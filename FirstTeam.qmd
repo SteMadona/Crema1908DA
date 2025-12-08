@@ -24,7 +24,7 @@ Questa è la sezione dedicata alla **prima squadra**.
 - M. Vailati 14
 
 ## Centrocampisti
-- [N. Abba 6](GiocatoriFT/abba.qmd)
+- [N. Abba 6](GiocatoriFT/abba.html)
 - L. Gramignoli 7
 - A. Latini 8
 - J. Mozzanica 10

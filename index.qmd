@@ -1,11 +1,46 @@
 ---
-title: "Crema1908DA"
+title: ""
+format:
+  html:
+    theme: darkly
+    css: styles.css
 ---
 
-This is a Quarto website.
+<style>
+/* Titolo principale centrato e grande */
+.main-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+/* Sottotitolo centrato */
+.subtitle {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
 
-```{r}
-1 + 1
-```
+/* Paragrafo descrizione */
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+</style>
+
+# <div class="main-title">Crema 1908 Data Analysis</div>
+
+## <div class="subtitle">di Stefano Madona</div>
+
+---
+
+<div class="description">
+Questo sito è stato creato con i dati raccolti dai dispositivi wearable forniti dalla società Playmaker.  
+Tutte le analisi sono state realizzate con RStudio.  
+Tutti i grafici presenti nelle pagine sono originali e derivano direttamente dai dati raccolti.
+</div>

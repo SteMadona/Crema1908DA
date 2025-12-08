@@ -19,5 +19,6 @@ format:
     css: styles.css
     toc: true
 
-
+resources:
+  - robots.txt
 

@@ -1,0 +1,17 @@
+---
+title: "N. Abba"
+format:
+  html:
+    theme: darkly
+    css: styles.css
+---
+
+## Attaccante
+
+```{r, echo=FALSE}
+source("code/ReportUno.R")
+
+report_fisico("N. Abba")
+```
+
+Questo è il report fisico di N. Abba

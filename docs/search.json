@@ -11,6 +11,48 @@
     "href": "FirstTeam.html",
     "title": "Prima squadra",
     "section": "",
-    "text": "Prima squadra\nQuesta è la sezione dedicata alla prima squadra.\n\n\n&lt;h3&gt;Portieri&lt;/h3&gt;\n&lt;ul&gt;\n  &lt;li&gt;K. Ferrara 1&lt;/li&gt;\n  &lt;li&gt;C. Maianti 2&lt;/li&gt;\n&lt;/ul&gt;\n\n\n&lt;h3&gt;Difensori&lt;/h3&gt;\n&lt;ul&gt;\n  &lt;li&gt;A. Arpini 1&lt;/li&gt;\n  &lt;li&gt;S. Azzali 2&lt;/li&gt;\n  &lt;li&gt;E. Bettinelli 3&lt;/li&gt;\n  &lt;li&gt;V. Camilleri 4&lt;/li&gt;\n  &lt;li&gt;E. Maccherini 5&lt;/li&gt;\n  &lt;li&gt;M. Vailati 6&lt;/li&gt;\n&lt;/ul&gt;\n\n\n&lt;h3&gt;Centrocampisti&lt;/h3&gt;\n&lt;ul&gt;\n  &lt;li&gt;N. Abba 1&lt;/li&gt;\n  &lt;li&gt;L. Gramignoli 2&lt;/li&gt;\n  &lt;li&gt;A. Latini 3&lt;/li&gt;\n  &lt;li&gt;J. Mozzanica 4&lt;/li&gt;\n  &lt;li&gt;R. Pavesi 5&lt;/li&gt;\n  &lt;li&gt;F. Russo 6&lt;/li&gt;\n  &lt;li&gt;T. Serioli 7&lt;/li&gt;\n  &lt;li&gt;R. Tomella 8&lt;/li&gt;\n&lt;/ul&gt;\n\n\n&lt;h3&gt;Attaccanti&lt;/h3&gt;\n&lt;ul&gt;\n  &lt;li&gt;R. De Martino 1&lt;/li&gt;\n  &lt;li&gt;D. Fenotti 2&lt;/li&gt;\n  &lt;li&gt;Nome Attaccante 3&lt;/li&gt;\n&lt;/ul&gt;"
+    "text": "Questa è la sezione dedicata alla prima squadra.\n\n\n\nK. Ferrara 1\n\nC. Maianti 12\n\n\n\n\n\nA. Arpini 2\nS. Azzali 3\n\nE. Bettinelli 4\n\nV. Camilleri 5\nE. Maccherini 13\n\nM. Vailati 14\n\n\n\n\n\nN. Abba 6\nL. Gramignoli 7\nA. Latini 8\nJ. Mozzanica 10\nR. Pavesi 18\nF. Russo 15\nT. Serioli 16\nR. Tomella 17\n\n\n\n\n\nR. De Martino 9\nB. Diop 11\n\nD. Fenotti 19\nM. Varisco 20"
+  },
+  {
+    "objectID": "FirstTeam.html#portieri",
+    "href": "FirstTeam.html#portieri",
+    "title": "Prima squadra",
+    "section": "",
+    "text": "K. Ferrara 1\n\nC. Maianti 12"
+  },
+  {
+    "objectID": "FirstTeam.html#difensori",
+    "href": "FirstTeam.html#difensori",
+    "title": "Prima squadra",
+    "section": "",
+    "text": "A. Arpini 2\nS. Azzali 3\n\nE. Bettinelli 4\n\nV. Camilleri 5\nE. Maccherini 13\n\nM. Vailati 14"
+  },
+  {
+    "objectID": "FirstTeam.html#centrocampisti",
+    "href": "FirstTeam.html#centrocampisti",
+    "title": "Prima squadra",
+    "section": "",
+    "text": "N. Abba 6\nL. Gramignoli 7\nA. Latini 8\nJ. Mozzanica 10\nR. Pavesi 18\nF. Russo 15\nT. Serioli 16\nR. Tomella 17"
+  },
+  {
+    "objectID": "FirstTeam.html#attaccanti",
+    "href": "FirstTeam.html#attaccanti",
+    "title": "Prima squadra",
+    "section": "",
+    "text": "R. De Martino 9\nB. Diop 11\n\nD. Fenotti 19\nM. Varisco 20"
+  },
+  {
+    "objectID": "GiocatoriFT/abba.html",
+    "href": "GiocatoriFT/abba.html",
+    "title": "N. Abba",
+    "section": "",
+    "text": "source(“code/ReportUno.R”)\nreport_fisico(“N. Abba”)"
+  },
+  {
+    "objectID": "GiocatoriFT/abba.html#attaccante",
+    "href": "GiocatoriFT/abba.html#attaccante",
+    "title": "N. Abba",
+    "section": "",
+    "text": "source(“code/ReportUno.R”)\nreport_fisico(“N. Abba”)"
   }
 ]

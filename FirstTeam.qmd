@@ -6,13 +6,6 @@ format:
     css: styles.css
 ---
 
----
-title: "Prima squadra"
-format:
-  html:
-    theme: darkly
-    css: styles.css
----
 
 # Prima squadra
 
@@ -31,7 +24,7 @@ Questa è la sezione dedicata alla **prima squadra**.
 - M. Vailati 14
 
 ## Centrocampisti
-- N. Abba 6
+- [N. Abba 6](giocatori/abba.qmd)
 - L. Gramignoli 7
 - A. Latini 8
 - J. Mozzanica 10

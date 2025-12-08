@@ -45,9 +45,9 @@ format:
 }
 </style>
 
-# <div class="main-title">Crema 1908 Data Analysis</div>
+<div class="main-title">Crema 1908 Data Analysis</div>
 
-## <div class="subtitle">di Stefano Madona</div>
+<div class="subtitle">di Stefano Madona</div>
 
 ---
 

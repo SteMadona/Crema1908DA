@@ -6,55 +6,45 @@ format:
     css: styles.css
 ---
 
+---
+title: "Prima squadra"
+format:
+  html:
+    theme: darkly
+    css: styles.css
+---
+
 # Prima squadra
 
-Questa è la sezione dedicata alla **prima squadra**.  
+Questa è la sezione dedicata alla **prima squadra**.
 
-<div class="row" style="margin-top: 25px;">
+## Portieri
+- K. Ferrara 1  
+- C. Maianti 12  
 
-  <div class="col-md-3 col-sm-6">
-    <h3>Portieri</h3>
-    <ul>
-      <li>K. Ferrara 1</li>
-      <li>C. Maianti 2</li>
-    </ul>
-  </div>
+## Difensori
+- A. Arpini 2
+- S. Azzali 3  
+- E. Bettinelli 4  
+- V. Camilleri 5 
+- E. Maccherini 13  
+- M. Vailati 14
 
-  <div class="col-md-3 col-sm-6">
-    <h3>Difensori</h3>
-    <ul>
-      <li>A. Arpini 1</li>
-      <li>S. Azzali 2</li>
-      <li>E. Bettinelli 3</li>
-      <li>V. Camilleri 4</li>
-      <li>E. Maccherini 5</li>
-      <li>M. Vailati 6</li>
-    </ul>
-  </div>
+## Centrocampisti
+- N. Abba 6
+- L. Gramignoli 7
+- A. Latini 8
+- J. Mozzanica 10
+- R. Pavesi 18
+- F. Russo 15
+- T. Serioli 16
+- R. Tomella 17
 
-  <div class="col-md-3 col-sm-6">
-    <h3>Centrocampisti</h3>
-    <ul>
-      <li>N. Abba 1</li>
-      <li>L. Gramignoli 2</li>
-      <li>A. Latini 3</li>
-      <li>J. Mozzanica 4</li>
-      <li>R. Pavesi 5</li>
-      <li>F. Russo 6</li>
-      <li>T. Serioli 7</li>
-      <li>R. Tomella 8</li>
-    </ul>
-  </div>
+## Attaccanti
+- R. De Martino 9
+- B. Diop 11  
+- D. Fenotti 19
+- M. Varisco 20
 
-  <div class="col-md-3 col-sm-6">
-    <h3>Attaccanti</h3>
-    <ul>
-      <li>R. De Martino 1</li>
-      <li>D. Fenotti 2</li>
-      <li>Nome Attaccante 3</li>
-    </ul>
-  </div>
-
-</div>
 
 

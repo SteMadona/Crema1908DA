@@ -8,8 +8,8 @@ format:
 
 ## Attaccante
 
-```{r, echo=FALSE}
-source("code/ReportUno.R")
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../code/ReportUno.R")
 
 report_fisico("N. Abba")
 ```

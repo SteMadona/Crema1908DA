@@ -5,7 +5,7 @@ library(ggplot2)
 library(scales)
 library(rlang)
 
-df <- read_excel("data/CremaFT_1910.xlsx")
+df <- read_excel("../data/CremaFT_1910.xlsx")
 
 
 physical_data <- cbind(

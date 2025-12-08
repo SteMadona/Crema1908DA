@@ -9,6 +9,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+    logo: images/Crema_logo.png
+    logo-alt: "Crema 1908"
 
 format:
   html:

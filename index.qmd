@@ -52,7 +52,7 @@ format:
 ---
 
 <div class="logo-container">
-  <img src="images/logo_crema.png" class="logo-img">
+  <img src="images/Crema_logo.png" class="logo-img">
 </div>
 
 <div class="description">

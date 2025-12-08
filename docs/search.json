@@ -2,8 +2,8 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Crema1908DA",
+    "title": "Crema 1908 Data Analysis",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "#\n\nCrema 1908 Data Analysis\n\n##\n\ndi Stefano Madona\n\n\n\nQuesto sito è stato creato con i dati raccolti dai dispositivi wearable forniti dalla società Playmaker.\nTutte le analisi sono state realizzate con RStudio.\nTutti i grafici presenti nelle pagine sono originali e derivano direttamente dai dati raccolti."
   }
 ]

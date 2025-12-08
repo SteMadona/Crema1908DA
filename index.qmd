@@ -31,6 +31,18 @@ format:
   line-height: 1.6;
   margin-top: 20px;
 }
+
+/* Logo centrato */
+.logo-container {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.logo-img {
+  width: 180px;      /* puoi cambiare la dimensione */
+  height: auto;
+}
 </style>
 
 # <div class="main-title">Crema 1908 Data Analysis</div>
@@ -38,6 +50,10 @@ format:
 ## <div class="subtitle">di Stefano Madona</div>
 
 ---
+
+<div class="logo-container">
+  <img src="images/logo_crema.png" class="logo-img">
+</div>
 
 <div class="description">
 Questo sito è stato creato con i dati raccolti dai dispositivi wearable forniti dalla società Playmaker.  

@@ -8,10 +8,18 @@ format:
 
 ## Attaccante
 
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportUno.R")
 
 report_fisico("N. Abba")
 ```
 
-Questo è il report fisico di N. Abba
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../code/ReportDue.R")
+
+report_tecnico("N. Abba")
+```
+
+

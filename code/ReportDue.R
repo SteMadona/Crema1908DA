@@ -232,7 +232,7 @@ report_tecnico <- function(giocatore){
               hjust = -0.15, color = "white", size = 3.6, fontface = "bold") +
     scale_fill_manual(values = c(setNames("#FF2E2E", giocatore), "Media Ruolo" = "white"), name = NULL) +
     labs(
-      title    = paste("📊 Technique Report –", giocatore),
+      title    = paste("📊 Report Tecnico –", giocatore),
       subtitle = paste("Confronto con Media Ruolo:", ruolo),
       x = NULL, y = NULL
     ) +

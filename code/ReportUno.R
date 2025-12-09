@@ -4,44 +4,45 @@ library(tidyr)
 library(ggplot2)
 library(scales)
 library(rlang)
+library(lubridate)
 
 df <- read_excel("../data/CremaFT_1910.xlsx")
 
-
-physical_data <- cbind(
-  df$`Phase Duration (min)`, 
-  df$`Player Name`,
-  df$Tag, 
-  df$`Position Category`, 
-  df$Position, 
-  df$`Top Speed (m/s)`, 
-  df$`Distance Covered (m)`, 
-  df$`Work Rate (m/min)`, 
-  df$`Speed Zone - Distance Covered (m) Zone 1 [0-1.5(m/s)]`, 
-  df$`Speed Zone - Distance Covered (m) Zone 2 [1.5-2(m/s)]`, 
-  df$`Speed Zone - Distance Covered (m) Zone 3 [2-3(m/s)]`, 
-  df$`Speed Zone - Distance Covered (m) Zone 4 [3-4(m/s)]`, 
-  df$`Speed Zone - Distance Covered (m) Zone 5 [4-5.5(m/s)]`, 
-  df$`Speed Zone - Distance Covered (m) Zone 6 [5.5-7(m/s)]`, 
-  df$`Speed Zone - Distance Covered (m) Zone 7 [> 7(m/s)]`, 
-  df$`Horizontal Acc Zones - Distance Covered (m) Zone 1 [0-0.4(m/s^2)]`, 
-  df$`Horizontal Acc Zones - Distance Covered (m) Zone 2 [0.4-0.9(m/s^2)]`,
-  df$`Horizontal Acc Zones - Distance Covered (m) Zone 3 [0.9-1.5(m/s^2)]`, 
-  df$`Horizontal Acc Zones - Distance Covered (m) Zone 4 [1.5-2(m/s^2)]`, 
-  df$`Horizontal Acc Zones - Distance Covered (m) Zone 5 [2-3(m/s^2)]`, 
-  df$`Horizontal Acc Zones - Distance Covered (m) Zone 6 [> 3(m/s^2)]`, 
-  df$`Horizontal Decl Zones - Distance Covered (m) Zone 1 [0-0.6(m/s^2)]`, 
-  df$`Horizontal Decl Zones - Distance Covered (m) Zone 2 [0.6-1.1(m/s^2)]`, 
-  df$`Horizontal Decl Zones - Distance Covered (m) Zone 3 [1.1-1.6(m/s^2)]`, 
-  df$`Horizontal Decl Zones - Distance Covered (m) Zone 4 [1.6-2.2(m/s^2)]`, 
-  df$`Horizontal Decl Zones - Distance Covered (m) Zone 5 [2.2-3(m/s^2)]`, 
-  df$`Horizontal Decl Zones - Distance Covered (m) Zone 6 [> 3(m/s^2)]`
-)
-
-physical_data <- as.data.frame(physical_data)
+physical_data <- df %>% 
+  transmute(
+    date      = as.Date(Date),   
+    day       = Day,
+    duration  = `Phase Duration (min)`,
+    player    = `Player Name`,
+    Tag,
+    category  = `Position Category`,
+    position  = Position,
+    TopSpeed  = `Top Speed (m/s)`,
+    DistanceTot = `Distance Covered (m)`,
+    WorkRate  = `Work Rate (m/min)`,
+    SpeedZ1_m = `Speed Zone - Distance Covered (m) Zone 1 [0-1.5(m/s)]`,
+    SpeedZ2_m = `Speed Zone - Distance Covered (m) Zone 2 [1.5-2(m/s)]`,
+    SpeedZ3_m = `Speed Zone - Distance Covered (m) Zone 3 [2-3(m/s)]`,
+    SpeedZ4_m = `Speed Zone - Distance Covered (m) Zone 4 [3-4(m/s)]`,
+    SpeedZ5_m = `Speed Zone - Distance Covered (m) Zone 5 [4-5.5(m/s)]`,
+    SpeedZ6_m = `Speed Zone - Distance Covered (m) Zone 6 [5.5-7(m/s)]`,
+    SpeedZ7_m = `Speed Zone - Distance Covered (m) Zone 7 [> 7(m/s)]`,
+    AccZ1_m   = `Horizontal Acc Zones - Distance Covered (m) Zone 1 [0-0.4(m/s^2)]`,
+    AccZ2_m   = `Horizontal Acc Zones - Distance Covered (m) Zone 2 [0.4-0.9(m/s^2)]`,
+    AccZ3_m   = `Horizontal Acc Zones - Distance Covered (m) Zone 3 [0.9-1.5(m/s^2)]`,
+    AccZ4_m   = `Horizontal Acc Zones - Distance Covered (m) Zone 4 [1.5-2(m/s^2)]`,
+    AccZ5_m   = `Horizontal Acc Zones - Distance Covered (m) Zone 5 [2-3(m/s^2)]`,
+    AccZ6_m   = `Horizontal Acc Zones - Distance Covered (m) Zone 6 [> 3(m/s^2)]`,
+    DecZ1_m   = `Horizontal Decl Zones - Distance Covered (m) Zone 1 [0-0.6(m/s^2)]`,
+    DecZ2_m   = `Horizontal Decl Zones - Distance Covered (m) Zone 2 [0.6-1.1(m/s^2)]`,
+    DecZ3_m   = `Horizontal Decl Zones - Distance Covered (m) Zone 3 [1.1-1.6(m/s^2)]`,
+    DecZ4_m   = `Horizontal Decl Zones - Distance Covered (m) Zone 4 [1.6-2.2(m/s^2)]`,
+    DecZ5_m   = `Horizontal Decl Zones - Distance Covered (m) Zone 5 [2.2-3(m/s^2)]`,
+    DecZ6_m   = `Horizontal Decl Zones - Distance Covered (m) Zone 6 [> 3(m/s^2)]`
+  )
 
 colnames(physical_data) <- c(
-  "duration", "player", "Tag", "category", "position",
+  "date", "day", "duration", "player", "Tag", "category", "position",
   "TopSpeed", "DistanceTot", "WorkRate",
   "SpeedZ1_m", "SpeedZ2_m", "SpeedZ3_m", "SpeedZ4_m", "SpeedZ5_m", "SpeedZ6_m", "SpeedZ7_m",
   "AccZ1_m", "AccZ2_m", "AccZ3_m", "AccZ4_m", "AccZ5_m", "AccZ6_m",
@@ -54,6 +55,15 @@ physical_data <- physical_data %>%
     across(c(starts_with("SpeedZ"), starts_with("AccZ"), starts_with("DecZ"),
              "duration","DistanceTot","TopSpeed","WorkRate"), 
            ~ suppressWarnings(as.numeric(.)))
+  )
+
+
+physical_data <- physical_data %>%
+  mutate(
+    date = as.Date(date), 
+    week = isoweek(date), 
+    year = isoyear(date), 
+    week_id = paste(year, week, sep = "-")
   )
 
 
@@ -217,5 +227,126 @@ report_fisico <- function(giocatore) {
       legend.text      = element_text(color = "white", face = "bold"),
       legend.position  = "top",
       plot.margin      = margin(10, 40, 10, 10)
+    )
+}
+
+
+#TREND FISICO 
+df_physicalreport_week <- physical_data %>%
+  group_by(player, week_id) %>%
+  summarise(
+    HID = mean((SpeedZ5_m + SpeedZ6_m) / duration, na.rm = TRUE),
+    
+    sprint_dist = sum(SpeedZ7_m, na.rm = TRUE) / pmax(n(), 1),
+    topspeed = max(TopSpeed, na.rm = TRUE) * 3.6,
+    workrate = mean(WorkRate, na.rm = TRUE),
+    
+    acc_index = {
+      acc_means <- colMeans(select(cur_data_all(), starts_with("AccZ")), na.rm = TRUE)
+      sum((1:6) * acc_means)
+    },
+    
+    dec_index = {
+      dec_means <- colMeans(select(cur_data_all(), starts_with("DecZ")), na.rm = TRUE)
+      sum((1:6) * dec_means)
+    },
+    
+    .groups = "drop"
+  ) %>%
+  left_join(
+    physical_data %>% select(player, category) %>% distinct(),
+    by = "player"
+  )
+
+
+df_physicalreport_week <- df_physicalreport_week %>%
+  group_by(player) %>%
+  mutate(
+    acc_index = {
+      m <- max(acc_index, na.rm = TRUE)
+      if (!is.finite(m) || m == 0) {
+        NA_real_
+      } else {
+        acc_index / m * 100
+      }
+    },
+    dec_index = {
+      m <- max(dec_index, na.rm = TRUE)
+      if (!is.finite(m) || m == 0) {
+        NA_real_
+      } else {
+        dec_index / m * 100
+      }
+    }
+  ) %>%
+  ungroup()
+
+df_week_long <- df_physicalreport_week %>%
+  pivot_longer(
+    cols = c(dec_index, acc_index, sprint_dist, HID, topspeed, workrate),
+    names_to = "statistica",
+    values_to = "valore"
+  )
+
+ggplot(
+  df_week_long %>% filter(player == "A. Arpini"),
+  aes(x = statistica, y = valore)
+) +
+  geom_col(fill = "#FF2E2E") +
+  coord_flip() +
+  facet_wrap(~ week_id, nrow = 1) +
+  theme_minimal()
+
+colori_statistiche <- c(
+  acc_index   = "lightblue",
+  dec_index   = "purple",
+  sprint_dist = "#FF2E2E",
+  HID         = "white",
+  topspeed    = "green",
+  workrate    = "gray50"
+)
+
+trend_fisico_giocatore <- function(giocatore) {
+  
+  dati <- df_week_long %>%
+    filter(player == giocatore)
+  
+  if (nrow(dati) == 0) {
+    stop("Giocatore non trovato nel dataset")
+  }
+  
+  # assicura ordine cronologico delle settimane
+  dati <- dati %>%
+    mutate(week_id = factor(week_id, levels = sort(unique(week_id))))
+  
+  ggplot(
+    dati,
+    aes(
+      x = week_id,
+      y = valore,
+      group = statistica,
+      color = statistica
+    )
+  ) +
+    geom_line(size = 1.5) +
+    geom_point(size = 2) +
+    scale_color_manual(values = colori_statistiche) +
+    labs(
+      title = paste("📈 Trend Fisico Settimanale –", giocatore),
+      x = "Settimana",
+      y = NULL,
+      color = NULL
+    ) +
+    theme_minimal(base_size = 13) +
+    theme(
+      plot.background  = element_rect(fill = "#0b0b0b", color = NA),
+      panel.background = element_rect(fill = "#0b0b0b", color = NA),
+      panel.grid.major = element_line(color = "#222222"),
+      panel.grid.minor = element_blank(),
+      axis.text.y      = element_text(color = "white", face = "bold"),
+      axis.text.x      = element_text(color = "white"),
+      plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
+      legend.text      = element_text(color = "white", face = "bold"),
+      legend.position  = "top"
     )
 }

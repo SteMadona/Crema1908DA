@@ -6,8 +6,10 @@ format:
     css: styles.css
 ---
 
-## Attaccante
+## Centrocampista
 
+
+# Statistiche All Time 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportUno.R")
@@ -20,6 +22,15 @@ report_fisico("N. Abba")
 source("../code/ReportDue.R")
 
 report_tecnico("N. Abba")
+```
+
+# Trend di forma
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../code/ReportUno.R")
+
+trend_fisico_giocatore("N. Abba")
+
 ```
 
 

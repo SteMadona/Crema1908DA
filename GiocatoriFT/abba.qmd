@@ -33,4 +33,14 @@ trend_fisico_giocatore("N. Abba")
 
 ```
 
+# Trend tecnico
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../code/ReportDue.R")
+
+trend_tecnico_indici("N. Abba")
+trend_tecnico_possesso("N. Abba")
+trend_tecnico_piede("N. Abba")
+
+```
 

@@ -288,15 +288,6 @@ df_week_long <- df_physicalreport_week %>%
     values_to = "valore"
   )
 
-ggplot(
-  df_week_long %>% filter(player == "A. Arpini"),
-  aes(x = statistica, y = valore)
-) +
-  geom_col(fill = "#FF2E2E") +
-  coord_flip() +
-  facet_wrap(~ week_id, nrow = 1) +
-  theme_minimal()
-
 colori_statistiche <- c(
   acc_index   = "lightblue",
   dec_index   = "purple",
@@ -350,3 +341,5 @@ trend_fisico_giocatore <- function(giocatore) {
       legend.position  = "top"
     )
 }
+
+

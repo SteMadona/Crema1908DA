@@ -39,7 +39,7 @@ Questa è la sezione dedicata alla **prima squadra**.
 - D. Fenotti 19
 - M. Varisco 20
 
-# Grafici Prima Squadra
+# Analisi
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
 
@@ -107,4 +107,44 @@ ggplot(df_scatter, aes(x = physical_index, y = quality_index)) +
 ```
 
 
+# Rankings
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("code/ReportUno.R")
+source("code/ReportUno.R")
+source("code/Rankings.R")
+
+```
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+tb_topspeed
+```
+
+:::
+::: {.column width="50%"}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+tb_workrate
+```
+
+::: 
+
+::: {.column width="50%"}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+tb_touches
+```
+
+:::
+::: {.column width="50%"}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+tb_releases
+```
+
+
+# [Advanced Analytics](GiocatoriFT/AdvancedAnalytics.html)

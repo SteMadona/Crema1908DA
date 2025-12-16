@@ -11,35 +11,35 @@
     "href": "FirstTeam.html",
     "title": "Prima squadra",
     "section": "",
-    "text": "Questa è la sezione dedicata alla prima squadra.\n\n\n\nK. Ferrara 1\n\nC. Maianti 12\n\n\n\n\n\nA. Arpini 2\nS. Azzali 3\n\nE. Bettinelli 4\n\nV. Camilleri 5\nE. Maccherini 13\n\nM. Vailati 14\n\n\n\n\n\nN. Abba 6\nL. Gramignoli 7\nA. Latini 8\nJ. Mozzanica 10\nR. Pavesi 18\nF. Russo 15\nT. Serioli 16\nR. Tomella 17\n\n\n\n\n\nR. De Martino 9\nB. Diop 11\n\nD. Fenotti 19\nM. Varisco 20"
+    "text": "Questa è la sezione dedicata alla prima squadra."
   },
   {
     "objectID": "FirstTeam.html#portieri",
     "href": "FirstTeam.html#portieri",
     "title": "Prima squadra",
-    "section": "",
-    "text": "K. Ferrara 1\n\nC. Maianti 12"
+    "section": "Portieri",
+    "text": "Portieri\n\nK. Ferrara 1\n\nC. Maianti 12"
   },
   {
     "objectID": "FirstTeam.html#difensori",
     "href": "FirstTeam.html#difensori",
     "title": "Prima squadra",
-    "section": "",
-    "text": "A. Arpini 2\nS. Azzali 3\n\nE. Bettinelli 4\n\nV. Camilleri 5\nE. Maccherini 13\n\nM. Vailati 14"
+    "section": "Difensori",
+    "text": "Difensori\n\nA. Arpini\nS. Azzali\nE. Bettinelli\n\nV. Camilleri\nE. Maccherini\n\nM. Vailati"
   },
   {
     "objectID": "FirstTeam.html#centrocampisti",
     "href": "FirstTeam.html#centrocampisti",
     "title": "Prima squadra",
-    "section": "",
-    "text": "N. Abba 6\nL. Gramignoli 7\nA. Latini 8\nJ. Mozzanica 10\nR. Pavesi 18\nF. Russo 15\nT. Serioli 16\nR. Tomella 17"
+    "section": "Centrocampisti",
+    "text": "Centrocampisti\n\nN. Abba\nL. Gramignoli\nA. Latini\nJ. Mozzanica\nR. Pavesi\nF. Russo\nT. Serioli\nR. Tomella"
   },
   {
     "objectID": "FirstTeam.html#attaccanti",
     "href": "FirstTeam.html#attaccanti",
     "title": "Prima squadra",
-    "section": "",
-    "text": "R. De Martino 9\nB. Diop 11\n\nD. Fenotti 19\nM. Varisco 20"
+    "section": "Attaccanti",
+    "text": "Attaccanti\n\nR. De Martino\nB. Diop\nD. Fenotti\nM. Varisco"
   },
   {
     "objectID": "GiocatoriFT/abba.html",

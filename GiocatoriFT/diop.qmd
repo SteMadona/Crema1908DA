@@ -1,12 +1,12 @@
 ---
-title: "N. Abba"
+title: "B. Diop"
 format:
   html:
     theme: darkly
     css: styles.css
 ---
 
-## Centrocampista
+## Attaccante
 
 
 # Statistiche All Time 
@@ -14,7 +14,7 @@ format:
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportUno.R")
 
-report_fisico("N. Abba")
+report_fisico("B. Diop")
 ```
 
 
@@ -22,7 +22,7 @@ report_fisico("N. Abba")
 source("../code/ReportDue.R")
 source("../code/partita_finale.R")
 
-player_sel <- "N. Abba"
+player_sel <- "B. Diop"
 
 ```
 
@@ -51,7 +51,7 @@ report_tecnico_pf(player_sel)
 #| out-width: "85%"
 
 source("../code/player_wheel.R")
-plot_player_wheel(pcts, "N. Abba")
+plot_player_wheel(pcts, "B. Diop")
 
 
 ```
@@ -61,7 +61,7 @@ plot_player_wheel(pcts, "N. Abba")
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportUno.R")
 
-trend_fisico_giocatore("N. Abba")
+trend_fisico_giocatore("B. Diop")
 
 ```
 
@@ -70,9 +70,9 @@ trend_fisico_giocatore("N. Abba")
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportDue.R")
 
-trend_tecnico_indici("N. Abba")
-trend_tecnico_possesso("N. Abba")
-trend_tecnico_piede("N. Abba")
+trend_tecnico_indici("B. Diop")
+trend_tecnico_possesso("B. Diop")
+trend_tecnico_piede("B. Diop")
 
 ```
 

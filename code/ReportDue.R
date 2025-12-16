@@ -7,8 +7,6 @@ library(rlang)
 library(lubridate)
 library(here)
 
-#df <- read_excel("../data/CremaFT_1910.xlsx")
-#df <- read_excel("data/CremaFT_1910.xlsx")
 df <- read_excel(here("data", "CremaFT_1910.xlsx"))
 
 

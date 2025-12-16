@@ -54,4 +54,57 @@ mean_quality  <- mean(df_scatter$quality_index, na.rm = TRUE)
 
 
 # --- SCATTERPLOT ------------------------------------------------------------
-
+scatter_phy_tec <- ggplot(df_scatter, aes(x = physical_index, y = quality_index)) +
+  geom_point(
+    aes(fill = category),
+    shape = 21,       # 🔹 Cerchio con bordo
+    color = "white",  # 🔹 Bordo bianco
+    size = 5,         # 🔹 Pallini più grandi
+    alpha = 0.9,
+    stroke = 0.7      # 🔹 Spessore del bordo
+  ) +
+  geom_text(
+    aes(label = player),
+    vjust = -1,
+    color = "white",
+    size = 3,
+    alpha = 0.8
+  ) +
+  geom_vline(xintercept = mean_physical, linetype = "dashed", color = "gray60", size = 1.1) +
+  geom_hline(yintercept = mean_quality,  linetype = "dashed", color = "gray60", size = 1.1) +
+  
+  scale_fill_manual(values = c(
+    "Defenders" = "#FFFFFF",     # bianco
+    "Midfielders" = "#FF2E2E",   # rosso
+    "Forwards" = "gray30"        # grigio scuro
+  )) +
+  
+  guides(
+    fill = guide_legend(
+      override.aes = list(color = "white")  # legenda con bordo bianco
+    )
+  ) +
+  
+  labs(
+    title = "📈 Confronto tra qualità fisica e tecnica",
+    subtitle = "Giocatori di movimento – confronto tra volumi fisici e qualità tecnica",
+    x = "Indice Qualità Fisica (0-1)",
+    y = "Indice Qualità Tecnica (0–1)",
+    fill = "Ruolo"
+  ) +
+  
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.background = element_rect(fill = "#111111", color = NA),
+    panel.background = element_rect(fill = "#111111", color = NA),
+    legend.background = element_rect(fill = "#111111", color = NA),
+    panel.grid.major = element_line(color = "#333333"),
+    panel.grid.minor = element_line(color = "#222222"),
+    text = element_text(color = "white"),
+    axis.text = element_text(color = "white"),
+    axis.title = element_text(color = "white", face = "bold"),
+    plot.title = element_text(color = "#FF2E2E", face = "bold", size = 16),
+    plot.subtitle = element_text(color = "white"),
+    legend.text = element_text(color = "white"),
+    legend.title = element_text(color = "white")
+  )

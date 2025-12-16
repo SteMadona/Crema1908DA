@@ -22,6 +22,25 @@ report_fisico("N. Abba")
 source("../code/ReportDue.R")
 
 report_tecnico("N. Abba")
+
+
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-format: png
+#| fig-dpi: 320
+#| fig-bg: "#0b0b0b"
+#| fig-width: 7
+#| fig-height: 7
+#| out-width: "85%"
+
+source("../code/player_wheel.R")
+plot_player_wheel(pcts, "N. Abba")
+
+
 ```
 
 # Trend di forma

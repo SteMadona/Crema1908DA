@@ -1,5 +1,5 @@
 ---
-title: "R. PAvesi"
+title: "R. Pavesi"
 format:
   html:
     theme: darkly
@@ -14,7 +14,7 @@ format:
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportUno.R")
 
-report_fisico("R. PAvesi")
+report_fisico("R. Pavesi")
 ```
 
 
@@ -22,7 +22,7 @@ report_fisico("R. PAvesi")
 source("../code/ReportDue.R")
 source("../code/partita_finale.R")
 
-player_sel <- "R. PAvesi"
+player_sel <- "R. Pavesi"
 
 ```
 
@@ -51,7 +51,7 @@ report_tecnico_pf(player_sel)
 #| out-width: "85%"
 
 source("../code/player_wheel.R")
-plot_player_wheel(pcts, "R. PAvesi")
+plot_player_wheel(pcts, "R. Pavesi")
 
 
 ```
@@ -61,7 +61,7 @@ plot_player_wheel(pcts, "R. PAvesi")
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportUno.R")
 
-trend_fisico_giocatore("R. PAvesi")
+trend_fisico_giocatore("R. Pavesi")
 
 ```
 
@@ -70,9 +70,9 @@ trend_fisico_giocatore("R. PAvesi")
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportDue.R")
 
-trend_tecnico_indici("R. PAvesi")
-trend_tecnico_possesso("R. PAvesi")
-trend_tecnico_piede("R. PAvesi")
+trend_tecnico_indici("R. Pavesi")
+trend_tecnico_possesso("R. Pavesi")
+trend_tecnico_piede("R. Pavesi")
 
 ```
 

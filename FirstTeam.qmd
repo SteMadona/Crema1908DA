@@ -44,12 +44,26 @@ Questa è la sezione dedicata alla **prima squadra**.
 source("code/ReportUno.R")
 source("code/ReportDue.R")
 source("code/fisico_vs_tecnica.R")
-
+source("code/data_passes.R")
 
 scatter_phy_tec
 
 
 ```
+
+::: {.panel-tabset}
+# Full Sessions
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+scatter_pass_regain
+```
+
+# Partita Finale 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+scatter_pass_regain_part
+```
+
+:::
+
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("code/carichi_lavoro.R")

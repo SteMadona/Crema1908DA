@@ -76,3 +76,20 @@ trend_tecnico_piede("A. Arpini")
 
 ```
 
+# Giocatore simile nelle giovanili 
+
+::: {.panel-tabset}
+# Valori Fisici
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../code/comparison_U17_vs_FT.R")
+find_most_similar_u17(player_sel, 
+                      ft_data_phy, u17_data_phy, return_plot = T)$plot
+```
+
+# Valori Tecnici 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+find_most_similar_u17(player_sel, 
+                      ft_data_tec, u17_data_tec, return_plot = T)$plot
+```
+
+:::

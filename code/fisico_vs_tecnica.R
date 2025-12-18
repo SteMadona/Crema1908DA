@@ -41,7 +41,7 @@ df_scatter <- df_scatter %>%
     one_touch_share = share_1T,  # % di possesso in tocchi di prima
     quality_index_raw = (
       scales::rescale(releases_per_min, to = c(0,1), from = range(releases_per_min, na.rm=TRUE)) * 0.4 +
-        scales::rescale(release_vel_avg,  to = c(0,1), from = range(one_touch_share, na.rm=TRUE))  * 0.4 +
+        scales::rescale(release_vel_avg,  to = c(0,1), from = range(release_vel_avg, na.rm=TRUE))  * 0.4 +
         scales::rescale(touches_total_avg, to = c(0, 1), from = range(touches_total_avg, na.rm = T)) *0.2
     ),
     quality_index = rescale(quality_index_raw, to = c(0, 1))
@@ -108,3 +108,5 @@ scatter_phy_tec <- ggplot(df_scatter, aes(x = physical_index, y = quality_index)
     legend.text = element_text(color = "white"),
     legend.title = element_text(color = "white")
   )
+
+scatter_phy_tec

@@ -84,14 +84,14 @@ df_physicalreport_u17 <- physical_data_u17 %>%
     },
     .groups = "drop"
   ) %>%
-  left_join(physical_data %>% select(player, category) %>% distinct(), by = "player") %>%
+  left_join(physical_data_u17 %>% select(player, category) %>% distinct(), by = "player") %>%
   mutate(
     acc_index = scales::rescale(acc_index, to = c(0,100)),
     dec_index = scales::rescale(dec_index, to = c(0,100))
   )
 
 # Escludo portieri per medie
-df_no_gk <- df_physicalreport %>% filter(category != "Goalkeepers")
+df_no_gk_u17 <- df_physicalreport_u17 %>% filter(category != "Goalkeepers")
 
 
 #OCCHIO PERCHè MANCANO I RUOLI IN U17
@@ -262,4 +262,196 @@ agg_u17 <- agg_u17 %>%
     time_ball_index = rescale(avg_time_per_poss_sec, to=c(0,100),
                               from=range(agg_u17$avg_time_per_poss_sec[agg_u17$category!="Goalkeepers"], na.rm = TRUE))
   )
+
+
+agg_u17 <- agg_u17 %>% filter(category != "Goalkeepers")
+
+
+u17_data <- agg_u17 %>%
+  left_join(df_no_gk_u17, by = "player") %>%
+  select(player, category.x, touch_per_min, releases_per_min, release_vel_avg, one_touch, 
+         touches_total, HID, topspeed, workrate, acc_index, dec_index) %>%
+  mutate(one_touch_perc = 100*(one_touch / touches_total)) %>%
+  select(-c(one_touch, touches_total))
+
+
+ft_data <- agg %>%
+  left_join(df_no_gk, by = "player") %>%
+  select(player, category.x, touch_per_min, releases_per_min, release_vel_avg, one_touch, 
+         touches_total, HID, topspeed, workrate, acc_index, dec_index) %>%
+  mutate(one_touch_perc = 100*(one_touch / touches_total)) %>%
+  select(-c(one_touch, touches_total)) %>%
+  filter(category.x != "Goalkeepers")
+
+
+.euclid_dist <- function(A, b) sqrt(rowSums((A - matrix(b, nrow(A), ncol(A), byrow = T))^2))
+
+.cosine_dist <- function(A, b){
+  b_norm <- sqrt(sum(b^2))
+  A_norm <- sqrt(rowSums(A^2))
+  sim <- (A %*% b) / (A_norm *b_norm)
+  as.numeric(1 - sim)
+}
+
+
+
+find_most_similar_u17 <- function(player_ft,
+                                  data_ft, data_u17,
+                                  same_category = FALSE,
+                                  method = c("euclidean", "cosine"),
+                                  top_n = 5,
+                                  return_plot = TRUE) {
+  method <- match.arg(method)
+  
+  ft  <- data_ft
+  u17 <- data_u17
+  
+  # Feature usate per il matching (escludo player e category)
+  feat <- setdiff(names(ft), c("player", "category.x"))
+  
+  # prendo la riga del player FT
+  p <- ft %>% filter(player == player_ft)
+  if (nrow(p) != 1) stop("player_ft non trovato (o duplicato) in data_ft")
+  
+  # filtro U17 per stessa category.x (es. ruolo) se richiesto
+  if (same_category) {
+    u17 <- u17 %>% filter(`category.x` == p$`category.x`)
+  }
+  if (nrow(u17) == 0) stop("Nessun giocatore U17 disponibile dopo il filtro di category.x")
+  
+  # --- imputazione semplice NA: mediana sul campione combinato ---
+  comb <- bind_rows(ft %>% mutate(.grp = "FT"),
+                    u17 %>% mutate(.grp = "U17"))
+  
+  med <- comb %>%
+    summarise(across(all_of(feat), ~ median(.x, na.rm = TRUE)))
+  
+  fill_median <- function(df) {
+    df %>%
+      mutate(across(all_of(feat), ~ ifelse(is.na(.x), as.numeric(med[[cur_column()]]), .x)))
+  }
+  
+  ft2  <- fill_median(ft)
+  u172 <- fill_median(u17)
+  p2   <- ft2 %>% filter(player == player_ft)
+  
+  #LO Z-SCORE è CALCOLATO SU TUTTI I GIOCATORI INSIEME
+  
+  comb2 <- bind_rows(
+    ft2 %>% select(all_of(feat)),
+    u172 %>% select(all_of(feat))
+  )
+  
+  mu <- sapply(comb2, mean)
+  sdv <- sapply(comb2, sd)
+  sdv[sdv == 0] <- 1
+  
+  z <- function(df) {
+    X <- as.matrix(df[, feat])
+    scale(X, center = mu, scale = sdv)
+  }
+  
+  U <- z(u172)
+  b <- as.numeric(z(p2))
+  
+  # distanza
+  dist <- if (method == "euclidean") .euclid_dist(U, b) else .cosine_dist(U, b)
+  
+  out <- u172 %>%
+    mutate(distance = dist) %>%
+    arrange(distance) %>%
+    select(player, `category.x`, distance, all_of(feat)) %>%
+    slice_head(n = top_n)
+  
+  best_u17 <- out$player[1]
+  
+  # plot confronto (z-score) FT vs best U17
+  plt <- NULL
+  # plot confronto (valori originali) FT vs best U17
+  plt <- NULL
+  if (return_plot) {
+    
+    lab_ft  <- paste0("FT: ", player_ft)
+    lab_u17 <- paste0("U17: ", best_u17)
+    
+    # valori ORIGINALI (non z-score)
+    ft_abs  <- p2 %>% select(all_of(feat)) %>% mutate(who = lab_ft)
+    u17_abs <- u172 %>% filter(player == best_u17) %>% select(all_of(feat)) %>% mutate(who = lab_u17)
+    
+    plot_df <- bind_rows(ft_abs, u17_abs) %>%
+      tidyr::pivot_longer(-who, names_to = "variable", values_to = "value") %>%
+      mutate(who = factor(who, levels = c(lab_ft, lab_u17)))
+    
+    # ordine metriche: per differenza assoluta (più importanti in alto)
+    ord <- plot_df %>%
+      tidyr::pivot_wider(names_from = who, values_from = value) %>%
+      mutate(absdiff = abs(.data[[lab_u17]] - .data[[lab_ft]])) %>%
+      arrange(desc(absdiff)) %>%
+      pull(variable)
+    
+    plot_df <- plot_df %>% mutate(variable = factor(variable, levels = ord))
+    
+    # etichette valori (formattazione "smart")
+    plot_df <- plot_df %>%
+      mutate(val_lbl = dplyr::case_when(
+        abs(value) >= 100 ~ scales::number(value, accuracy = 1),
+        abs(value) >= 10  ~ scales::number(value, accuracy = 0.1),
+        TRUE              ~ scales::number(value, accuracy = 0.01)
+      ))
+    
+    plt <- ggplot(plot_df, aes(x = who, y = value, fill = who)) +
+      geom_col(width = 0.72, color = "#0b0b0b") +
+      geom_text(aes(label = val_lbl), vjust = -0.35, color = "white",
+                fontface = "bold", size = 3.2) +
+      facet_wrap(~ variable, scales = "free_y", ncol = 2) +
+      scale_fill_manual(values = setNames(c("white", "#FF2E2E"), c(lab_ft, lab_u17))) +
+      labs(
+        title = "Confronto FT vs U17 più simile (valori originali)",
+        subtitle = paste0(lab_ft, " | ", lab_u17,
+                          " | Distanza (matching su z-score): ", round(out$distance[1], 2)),
+        x = NULL, y = NULL, fill = NULL
+      ) +
+      coord_cartesian(clip = "off") +
+      theme_minimal(base_size = 12) +
+      theme(
+        plot.background  = element_rect(fill = "#0b0b0b", color = NA),
+        panel.background = element_rect(fill = "#0b0b0b", color = NA),
+        panel.grid.major = element_line(color = "#222222"),
+        panel.grid.minor = element_blank(),
+        strip.text       = element_text(color = "white", face = "bold", size = 12),
+        axis.text.x      = element_text(color = "white", face = "bold", size = 10),
+        axis.text.y      = element_text(color = "white", size = 10),
+        plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
+        plot.subtitle    = element_text(color = "white"),
+        legend.position  = "top",
+        legend.text      = element_text(color = "white", face = "bold"),
+        panel.spacing    = unit(1.1, "lines"),
+        plot.margin      = margin(12, 12, 12, 12)
+      )
+  }
+  
+  
+  
+  
+  list(
+    player_ft = player_ft,
+    category_ft = p$`category.x`,
+    best_u17 = best_u17,
+    ranking_u17 = out,
+    plot = plt
+  )
+}
+
+
+u17_data_phy <- u17_data %>%
+  select(player, category.x, HID, topspeed, workrate, acc_index, dec_index)
+
+u17_data_tec <- u17_data %>%
+  select(player, category.x, touch_per_min, releases_per_min, release_vel_avg, one_touch_perc)
+
+ft_data_phy <- ft_data %>%
+  select(player, category.x, HID, topspeed, workrate, acc_index, dec_index)
+
+ft_data_tec  <- ft_data %>%
+  select(player, category.x, touch_per_min, releases_per_min, release_vel_avg, one_touch_perc)
 

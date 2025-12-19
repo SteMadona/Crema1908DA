@@ -45,6 +45,7 @@ source("code/ReportUno.R")
 source("code/ReportDue.R")
 source("code/fisico_vs_tecnica.R")
 source("code/data_passes.R")
+source("code/scatter_ruoli.R")
 
 scatter_phy_tec
 
@@ -60,6 +61,54 @@ scatter_pass_regain
 # Partita Finale 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 scatter_pass_regain_part
+```
+
+:::
+
+::: {.panel-tabset}
+# Difensori
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-format: png
+#| fig-dpi: 320
+#| fig-bg: "#0b0b0b"
+#| fig-width: 7
+#| fig-height: 7
+#| out-width: "85%"
+
+scatter_dif
+```
+
+# Centrocampisti 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-format: png
+#| fig-dpi: 320
+#| fig-bg: "#0b0b0b"
+#| fig-width: 7
+#| fig-height: 7
+#| out-width: "85%"
+
+scatter_cc
+```
+
+# Attaccanti 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-format: png
+#| fig-dpi: 320
+#| fig-bg: "#0b0b0b"
+#| fig-width: 7
+#| fig-height: 7
+#| out-width: "85%"
+
+scatter_att
 ```
 
 :::

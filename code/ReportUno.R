@@ -9,7 +9,29 @@ library(here)
 
 #df <- read_excel("../data/CremaFT_1910.xlsx")
 #df <- read_excel("data/CremaFT_1910.xlsx")
-df <- read_excel(here("data", "CremaFT_1910.xlsx"))
+df <- read_excel(here("data", "CremaFT_2401.xlsx"))
+
+theme_crema_light <- function(base_size = 14) {
+  theme_minimal(base_size = base_size) +
+    theme(
+      plot.background  = element_rect(fill = "#FFFFFF", color = NA),
+      panel.background = element_rect(fill = "#FFFFFF", color = NA),
+      panel.border     = element_rect(color = "#E6E6E6", fill = NA, linewidth = 0.6),
+      
+      panel.grid.major = element_line(color = "grey", linewidth = 0.4),
+      panel.grid.minor = element_line(color = "grey", linewidth = 0.4),
+      
+      text        = element_text(color = "#111111"),
+      axis.text   = element_text(color = "#111111"),
+      axis.title  = element_text(color = "#111111", face = "bold"),
+      plot.title  = element_text(color = "#FF2E2E", face = "bold", size = 16),
+      plot.subtitle = element_text(color = "#111111"),
+      
+      axis.ticks = element_line(color = "#CFCFCF"),
+      axis.ticks.length = unit(3, "pt")
+    )
+}
+
 
 
 physical_data <- df %>% 
@@ -198,7 +220,7 @@ report_fisico <- function(giocatore) {
   ) %>% tidyr::drop_na(statistica)
   
   # mappa colori sul VALORE della legenda
-  colori <- setNames(c("#FF2E2E", "white"), c(giocatore, "Media Ruolo"))
+  colori <- setNames(c("#FF2E2E", "black"), c(giocatore, "Media Ruolo"))
   
   ggplot(dati_plot, aes(x = valore, y = statistica, fill = tipo)) +
     geom_col(position = position_dodge(width = 0.7), width = 0.6, na.rm = TRUE) +
@@ -206,7 +228,7 @@ report_fisico <- function(giocatore) {
       aes(label = round(valore, 1)),
       position = position_dodge(width = 0.7),
       vjust = -0.3, # etichette fuori dalla barra
-      color = "white", size = 3.8, fontface = "bold",
+      color = "black", size = 3.8, fontface = "bold",
       na.rm = TRUE
     ) +
     coord_cartesian(clip = "off") +
@@ -219,19 +241,7 @@ report_fisico <- function(giocatore) {
       x = NULL, y = NULL
     ) +
     theme_minimal(base_size = 13) +
-    theme(
-      plot.background  = element_rect(fill = "#0b0b0b", color = NA),
-      panel.background = element_rect(fill = "#0b0b0b", color = NA),
-      panel.grid.major = element_line(color = "#222222"),
-      panel.grid.minor = element_blank(),
-      axis.text.y      = element_text(color = "white", face = "bold"),
-      axis.text.x      = element_text(color = "white"),
-      plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      plot.subtitle    = element_text(color = "white"),
-      legend.text      = element_text(color = "white", face = "bold"),
-      legend.position  = "top",
-      plot.margin      = margin(10, 40, 10, 10)
-    )
+    theme_crema_light(14)
 }
 
 
@@ -293,7 +303,7 @@ df_week_long <- df_physicalreport_week %>%
   )
 
 colori_statistiche <- c(
-  acc_index   = "lightblue",
+  acc_index   = "black",
   dec_index   = "purple",
   sprint_dist = "#FF2E2E",
   HID         = "white",
@@ -333,17 +343,6 @@ trend_fisico_giocatore <- function(giocatore) {
       color = NULL
     ) +
     theme_minimal(base_size = 13) +
-    theme(
-      plot.background  = element_rect(fill = "#0b0b0b", color = NA),
-      panel.background = element_rect(fill = "#0b0b0b", color = NA),
-      panel.grid.major = element_line(color = "#222222"),
-      panel.grid.minor = element_blank(),
-      axis.text.y      = element_text(color = "white", face = "bold"),
-      axis.text.x      = element_text(color = "white"),
-      plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      legend.text      = element_text(color = "white", face = "bold"),
-      legend.position  = "top"
-    )
+    theme_crema_light()
 }
-
 

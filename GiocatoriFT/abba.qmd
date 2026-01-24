@@ -13,15 +13,21 @@ format:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportUno.R")
+source("../code/ReportDue.R")
+source("../code/partita_finale.R")
+source("../code/fisico_vs_tecnica.R")
 
+plot_phy_tec_player("N. Abba")
+```
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 report_fisico("N. Abba")
 ```
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/ReportDue.R")
-source("../code/partita_finale.R")
-
 player_sel <- "N. Abba"
 
 ```
@@ -93,3 +99,50 @@ find_most_similar_u17(player_sel,
 ```
 
 :::
+
+# Dinamica di corsa
+
+::: {.panel-tabset}
+# Contact Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../code/run_dynamics.R")
+plot_hid_box_kpi(df_dynamic_hid_match, "N. Abba", metric = "HCD")
+
+```
+
+# Flight Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_hid_box_kpi(df_dynamic_hid_match, "N. Abba", metric = "HFD")
+
+```
+
+# Stride Length
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_hid_box_kpi(df_dynamic_hid_match, "N. Abba", metric = "HSL")
+
+
+```
+
+
+:::
+
+::: {.panel-tabset}
+# Contact Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, "N. Abba", metric = "HCD", top_n = 20)
+
+```
+
+# Flight Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, "N. Abba", metric = "HFD", top_n = 20)
+
+```
+
+# Stride Length
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, "N. Abba", metric = "HSL", top_n = 20)
+
+```
+:::
+

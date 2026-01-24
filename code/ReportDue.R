@@ -7,7 +7,29 @@ library(rlang)
 library(lubridate)
 library(here)
 
-df <- read_excel(here("data", "CremaFT_1910.xlsx"))
+df <- read_excel(here("data", "CremaFT_2401.xlsx"))
+
+
+theme_crema_light <- function(base_size = 14) {
+  theme_minimal(base_size = base_size) +
+    theme(
+      plot.background  = element_rect(fill = "#FFFFFF", color = NA),
+      panel.background = element_rect(fill = "#FFFFFF", color = NA),
+      panel.border     = element_rect(color = "#E6E6E6", fill = NA, linewidth = 0.6),
+      
+      panel.grid.major = element_line(color = "grey", linewidth = 0.4),
+      panel.grid.minor = element_line(color = "grey", linewidth = 0.4),
+      
+      text        = element_text(color = "#111111"),
+      axis.text   = element_text(color = "#111111"),
+      axis.title  = element_text(color = "#111111", face = "bold"),
+      plot.title  = element_text(color = "#FF2E2E", face = "bold", size = 16),
+      plot.subtitle = element_text(color = "#111111"),
+      
+      axis.ticks = element_line(color = "#CFCFCF"),
+      axis.ticks.length = unit(3, "pt")
+    )
+}
 
 
 df_skill <- df %>%
@@ -249,29 +271,17 @@ report_tecnico <- function(giocatore){
     geom_col(position = position_dodge(width = 0.7), width = 0.6) +
     geom_text(aes(label = mapply(lab_fun, metrica, valore)),
               position = position_dodge(width = 0.7),
-              hjust = -0.15, color = "white", size = 3.6, fontface = "bold") +
-    scale_fill_manual(values = c(setNames("#FF2E2E", giocatore), "Media Ruolo" = "white"), name = NULL) +
+              hjust = -0.15, color = "black", size = 3.6, fontface = "bold") +
+    scale_fill_manual(values = c(setNames("#FF2E2E", giocatore), "Media Ruolo" = "black"), name = NULL) +
     labs(
       title    = paste("📊 Report Tecnico –", giocatore),
       subtitle = paste("Confronto con Media Ruolo:", ruolo),
       x = NULL, y = NULL
     ) +
     theme_minimal(base_size = 13) +
-    theme(
-      plot.background   = element_rect(fill = "#0b0b0b", color = NA),
-      panel.background  = element_rect(fill = "#0b0b0b", color = NA),
-      panel.grid.major  = element_line(color = "#222222"),
-      panel.grid.minor  = element_blank(),
-      axis.text.y       = element_text(color = "white", face = "bold"),
-      axis.text.x       = element_text(color = "white"),
-      plot.title        = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      plot.subtitle     = element_text(color = "white"),
-      legend.text       = element_text(color = "white", face = "bold"),
-      legend.position   = "top",
-      plot.margin       = margin(10, 40, 10, 10)
-    )
+    theme_crema_light()
 }
-
+report_tecnico("N. Abba")
 # df_skill ha già: date, player, category, position, week_id
 
 DUR_1TOUCH <- 0.4
@@ -429,17 +439,7 @@ trend_tecnico_indici <- function(giocatore) {
       y = "Indice (0–100)"
     ) +
     theme_minimal(base_size = 13) +
-    theme(
-      plot.background  = element_rect(fill = "#0b0b0b", color = NA),
-      panel.background = element_rect(fill = "#0b0b0b", color = NA),
-      panel.grid.major = element_line(color = "#222222"),
-      panel.grid.minor = element_blank(),
-      axis.text.y      = element_text(color = "white", face = "bold"),
-      axis.text.x      = element_text(color = "white"),
-      plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      legend.text      = element_text(color = "white", face = "bold"),
-      legend.position  = "top"
-    )
+    theme_crema_light()
 }
 
 
@@ -470,17 +470,7 @@ trend_tecnico_possesso <- function(giocatore) {
       fill = NULL
     ) +
     theme_minimal(base_size = 13) +
-    theme(
-      plot.background  = element_rect(fill = "#0b0b0b", color = NA),
-      panel.background = element_rect(fill = "#0b0b0b", color = NA),
-      panel.grid.major = element_line(color = "#222222"),
-      panel.grid.minor = element_blank(),
-      axis.text.y      = element_text(color = "white", face = "bold"),
-      axis.text.x      = element_text(color = "white"),
-      plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      legend.text      = element_text(color = "white", face = "bold"),
-      legend.position  = "top"
-    )
+    theme_crema_light()
 }
 
 trend_tecnico_piede <- function(giocatore) {
@@ -511,16 +501,6 @@ trend_tecnico_piede <- function(giocatore) {
       color = NULL
     ) +
     theme_minimal(base_size = 13) +
-    theme(
-      plot.background  = element_rect(fill = "#0b0b0b", color = NA),
-      panel.background = element_rect(fill = "#0b0b0b", color = NA),
-      panel.grid.major = element_line(color = "#222222"),
-      panel.grid.minor = element_blank(),
-      axis.text.y      = element_text(color = "white", face = "bold"),
-      axis.text.x      = element_text(color = "white"),
-      plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      legend.text      = element_text(color = "white", face = "bold"),
-      legend.position  = "top"
-    )
+    theme_crema_light()
 }
 

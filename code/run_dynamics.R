@@ -1,4 +1,4 @@
-df <- read_excel(here("data", "CremaFT_1910.xlsx"))
+df <- read_excel(here("data", "CremaFT_2401.xlsx"))
 
 #THEME 
 library(tidyverse)
@@ -6,26 +6,30 @@ library(lubridate)
 library(ggrepel)
 library(patchwork)
 library(scales)
+library(gt)
 
-theme_crema_dark <- function(base_size = 14) {
+
+theme_crema_light <- function(base_size = 14) {
   theme_minimal(base_size = base_size) +
     theme(
-      plot.background  = element_rect(fill = "#111111", color = NA),
-      panel.background = element_rect(fill = "#111111", color = NA),
-      legend.background= element_rect(fill = "#111111", color = NA),
-      panel.grid.major = element_line(color = "#333333"),
-      panel.grid.minor = element_line(color = "#222222"),
-      text             = element_text(color = "white"),
-      axis.text        = element_text(color = "white"),
-      axis.title       = element_text(color = "white", face = "bold"),
-      plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      plot.subtitle    = element_text(color = "white"),
-      legend.text      = element_text(color = "white"),
-      legend.title     = element_text(color = "white"),
-      strip.text       = element_text(color = "white", face = "bold"),
-      strip.background = element_rect(fill = "#151515", color = NA)
+      plot.background  = element_rect(fill = "#FFFFFF", color = NA),
+      panel.background = element_rect(fill = "#FFFFFF", color = NA),
+      panel.border     = element_rect(color = "#E6E6E6", fill = NA, linewidth = 0.6),
+      
+      panel.grid.major = element_line(color = "grey", linewidth = 0.4),
+      panel.grid.minor = element_line(color = "grey", linewidth = 0.4),
+      
+      text        = element_text(color = "#111111"),
+      axis.text   = element_text(color = "#111111"),
+      axis.title  = element_text(color = "#111111", face = "bold"),
+      plot.title  = element_text(color = "#FF2E2E", face = "bold", size = 16),
+      plot.subtitle = element_text(color = "#111111"),
+      
+      axis.ticks = element_line(color = "#CFCFCF"),
+      axis.ticks.length = unit(3, "pt")
     )
 }
+
 
 
 # OVERALL
@@ -61,9 +65,6 @@ df_dynamic <- df %>%
 
 num_cols <- setdiff(names(df_dynamic), c("date", "player","category","position", "tag"))
 df_dynamic[num_cols] <- lapply(df_dynamic[num_cols], function(x) suppressWarnings(as.numeric(x)))
-
-View(df_dynamic)
-
 
 df_dynamic_match <- df_dynamic %>% 
   filter(tag %in% c("Partita finale martedi", "Partita finale mercoledi", 
@@ -222,7 +223,6 @@ df_dynamic_sprint_report <- df_dynamic_sprint_match %>%
   ) %>%
   left_join(df_dynamic_sprint_match %>% select(player, category) %>% distinct(), by = "player") %>%
   filter(category != "Goalkeepers") 
-View(df_dynamic_sprint_report)
 
 #sprint per il momento esclusa perchè sono praticamente solo valori mancanti
 
@@ -250,71 +250,12 @@ prep_hid_session <- function(df_dynamic_hid_match) {
     )
 }
 
-plot_hid_kpi_cards <- function(df_dynamic_hid_match,
-                               player_name,
-                               out_th = 2.5, 
-                               index = 1) {
-  
-  hid_obs <- prep_hid_session(df_dynamic_hid_match) %>%
-    filter(player == player_name)
-  
-  make_card <- function(metric_col, metric_label) {
-    d <- hid_obs %>%
-      filter(!is.na(.data[[metric_col]])) %>%
-      mutate(
-        rz = robust_z(.data[[metric_col]]),
-        outlier = abs(rz) >= out_th
-      )
-    
-    mu <- mean(d[[metric_col]], na.rm = TRUE)
-    
-    ggplot(d, aes(x = .data[[metric_col]])) +
-      geom_density(fill = "#2A2A2A", alpha = 0.85, color = NA) +
-      geom_rug(aes(color = outlier), sides = "b", alpha = 0.85, linewidth = 0.6) +
-      geom_point(
-        aes(y = 0, fill = outlier),
-        shape = 21, color = "white", stroke = 0.7,
-        size = 3.6, alpha = 0.95,
-        position = position_jitter(height = 0.0001)
-      ) +
-      geom_vline(xintercept = mu, linetype = "dashed", color = "gray60", linewidth = 1.1) +
-      scale_fill_manual(values = c(`FALSE` = "#8A8A8A", `TRUE` = "#FF2E2E"), guide = "none") +
-      scale_color_manual(values = c(`FALSE` = "#8A8A8A", `TRUE` = "#FF2E2E"), guide = "none") +
-      labs(
-        title = metric_label,
-        subtitle = paste0("HID baseline + osservazioni (outlier |z|≥", out_th, ")"),
-        x = NULL, y = NULL
-      ) +
-#      theme_crema_dark(13) +
-      theme(
-        axis.text.y = element_blank(),
-        axis.ticks.y = element_blank(),
-        panel.grid.major.y = element_blank(),
-        panel.grid.minor.y = element_blank(),
-        plot.title = element_text(size = 14),
-        plot.subtitle = element_text(size = 11)
-      )
-  }
-  
-  
-  plots <- list(
-    make_card("HCD_mean", "HCD (Contact Duration) — mean"),
-    make_card("HFD_mean", "HFD (Flight Duration) — mean"), 
-    make_card("HSL_mean", "HSL (Stride Length) — mean")
-  )
-  
-  plots[[index]]
-}
-
-plot_hid_kpi_cards(df_dynamic_hid_match, "L. Gramignoli", index = 2)
-
-
 gt_hid_outlier_table <- function(df_dynamic_hid_match,
-                                 player_name,
-                                 metric = c("HCD", "HFD", "HSL"),
-                                 out_th = 2.5,
-                                 top_n = 10,
-                                 show_baseline_row = TRUE) {
+                                        player_name,
+                                        metric = c("HCD", "HFD", "HSL"),
+                                        out_th = 2.5,
+                                        top_n = NULL,              # NULL = tutti
+                                        show_baseline_row = TRUE) {
   
   metric <- match.arg(metric)
   
@@ -337,9 +278,7 @@ gt_hid_outlier_table <- function(df_dynamic_hid_match,
       value = .data[[col_name]]
     )
   
-  if (nrow(d) == 0) {
-    stop(paste0("Nessun dato disponibile per ", player_name, " su ", lab))
-  }
+  if (nrow(d) == 0) stop(paste0("Nessun dato disponibile per ", player_name, " su ", lab))
   
   baseline_mean <- mean(d$value, na.rm = TRUE)
   
@@ -349,12 +288,11 @@ gt_hid_outlier_table <- function(df_dynamic_hid_match,
       delta = value - baseline_mean,
       z_robusto = robust_z(value),
       outlier_flag = abs(z_robusto) >= out_th
-    ) %>%
-    arrange(desc(abs(z_robusto)))
+    )
   
   out_tbl <- d2 %>%
     filter(outlier_flag) %>%
-    slice_head(n = top_n) %>%
+    arrange(date) %>%  # ✅ ordine cronologico
     transmute(
       type,
       date,
@@ -362,9 +300,13 @@ gt_hid_outlier_table <- function(df_dynamic_hid_match,
       value,
       baseline_mean,
       delta,
-      z_robusto,
-      outlier = if_else(outlier_flag, "✅", "")
+      z_robusto
     )
+  
+  # opzionale: limita N ma senza perdere la cronologia (prende le prime N nel tempo)
+  if (!is.null(top_n)) {
+    out_tbl <- out_tbl %>% slice_head(n = top_n)
+  }
   
   if (show_baseline_row) {
     base_row <- tibble(
@@ -374,20 +316,16 @@ gt_hid_outlier_table <- function(df_dynamic_hid_match,
       value = NA_real_,
       baseline_mean = baseline_mean,
       delta = NA_real_,
-      z_robusto = NA_real_,
-      outlier = ""   # character coerente
+      z_robusto = NA_real_
     )
-    
     out_tbl <- bind_rows(base_row, out_tbl)
   }
   
-  
-  # tabella gt (stile simile al tuo)
-  gt_tbl <- out_tbl %>%
+  out_tbl %>%
     gt() %>%
     tab_header(
       title = md(paste0("**", player_name, " — ", lab, "**")),
-      subtitle = md(paste0("Outlier HID (|z| ≥ ", out_th, ") — Top ", top_n, " | unità: ", unit))
+      subtitle = md(paste0("Outlier HID (|z| ≥ ", out_th, ") — ordinati per data | unità: ", unit))
     ) %>%
     cols_label(
       type = "Tipo",
@@ -396,8 +334,7 @@ gt_hid_outlier_table <- function(df_dynamic_hid_match,
       value = "Valore",
       baseline_mean = "Baseline",
       delta = "Delta",
-      z_robusto = "Z robusto",
-      outlier = "Outlier"
+      z_robusto = "Z robusto"
     ) %>%
     fmt_date(columns = date, date_style = 3) %>%
     fmt_number(columns = c(value, baseline_mean, delta), decimals = 3) %>%
@@ -405,30 +342,119 @@ gt_hid_outlier_table <- function(df_dynamic_hid_match,
     tab_style(
       style = list(cell_text(weight = "bold", color = "#FF2E2E")),
       locations = cells_title(groups = "title")
-    ) %>%
-    tab_style(
-      style = list(cell_text(weight = "bold")),
-      locations = cells_body(columns = outlier)
-    ) %>%
-    tab_options(
-      table.background.color = "#111111",
-      heading.background.color = "#111111",
-      table.font.color = "white",
-      row.striping.background_color = "#151515",
-      row.striping.include_table_body = TRUE,
-      table.border.top.style = "hidden",
-      table.border.bottom.style = "hidden",
-      data_row.padding = px(6)
-    )
-  
-  gt_tbl
+    ) 
 }
 
-tb_hcd <- gt_hid_outlier_table(df_dynamic_hid_match, "M. Varisco", metric = "HCD", top_n = 10)
-tb_hcd
 
-tb_hsl <- gt_hid_outlier_table(df_dynamic_hid_match, "R. Tomella", metric = "HSL", top_n = 10)
-tb_hsl
+plot_hid_box_kpi <- function(df_dynamic_hid_match,
+                             player_name,
+                             metric = c("HCD", "HFD", "HSL"),
+                             out_th = 2.5,
+                             use_light_theme = TRUE,
+                             label_fmt = "%d/%m") {
+  
+  metric <- match.arg(metric)
+  
+  hid_obs <- prep_hid_session(df_dynamic_hid_match) %>%
+    filter(player == player_name)
+  
+  metric_info <- list(
+    HCD = list(col = "HCD_mean", label = "HCD (Contact Duration) — mean", unit = "sec"),
+    HFD = list(col = "HFD_mean", label = "HFD (Flight Duration) — mean", unit = "sec"),
+    HSL = list(col = "HSL_mean", label = "HSL (Stride Length) — mean", unit = "cm")
+  )
+  
+  col_name <- metric_info[[metric]]$col
+  lab <- metric_info[[metric]]$label
+  unit <- metric_info[[metric]]$unit
+  
+  d <- hid_obs %>%
+    filter(!is.na(.data[[col_name]])) %>%
+    transmute(
+      date, tag,
+      value = .data[[col_name]]
+    ) %>%
+    mutate(
+      z_robusto = robust_z(value),
+      outlier_flag = abs(z_robusto) >= out_th,
+      label = if_else(outlier_flag, format(date, label_fmt), NA_character_)
+    )
+  
+  n_sessions <- nrow(d)
+  n_outliers <- sum(d$outlier_flag, na.rm = TRUE)
+  med <- median(d$value, na.rm = TRUE)
+  q25 <- quantile(d$value, 0.25, na.rm = TRUE)
+  q75 <- quantile(d$value, 0.75, na.rm = TRUE)
+  
+  kpi_txt <- paste0(
+    "n: ", n_sessions,
+    "  |  outlier: ", n_outliers,
+    "  |  median: ", round(med, 3),
+    "  |  IQR: ", round(q25, 3), "–", round(q75, 3)
+  )
+  
+  # coordinate per posizionare testo in alto a destra (prima del flip)
+  x_anno <- 1.25
+  y_anno <- max(d$value, na.rm = TRUE)
+  
+  
+  if (nrow(d) == 0) stop(paste0("Nessun dato disponibile per ", player_name, " su ", lab))
+  
+  mu <- mean(d$value, na.rm = TRUE)
+  
+  p <- ggplot(d, aes(x = "", y = value)) +
+    geom_boxplot(
+      width = 0.25, outlier.shape = NA,
+      fill = ifelse(use_light_theme, "#F2F2F2", "#2A2A2A"),
+      color = ifelse(use_light_theme, "#111111", "white"),
+      linewidth = 0.9
+    ) +
+    geom_point(
+      aes(fill = outlier_flag),
+      shape = 21,
+      color = ifelse(use_light_theme, "#111111", "white"),
+      stroke = 0.7,
+      size = 4,
+      alpha = 0.95,
+      position = position_jitter(width = 0.12, height = 0)
+    ) +
+    # etichette SOLO outlier
+    ggrepel::geom_text_repel(
+      data = d %>% filter(outlier_flag),
+      aes(label = label),
+      size = 3.8,
+      color = ifelse(use_light_theme, "#111111", "white"),
+      box.padding = 0.35,
+      point.padding = 0.25,
+      max.overlaps = 50,
+      min.segment.length = 0,
+      segment.color = "gray60"
+    ) +
+    geom_hline(yintercept = mu, linetype = "dashed", color = "gray60", linewidth = 1.1) +
+    scale_fill_manual(values = c(`FALSE` = "#8A8A8A", `TRUE` = "#FF2E2E"), guide = "none") +
+    labs(
+      title = lab,
+      subtitle = paste0(player_name, " — outlier |z| ≥ ", out_th, " (etichette = data)"),
+      x = NULL,
+      y = paste0("Valore (", unit, ")")
+    ) + annotate(
+      "label",
+      x = x_anno, y = y_anno,
+      label = kpi_txt,
+      hjust = 1, vjust = 1,
+      size = 3.6,
+      label.size = 0.35,
+      label.r = unit(0.15, "lines"),
+      fill = "#FFFFFF",
+      color = "#111111"
+    ) +
+  
+    coord_flip() + 
+    theme_crema_light(14) 
+  
+  
+  p
+}
 
-tb_hfd <- gt_hid_outlier_table(df_dynamic_hid_match, "L. Gramignoli", metric = "HFD", top_n = 10)
-tb_hfd
+
+

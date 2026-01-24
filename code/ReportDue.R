@@ -25,12 +25,12 @@ theme_crema_light <- function(base_size = 14) {
       axis.title  = element_text(color = "#111111", face = "bold"),
       plot.title  = element_text(color = "#FF2E2E", face = "bold", size = 16),
       plot.subtitle = element_text(color = "#111111"),
+      axis.text.x = element_text(angle = 45, hjust = 1),
       
       axis.ticks = element_line(color = "#CFCFCF"),
       axis.ticks.length = unit(3, "pt")
     )
 }
-
 
 df_skill <- df %>%
   transmute(
@@ -409,7 +409,7 @@ colori_indici <- c(
   "Indice Possesso"          = "#FF2E2E",
   "Indice Tocchi"            = "lightblue",
   "Indice Velocità Rilascio" = "green",
-  "Indice Tempo p/Possesso"  = "white"
+  "Indice Tempo p/Possesso"  = "black"
 )
 
 
@@ -438,6 +438,9 @@ trend_tecnico_indici <- function(giocatore) {
       x = "Settimana",
       y = "Indice (0–100)"
     ) +
+    scale_x_discrete(
+      breaks = function(x) x[seq(1, length(x), by = 2)]
+    ) + 
     theme_minimal(base_size = 13) +
     theme_crema_light()
 }
@@ -469,6 +472,9 @@ trend_tecnico_possesso <- function(giocatore) {
       y = "Distribuzione % possesso",
       fill = NULL
     ) +
+    scale_x_discrete(
+      breaks = function(x) x[seq(1, length(x), by = 2)]
+    ) + 
     theme_minimal(base_size = 13) +
     theme_crema_light()
 }
@@ -500,7 +506,9 @@ trend_tecnico_piede <- function(giocatore) {
       y = "Percentuale tocchi",
       color = NULL
     ) +
+    scale_x_discrete(
+      breaks = function(x) x[seq(1, length(x), by = 2)]
+    ) + 
     theme_minimal(base_size = 13) +
     theme_crema_light()
 }
-

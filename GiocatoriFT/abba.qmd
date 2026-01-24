@@ -38,9 +38,14 @@ player_sel <- "N. Abba"
 report_tecnico(player_sel)
 ```
 
-# Partita Finale 
+# Partita Finale Allenamento
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 report_tecnico_pf(player_sel)
+```
+
+# Partite Ufficiali
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_tecnico_match(player_sel)
 ```
 
 :::
@@ -125,6 +130,8 @@ plot_hid_box_kpi(df_dynamic_hid_match, "N. Abba", metric = "HSL")
 
 
 :::
+
+## Valori anomali
 
 ::: {.panel-tabset}
 # Contact Duration

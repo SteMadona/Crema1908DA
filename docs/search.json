@@ -75,5 +75,12 @@
     "title": "R. De Martino",
     "section": "Attaccante",
     "text": "Attaccante"
+  },
+  {
+    "objectID": "GiocatoriFT/abba.html#valori-anomali",
+    "href": "GiocatoriFT/abba.html#valori-anomali",
+    "title": "N. Abba",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nN. Abba — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.148\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN. Abba — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.375\nNA\nNA\n\n\nsession\nFri, Nov 28, 2025\nPartita finale venerdi\n0.325\n0.375\n−0.050\n−3.37\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN. Abba — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n315.314\nNA\nNA\n\n\nsession\nFri, Nov 28, 2025\nPartita finale venerdi\n265.500\n315.314\n−49.814\n−4.68"
   }
 ]

@@ -132,7 +132,7 @@ plot_player_wheel <- function(pcts_df, player_name) {
     
     # etichette esterne: più fuori e più “tangenti” al cerchio
     geom_text(aes(y = 118, label = metric, angle = angle, hjust = hjust),
-              color = "white", 
+              color = "black", 
               size = 3.9, 
               fontface = "bold") +
     
@@ -147,13 +147,15 @@ plot_player_wheel <- function(pcts_df, player_name) {
     
     theme_void() +
     theme(
-      plot.background  = element_rect(fill = "#0b0b0b", color = NA),
-      panel.background = element_rect(fill = "#0b0b0b", color = NA),
+      plot.background  = element_rect(fill = "white", color = NA),
+      panel.background = element_rect(fill = "white", color = NA),
       plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      plot.subtitle    = element_text(color = "white"),
+      plot.subtitle    = element_text(color = "black"),
       plot.margin      = margin(10, 55, 10, 20)
     )
 }
 
 
 pcts <- make_player_pcts(df_physicalreport, agg)
+
+plot_player_wheel(pcts, "N. Abba")

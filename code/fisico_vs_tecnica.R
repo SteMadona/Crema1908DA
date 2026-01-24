@@ -17,11 +17,13 @@ player_list <- c("G. Recino", "E. Maccherini", "L. Niculae", "S. Azzali", "A. Ar
 
 # Calcolo la media dei tocchi totali per giocatore
 df_touch_avg <- df_skill %>%
+  filter(player %in% player_list) %>%
   mutate(touches_total = touch_L + touch_R) %>%
   group_by(player) %>%
   summarise(touches_total_avg = mean(touches_total, na.rm = TRUE), .groups = "drop")
 
 df_physicalreport <- df_physicalreport %>%
+  filter(player %in% player_list) %>%
   mutate(
     physical_index_raw =(
       scales::rescale(z5_min, to = c(0, 1), from = range(z5_min, na.rm = T)) * 0.2 + 

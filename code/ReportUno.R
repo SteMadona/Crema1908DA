@@ -26,12 +26,12 @@ theme_crema_light <- function(base_size = 14) {
       axis.title  = element_text(color = "#111111", face = "bold"),
       plot.title  = element_text(color = "#FF2E2E", face = "bold", size = 16),
       plot.subtitle = element_text(color = "#111111"),
+      axis.text.x = element_text(angle = 45, hjust = 1),
       
       axis.ticks = element_line(color = "#CFCFCF"),
       axis.ticks.length = unit(3, "pt")
     )
 }
-
 
 
 physical_data <- df %>% 
@@ -342,7 +342,11 @@ trend_fisico_giocatore <- function(giocatore) {
       y = NULL,
       color = NULL
     ) +
+    scale_x_discrete(
+      breaks = function(x) x[seq(1, length(x), by = 2)]
+    ) +
     theme_minimal(base_size = 13) +
-    theme_crema_light()
+    theme_crema_light() 
 }
+
 

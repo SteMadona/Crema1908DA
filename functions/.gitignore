@@ -1,0 +1,4 @@
+node_modules/
+*.local
+acl.json
+functions/acl.json

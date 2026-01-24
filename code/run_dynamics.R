@@ -285,7 +285,7 @@ plot_hid_kpi_cards <- function(df_dynamic_hid_match,
         subtitle = paste0("HID baseline + osservazioni (outlier |z|≥", out_th, ")"),
         x = NULL, y = NULL
       ) +
-      theme_crema_dark(13) +
+#      theme_crema_dark(13) +
       theme(
         axis.text.y = element_blank(),
         axis.ticks.y = element_blank(),
@@ -306,7 +306,7 @@ plot_hid_kpi_cards <- function(df_dynamic_hid_match,
   plots[[index]]
 }
 
-plot_hid_kpi_cards(df_dynamic_hid_match, "L. Gramignoli", index = 3)
+plot_hid_kpi_cards(df_dynamic_hid_match, "L. Gramignoli", index = 2)
 
 
 gt_hid_outlier_table <- function(df_dynamic_hid_match,

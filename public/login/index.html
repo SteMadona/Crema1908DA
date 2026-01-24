@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Login - Crema1908</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; max-width: 520px; margin: 48px auto; padding: 0 16px; }
+    input { width: 100%; padding: 10px; font-size: 16px; margin: 8px 0; }
+    button { padding: 10px 14px; font-size: 16px; cursor: pointer; }
+    .msg { margin-top: 12px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Accedi</h1>
+  <p>Inserisci la tua email. Riceverai un link per entrare.</p>
+
+  <input id="email" type="email" placeholder="nome@..." />
+  <button id="send">Invia link</button>
+
+  <div class="msg" id="msg"></div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    import {
+      getAuth,
+      sendSignInLinkToEmail,
+      isSignInWithEmailLink,
+      signInWithEmailLink
+    } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+    // INCOLLA QUI il tuo firebaseConfig (solo l'oggetto)
+    const firebaseConfig = {
+      apiKey: "AIzaSyDgDBzrGFMrU9iOqvV7pVjMdkeMB3-Fw58",
+      authDomain: "crema1908dataanalysis-1c14b.firebaseapp.com",
+      projectId: "crema1908dataanalysis-1c14b",
+      storageBucket: "crema1908dataanalysis-1c14b.firebasestorage.app",
+      messagingSenderId: "1066689076544",
+      appId: "1:1066689076544:web:36a396be00ab80e28daea5",
+      measurementId: "G-3S38S6N9X7"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const msgEl = document.getElementById("msg");
+    const setMsg = (t) => msgEl.textContent = t;
+
+    const actionCodeSettings = {
+      url: `${location.origin}/login/`,
+      handleCodeInApp: true
+    };
+
+    // Se siamo tornati da un link di login, completa il sign-in
+    if (isSignInWithEmailLink(auth, window.location.href)) {
+      let email = window.localStorage.getItem("emailForSignIn");
+      if (!email) email = window.prompt("Conferma la tua email:");
+
+      try {
+        const cred = await signInWithEmailLink(auth, email, window.location.href);
+        window.localStorage.removeItem("emailForSignIn");
+
+        const idToken = await cred.user.getIdToken();
+        // Scambia ID token -> session cookie (Function)
+        const resp = await fetch("/api/sessionLogin", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ idToken })
+        });
+
+        if (!resp.ok) {
+          setMsg("Accesso non autorizzato o errore di sessione.");
+        } else {
+          window.location.href = "/";
+        }
+      } catch (e) {
+        setMsg("Errore durante l'accesso. Riprova.");
+      }
+    }
+
+    document.getElementById("send").onclick = async () => {
+      const email = document.getElementById("email").value.trim().toLowerCase();
+      if (!email) return setMsg("Inserisci una email valida.");
+
+      try {
+        await sendSignInLinkToEmail(auth, email, actionCodeSettings);
+        window.localStorage.setItem("emailForSignIn", email);
+        setMsg("Link inviato! Controlla la posta e clicca sul link.");
+      } catch (e) {
+        setMsg("Errore nell'invio del link. Verifica l'email e riprova.");
+      }
+    };
+  </script>
+</body>
+</html>

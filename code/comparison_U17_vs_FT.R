@@ -1,5 +1,26 @@
 df_u17 <- read_excel(here("data", "CremaU17_2410.xlsx"))
 
+theme_crema_light <- function(base_size = 14) {
+  theme_minimal(base_size = base_size) +
+    theme(
+      plot.background  = element_rect(fill = "#FFFFFF", color = NA),
+      panel.background = element_rect(fill = "#FFFFFF", color = NA),
+      panel.border     = element_rect(color = "#E6E6E6", fill = NA, linewidth = 0.6),
+      
+      panel.grid.major = element_line(color = "grey", linewidth = 0.4),
+      panel.grid.minor = element_line(color = "grey", linewidth = 0.4),
+      
+      text        = element_text(color = "#111111"),
+      axis.text   = element_text(color = "#111111"),
+      axis.title  = element_text(color = "#111111", face = "bold"),
+      plot.title  = element_text(color = "#FF2E2E", face = "bold", size = 16),
+      plot.subtitle = element_text(color = "#111111"),
+
+      axis.ticks = element_line(color = "#CFCFCF"),
+      axis.ticks.length = unit(3, "pt")
+    )
+}
+
 
 physical_data_u17 <- df_u17 %>% 
   transmute(
@@ -400,11 +421,11 @@ find_most_similar_u17 <- function(player_ft,
       ))
     
     plt <- ggplot(plot_df, aes(x = who, y = value, fill = who)) +
-      geom_col(width = 0.72, color = "#0b0b0b") +
-      geom_text(aes(label = val_lbl), vjust = -0.35, color = "white",
+      geom_col(width = 0.72, color = "white") +
+      geom_text(aes(label = val_lbl), vjust = -0.35, color = "black",
                 fontface = "bold", size = 3.2) +
       facet_wrap(~ variable, scales = "free_y", ncol = 2) +
-      scale_fill_manual(values = setNames(c("white", "#FF2E2E"), c(lab_ft, lab_u17))) +
+      scale_fill_manual(values = setNames(c("black", "#FF2E2E"), c(lab_ft, lab_u17))) +
       labs(
         title = "Confronto FT vs U17 più simile (valori originali)",
         subtitle = paste0(lab_ft, " | ", lab_u17,
@@ -413,21 +434,7 @@ find_most_similar_u17 <- function(player_ft,
       ) +
       coord_cartesian(clip = "off") +
       theme_minimal(base_size = 12) +
-      theme(
-        plot.background  = element_rect(fill = "#0b0b0b", color = NA),
-        panel.background = element_rect(fill = "#0b0b0b", color = NA),
-        panel.grid.major = element_line(color = "#222222"),
-        panel.grid.minor = element_blank(),
-        strip.text       = element_text(color = "white", face = "bold", size = 12),
-        axis.text.x      = element_text(color = "white", face = "bold", size = 10),
-        axis.text.y      = element_text(color = "white", size = 10),
-        plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
-        plot.subtitle    = element_text(color = "white"),
-        legend.position  = "top",
-        legend.text      = element_text(color = "white", face = "bold"),
-        panel.spacing    = unit(1.1, "lines"),
-        plot.margin      = margin(12, 12, 12, 12)
-      )
+      theme_crema_light()
   }
   
   

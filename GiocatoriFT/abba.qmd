@@ -16,19 +16,24 @@ source("../code/ReportUno.R")
 source("../code/ReportDue.R")
 source("../code/partita_finale.R")
 source("../code/fisico_vs_tecnica.R")
-
-plot_phy_tec_player("N. Abba")
-```
-
-
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-report_fisico("N. Abba")
-```
+source("../code/comparison_U17_vs_FT.R")
+source("../code/player_wheel.R")
+source("../code/run_dynamics.R")
 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
 player_sel <- "N. Abba"
+plot_phy_tec_player(player_sel)
+```
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_fisico(player_sel)
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+player_sel <- player_sel
 
 ```
 
@@ -61,8 +66,7 @@ report_tecnico_match(player_sel)
 #| fig-height: 7
 #| out-width: "85%"
 
-source("../code/player_wheel.R")
-plot_player_wheel(pcts, "N. Abba")
+plot_player_wheel(pcts, player_sel)
 
 
 ```
@@ -70,20 +74,16 @@ plot_player_wheel(pcts, "N. Abba")
 # Trend di forma
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/ReportUno.R")
-
-trend_fisico_giocatore("N. Abba")
+trend_fisico_giocatore(player_sel)
 
 ```
 
 # Trend tecnico
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/ReportDue.R")
-
-trend_tecnico_indici("N. Abba")
-trend_tecnico_possesso("N. Abba")
-trend_tecnico_piede("N. Abba")
+trend_tecnico_indici(player_sel)
+trend_tecnico_possesso(player_sel)
+trend_tecnico_piede(player_sel)
 
 ```
 
@@ -92,7 +92,6 @@ trend_tecnico_piede("N. Abba")
 ::: {.panel-tabset}
 # Valori Fisici
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/comparison_U17_vs_FT.R")
 find_most_similar_u17(player_sel, 
                       ft_data_phy, u17_data_phy, return_plot = T)$plot
 ```
@@ -110,20 +109,19 @@ find_most_similar_u17(player_sel,
 ::: {.panel-tabset}
 # Contact Duration
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/run_dynamics.R")
-plot_hid_box_kpi(df_dynamic_hid_match, "N. Abba", metric = "HCD")
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HCD")
 
 ```
 
 # Flight Duration
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot_hid_box_kpi(df_dynamic_hid_match, "N. Abba", metric = "HFD")
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HFD")
 
 ```
 
 # Stride Length
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot_hid_box_kpi(df_dynamic_hid_match, "N. Abba", metric = "HSL")
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HSL")
 
 
 ```
@@ -136,19 +134,19 @@ plot_hid_box_kpi(df_dynamic_hid_match, "N. Abba", metric = "HSL")
 ::: {.panel-tabset}
 # Contact Duration
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-gt_hid_outlier_table(df_dynamic_hid_match, "N. Abba", metric = "HCD", top_n = 20)
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HCD", top_n = 20)
 
 ```
 
 # Flight Duration
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-gt_hid_outlier_table(df_dynamic_hid_match, "N. Abba", metric = "HFD", top_n = 20)
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HFD", top_n = 20)
 
 ```
 
 # Stride Length
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-gt_hid_outlier_table(df_dynamic_hid_match, "N. Abba", metric = "HSL", top_n = 20)
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HSL", top_n = 20)
 
 ```
 :::

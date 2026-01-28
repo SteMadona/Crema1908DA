@@ -82,7 +82,7 @@ plot_player_wheel <- function(pcts_df, player_name) {
       id = as.integer(metric),
       
       # colori spicchi
-      fill = if_else(group == "Physical", "#FF2E2E", "white"),
+      fill = if_else(group == "Physical", "#FF2E2E", "#000000"),
       
       # testo numeri: nero sulla parte bianca, bianco sulla parte rossa
       txt = if_else(group == "Physical", "white", "#000000"),
@@ -131,12 +131,19 @@ plot_player_wheel <- function(pcts_df, player_name) {
               alpha = 0.35, nudge_y = 0.15) +
     
     # etichette esterne: più fuori e più “tangenti” al cerchio
-    geom_text(aes(y = 118, label = metric, angle = angle, hjust = hjust),
+    geom_text(aes(y = 118, label = metric, angle = angle),
+              hjust = 0.5, 
               color = "black", 
               size = 3.9, 
               fontface = "bold") +
     
     scale_fill_identity() +
+    # subito prima di coord_polar()
+    scale_x_continuous(
+      limits = c(0.5, 8.5),
+      breaks = 1:8,
+      expand = c(0, 0)
+    ) + 
     coord_polar(start = pi/2, clip = "off") +
     scale_y_continuous(limits = c(0, 130)) +
     

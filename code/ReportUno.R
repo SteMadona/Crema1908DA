@@ -11,25 +11,37 @@ library(here)
 #df <- read_excel("data/CremaFT_1910.xlsx")
 df <- read_excel(here("data", "CremaFT_2401.xlsx"))
 
-theme_crema_light <- function(base_size = 14) {
-  theme_minimal(base_size = base_size) +
+
+theme_crema_pro <- function(base_size = 12, base_family = "") {
+  theme_minimal(base_size = base_size, base_family = base_family) +
     theme(
-      plot.background  = element_rect(fill = "#FFFFFF", color = NA),
-      panel.background = element_rect(fill = "#FFFFFF", color = NA),
+      plot.background  = element_rect(fill = "white", color = NA),
+      panel.background = element_rect(fill = "white", color = NA),
+      
+      # griglia: leggera, “da report”
+      panel.grid.minor = element_blank(),
+      panel.grid.major.y = element_line(color = "#E9E9E9", linewidth = 0.4),
+      panel.grid.major.x = element_line(color = "#F2F2F2", linewidth = 0.3),
+      
+      # bordo pannello sottile
       panel.border     = element_rect(color = "#E6E6E6", fill = NA, linewidth = 0.6),
       
-      panel.grid.major = element_line(color = "grey", linewidth = 0.4),
-      panel.grid.minor = element_line(color = "grey", linewidth = 0.4),
+      # testi
+      plot.title    = element_text(face = "bold", size = base_size * 1.25, color = "#111111"),
+      plot.subtitle = element_text(size = base_size * 0.95, color = "#444444"),
+      plot.caption  = element_text(size = base_size * 0.8, color = "#666666"),
       
-      text        = element_text(color = "#111111"),
-      axis.text   = element_text(color = "#111111"),
-      axis.title  = element_text(color = "#111111", face = "bold"),
-      plot.title  = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      plot.subtitle = element_text(color = "#111111"),
-      axis.text.x = element_text(angle = 45, hjust = 1),
+      axis.title = element_text(face = "bold", color = "#111111"),
+      axis.text  = element_text(color = "#222222"),
       
-      axis.ticks = element_line(color = "#CFCFCF"),
-      axis.ticks.length = unit(3, "pt")
+      # legenda “media style”
+      legend.position = "top",
+      legend.direction = "horizontal",
+      legend.title = element_blank(),
+      legend.text = element_text(size = base_size * 0.9),
+      legend.key = element_rect(fill = NA, color = NA),
+      
+      plot.margin = margin(10, 14, 10, 10)
     )
 }
 
@@ -241,7 +253,7 @@ report_fisico <- function(giocatore) {
       x = NULL, y = NULL
     ) +
     theme_minimal(base_size = 13) +
-    theme_crema_light(14)
+    theme_crema_pro()
 }
 
 
@@ -306,7 +318,7 @@ colori_statistiche <- c(
   acc_index   = "black",
   dec_index   = "purple",
   sprint_dist = "#FF2E2E",
-  HID         = "white",
+  HID         = "cyan",
   topspeed    = "green",
   workrate    = "gray50"
 )
@@ -334,8 +346,16 @@ trend_fisico_giocatore <- function(giocatore) {
     )
   ) +
     geom_line(size = 1.5) +
-    geom_point(size = 2) +
+    geom_point(
+      size = 2,
+      shape = 21,
+      stroke = 0.9,
+      aes(fill = statistica),
+      color = "black",   # bordo bianco
+      show.legend = F
+    ) +
     scale_color_manual(values = colori_statistiche) +
+    scale_fill_manual(values = colori_statistiche) +
     labs(
       title = paste("📈 Trend Fisico Settimanale –", giocatore),
       x = "Settimana",
@@ -346,7 +366,11 @@ trend_fisico_giocatore <- function(giocatore) {
       breaks = function(x) x[seq(1, length(x), by = 2)]
     ) +
     theme_minimal(base_size = 13) +
-    theme_crema_light() 
+    theme_crema_pro() + 
+    theme(
+      axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)
+    )
 }
 
+trend_fisico_giocatore("N. Abba")
 

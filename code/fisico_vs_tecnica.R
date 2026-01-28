@@ -101,7 +101,7 @@ scatter_phy_tec <- ggplot(df_scatter, aes(x = physical_index, y = quality_index)
   ) +
   
   theme_minimal(base_size = 14) +
-  theme_crema_light()
+  theme_crema_pro()
 
 scatter_phy_tec
 
@@ -147,7 +147,7 @@ plot_phy_tec_player <- function(player_name) {
       fill = "Ruolo"
     ) +
     ggplot2::theme_minimal(base_size = 14) +
-    theme_crema_light() +
+    theme_crema_pro() +
     ggplot2::scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.3), expand = c(0, 0)) +
     ggplot2::scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.3), expand = c(0, 0))
   

@@ -257,7 +257,7 @@ report_tecnico_pf <- function(giocatore){
       x = NULL, y = NULL
     ) +
     theme_minimal(base_size = 13) +
-    theme_crema_light()
+    theme_crema_pro()
 }
 
 
@@ -520,5 +520,5 @@ report_tecnico_match <- function(giocatore){
       x = NULL, y = NULL
     ) +
     theme_minimal(base_size = 13) +
-    theme_crema_light()
+    theme_crema_pro()
 }

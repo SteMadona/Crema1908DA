@@ -6,6 +6,7 @@ library(scales)
 library(rlang)
 library(lubridate)
 library(here)
+library(ggrepel)
 
 df <- read_excel(here("data", "CremaFT_2401.xlsx"))
 
@@ -32,6 +33,40 @@ theme_crema_light <- function(base_size = 14) {
     )
 }
 
+theme_crema_pro <- function(base_size = 12, base_family = "") {
+  theme_minimal(base_size = base_size, base_family = base_family) +
+    theme(
+      plot.background  = element_rect(fill = "white", color = NA),
+      panel.background = element_rect(fill = "white", color = NA),
+      
+      # griglia: leggera, “da report”
+      panel.grid.minor = element_blank(),
+      panel.grid.major.y = element_line(color = "#E9E9E9", linewidth = 0.4),
+      panel.grid.major.x = element_line(color = "#F2F2F2", linewidth = 0.3),
+      
+      # bordo pannello sottile
+      panel.border     = element_rect(color = "#E6E6E6", fill = NA, linewidth = 0.6),
+      
+      # testi
+      plot.title    = element_text(face = "bold", size = base_size * 1.25, color = "#111111"),
+      plot.subtitle = element_text(size = base_size * 0.95, color = "#444444"),
+      plot.caption  = element_text(size = base_size * 0.8, color = "#666666"),
+      
+      axis.title = element_text(face = "bold", color = "#111111"),
+      axis.text  = element_text(color = "#222222"),
+      
+      # legenda “media style”
+      legend.position = "top",
+      legend.direction = "horizontal",
+      legend.title = element_blank(),
+      legend.text = element_text(size = base_size * 0.9),
+      legend.key = element_rect(fill = NA, color = NA),
+      
+      plot.margin = margin(10, 14, 10, 10)
+    )
+}
+
+
 df_skill <- df %>%
   transmute(
     date        = as.Date(Date),
@@ -48,7 +83,7 @@ df_skill <- df %>%
     RV_Z3       = `RV Zone 3 [10-15( m/s)]`,
     RV_Z4       = `RV Zone 4 [15-20( m/s)]`,
     RV_Z5       = `RV Zone 5 [20-25( m/s)]`,
-    RV_Z6       = `RV Zone 6 [> 25( m/s)]`,
+#    RV_Z6       = `RV Zone 6 [> 25( m/s)]`,
     
     LongPoss    = `Long possessions (#)`,
     ShortPoss   = `Short Possessions (#)`,
@@ -70,7 +105,7 @@ df_skill <- df %>%
 
 names(df_skill) <- c("date", "player", "category", "position",
                      "touch_L", "touch_R", "touch_per_min",
-                     "rv_z1", "rv_z2", "rv_z3", "rv_z4", "rv_z5", "rv_z6",
+                     "rv_z1", "rv_z2", "rv_z3", "rv_z4", "rv_z5", #"rv_z6",
                      "pos_long", "pos_short", "one_touch",
                      "one_touch_R", "one_touch_L",
                      "releases_per_min", "release_L", "release_R",
@@ -96,7 +131,7 @@ DUR_SHORT  <- 2.0
 DUR_LONG   <- 4.0
 
 # pesi per indice velocità di rilascio (zone più alte valgono di più)
-RV_WEIGHTS <- c(1, 2, 3, 4, 5, 6)
+RV_WEIGHTS <- c(1, 2, 3, 4, 5)
 
 # pesi per indice di possesso (composito)
 W_POSSESSION <- c(
@@ -124,7 +159,7 @@ agg <- df_skill %>%
     rv_z3 = sum(rv_z3, na.rm = TRUE),
     rv_z4 = sum(rv_z4, na.rm = TRUE),
     rv_z5 = sum(rv_z5, na.rm = TRUE),
-    rv_z6 = sum(rv_z6, na.rm = TRUE),
+#    rv_z6 = sum(rv_z6, na.rm = TRUE),
     
     pos_long  = sum(pos_long,  na.rm = TRUE),
     pos_short = sum(pos_short, na.rm = TRUE),
@@ -155,9 +190,9 @@ agg <- df_skill %>%
     share_touch_L = ifelse(touches_total>0, touch_L/touches_total, NA_real_),
     
     # indice velocità di rilascio (0–100) pesato sulle zone
-    rv_total  = rv_z1+rv_z2+rv_z3+rv_z4+rv_z5+rv_z6,
+    rv_total  = rv_z1+rv_z2+rv_z3+rv_z4+rv_z5,
     rv_index_raw = (RV_WEIGHTS[1]*rv_z1 + RV_WEIGHTS[2]*rv_z2 + RV_WEIGHTS[3]*rv_z3 +
-                      RV_WEIGHTS[4]*rv_z4 + RV_WEIGHTS[5]*rv_z5 + RV_WEIGHTS[6]*rv_z6) /
+                      RV_WEIGHTS[4]*rv_z4 + RV_WEIGHTS[5]*rv_z5) /
       pmax(rv_total, 1),
     # tempo con la palla (stima)
     time_ball_total_sec = one_touch*DUR_1TOUCH + pos_short*DUR_SHORT + pos_long*DUR_LONG,
@@ -279,15 +314,14 @@ report_tecnico <- function(giocatore){
       x = NULL, y = NULL
     ) +
     theme_minimal(base_size = 13) +
-    theme_crema_light()
+    theme_crema_pro()
 }
-report_tecnico("N. Abba")
 # df_skill ha già: date, player, category, position, week_id
 
 DUR_1TOUCH <- 0.4
 DUR_SHORT  <- 2.0
 DUR_LONG   <- 4.0
-RV_WEIGHTS <- c(1, 2, 3, 4, 5, 6)
+RV_WEIGHTS <- c(1, 2, 3, 4, 5)
 W_POSSESSION <- c(
   touch_per_min    = 0.40,
   releases_per_min = 0.25,
@@ -312,7 +346,7 @@ agg_week <- df_skill %>%
     rv_z3 = sum(rv_z3, na.rm = TRUE),
     rv_z4 = sum(rv_z4, na.rm = TRUE),
     rv_z5 = sum(rv_z5, na.rm = TRUE),
-    rv_z6 = sum(rv_z6, na.rm = TRUE),
+#    rv_z6 = sum(rv_z6, na.rm = TRUE),
     
     pos_long  = sum(pos_long,  na.rm = TRUE),
     pos_short = sum(pos_short, na.rm = TRUE),
@@ -343,9 +377,9 @@ agg_week <- df_skill %>%
     share_touch_L = ifelse(touches_total > 0, touch_L / touches_total, NA_real_),
     
     # indice velocità di rilascio (grezzo)
-    rv_total  = rv_z1 + rv_z2 + rv_z3 + rv_z4 + rv_z5 + rv_z6,
+    rv_total  = rv_z1 + rv_z2 + rv_z3 + rv_z4 + rv_z5,
     rv_index_raw = (RV_WEIGHTS[1]*rv_z1 + RV_WEIGHTS[2]*rv_z2 + RV_WEIGHTS[3]*rv_z3 +
-                      RV_WEIGHTS[4]*rv_z4 + RV_WEIGHTS[5]*rv_z5 + RV_WEIGHTS[6]*rv_z6) /
+                      RV_WEIGHTS[4]*rv_z4 + RV_WEIGHTS[5]*rv_z5) /
       pmax(rv_total, 1),
     
     # tempo con la palla (stima)
@@ -413,38 +447,6 @@ colori_indici <- c(
 )
 
 
-trend_tecnico_indici <- function(giocatore) {
-  dati <- agg_week %>%
-    filter(player == giocatore) %>%
-    select(week_id, possession_index, touches_index, rv_index, time_ball_index) %>%
-    tidyr::pivot_longer(
-      cols = c(possession_index, touches_index, rv_index, time_ball_index),
-      names_to = "metrica",
-      values_to = "valore"
-    ) %>%
-    mutate(
-      week_id = factor(week_id, levels = sort(unique(week_id))),
-      metrica = factor(metrica,
-                       levels = c("possession_index","touches_index","rv_index","time_ball_index"),
-                       labels = c("Indice Possesso","Indice Tocchi","Indice Velocità Rilascio","Indice Tempo p/Possesso"))
-    )
-  
-  ggplot(dati, aes(x = week_id, y = valore, group = metrica, color = metrica)) +
-    geom_line(size = 1.5) +
-    geom_point(size = 2) +
-    scale_color_manual(values = colori_indici, name = NULL) +
-    labs(
-      title = paste("📈 Trend Indici Tecnici –", giocatore),
-      x = "Settimana",
-      y = "Indice (0–100)"
-    ) +
-    scale_x_discrete(
-      breaks = function(x) x[seq(1, length(x), by = 2)]
-    ) + 
-    theme_minimal(base_size = 13) +
-    theme_crema_light()
-}
-
 
 trend_tecnico_possesso <- function(giocatore) {
   dati <- agg_week %>%
@@ -498,7 +500,14 @@ trend_tecnico_piede <- function(giocatore) {
   
   ggplot(dati, aes(x = week_id, y = valore, color = piede, group = piede)) +
     geom_line(size = 1.5) +
-    geom_point(size = 2) +
+    geom_point(
+      size = 2.6,
+      shape = 21,
+      stroke = 0.9,
+      aes(fill = piede),
+      color = "black",   # bordo bianco
+      show.legend = F
+    ) + 
     scale_y_continuous(labels = function(x) paste0(x, "%")) +
     labs(
       title = paste("Uso del Piede –", giocatore),
@@ -510,5 +519,60 @@ trend_tecnico_piede <- function(giocatore) {
       breaks = function(x) x[seq(1, length(x), by = 2)]
     ) + 
     theme_minimal(base_size = 13) +
-    theme_crema_light()
+    theme_crema_pro() + 
+    theme(axis.text.x = element_text(angle = 45, hjust =  1, vjust = 1))
 }
+
+
+trend_tecnico_indici <- function(giocatore) {
+  
+  dati <- agg_week %>%
+    dplyr::filter(player == giocatore) %>%
+    dplyr::select(week_id, possession_index, touches_index, rv_index, time_ball_index) %>%
+    tidyr::pivot_longer(
+      cols = c(possession_index, touches_index, rv_index, time_ball_index),
+      names_to = "metrica",
+      values_to = "valore"
+    ) %>%
+    dplyr::mutate(
+      week_id = factor(week_id, levels = sort(unique(week_id))),
+      metrica = factor(metrica,
+                       levels = c("possession_index","touches_index","rv_index","time_ball_index"),
+                       labels = c("Indice Possesso","Indice Tocchi","Indice Velocità Rilascio","Indice Tempo p/Possesso")
+      )
+    )
+  
+  
+  ggplot(dati, aes(x = week_id, y = valore, group = metrica, color = metrica)) +
+    geom_line(linewidth = 1.35, lineend = "round") +
+    geom_point(
+      size = 2.6,
+      shape = 21,
+      stroke = 0.9,
+      aes(fill = metrica),
+      color = "black"   # bordo bianco
+    ) +
+    scale_color_manual(values = colori_indici) +
+    scale_fill_manual(values = colori_indici) +
+    scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 20), expand = expansion(mult = c(0.02, 0.05))) +
+    scale_x_discrete(breaks = function(x) x[seq(1, length(x), by = 2)]) +
+    labs(
+      title = paste("Trend Indici Tecnici —", giocatore),
+      subtitle = "Aggregazione settimanale | Scala 0–100",
+      x = "Settimana",
+      y = "Indice",
+      caption = "Source: internal performance data"
+    ) +
+    guides(
+      color = guide_legend(nrow = 1, byrow = TRUE),
+      fill  = "none"
+    ) +
+    theme_crema_pro() + 
+    theme(
+      axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)
+    )
+  
+}
+
+
+report_tecnico("M. Varisco")

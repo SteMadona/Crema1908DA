@@ -1,0 +1,62 @@
+---
+title: "N. Abba"
+format:
+  html:
+    theme: darkly
+    css: styles.css
+---
+
+## Centrocampista
+
+
+# Statistiche All Time 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../code/ReportUnoNew.R")
+source("../code/ReportDueNew.R")
+source("../code/lista_squadre.R")
+source("../code/Temi_grafici.R")
+source("../code/phy_vs_tech_new.R")
+source("../code/player_wheel.R")
+source("../code/run_dynamics_new.R")
+source("../code/comparisons.R")
+
+df_u19 <- read_excel(here("data", "CremaU19.xlsx"))
+players_u19 <- c("C. Brazzorotto", "C. Barzi", "M. Bertazzoli", "C. Bertazzoni", "M. Bonizzoni", 
+                 "G. Cerrato", "A. Cicarè", "W. De Maio", "M. D'Ischia", "I. Dimov",
+                 "M. Fino", "V. Gerasym", "A. Jarid", "A. Nicotra", "F. Valletti",
+                 "F. Montemezzani", "S. Schiavini", "B. Pape", "R. Tabal", "M. Tajeddine",
+                 "F. Cerioli")
+
+
+cph <- prep_physical_context(df_u19, players = players_u19)
+
+ctx_session <- prep_skill_context(df_u19, players = players_u19, data_type = "session")
+ctx_pf <- prep_skill_context(df_u19, players = players_u19, data_type = "pf")
+
+scatter_data <- build_df_scatter_phy_tec(ctx_session, cph$df_physicalreport, players_u19)
+
+
+player_sel <- "C. Barzi"
+plot_phy_tec_player(player_sel, scatter_data = scatter_data)
+```
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_fisico(player_sel, cph)
+```
+
+
+::: {.panel-tabset}
+# Full Sessions
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_tecnico(player_sel, ctx_session)
+```
+
+# Partita Finale Allenamento
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_tecnico(player_sel, ctx_pf)
+```
+
+:::

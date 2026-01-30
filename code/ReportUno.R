@@ -89,6 +89,7 @@ colnames(physical_data) <- c(
 
 physical_data <- physical_data %>% 
   filter(Tag == "Full Session") %>% 
+  filter(player %in% player_ft)
   mutate(
     across(c(starts_with("SpeedZ"), starts_with("AccZ"), starts_with("DecZ"),
              "duration","DistanceTot","TopSpeed","WorkRate"), 

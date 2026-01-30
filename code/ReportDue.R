@@ -143,6 +143,7 @@ W_POSSESSION <- c(
 
 
 agg <- df_skill %>%
+  filter(player %in% player_ft) %>%
   group_by(player, category, position) %>%
   summarise(
     # volumi & tassi (uso medie per le metriche “/min”)

@@ -10,11 +10,6 @@ library(lubridate)
 
 # --- PREPARAZIONE DATI ------------------------------------------------------
 
-player_list <- c("G. Recino", "E. Maccherini", "L. Niculae", "S. Azzali", "A. Arpini",
-                 "T. Valdameri", "N. Abba", "M. Vailati", "J. Mozzanica", "A. Latini",
-                 "R. Tomella", "R. Pavesi", "E. Neci", "D. Fenotti", "L. Gramignoli", 
-                 "T. Erman", "M. Varisco", "J. Ceserani", "T. Serioli", "V. Camilleri")
-
 # Calcolo la media dei tocchi totali per giocatore
 df_touch_avg <- df_skill %>%
   filter(player %in% player_list) %>%
@@ -152,3 +147,72 @@ plot_phy_tec_player <- function(player_name) {
     ggplot2::scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.3), expand = c(0, 0))
   
 }
+
+
+build_df_scatter_phy_tec <- function(ctx_skill,
+                                     df_physicalreport,
+                                     player_list,
+                                     exclude_gk = TRUE) {
+  
+  # ---- 1) tocchi medi da ctx$df_skill (non da df_skill globale) ----
+  df_touch_avg <- ctx_skill$df_skill %>%
+    filter(player %in% player_list) %>%
+    mutate(touches_total = touch_L + touch_R) %>%
+    group_by(player) %>%
+    summarise(touches_total_avg = mean(touches_total, na.rm = TRUE), .groups = "drop")
+  
+  # ---- 2) indice fisico (come fai tu) ----
+  df_phys <- df_physicalreport %>%
+    filter(player %in% player_list) %>%
+    mutate(
+      physical_index_raw = (
+        scales::rescale(z5_min,      to = c(0,1), from = range(z5_min, na.rm = TRUE)) * 0.2 +
+          scales::rescale(z6_min,      to = c(0,1), from = range(z6_min, na.rm = TRUE)) * 0.2 +
+          scales::rescale(sprint_dist, to = c(0,1), from = range(sprint_dist, na.rm = TRUE)) * 0.1 +
+          scales::rescale(workrate,    to = c(0,1), from = range(workrate, na.rm = TRUE)) * 0.5
+      ),
+      physical_index = scales::rescale(physical_index_raw, to = c(0,1))
+    ) %>%
+    select(player, physical_index)
+  
+  # ---- 3) base tecnica: usa ctx$agg_all (è il tuo “agg”) ----
+  df_scatter <- ctx_skill$agg_all %>%
+    left_join(df_phys, by = "player") %>%
+    left_join(df_touch_avg, by = "player") %>%
+    filter(player %in% player_list) %>%
+    { if (exclude_gk) filter(., category != "Goalkeepers") else . }
+  
+  # ---- 4) indice qualità tecnica (come fai tu, ma su df_scatter) ----
+  df_scatter <- df_scatter %>%
+    mutate(
+      quality_index_raw = (
+        scales::rescale(releases_per_min,   to = c(0,1), from = range(releases_per_min, na.rm = TRUE)) * 0.4 +
+          scales::rescale(release_vel_avg,    to = c(0,1), from = range(release_vel_avg,  na.rm = TRUE)) * 0.4 +
+          scales::rescale(touches_total_avg,  to = c(0,1), from = range(touches_total_avg,na.rm = TRUE)) * 0.2
+      ),
+      quality_index = scales::rescale(quality_index_raw, to = c(0,1))
+    )
+  
+  # ---- 5) medie squadra (per linee tratteggiate) ----
+  mean_physical <- mean(df_scatter$physical_index, na.rm = TRUE)
+  mean_quality  <- mean(df_scatter$quality_index,  na.rm = TRUE)
+  
+  list(
+    df_scatter = df_scatter,
+    mean_physical = mean_physical,
+    mean_quality  = mean_quality
+  )
+}
+
+prova <- prep_physical_context(df_ft, players = players_ft)
+prova2 <- prova$df_physicalreport
+
+out_scatter_session <- build_df_scatter_phy_tec(
+  ctx_skill = ctx_session,
+  df_physicalreport = prova2,
+  player_list = players_ft
+)
+
+df_scatter    <- out_scatter_session$df_scatter
+mean_physical <- out_scatter_session$mean_physical
+mean_quality  <- out_scatter_session$mean_quality

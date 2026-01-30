@@ -12,13 +12,22 @@ format:
 # Statistiche All Time 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/ReportUno.R")
-source("../code/ReportDue.R")
-source("../code/partita_finale.R")
+source("../code/ReportUnoNew.R")
+source("../code/ReportDueNew.R")
+source("../code/lista_squadre.R")
+source("../code/Temi_grafici.R")
 source("../code/fisico_vs_tecnica.R")
 source("../code/comparison_U17_vs_FT.R")
 source("../code/player_wheel.R")
 source("../code/run_dynamics.R")
+
+df_ft <- read_excel(here("data", "CremaFT_2401.xlsx"))
+
+cph <- prep_physical_context(df_ft, players = players_ft)
+
+ctx_session <- prep_skill_context(df_ft, players = players_ft, data_type = "session")
+ctx_pf <- prep_skill_context(df_ft, players = players_ft, data_type = "pf")
+ctx_matches <- prep_skill_context(df_ft, players = players_ft, data_type = "match", matches_list = match_ft)
 
 
 player_sel <- "N. Abba"
@@ -28,29 +37,24 @@ plot_phy_tec_player(player_sel)
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-report_fisico(player_sel)
+report_fisico(player_sel, cph)
 ```
 
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-player_sel <- player_sel
-
-```
 
 ::: {.panel-tabset}
 # Full Sessions
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-report_tecnico(player_sel)
+report_tecnico(player_sel, ctx_session)
 ```
 
 # Partita Finale Allenamento
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-report_tecnico_pf(player_sel)
+report_tecnico(player_sel, ctx_pf)
 ```
 
 # Partite Ufficiali
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-report_tecnico_match(player_sel)
+report_tecnico(player_sel, ctx_matches)
 ```
 
 :::
@@ -74,16 +78,16 @@ plot_player_wheel(pcts, player_sel)
 # Trend di forma
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-trend_fisico_giocatore(player_sel)
+trend_fisico(player_sel, cph)
 
 ```
 
 # Trend tecnico
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-trend_tecnico_indici(player_sel)
-trend_tecnico_possesso(player_sel)
-trend_tecnico_piede(player_sel)
+trend_tecnico_indici(player_sel, ctx_session)
+trend_tecnico_possesso(player_sel, ctx_session)
+trend_tecnico_piede(player_sel, ctx_session)
 
 ```
 

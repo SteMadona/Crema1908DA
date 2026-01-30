@@ -161,8 +161,3 @@ plot_player_wheel <- function(pcts_df, player_name) {
       plot.margin      = margin(10, 55, 10, 20)
     )
 }
-
-
-pcts <- make_player_pcts(df_physicalreport, agg)
-
-plot_player_wheel(pcts, "N. Abba")

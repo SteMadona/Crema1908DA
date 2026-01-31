@@ -40,7 +40,6 @@ Questa è la sezione dedicata alla **Under 19**.
 - [B. Pape](GiocatoriU19/pape.html)
 
 ## Attaccanti
-- [G. Cerrato](GiocatoriU19/cerrato.html)
 - [M. Fino](GiocatoriU19/fino.html)
 - [A. Nicotra](GiocatoriU19/nicotra.html)
 - [F. Valletti](GiocatoriU19/valletti.html)

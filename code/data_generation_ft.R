@@ -16,7 +16,7 @@ df_ft <- read_excel(here("data", "CremaFT_2401.xlsx"))
 players_ft <- c("G. Recino", "E. Maccherini", "L. Niculae", "S. Azzali", "A. Arpini",
                 "T. Valdameri", "N. Abba", "M. Vailati", "J. Mozzanica", "A. Latini",
                 "R. Tomella", "R. Pavesi", "E. Neci", "D. Fenotti", "L. Gramignoli", 
-                "T. Erman", "M. Varisco", "J. Ceserani", "T. Serioli", "V. Camilleri")
+                "T. Erman", "M. Varisco", "J. Cerasani", "T. Serioli", "V. Camilleri")
 
 
 match_ft <- c("CREMA vs PRO PALAZZOLO 1a", "CREMA vs PISTOIESE", "CREMA vs SANTANGELO 1a",

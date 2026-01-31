@@ -48,3 +48,14 @@ Questa è la sezione dedicata alla **Under 19**.
 
 # Analisi All Time
 
+
+## Carichi di Lavoro
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/carichi_lavoro.R")
+tb_carichi_lavoro_u19
+
+```
+
+

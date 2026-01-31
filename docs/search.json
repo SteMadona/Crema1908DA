@@ -194,5 +194,19 @@
     "title": "M. Tajeddine",
     "section": "Valori anomali",
     "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.135\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.383\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.440\n0.383\n0.057\n2.92\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n297.667\nNA\nNA"
+  },
+  {
+    "objectID": "FirstTeam.html#carichi-di-lavoro",
+    "href": "FirstTeam.html#carichi-di-lavoro",
+    "title": "Prima squadra",
+    "section": "Carichi di Lavoro",
+    "text": "Carichi di Lavoro\n\n\n\n\n\n\n\n\nCarichi di lavoro\n\n\nMedie settimanali (tutti i giocatori)\n\n\nWeek\nMedia WorkRate\nMedia HID\nMedia Acc. Index\nMedia Dec. Index\n\n\n\n\n2025-40\n74.62\n9.44\n80.62\n80.70\n\n\n2025-41\n75.37\n9.72\n74.88\n75.24\n\n\n2025-42\n80.68\n12.45\n84.28\n84.93\n\n\n2025-43\n77.46\n12.99\n82.54\n84.35\n\n\n2025-44\n77.39\n9.56\n91.19\n90.76\n\n\n2025-45\n86.36\n14.11\n95.93\n96.78\n\n\n2025-46\n84.04\n12.98\n87.74\n88.40\n\n\n2025-47\n83.78\n11.48\n94.41\n94.33\n\n\n2025-48\n80.50\n13.51\n85.84\n87.24\n\n\n2025-49\n79.77\n12.10\n86.27\n87.20\n\n\n2025-50\n80.44\n13.64\n85.78\n87.20\n\n\n2025-51\n84.41\n10.87\n93.06\n92.81\n\n\n2026-2\n77.56\n10.38\n86.89\n87.22\n\n\n2026-3\n83.64\n13.58\n91.52\n93.29\n\n\n2026-4\n86.94\n14.46\n90.61\n90.80"
+  },
+  {
+    "objectID": "Under19.html#carichi-di-lavoro",
+    "href": "Under19.html#carichi-di-lavoro",
+    "title": "Under 19",
+    "section": "Carichi di Lavoro",
+    "text": "Carichi di Lavoro\n\n\n\n\n\n\n\n\nCarichi di lavoro\n\n\nMedie settimanali (tutti i giocatori)\n\n\nWeek\nMedia WorkRate\nMedia HID\nMedia Acc. Index\nMedia Dec. Index\n\n\n\n\n2025-41\n75.16\n8.41\n83.61\n83.01\n\n\n2025-42\n73.83\n11.35\n83.38\n84.05\n\n\n2025-43\n65.59\n7.96\n78.62\n78.43\n\n\n2025-44\n66.65\n8.54\n77.70\n77.86\n\n\n2025-45\n72.30\n11.33\n77.13\n77.77\n\n\n2025-46\n75.58\n14.00\n93.95\n94.24\n\n\n2025-47\n88.10\n14.99\n88.09\n87.98\n\n\n2025-48\n80.68\n12.44\n93.92\n93.49\n\n\n2025-49\n82.27\n11.29\n91.86\n91.59\n\n\n2025-50\n86.39\n15.42\n91.64\n92.49\n\n\n2025-51\n75.46\n16.57\n70.52\n72.28\n\n\n2026-2\n73.69\n11.64\n73.32\n73.26\n\n\n2026-3\n67.46\n6.47\n83.45\n83.11\n\n\n2026-4\n79.96\n11.82\n96.43\n96.67"
   }
 ]

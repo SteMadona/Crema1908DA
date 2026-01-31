@@ -2,9 +2,10 @@ library(dplyr)
 library(gt)
 library(scales)
 
-ctx <- readRDS(here::here("data", "derived", "u19_context.rds"))
+ctx <- readRDS(here::here("data", "derived", "ft_context.rds"))
 
-df_physicalreport_week_u19 <- ctx$cph_u19$physical_data %>%
+
+df_physicalreport_week_ft <- cph_ft$physical_data %>%
   group_by(player, week_id) %>%
   summarise(
     HID = mean((SpeedZ5_m + SpeedZ6_m) / duration, na.rm = TRUE),
@@ -21,7 +22,7 @@ df_physicalreport_week_u19 <- ctx$cph_u19$physical_data %>%
     },
     .groups = "drop"
   ) %>%
-  left_join(ctx$cph_u19$physical_data %>% select(player, category) %>% distinct(), by = "player") %>%
+  left_join(cph_ft$physical_data %>% select(player, category) %>% distinct(), by = "player") %>%
   group_by(player) %>%
   mutate(
     acc_index = {
@@ -35,7 +36,7 @@ df_physicalreport_week_u19 <- ctx$cph_u19$physical_data %>%
   ) %>%
   ungroup()
 
-data_carichi_u19 <- df_physicalreport_week_u19 %>%
+data_carichi_ft <- df_physicalreport_week_ft %>%
   group_by(week_id) %>%
   summarise(
     workrate   = mean(workrate, na.rm = TRUE),
@@ -47,7 +48,7 @@ data_carichi_u19 <- df_physicalreport_week_u19 %>%
   arrange(week_id) %>%
   rename(Week = week_id)
 
-tb_carichi_lavoro_u19 <- gt(data_carichi_u19) %>%
+tb_carichi_lavoro_ft <- gt(data_carichi_ft) %>%
   tab_header(
     title = md("**Carichi di lavoro**"),
     subtitle = md("Medie settimanali (tutti i giocatori)")
@@ -77,4 +78,3 @@ tb_carichi_lavoro_u19 <- gt(data_carichi_u19) %>%
     Week ~ px(90),
     everything() ~ px(150)
   )
-

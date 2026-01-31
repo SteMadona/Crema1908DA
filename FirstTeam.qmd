@@ -45,3 +45,14 @@ Questa è la sezione dedicata alla **prima squadra**.
 - [D. Fenotti](GiocatoriFT/fenotti.html) 
 - [M. Varisco](GiocatoriFT/varisco.html)
 
+
+# Analisi All Time
+
+## Carichi di Lavoro
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/carichi_lavoro_ft.R")
+tb_carichi_lavoro_ft
+
+```

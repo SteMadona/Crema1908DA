@@ -1,12 +1,12 @@
 ---
-title: "N. Abba"
+title: "C. Barzi"
 format:
   html:
     theme: darkly
     css: styles.css
 ---
 
-## Centrocampista
+## Difensore
 
 
 # Statistiche All Time 

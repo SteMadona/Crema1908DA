@@ -10,6 +10,8 @@ website:
         text: Home
       - href: FirstTeam.qmd
         text: "Prima squadra"
+      - href: Under19.qmd
+        text: "Under 19"
     logo: images/Crema_logo.png
     logo-alt: "Crema 1908"
 

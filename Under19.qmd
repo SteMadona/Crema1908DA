@@ -1,0 +1,50 @@
+---
+title: "Prima squadra"
+format:
+  html:
+    theme: darkly
+    css: styles.css
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/data_generation_u19.R")
+
+```
+
+
+Questa è la sezione dedicata alla **Under 19**.
+
+## Portieri
+- A. Laini
+- A. Riboli
+
+## Difensori
+- C. Barzi
+- M. Bertazzoli
+- A. Cicarè
+- I. Dimov
+- V. Gerasym
+- F. Montemezzani
+- F. Cerioli
+
+## Centrocampisti
+- C. Brazzorotto
+- C. Bertazzoni
+- M. Bonizzoni
+- W. De Maio
+- M. D'Ischia
+- A. Jarid
+- S. Schiavini
+- B. Pape
+
+## Attaccanti
+- G. Cerrato
+- M. Fino
+- A. Nicotra
+- F. Valletti
+- R. Tabal
+- M. Tajeddine
+
+# Analisi All Time
+

@@ -1,5 +1,5 @@
 ---
-title: "Prima squadra"
+title: "Under 19"
 format:
   html:
     theme: darkly
@@ -8,6 +8,7 @@ format:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
 
+source("code/data_generation_ft.R")
 source("code/data_generation_u19.R")
 
 ```
@@ -20,7 +21,7 @@ Questa è la sezione dedicata alla **Under 19**.
 - A. Riboli
 
 ## Difensori
-- C. Barzi
+- [C. Barzi](GiocatoriU19/barzi.html)
 - M. Bertazzoli
 - A. Cicarè
 - I. Dimov

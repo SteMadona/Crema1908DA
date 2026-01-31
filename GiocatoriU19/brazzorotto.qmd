@@ -1,12 +1,12 @@
 ---
-title: "C. Barzi"
+title: "C. Brazzorotto"
 format:
   html:
     theme: darkly
     css: styles.css
 ---
 
-## Difensore
+## Centrocampista
 
 
 # Statistiche All Time 
@@ -38,7 +38,7 @@ scatter_u19_ft_pf      <- ctx$scatter_u19_ft_pf
 scatter_u19_ft_session <- ctx$scatter_u19_ft_session
 
 
-player_sel <- "C. Barzi"
+player_sel <- "C. Brazzorotto"
 plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 ```
 

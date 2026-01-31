@@ -1,12 +1,12 @@
 ---
-title: "C. Barzi"
+title: "A. Nicotra"
 format:
   html:
     theme: darkly
     css: styles.css
 ---
 
-## Difensore
+## Attaccante
 
 
 # Statistiche All Time 
@@ -38,7 +38,7 @@ scatter_u19_ft_pf      <- ctx$scatter_u19_ft_pf
 scatter_u19_ft_session <- ctx$scatter_u19_ft_session
 
 
-player_sel <- "C. Barzi"
+player_sel <- "A. Nicotra"
 plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 ```
 

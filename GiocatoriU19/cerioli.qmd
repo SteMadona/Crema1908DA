@@ -1,5 +1,5 @@
 ---
-title: "C. Barzi"
+title: "F. Cerioli"
 format:
   html:
     theme: darkly
@@ -38,7 +38,7 @@ scatter_u19_ft_pf      <- ctx$scatter_u19_ft_pf
 scatter_u19_ft_session <- ctx$scatter_u19_ft_session
 
 
-player_sel <- "C. Barzi"
+player_sel <- "F. Cerioli"
 plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 ```
 

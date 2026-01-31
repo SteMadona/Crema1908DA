@@ -7,6 +7,7 @@ source(here("code", "Temi_grafici.R"))
 source(here("code", "phy_vs_tech_new.R"))
 source(here("code", "player_wheel.R"))
 source(here("code", "run_dynamics_new.R"))
+source(here("code", "comparisons.R"))
 
 
 
@@ -55,5 +56,5 @@ out_u19 <- list(
 )
 
 out_path_u19 <- here::here("data", "derived", "u19_context.rds")
-saveRDS(out_u19, out_path)
+saveRDS(out_u19, out_path_u19)
 

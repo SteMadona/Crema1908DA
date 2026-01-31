@@ -46,7 +46,7 @@ out_ft <- list(
 )
 
 out_path_ft <- here::here("data", "derived", "ft_context.rds")
-saveRDS(out_ft, out_path)
+saveRDS(out_ft, out_path_ft)
 
 
 

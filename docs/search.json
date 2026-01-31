@@ -82,5 +82,61 @@
     "title": "N. Abba",
     "section": "Valori anomali",
     "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nN. Abba — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.148\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN. Abba — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.375\nNA\nNA\n\n\nsession\nFri, Nov 28, 2025\nPartita finale venerdi\n0.325\n0.375\n−0.050\n−3.37\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN. Abba — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n315.314\nNA\nNA\n\n\nsession\nFri, Nov 28, 2025\nPartita finale venerdi\n265.500\n315.314\n−49.814\n−4.68"
+  },
+  {
+    "objectID": "Under19.html",
+    "href": "Under19.html",
+    "title": "C. Barzi",
+    "section": "",
+    "text": "Questa è la sezione dedicata alla Under 19."
+  },
+  {
+    "objectID": "Under19.html#portieri",
+    "href": "Under19.html#portieri",
+    "title": "C. Barzi",
+    "section": "Portieri",
+    "text": "Portieri\n\nA. Laini\nA. Riboli"
+  },
+  {
+    "objectID": "Under19.html#difensori",
+    "href": "Under19.html#difensori",
+    "title": "C. Barzi",
+    "section": "Difensori",
+    "text": "Difensori\n\nC. Barzi\nM. Bertazzoli\nA. Cicarè\nI. Dimov\nV. Gerasym\nF. Montemezzani\nF. Cerioli"
+  },
+  {
+    "objectID": "Under19.html#centrocampisti",
+    "href": "Under19.html#centrocampisti",
+    "title": "C. Barzi",
+    "section": "Centrocampisti",
+    "text": "Centrocampisti\n\nC. Brazzorotto\nC. Bertazzoni\nM. Bonizzoni\nW. De Maio\nM. D’Ischia\nA. Jarid\nS. Schiavini\nB. Pape"
+  },
+  {
+    "objectID": "Under19.html#attaccanti",
+    "href": "Under19.html#attaccanti",
+    "title": "C. Barzi",
+    "section": "Attaccanti",
+    "text": "Attaccanti\n\nG. Cerrato\nM. Fino\nA. Nicotra\nF. Valletti\nR. Tabal\nM. Tajeddine"
+  },
+  {
+    "objectID": "Under19.html#difensore",
+    "href": "Under19.html#difensore",
+    "title": "C. Barzi",
+    "section": "Difensore",
+    "text": "Difensore"
+  },
+  {
+    "objectID": "GiocatoriU19/barzi.html#valori-anomali",
+    "href": "GiocatoriU19/barzi.html#valori-anomali",
+    "title": "C. Barzi",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nC. Barzi — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.168\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC. Barzi — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.377\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC. Barzi — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n313.375\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/bertazzoli.html#valori-anomali",
+    "href": "GiocatoriU19/bertazzoli.html#valori-anomali",
+    "title": "M. Bertazzoli",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.159\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.396\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.430\n0.396\n0.034\n2.70\n\n\nsession\nMon, Dec 15, 2025\nPartita finale\n0.445\n0.396\n0.049\n3.71\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n324.417\nNA\nNA"
   }
 ]

@@ -26,14 +26,12 @@ df          <- ctx$df_u19
 cph         <- ctx$cph_u19
 ctx_session <- ctx$ctx_session_u19
 ctx_pf      <- ctx$ctx_pf_u19
-ctx_matches <- ctx$ctx_matches_u19
 pcts        <- ctx$pcts_u19
 
 scatter_data <- ctx$scatter_u19
 
 df_dynamic_hid_match <- ctx$run_ctx_u19$df_dynamic_hid_match
 
-scatter_u19_ft_match   <- ctx$scatter_u19_ft_match
 scatter_u19_ft_pf      <- ctx$scatter_u19_ft_pf
 scatter_u19_ft_session <- ctx$scatter_u19_ft_session
 
@@ -59,11 +57,6 @@ report_tecnico(player_sel, ctx_session)
 # Partita Finale Allenamento
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 report_tecnico(player_sel, ctx_pf)
-```
-
-# Partite Ufficiali
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-report_tecnico(player_sel, ctx_matches)
 ```
 
 :::
@@ -161,10 +154,6 @@ plot_compare_phy_tec_player(scatter_u19_ft_session, player_sel)
 plot_compare_phy_tec_player(scatter_u19_ft_pf, player_sel)
 ```
 
-# Partite Ufficiali
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot_compare_phy_tec_player(scatter_u19_ft_match, player_sel)
-```
 :::
 
 

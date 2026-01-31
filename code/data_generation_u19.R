@@ -16,7 +16,7 @@ source(here("code", "comparisons.R"))
 df_u19 <- read_excel(here("data", "CremaU19.xlsx"))
 
 players_u19 <- c("C. Brazzorotto", "C. Barzi", "M. Bertazzoli", "C. Bertazzoni", "M. Bonizzoni", 
-                 "G. Cerrato", "A. Cicarè", "W. De Maio", "M. D'Ischia", "I. Dimov",
+                 "A. Cicarè", "W. De Maio", "M. D'Ischia", "I. Dimov",
                  "M. Fino", "V. Gerasym", "A. Jarid", "A. Nicotra", "F. Valletti",
                  "F. Montemezzani", "S. Schiavini", "B. Pape", "R. Tabal", "M. Tajeddine",
                  "F. Cerioli")

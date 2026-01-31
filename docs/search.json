@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Crema 1908 Data Analysis",
     "section": "",
-    "text": "Crema 1908 Data Analysis\n\n\ndi Stefano Madona\n\n\n\n\n\n\nQuesto sito è stato creato con i dati raccolti dai dispositivi wearable forniti dalla società Playmaker.\nTutte le analisi sono state realizzate con RStudio.\nTutti i grafici presenti nelle pagine sono originali e derivano direttamente dai dati raccolti."
+    "text": "Crema 1908 Data Analysis\n\n\ndi Stefano Madona\n\n\n\n\n\n\nQuesto sito è stato creato con i dati raccolti dai dispositivi wearable forniti dalla società Playermaker.\nTutte le analisi sono state realizzate con RStudio.\nTutti i grafici presenti nelle pagine sono originali e derivano direttamente dai dati raccolti."
   },
   {
     "objectID": "FirstTeam.html",
@@ -138,5 +138,61 @@
     "title": "M. Bertazzoli",
     "section": "Valori anomali",
     "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.159\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.396\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.430\n0.396\n0.034\n2.70\n\n\nsession\nMon, Dec 15, 2025\nPartita finale\n0.445\n0.396\n0.049\n3.71\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n324.417\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/cicare.html#valori-anomali",
+    "href": "GiocatoriU19/cicare.html#valori-anomali",
+    "title": "A. Cicarè",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nA. Cicarè — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.138\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Cicarè — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.372\nNA\nNA\n\n\nsession\nThu, Oct 9, 2025\nPartita finale\n0.395\n0.372\n0.023\n2.70\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.410\n0.372\n0.038\n3.71\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Cicarè — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n299.000\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n323.500\n299.000\n24.500\n2.51"
+  },
+  {
+    "objectID": "GiocatoriU19/demaio.html#valori-anomali",
+    "href": "GiocatoriU19/demaio.html#valori-anomali",
+    "title": "W. De Maio",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nW. De Maio — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.150\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nW. De Maio — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.340\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nW. De Maio — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n292.500\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/dimov.html#valori-anomali",
+    "href": "GiocatoriU19/dimov.html#valori-anomali",
+    "title": "I. Dimov",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nI. Dimov — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.143\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI. Dimov — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.398\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI. Dimov — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n312.167\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/pape.html#valori-anomali",
+    "href": "GiocatoriU19/pape.html#valori-anomali",
+    "title": "B. Pape",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nB. Pape — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.160\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB. Pape — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.410\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB. Pape — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n311.400\nNA\nNA\n\n\nsession\nMon, Oct 20, 2025\nPartita finale\n266.000\n311.400\n−45.400\n−3.34"
+  },
+  {
+    "objectID": "GiocatoriU19/schiavini.html#valori-anomali",
+    "href": "GiocatoriU19/schiavini.html#valori-anomali",
+    "title": "S. Schiavini",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nS. Schiavini — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.140\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS. Schiavini — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.350\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS. Schiavini — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n285.000\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/valletti.html#valori-anomali",
+    "href": "GiocatoriU19/valletti.html#valori-anomali",
+    "title": "F. Valletti",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nF. Valletti — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.150\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Valletti — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.375\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Valletti — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n304.000\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/tabal.html#valori-anomali",
+    "href": "GiocatoriU19/tabal.html#valori-anomali",
+    "title": "R. Tabal",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nR. Tabal — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.167\nNA\nNA\n\n\nsession\nThu, Nov 13, 2025\nPartita finale\n0.120\n0.167\n−0.047\n−6.75\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Tabal — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.346\nNA\nNA\n\n\nsession\nThu, Nov 13, 2025\nPartita finale\n0.415\n0.346\n0.069\n6.74\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Tabal — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n304.167\nNA\nNA\n\n\nsession\nThu, Nov 13, 2025\nPartita finale\n347.500\n304.167\n43.333\n6.52\n\n\nsession\nThu, Nov 20, 2025\nPartita finale\n271.000\n304.167\n−33.167\n−4.95"
+  },
+  {
+    "objectID": "GiocatoriU19/tajeddine.html#valori-anomali",
+    "href": "GiocatoriU19/tajeddine.html#valori-anomali",
+    "title": "M. Tajeddine",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.135\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.383\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.440\n0.383\n0.057\n2.92\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n297.667\nNA\nNA"
   }
 ]

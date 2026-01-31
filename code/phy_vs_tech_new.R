@@ -106,3 +106,75 @@ plot_phy_tec_player <- function(player_name,
     ggplot2::scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.3), expand = c(0, 0))
   
 }
+
+
+plot_phy_tec_squad <- function(scatter_data,
+                               label_players = TRUE,
+                               point_size = 4.5,
+                               alpha_points = 0.9) {
+  
+  df_scatter    <- scatter_data$df_scatter
+  mean_physical <- scatter_data$mean_physical
+  mean_quality  <- scatter_data$mean_quality
+  
+  if (!all(c("player", "category", "physical_index", "quality_index") %in% names(df_scatter))) {
+    stop("df_scatter deve contenere: player, category, physical_index, quality_index")
+  }
+  
+  p <- ggplot2::ggplot(
+    df_scatter,
+    ggplot2::aes(x = physical_index, y = quality_index)
+  ) +
+    ggplot2::geom_point(
+      ggplot2::aes(fill = category),
+      shape  = 21,
+      color  = "black",
+      size   = point_size,
+      alpha  = alpha_points,
+      stroke = 0.8
+    ) +
+    ggplot2::geom_vline(
+      xintercept = mean_physical,
+      linetype = "dashed",
+      color = "gray60",
+      linewidth = 1.1
+    ) +
+    ggplot2::geom_hline(
+      yintercept = mean_quality,
+      linetype = "dashed",
+      color = "gray60",
+      linewidth = 1.1
+    ) +
+    ggplot2::scale_fill_manual(values = c(
+      "Defenders"   = "black",
+      "Midfielders" = "#FF2E2E",
+      "Forwards"    = "gray30",
+      "Goalkeepers" = "gold"      # nel caso tu non escluda i GK
+    )) +
+    ggplot2::guides(fill = ggplot2::guide_legend(override.aes = list(color = "black"))) +
+    ggplot2::labs(
+      title = "📈 Confronto tra qualità fisica e tecnica",
+      subtitle = "Tutti i giocatori — linee tratteggiate = medie squadra",
+      x = "Indice Qualità Fisica (0-1)",
+      y = "Indice Qualità Tecnica (0–1)",
+      fill = "Ruolo"
+    ) +
+    ggplot2::scale_x_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.3), expand = c(0, 0)) +
+    ggplot2::scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.3), expand = c(0, 0)) +
+    ggplot2::theme_minimal(base_size = 14) +
+    theme_crema_pro()
+  
+  if (isTRUE(label_players)) {
+    p <- p +
+      ggrepel::geom_text_repel(
+        ggplot2::aes(label = player),
+        color = "black",
+        size = 4,
+        box.padding = 0.35,
+        point.padding = 0.25,
+        max.overlaps = Inf
+      )
+  }
+  
+  p
+}

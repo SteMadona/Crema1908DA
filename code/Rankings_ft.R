@@ -2,7 +2,7 @@ library(dplyr)
 library(gt)
 library(scales)
 
-ctx <- readRDS(here::here("data", "derived", "u19_context.rds"))
+ctx <- readRDS(here::here("data", "derived", "ft_context.rds"))
 
 top5_table <- function(data, stat_col, stat_name = NULL, digits = 1, suffix = "") {
   stat_col <- rlang::ensym(stat_col)
@@ -31,9 +31,9 @@ top5_table <- function(data, stat_col, stat_name = NULL, digits = 1, suffix = ""
     tab_options(
       table.background.color = "#111111",
       heading.background.color = "#111111",
-#      column_labels.background.color = "#111111",
+      #      column_labels.background.color = "#111111",
       table.font.color = "white",
-#      column_labels.font.color = "white",
+      #      column_labels.font.color = "white",
       row.striping.background_color = "#151515",
       row.striping.include_table_body = TRUE,
       table.border.top.style = "hidden",
@@ -42,7 +42,7 @@ top5_table <- function(data, stat_col, stat_name = NULL, digits = 1, suffix = ""
     )
 }
 
-data_topspeed <- ctx$cph_u19$physical_data %>%
+data_topspeed <- ctx$cph_ft$physical_data %>%
   filter(!is.na(TopSpeed)) %>%
   arrange(desc(TopSpeed)) %>% 
   slice_head(n = 10) %>%
@@ -76,7 +76,7 @@ tb_topspeed <- gt(data_topspeed) %>%
     data_row.padding = px(6)
   )
 
-data_workrate <- ctx$cph_u19$physical_data %>%
+data_workrate <- ctx$cph_ft$physical_data %>%
   filter(!is.na(WorkRate)) %>%
   group_by(player) %>%
   summarise(WorkRate = mean(WorkRate)) %>%
@@ -113,7 +113,7 @@ tb_workrate <- gt(data_workrate) %>%
   )
 
 
-data_touches <- ctx$ctx_session_u19$df_skill %>%
+data_touches <- ctx$ctx_session_ft$df_skill %>%
   group_by(player) %>%
   summarise(touches = mean(touch_per_min)) %>%
   arrange(desc(touches)) %>%
@@ -149,7 +149,7 @@ tb_touches <- gt(data_touches) %>%
   )
 
 
-data_releases <- ctx$ctx_session_u19$df_skill %>%
+data_releases <- ctx$ctx_session_ft$df_skill %>%
   group_by(player) %>%
   summarise(releases = mean(releases_per_min)) %>%
   arrange(desc(releases)) %>%

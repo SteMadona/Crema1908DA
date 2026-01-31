@@ -59,3 +59,58 @@ tb_carichi_lavoro_u19
 ```
 
 
+## Statistiche all time
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/phy_vs_tech_new.R")
+ctx <- readRDS(here::here("data", "derived", "u19_context.rds"))
+plot_phy_tec_squad(ctx$scatter_u19)
+
+```
+
+
+## Classifiche fisiche
+
+::: columns
+
+::: {.column width="50%"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/Rankings.R")
+tb_topspeed
+
+```
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+tb_workrate
+
+```
+:::
+
+::: 
+
+
+## Classifiche Tecniche 
+
+::: columns
+
+::: {.column width="50%"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+tb_touches
+
+```
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+tb_releases
+
+```
+:::
+
+:::

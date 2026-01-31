@@ -7,6 +7,12 @@ format:
 ---
 
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/data_generation_ft.R")
+
+```
+
 Questa è la sezione dedicata alla **prima squadra**.
 
 ## Portieri
@@ -16,24 +22,26 @@ Questa è la sezione dedicata alla **prima squadra**.
 ## Difensori
 - [A. Arpini](GiocatoriFT/arpini.html)
 - [S. Azzali](GiocatoriFT/azzali.html) 
-- [E. Bettinelli](GiocatoriFT/bettinelli.html)  
 - [V. Camilleri](GiocatoriFT/camilleri.html) 
 - [E. Maccherini](GiocatoriFT/maccherini.html)  
+- [L. Niculae](GiocatoriFT/niculae.html)
 - [M. Vailati](GiocatoriFT/vailati.html)
 
 ## Centrocampisti
 - [N. Abba](GiocatoriFT/abba.html)
+- [J. Cerasani](GiocatoriFT/cerasani.html)
+- [T. Erman](GiocatoriFT/erman.html)
 - [L. Gramignoli](GiocatoriFT/gramignoli.html)
 - [A. Latini](GiocatoriFT/latini.html)
 - [J. Mozzanica](GiocatoriFT/mozzanica.html)
 - [R. Pavesi](GiocatoriFT/pavesi.html)
-- [F. Russo](GiocatoriFT/russo.html)
 - [T. Serioli](GiocatoriFT/serioli.html)
 - [R. Tomella](GiocatoriFT/tomella.html)
+- [T. Valdameri](GiocatoriFT/valdameri.html)
 
 ## Attaccanti
-- [R. De Martino](GiocatoriFT/demartino.html)
-- [B. Diop](GiocatoriFT/diop.html)
+- [E. Neci](GiocatoriFT/neci.html)
+- [G. Recino](GiocatoriFT/recino.html)
 - [D. Fenotti](GiocatoriFT/fenotti.html) 
 - [M. Varisco](GiocatoriFT/varisco.html)
 

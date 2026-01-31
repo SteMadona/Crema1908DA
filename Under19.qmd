@@ -22,30 +22,30 @@ Questa è la sezione dedicata alla **Under 19**.
 
 ## Difensori
 - [C. Barzi](GiocatoriU19/barzi.html)
-- M. Bertazzoli
-- A. Cicarè
-- I. Dimov
-- V. Gerasym
-- F. Montemezzani
-- F. Cerioli
+- [M. Bertazzoli](GiocatoriU19/bertazzoli.html)
+- [A. Cicarè](GiocatoriU19/cicare.html)
+- [I. Dimov](GiocatoriU19/dimov.html)
+- [V. Gerasym](GiocatoriU19/gerasym.html)
+- [F. Montemezzani](GiocatoriU19/montemezzani.html)
+- [F. Cerioli](GiocatoriU19/cerioli.html)
 
 ## Centrocampisti
-- C. Brazzorotto
-- C. Bertazzoni
-- M. Bonizzoni
-- W. De Maio
-- M. D'Ischia
-- A. Jarid
-- S. Schiavini
-- B. Pape
+- [C. Brazzorotto](GiocatoriU19/brazzorotto.html)
+- [C. Bertazzoni](GiocatoriU19/bertazzoni.html)
+- [M. Bonizzoni](GiocatoriU19/bonizzoni.html)
+- [W. De Maio](GiocatoriU19/demaio.html)
+- [M. D'Ischia](GiocatoriU19/dischia.html)
+- [A. Jarid](GiocatoriU19/jarid.html)
+- [S. Schiavini](GiocatoriU19/schiavini.html)
+- [B. Pape](GiocatoriU19/pape.html)
 
 ## Attaccanti
-- G. Cerrato
-- M. Fino
-- A. Nicotra
-- F. Valletti
-- R. Tabal
-- M. Tajeddine
+- [G. Cerrato](GiocatoriU19/cerrato.html)
+- [M. Fino](GiocatoriU19/fino.html)
+- [A. Nicotra](GiocatoriU19/nicotra.html)
+- [F. Valletti](GiocatoriU19/valletti.html)
+- [R. Tabal](GiocatoriU19/tabal.html)
+- [M. Tajeddine](GiocatoriU19/tajeddine.html)
 
 # Analisi All Time
 

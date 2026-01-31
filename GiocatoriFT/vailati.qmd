@@ -12,29 +12,51 @@ format:
 # Statistiche All Time 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/ReportUno.R")
+source("../code/ReportUnoNew.R")
+source("../code/ReportDueNew.R")
+source("../code/Temi_grafici.R")
+source("../code/player_wheel.R")
+source("../code/run_dynamics_new.R")
+source("../code/phy_vs_tech_new.R")
 
-report_fisico("M. Vailati")
-```
 
+ctx <- readRDS(here::here("data", "derived", "ft_context.rds"))
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/ReportDue.R")
-source("../code/partita_finale.R")
+df          <- ctx$df_ft
+cph         <- ctx$cph_ft
+ctx_session <- ctx$ctx_session_ft
+ctx_pf      <- ctx$ctx_pf_ft
+ctx_matches <- ctx$ctx_matches_ft
+pcts        <- ctx$pcts_ft
+
+scatter_data <- ctx$scatter_ft
+
+df_dynamic_hid_match <- ctx$run_ctx_ft$df_dynamic_hid_match
+
 
 player_sel <- "M. Vailati"
+plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 
+
+
+report_fisico(player_sel, cph)
 ```
+
 
 ::: {.panel-tabset}
 # Full Sessions
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-report_tecnico(player_sel)
+report_tecnico(player_sel, ctx_session)
 ```
 
-# Partita Finale 
+# Partita Finale Allenamento
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-report_tecnico_pf(player_sel)
+report_tecnico(player_sel, ctx_pf)
+```
+
+# Partite Ufficiali
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_tecnico(player_sel, ctx_matches)
 ```
 
 :::
@@ -50,8 +72,7 @@ report_tecnico_pf(player_sel)
 #| fig-height: 7
 #| out-width: "85%"
 
-source("../code/player_wheel.R")
-plot_player_wheel(pcts, "M. Vailati")
+plot_player_wheel(pcts, player_sel)
 
 
 ```
@@ -59,38 +80,63 @@ plot_player_wheel(pcts, "M. Vailati")
 # Trend di forma
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/ReportUno.R")
-
-trend_fisico_giocatore("M. Vailati")
+trend_fisico(player_sel, cph)
 
 ```
 
 # Trend tecnico
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/ReportDue.R")
-
-trend_tecnico_indici("M. Vailati")
-trend_tecnico_possesso("M. Vailati")
-trend_tecnico_piede("M. Vailati")
+trend_tecnico_indici(player_sel, ctx_session)
+trend_tecnico_possesso(player_sel, ctx_session)
+trend_tecnico_piede(player_sel, ctx_session)
 
 ```
 
-
-# Giocatore simile nelle giovanili 
+# Dinamica di corsa
 
 ::: {.panel-tabset}
-# Valori Fisici
+# Contact Duration
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-source("../code/comparison_U17_vs_FT.R")
-find_most_similar_u17(player_sel, 
-                      ft_data_phy, u17_data_phy, return_plot = T)$plot
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HCD")
+
 ```
 
-# Valori Tecnici 
+# Flight Duration
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-find_most_similar_u17(player_sel, 
-                      ft_data_tec, u17_data_tec, return_plot = T)$plot
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HFD")
+
 ```
+
+# Stride Length
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HSL")
+
+
+```
+
 
 :::
+
+## Valori anomali
+
+::: {.panel-tabset}
+# Contact Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HCD", top_n = 20)
+
+```
+
+# Flight Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HFD", top_n = 20)
+
+```
+
+# Stride Length
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HSL", top_n = 20)
+
+```
+:::
+

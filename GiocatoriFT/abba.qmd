@@ -14,29 +14,31 @@ format:
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportUnoNew.R")
 source("../code/ReportDueNew.R")
-source("../code/lista_squadre.R")
 source("../code/Temi_grafici.R")
-source("../code/fisico_vs_tecnica.R")
-source("../code/comparison_U17_vs_FT.R")
 source("../code/player_wheel.R")
-source("../code/run_dynamics.R")
+source("../code/run_dynamics_new.R")
+source("../code/phy_vs_tech_new.R")
 
-df_ft <- read_excel(here("data", "CremaFT_2401.xlsx"))
 
-cph <- prep_physical_context(df_ft, players = players_ft)
+ctx <- readRDS(here::here("data", "derived", "ft_context.rds"))
 
-ctx_session <- prep_skill_context(df_ft, players = players_ft, data_type = "session")
-ctx_pf <- prep_skill_context(df_ft, players = players_ft, data_type = "pf")
-ctx_matches <- prep_skill_context(df_ft, players = players_ft, data_type = "match", matches_list = match_ft)
+df          <- ctx$df_ft
+cph         <- ctx$cph_ft
+ctx_session <- ctx$ctx_session_ft
+ctx_pf      <- ctx$ctx_pf_ft
+ctx_matches <- ctx$ctx_matches_ft
+pcts        <- ctx$pcts_ft
+
+scatter_data <- ctx$scatter_ft
+
+df_dynamic_hid_match <- ctx$run_ctx_ft$df_dynamic_hid_match
 
 
 player_sel <- "N. Abba"
-plot_phy_tec_player(player_sel)
-```
+plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 
 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
 report_fisico(player_sel, cph)
 ```
 
@@ -90,23 +92,6 @@ trend_tecnico_possesso(player_sel, ctx_session)
 trend_tecnico_piede(player_sel, ctx_session)
 
 ```
-
-# Giocatore simile nelle giovanili 
-
-::: {.panel-tabset}
-# Valori Fisici
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-find_most_similar_u17(player_sel, 
-                      ft_data_phy, u17_data_phy, return_plot = T)$plot
-```
-
-# Valori Tecnici 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-find_most_similar_u17(player_sel, 
-                      ft_data_tec, u17_data_tec, return_plot = T)$plot
-```
-
-:::
 
 # Dinamica di corsa
 

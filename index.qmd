@@ -56,7 +56,7 @@ format:
 </div>
 
 <div class="description">
-Questo sito è stato creato con i dati raccolti dai dispositivi wearable forniti dalla società Playmaker.  
+Questo sito è stato creato con i dati raccolti dai dispositivi wearable forniti dalla società Playermaker.  
 Tutte le analisi sono state realizzate con RStudio.  
 Tutti i grafici presenti nelle pagine sono originali e derivano direttamente dai dati raccolti.
 </div>

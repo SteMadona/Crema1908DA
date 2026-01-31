@@ -1,5 +1,5 @@
 ---
-title: "S. Azzali"
+title: "L. Niculae"
 format:
   html:
     theme: darkly
@@ -34,7 +34,7 @@ scatter_data <- ctx$scatter_ft
 df_dynamic_hid_match <- ctx$run_ctx_ft$df_dynamic_hid_match
 
 
-player_sel <- "S. Azzali"
+player_sel <- "L. Niculae"
 plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 
 

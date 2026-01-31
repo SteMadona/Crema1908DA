@@ -1,12 +1,12 @@
 ---
-title: "S. Azzali"
+title: "G. Recino"
 format:
   html:
     theme: darkly
     css: styles.css
 ---
 
-## Difensore
+## Attaccante
 
 
 # Statistiche All Time 
@@ -34,7 +34,7 @@ scatter_data <- ctx$scatter_ft
 df_dynamic_hid_match <- ctx$run_ctx_ft$df_dynamic_hid_match
 
 
-player_sel <- "S. Azzali"
+player_sel <- "G. Recino"
 plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 
 

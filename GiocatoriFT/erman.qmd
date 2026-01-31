@@ -1,12 +1,12 @@
 ---
-title: "S. Azzali"
+title: "T. Erman"
 format:
   html:
     theme: darkly
     css: styles.css
 ---
 
-## Difensore
+## Centrocampista
 
 
 # Statistiche All Time 
@@ -34,7 +34,7 @@ scatter_data <- ctx$scatter_ft
 df_dynamic_hid_match <- ctx$run_ctx_ft$df_dynamic_hid_match
 
 
-player_sel <- "S. Azzali"
+player_sel <- "T. Erman"
 plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 
 

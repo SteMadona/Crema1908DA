@@ -68,36 +68,47 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+<script src="../site_libs/bslib-component-js-0.7.0/components.min.js"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
+<script src="../site_libs/bslib-component-js-0.7.0/web-components.min.js" type="module"></script>
+
+<link href="../site_libs/bslib-component-css-0.7.0/components.css" rel="stylesheet">
+
+<script src="../site_libs/bslib-tag-require-0.7.0/tag-require.js"></script>
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+
+<script src="../site_libs/datatables-binding-0.34.0/datatables.js"></script>
+
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+
+<script src="../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script src="../site_libs/jszip-1.13.6/jszip.min.js"></script>
+
+<link href="../site_libs/dt-ext-buttons-1.13.6/css/buttons.dataTables.min.css" rel="stylesheet">
+
+<script src="../site_libs/dt-ext-buttons-1.13.6/js/dataTables.buttons.min.js"></script>
+
+<script src="../site_libs/dt-ext-buttons-1.13.6/js/buttons.html5.min.js"></script>
+
+<script src="../site_libs/dt-ext-buttons-1.13.6/js/buttons.colVis.min.js"></script>
+
+<script src="../site_libs/dt-ext-buttons-1.13.6/js/buttons.print.min.js"></script>
+
+<link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -147,28 +158,14 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#config" id="toc-config" class="nav-link active" data-scroll-target="#config">=== CONFIG ===</a></li>
-  <li><a href="#lettura-dati" id="toc-lettura-dati" class="nav-link" data-scroll-target="#lettura-dati">— Lettura dati —</a></li>
-  <li><a href="#elimina-eventuali-colonne-completamente-vuote-capita-con-export-excel" id="toc-elimina-eventuali-colonne-completamente-vuote-capita-con-export-excel" class="nav-link" data-scroll-target="#elimina-eventuali-colonne-completamente-vuote-capita-con-export-excel">Elimina eventuali colonne completamente vuote (capita con export Excel)</a></li>
-  <li><a href="#individua-le-colonne-stagione-formato-2021" id="toc-individua-le-colonne-stagione-formato-2021" class="nav-link" data-scroll-target="#individua-le-colonne-stagione-formato-2021">Individua le colonne stagione (formato 20/21)</a></li>
-  <li><a href="#ordine-stagioni-come-appaiono-nel-file-se-vuoi-forzarlo-sostituisci-season_cols-con-un-vettore-fisso" id="toc-ordine-stagioni-come-appaiono-nel-file-se-vuoi-forzarlo-sostituisci-season_cols-con-un-vettore-fisso" class="nav-link" data-scroll-target="#ordine-stagioni-come-appaiono-nel-file-se-vuoi-forzarlo-sostituisci-season_cols-con-un-vettore-fisso">Ordine stagioni come appaiono nel file (se vuoi forzarlo, sostituisci season_cols con un vettore fisso)</a></li>
-  <li><a href="#calcoli-per-riga" id="toc-calcoli-per-riga" class="nav-link" data-scroll-target="#calcoli-per-riga">— Calcoli per riga —</a></li>
-  <li><a href="#kpi" id="toc-kpi" class="nav-link" data-scroll-target="#kpi">— KPI —</a></li>
-  <li><a href="#value-boxes-stile-professionale" id="toc-value-boxes-stile-professionale" class="nav-link" data-scroll-target="#value-boxes-stile-professionale">Value boxes (stile professionale)</a></li>
-  <li><a href="#evidenzia-chi-ha-premio-e-chi-ha-dati-mancanti" id="toc-evidenzia-chi-ha-premio-e-chi-ha-dati-mancanti" class="nav-link" data-scroll-target="#evidenzia-chi-ha-premio-e-chi-ha-dati-mancanti">Evidenzia chi ha premio e chi ha dati mancanti</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -178,7 +175,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -200,59 +197,74 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Regola:</strong> il premio di tesseramento è dovuto per ogni stagione <strong>dal 20/21</strong> in cui il giocatore risulta in una società diversa da <strong>AC Crema 1908</strong>. Le celle vuote dal 20/21 in poi vengono marcate come <strong>dati mancanti</strong>.</p>
+<p><strong>Regola:</strong> il premio di tesseramento è dovuto per ogni stagione <strong>dal 20/21</strong> in cui il giocatore risulta in una società diversa da <strong>AC Crema 1908</strong>.<br>
+Le celle vuote dal 20/21 in poi vengono marcate come <strong>dati mancanti</strong>.</p>
 </div>
 </div>
-<p>library(dplyr) library(stringr) library(readr) library(tidyr)</p>
-<section id="config" class="level1">
-<h1>=== CONFIG ===</h1>
-<p>datafile &lt;- read_excel(here(“data”, “STORICO_CALCIATORI.xlsx”)) crema_tag &lt;- “AC CREMA 1908” due_from &lt;- “20/21” # da qui in avanti si conteggiano i premi</p>
-</section>
-<section id="lettura-dati" class="level1">
-<h1>— Lettura dati —</h1>
-<p>df &lt;- read_csv(datafile, show_col_types = FALSE)</p>
-</section>
-<section id="elimina-eventuali-colonne-completamente-vuote-capita-con-export-excel" class="level1">
-<h1>Elimina eventuali colonne completamente vuote (capita con export Excel)</h1>
-<p>df &lt;- df %&gt;% select(where(~ !all(is.na(.) | str_squish(as.character(.)) == ““)))</p>
-</section>
-<section id="individua-le-colonne-stagione-formato-2021" class="level1">
-<h1>Individua le colonne stagione (formato 20/21)</h1>
-<p>season_cols &lt;- names(df)[str_detect(names(df), “^\d{2}/\d{2}$”)] if (length(season_cols) == 0) stop(“Non trovo colonne stagione nel formato ‘20/21’.”)</p>
-</section>
-<section id="ordine-stagioni-come-appaiono-nel-file-se-vuoi-forzarlo-sostituisci-season_cols-con-un-vettore-fisso" class="level1">
-<h1>Ordine stagioni come appaiono nel file (se vuoi forzarlo, sostituisci season_cols con un vettore fisso)</h1>
-<p>seasons &lt;- season_cols if (!due_from %in% seasons) stop(paste(“La stagione”, due_from, “non è tra le colonne.”))</p>
-<p>due_seasons &lt;- seasons[match(due_from, seasons):length(seasons)]</p>
-<p>norm &lt;- function(x) str_squish(replace_na(as.character(x), ““)) is_crema &lt;- function(x) str_detect(str_to_upper(norm(x)), str_to_upper(crema_tag))</p>
-</section>
-<section id="calcoli-per-riga" class="level1">
-<h1>— Calcoli per riga —</h1>
-<p>calc_arrival &lt;- function(row) { idx &lt;- which(is_crema(row[seasons])) if (length(idx) == 0) return(“—”) seasons[min(idx)] }</p>
-<p>calc_due_missing &lt;- function(row) { vals &lt;- setNames(lapply(row[due_seasons], norm), due_seasons) missing &lt;- names(vals)[unlist(vals) == “”] due &lt;- names(vals)[unlist(vals) != “” &amp; !sapply(vals, is_crema)] list( due_years = if (length(due)) paste(due, collapse = “,”) else “—”, due_n = length(due), missing = if (length(missing)) paste(missing, collapse = “,”) else “—” ) }</p>
-<p>tmp &lt;- df %&gt;% rowwise() %&gt;% mutate( <code>Anno arrivo (Crema)</code> = calc_arrival(cur_data()), .calc = list(calc_due_missing(cur_data())), <code>Anni premio (da 20/21)</code> = .calc<span class="math inline">\(due_years,
-    `N° anni premio` = .calc\)</span>due_n, <code>Dati mancanti (da 20/21)</code> = .calc$missing ) %&gt;% ungroup() %&gt;% select(-.calc)</p>
-</section>
-<section id="kpi" class="level1">
-<h1>— KPI —</h1>
-<p>n_players &lt;- nrow(tmp) n_due_players &lt;- sum(tmp<span class="math inline">\(`N° anni premio` &gt; 0, na.rm = TRUE)
-tot_due_years &lt;- sum(tmp\)</span><code>N° anni premio</code>, na.rm = TRUE) n_missing &lt;- sum(tmp$<code>Dati mancanti (da 20/21)</code> != “—”, na.rm = TRUE)</p>
-</section>
-<section id="value-boxes-stile-professionale" class="level1">
-<h1>Value boxes (stile professionale)</h1>
-<p>library(bslib) bslib::layout_column_wrap( width = 1/4, bslib::value_box(“Giocatori”, n_players), bslib::value_box(“Con premio dovuto”, n_due_players), bslib::value_box(“Anni premio totali”, tot_due_years), bslib::value_box(“Righe con dati mancanti”, n_missing) )</p>
-<p>library(DT)</p>
-<p>view &lt;- tmp %&gt;% select(Giocatore, Categoria, Nascita, <code>Anno arrivo (Crema)</code>, <code>N° anni premio</code>, <code>Anni premio (da 20/21)</code>, <code>Dati mancanti (da 20/21)</code>) %&gt;% arrange(desc(<code>N° anni premio</code>), Giocatore)</p>
-<p>dt &lt;- datatable( view, rownames = FALSE, extensions = c(“Buttons”), options = list( dom = “Bfrtip”, buttons = c(“copy”, “csv”, “excel”, “print”), pageLength = 25, scrollX = TRUE ) )</p>
-</section>
-<section id="evidenzia-chi-ha-premio-e-chi-ha-dati-mancanti" class="level1">
-<h1>Evidenzia chi ha premio e chi ha dati mancanti</h1>
-<p>dt %&gt;% formatStyle( “N° anni premio”, backgroundColor = styleInterval(0, c(NA, “#fff3cd”)), fontWeight = styleInterval(0, c(“normal”, “bold”)) ) %&gt;% formatStyle( “Dati mancanti (da 20/21)”, backgroundColor = styleEqual(“—”, NA, default = “#f8d7da”) )</p>
-<p>storico &lt;- tmp %&gt;% select(Giocatore, all_of(seasons)) %&gt;% arrange(Giocatore)</p>
-<p>datatable(storico, rownames = FALSE, options = list(pageLength = 25, scrollX = TRUE))</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="bslib-grid bslib-mb-spacing html-fill-item" data-require-bs-caller="layout_column_wrap()" data-require-bs-version="5" style="grid-template-columns:repeat(4, minmax(0, 1fr));grid-auto-rows:1fr;--bslib-grid-height:auto;--bslib-grid-height-mobile:auto;">
+<div class="bslib-grid-item bslib-gap-spacing html-fill-container">
+<div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container bslib-value-box default" data-bslib-card-init="" data-require-bs-caller="card() value_box()" data-require-bs-version="5 5">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">
+<div class="value-box-area html-fill-item html-fill-container">
+<p class="value-box-title">Giocatori</p>
+<p class="value-box-value">24</p>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script>
+</div>
+</div>
+<div class="bslib-grid-item bslib-gap-spacing html-fill-container">
+<div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container bslib-value-box default" data-bslib-card-init="" data-require-bs-caller="card() value_box()" data-require-bs-version="5 5">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">
+<div class="value-box-area html-fill-item html-fill-container">
+<p class="value-box-title">Con premio dovuto</p>
+<p class="value-box-value">20</p>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script>
+</div>
+</div>
+<div class="bslib-grid-item bslib-gap-spacing html-fill-container">
+<div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container bslib-value-box default" data-bslib-card-init="" data-require-bs-caller="card() value_box()" data-require-bs-version="5 5">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">
+<div class="value-box-area html-fill-item html-fill-container">
+<p class="value-box-title">Anni premio totali</p>
+<p class="value-box-value">53</p>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script>
+</div>
+</div>
+<div class="bslib-grid-item bslib-gap-spacing html-fill-container">
+<div class="card bslib-card bslib-mb-spacing html-fill-item html-fill-container bslib-value-box default" data-bslib-card-init="" data-require-bs-caller="card() value_box()" data-require-bs-version="5 5">
+<div class="card-body bslib-gap-spacing html-fill-item html-fill-container" style="margin-top:auto;margin-bottom:auto;flex:1 1 auto;">
+<div class="value-box-area html-fill-item html-fill-container">
+<p class="value-box-title">Righe con dati mancanti</p>
+<p class="value-box-value">2</p>
+</div>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-78e5f156653422553883" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-78e5f156653422553883">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["AJDINI ALAN","BRUSATI ALESSANDRO","KURICI LORIS","MHILLI ALESIO","VANELLI MATTIA","DI CICCO EDOARDO","LAINI ALESSIO","LAINI MATTIA","MARELLI PIETRO","MASSAZZA FRANCESCO","PASCALE LUIGI","PEA DIEGO","GAGLIARDI KRISTIAN","NDEMA YONGWA FRANK WARREN","NICOLINI RICCARDO","TACCHINI MICHELE","BRESCIANI MATTIA","CALIA THOMAS","MORUZZI FEDERICO","RIBOLI ALESSANDRO","GRANATA ANDREA","INVERNIZZI LEONARDO","MONTOYA FLORES STEFANO RAUL","SHIKU DEIVI"],["ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009","ALLIEVI U17 - 2009"],["21/04/2009","01/06/2009","14/07/2009","02/04/2009","19/12/2009","08/06/2009","10/02/2009","10/02/2009","22/04/2009","30/01/2009","31/07/2009","29/06/2009","17/11/2009","19/02/2009","10/10/2009","17/10/2009","06/01/2009","30/10/2009","15/09/2009","16/07/2009","23/04/2009","29/04/2009","07/04/2009","09/09/2009"],["21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25","21/22–24/25"],["25/26","25/26","25/26","25/26","25/26","24/25","24/25","24/25","24/25","24/25","24/25","24/25","23/24","23/24","23/24","18/19","22/23","22/23","21/22","22/23","25/26","25/26","20/21","21/22"],[4,4,4,4,4,3,3,3,3,3,3,3,2,2,2,2,1,1,1,1,0,0,0,0],["21/22, 22/23, 23/24, 24/25","21/22, 22/23, 23/24, 24/25","21/22, 22/23, 23/24, 24/25","21/22, 22/23, 23/24, 24/25","21/22, 22/23, 23/24, 24/25","21/22, 22/23, 23/24","21/22, 22/23, 23/24","21/22, 22/23, 23/24","21/22, 22/23, 23/24","21/22, 22/23, 23/24","21/22, 22/23, 23/24","21/22, 22/23, 23/24","21/22, 22/23","21/22, 22/23","21/22, 22/23","23/24, 24/25","21/22","21/22","23/24","21/22","—","—","—","—"],["—","—","—","—","—","—","—","—","—","—","—","—","—","—","—","—","—","—","—","—","21/22, 22/23, 23/24, 24/25","21/22, 22/23, 23/24, 24/25","—","—"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Giocatore<\/th>\n      <th>Categoria<\/th>\n      <th>Nascita<\/th>\n      <th>Finestra premio (U13–U16)<\/th>\n      <th>Anno arrivo (Crema)<\/th>\n      <th>N° anni premio<\/th>\n      <th>Anni premio (U13–U16)<\/th>\n      <th>Dati mancanti (U13–U16)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":["copy","csv","excel","print"],"pageLength":25,"scrollX":true,"columnDefs":[{"className":"dt-right","targets":5},{"name":"Giocatore","targets":0},{"name":"Categoria","targets":1},{"name":"Nascita","targets":2},{"name":"Finestra premio (U13–U16)","targets":3},{"name":"Anno arrivo (Crema)","targets":4},{"name":"N° anni premio","targets":5},{"name":"Anni premio (U13–U16)","targets":6},{"name":"Dati mancanti (U13–U16)","targets":7}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'font-weight':isNaN(parseFloat(value)) ? '' : value <= 0 ? \"normal\" : \"bold\",'background-color':isNaN(parseFloat(value)) ? '' : value <= 0 ? null : \"#fff3cd\"});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'background-color':value == \"—\" ? null : \"#f8d7da\"});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-6390cc9086fe61940d51" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6390cc9086fe61940d51">{"x":{"filter":"none","vertical":false,"data":[["AJDINI ALAN","BRESCIANI MATTIA","BRUSATI ALESSANDRO","CALIA THOMAS","DI CICCO EDOARDO","GAGLIARDI KRISTIAN","GRANATA ANDREA","INVERNIZZI LEONARDO","KURICI LORIS","LAINI ALESSIO","LAINI MATTIA","MARELLI PIETRO","MASSAZZA FRANCESCO","MHILLI ALESIO","MONTOYA FLORES STEFANO RAUL","MORUZZI FEDERICO","NDEMA YONGWA FRANK WARREN","NICOLINI RICCARDO","PASCALE LUIGI","PEA DIEGO","RIBOLI ALESSANDRO","SHIKU DEIVI","TACCHINI MICHELE","VANELLI MATTIA"],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],["POL. SAN LUIGI ASD","LUISIANA","SANCOLOMBANO CALCIO",null,"SS DRESANO",null,null,null,"POL. JUVENTINA","FANFULLA","FANFULLA","LAUDENSE","ZELOBUONPERSICO","CASALBUTTANO","CASTELNUOVO",null,"FANFULLA",null,null,"POL. JUVENTINA",null,null,"AC CREMA 1908",null],["RC CODOGNO","LUISIANA","SANCOLOMBANO CALCIO","ACCADEMIA PERGOLETTESE","FANFULLA","LUISIANA",null,null,"FANFULLA","FANFULLA / SAN COLOMBANO CALCIO","FANFULLA / SAN COLOMBANO CALCIO","LAUDENSE","FANFULLA","CASALBUTTANO","CASTELNUOVO","ALBACREMA","FANFULLA","SPORTED MARIS","CASTELVERDE","FANFULLA","US BAGNOLO","TRESCORE","AC CREMA 1908","PIACENZA CALCIO"],["RC CODOGNO","LUISIANA","GS AZZURRA","ACCADEMIA PERGOLETTESE","FANFULLA","LUISIANA",null,null,"FANFULLA","SAN COLOMBANO CALCIO","SAN COLOMBANO CALCIO","LAUDENSE","FANFULLA","SPORTED MARIS","AC CREMA 1908","SERGNANESE","FANFULLA","SPORTED MARIS","CASTELVERDE","FANFULLA","US BAGNOLO","TRESCORE","AC CREMA 1908","FANFULLA"],["RC CODOGNO","LUISIANA","GS AZZURRA","US PERGOLETTESE","FANFULLA","LUISIANA",null,null,"FANFULLA","MONTANASO LOMBARDO","MONTANASO LOMBARDO","LAUDENSE","FANFULLA","SPORTED MARIS","AC CREMA 1908","AC CREMA 1908","FANFULLA","SPORTED MARIS","CASTELVERDE","FANFULLA","US BAGNOLO / US PERGOLETTESE","AC CREMA 1908","AC CREMA 1908","FANFULLA"],["RC CODOGNO","AC CREMA 1908","GS AZZURRA","AC CREMA 1908","FANFULLA","LUISIANA",null,null,"FANFULLA","SANT'ANGELO","SANT'ANGELO","LAUDENSE","FANFULLA","SPORTED MARIS","AC CREMA 1908","AC CREMA 1908","FANFULLA","SPORTED MARIS","CASTELVERDE","FANFULLA","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","FANFULLA"],["RC CODOGNO","AC CREMA 1908","SANT'ANGELO","AC CREMA 1908","FANFULLA","AC CREMA 1908",null,null,"FANFULLA","SANT'ANGELO","SANT'ANGELO","FANFULLA","FANFULLA","SPORTED MARIS","AC CREMA 1908","US PERGOLETTESE","AC CREMA 1908","AC CREMA 1908","CASTELVERDE","FANFULLA","AC CREMA 1908","AC CREMA 1908","UC ALBINOLEFFE","SUPERGA MUZZA"],["SANT'ANGELO","AC CREMA 1908","SANT'ANGELO","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908",null,null,"FANFULLA","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","SPORTED MARIS","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","UC ALBINOLEFFE","FANFULLA"],["AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908","AC CREMA 1908"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Giocatore<\/th>\n      <th>16/17<\/th>\n      <th>17/18<\/th>\n      <th>18/19<\/th>\n      <th>19/20<\/th>\n      <th>20/21<\/th>\n      <th>21/22<\/th>\n      <th>22/23<\/th>\n      <th>23/24<\/th>\n      <th>24/25<\/th>\n      <th>25/26<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":25,"scrollX":true,"columnDefs":[{"name":"Giocatore","targets":0},{"name":"16/17","targets":1},{"name":"17/18","targets":2},{"name":"18/19","targets":3},{"name":"19/20","targets":4},{"name":"20/21","targets":5},{"name":"21/22","targets":6},{"name":"22/23","targets":7},{"name":"23/24","targets":8},{"name":"24/25","targets":9},{"name":"25/26","targets":10}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

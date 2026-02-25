@@ -1,0 +1,118 @@
+---
+title: "Under 17"
+format:
+  html:
+    theme: darkly
+    css: styles.css
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/data_generation_ft.R")
+source("code/data_generation_u19.R")
+source("code/data_generation_u17.R")
+
+```
+
+
+Questa è la sezione dedicata alla **Under 17**.
+
+## Portieri
+- A. Ajdini
+- A. Laini
+- A. Riboli
+
+## Difensori
+- [M. Bresciani](GiocatoriU17/bresciani.html)
+- [A. Brusati](GiocatoriU17/brusati.html)
+- [E. Di Cicco](GiocatoriU17/dicico.html)
+- [A. Granata]
+- [P. Marelli](GiocatoriU17/marelli.html)
+- [A. Mhilli](GiocatoriU17/mhilli.html)
+- [S. Montoya](GiocatoriU17/montoya.html)
+- [R. Nicolini](GiocatoriU17/nicolini.html)
+
+## Centrocampisti
+- [K. Gagliardi](GiocatoriU17/gagliardi.html)
+- [F. Massazza](GiocatoriU17//massazza.html)
+- [F. Moruzzi](GiocatoriU17/moruzzi.html)
+- [L. Pascale](GiocatoriU17/pascale.html)
+- [D. Pea](GiocatoriU17/pea.html)
+- [D. Shiku](GiocatoriU17/shiku.html)
+- [M. Vanelli](GiocatoriU17/vanelli.html)
+
+## Attaccanti
+- [T. Calia](GiocatoriU17/calia.html)
+- [L. Kurici](GiocatoriU17/kurici.html)
+- [M. Laini](GiocatoriU17/laini.html)
+- [F. Ndema](GiocatoriU17/ndema.html)
+- [M. Tacchini]
+
+# Analisi All Time
+
+
+## Carichi di Lavoro
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/carichi_lavoro.R")
+tb_carichi_lavoro_u17
+
+```
+
+
+## Statistiche all time
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/phy_vs_tech_new.R")
+ctx <- readRDS(here::here("data", "derived", "u17_context.rds"))
+plot_phy_tec_squad(ctx$scatter_u17)
+
+```
+
+
+## Classifiche fisiche
+
+::: columns
+
+::: {.column width="50%"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/Rankings_u17.R")
+tb_topspeed
+
+```
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+tb_workrate
+
+```
+:::
+
+::: 
+
+
+## Classifiche Tecniche 
+
+::: columns
+
+::: {.column width="50%"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+tb_touches
+
+```
+:::
+
+::: {.column width="50%"}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+tb_releases
+
+```
+:::
+
+:::

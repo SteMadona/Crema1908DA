@@ -1,0 +1,194 @@
+---
+title: "Premi tesseramento"
+subtitle: "Under 17 – Stagione 2025/26"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    page-layout: full
+    code-tools: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+::: {.callout-note}
+**Regola:** il premio di tesseramento è dovuto per ogni stagione **dal 20/21** in cui il giocatore risulta in una società diversa da **AC Crema 1908**.  
+Le celle vuote dal 20/21 in poi vengono marcate come **dati mancanti**.
+:::
+
+```{r}
+#| include: false
+
+library(dplyr)
+library(stringr)
+library(tidyr)
+library(readxl)
+library(here)
+library(bslib)
+library(DT)
+
+# === CONFIG PAGINA ===
+target_u  <- 17               # <-- per questa pagina: U17. (metti 14/15/16 nelle altre)
+crema_tag <- "AC CREMA 1908"
+
+# --- Lettura EXCEL ---
+df <- read_excel(here("data", "STORICO_CALCIATORI.xlsx"))
+names(df) <- str_squish(names(df))  # ripulisce eventuali spazi nelle intestazioni
+
+# Elimina colonne completamente vuote (capita con export Excel)
+df <- df %>% select(where(~ !all(is.na(.) | str_squish(as.character(.)) == "")))
+
+# Individua colonne stagione (formato 20/21)
+season_cols <- names(df)[str_detect(names(df), "^\\d{2}/\\d{2}$")]
+if (length(season_cols) == 0) stop("Non trovo colonne stagione nel formato '20/21'.")
+
+# Ordina le stagioni in modo cronologico (18/19 ... 25/26)
+season_start_year <- function(s) 2000 + as.integer(str_sub(s, 1, 2))
+seasons <- season_cols[order(season_start_year(season_cols))]
+current_season <- tail(seasons, 1)
+current_idx <- length(seasons)
+
+# Estrae U14/U15/U16/U17 dalla colonna Categoria (es. 'ALLIEVI U17 - 2009')
+parse_u <- function(cat) {
+  m <- str_match(str_to_upper(as.character(cat)), "U\\s*(\\d{2})")
+  suppressWarnings(as.integer(m[,2]))
+}
+
+# Normalizzazioni
+norm <- function(x) str_squish(replace_na(as.character(x), ""))
+is_crema <- function(x) str_detect(str_to_upper(norm(x)), str_to_upper(crema_tag))
+
+# --- Finestra premio U13->U16 (personalizzata per categoria) ---
+# start = stagione in cui era U13
+# end   = stagione in cui era U16 (se la categoria attuale è > U16 allora si ferma prima)
+window_indices <- function(u) {
+  if (is.na(u)) return(integer(0))
+  start_idx <- current_idx - (u - 13)                 # es U17: -4 -> 21/22
+  end_idx   <- current_idx - max(0, u - 16)           # es U17: -1 -> 24/25; U16: 0 -> 25/26
+  start_idx <- max(1, start_idx)
+  end_idx   <- min(current_idx, end_idx)
+  if (start_idx > end_idx) return(integer(0))
+  start_idx:end_idx
+}
+
+# --- Calcoli per riga ---
+calc_arrival <- function(row) {
+  idx <- which(sapply(row[seasons], is_crema))
+  if (length(idx) == 0) return("—")
+  seasons[min(idx)]
+}
+
+calc_due_missing <- function(row, u) {
+  idxs <- window_indices(u)
+  if (length(idxs) == 0) {
+    return(list(
+      window = "—",
+      due_years = "—",
+      due_n = 0,
+      missing = "—"
+    ))
+  }
+
+  win_seasons <- seasons[idxs]
+  vals <- setNames(lapply(row[win_seasons], norm), win_seasons)
+
+  missing <- names(vals)[unlist(vals) == ""]
+  due     <- names(vals)[unlist(vals) != "" & !sapply(vals, is_crema)]
+
+  list(
+    window   = paste0(min(win_seasons), "–", max(win_seasons)),
+    due_years = if (length(due)) paste(due, collapse = ", ") else "—",
+    due_n     = length(due),
+    missing   = if (length(missing)) paste(missing, collapse = ", ") else "—"
+  )
+}
+
+# --- FILTRO CATEGORIE: solo U14-U17 e solo la categoria della pagina ---
+df <- df %>%
+  mutate(U_cat = parse_u(Categoria)) %>%
+  filter(U_cat %in% 14:17, U_cat == target_u)
+
+tmp <- df %>%
+  rowwise() %>%
+  mutate(
+    `Finestra premio (U13–U16)` = calc_due_missing(cur_data(), U_cat)$window,
+    `Anno arrivo (Crema)` = calc_arrival(cur_data()),
+    .calc = list(calc_due_missing(cur_data(), U_cat)),
+    `Anni premio (U13–U16)` = .calc$due_years,
+    `N° anni premio` = .calc$due_n,
+    `Dati mancanti (U13–U16)` = .calc$missing
+  ) %>%
+  ungroup() %>%
+  select(-.calc)
+
+# KPI
+n_players     <- nrow(tmp)
+n_due_players <- sum(tmp$`N° anni premio` > 0, na.rm = TRUE)
+tot_due_years <- sum(tmp$`N° anni premio`, na.rm = TRUE)
+n_missing     <- sum(tmp$`Dati mancanti (U13–U16)` != "—", na.rm = TRUE)
+
+# Tabelle
+view <- tmp %>%
+  select(Giocatore, Categoria, Nascita,
+         `Finestra premio (U13–U16)`,
+         `Anno arrivo (Crema)`, `N° anni premio`,
+         `Anni premio (U13–U16)`, `Dati mancanti (U13–U16)`) %>%
+  arrange(desc(`N° anni premio`), Giocatore)
+
+storico <- tmp %>%
+  select(Giocatore, all_of(seasons)) %>%
+  arrange(Giocatore)
+```
+
+
+```{r}
+#| echo: false
+
+bslib::layout_column_wrap(
+  width = 1/4,
+  bslib::value_box("Giocatori", n_players),
+  bslib::value_box("Con premio dovuto", n_due_players),
+  bslib::value_box("Anni premio totali", tot_due_years),
+  bslib::value_box("Righe con dati mancanti", n_missing)
+)
+```
+
+
+```{r}
+#| echo: false
+
+DT::datatable(
+  view,
+  rownames = FALSE,
+  extensions = "Buttons",
+  options = list(
+    dom = "Bfrtip",
+    buttons = c("copy", "csv", "excel", "print"),
+    pageLength = 25,
+    scrollX = TRUE
+  )
+) %>%
+  DT::formatStyle(
+    "N° anni premio",
+    backgroundColor = DT::styleInterval(0, c(NA, "#fff3cd")),
+    fontWeight = DT::styleInterval(0, c("normal", "bold"))
+  ) %>%
+  formatStyle(
+  "Dati mancanti (U13–U16)",
+  backgroundColor = styleEqual("—", NA, default = "#f8d7da")
+)
+```
+
+
+```{r}
+#| echo: false
+
+DT::datatable(
+  storico,
+  rownames = FALSE,
+  options = list(pageLength = 25, scrollX = TRUE)
+)
+```
+

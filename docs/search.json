@@ -1,10 +1,311 @@
 [
   {
+    "objectID": "Under19.html",
+    "href": "Under19.html",
+    "title": "Under 19",
+    "section": "",
+    "text": "Questa è la sezione dedicata alla Under 19."
+  },
+  {
+    "objectID": "Under19.html#portieri",
+    "href": "Under19.html#portieri",
+    "title": "Under 19",
+    "section": "Portieri",
+    "text": "Portieri\n\nA. Laini\nA. Riboli"
+  },
+  {
+    "objectID": "Under19.html#difensori",
+    "href": "Under19.html#difensori",
+    "title": "Under 19",
+    "section": "Difensori",
+    "text": "Difensori\n\nC. Barzi\nM. Bertazzoli\nA. Cicarè\nI. Dimov\nV. Gerasym\nF. Montemezzani\nF. Cerioli"
+  },
+  {
+    "objectID": "Under19.html#centrocampisti",
+    "href": "Under19.html#centrocampisti",
+    "title": "Under 19",
+    "section": "Centrocampisti",
+    "text": "Centrocampisti\n\nC. Brazzorotto\nC. Bertazzoni\nM. Bonizzoni\nW. De Maio\nM. D’Ischia\nA. Jarid\nS. Schiavini\nB. Pape"
+  },
+  {
+    "objectID": "Under19.html#attaccanti",
+    "href": "Under19.html#attaccanti",
+    "title": "Under 19",
+    "section": "Attaccanti",
+    "text": "Attaccanti\n\nM. Fino\nA. Nicotra\nF. Valletti\nR. Tabal\nM. Tajeddine"
+  },
+  {
+    "objectID": "Under19.html#carichi-di-lavoro",
+    "href": "Under19.html#carichi-di-lavoro",
+    "title": "Under 19",
+    "section": "Carichi di Lavoro",
+    "text": "Carichi di Lavoro\n\n\n\n\n\n\n\n\nCarichi di lavoro\n\n\nMedie settimanali (tutti i giocatori)\n\n\nWeek\nMedia WorkRate\nMedia HID\nMedia Acc. Index\nMedia Dec. Index\n\n\n\n\n2025-41\n75.16\n8.41\n83.61\n83.01\n\n\n2025-42\n73.83\n11.35\n83.38\n84.05\n\n\n2025-43\n65.59\n7.96\n78.62\n78.43\n\n\n2025-44\n66.65\n8.54\n77.70\n77.86\n\n\n2025-45\n72.30\n11.33\n77.13\n77.77\n\n\n2025-46\n75.58\n14.00\n93.95\n94.24\n\n\n2025-47\n88.10\n14.99\n88.09\n87.98\n\n\n2025-48\n80.68\n12.44\n93.92\n93.49\n\n\n2025-49\n82.27\n11.29\n91.86\n91.59\n\n\n2025-50\n86.39\n15.42\n91.64\n92.49\n\n\n2025-51\n75.46\n16.57\n70.52\n72.28\n\n\n2026-2\n73.69\n11.64\n73.32\n73.26\n\n\n2026-3\n67.46\n6.47\n83.45\n83.11\n\n\n2026-4\n79.96\n11.82\n96.43\n96.67"
+  },
+  {
+    "objectID": "Under19.html#statistiche-all-time",
+    "href": "Under19.html#statistiche-all-time",
+    "title": "Under 19",
+    "section": "Statistiche all time",
+    "text": "Statistiche all time"
+  },
+  {
+    "objectID": "Under19.html#classifiche-fisiche",
+    "href": "Under19.html#classifiche-fisiche",
+    "title": "Under 19",
+    "section": "Classifiche fisiche",
+    "text": "Classifiche fisiche\n\n\n\n\n\n\n\n\n\n\nTopSpeed all time\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\nData\n\n\n\n\nM. Bonizzoni\n33.73\n2025-12-18\n\n\nF. Cerioli\n32.29\n2025-10-09\n\n\nM. Bertazzoli\n31.75\n2025-12-11\n\n\nR. Tabal\n31.64\n2025-11-13\n\n\nM. Tajeddine\n31.57\n2025-12-11\n\n\nM. Fino\n31.32\n2025-10-27\n\n\nM. Tajeddine\n31.25\n2025-10-09\n\n\nM. Tajeddine\n31.07\n2025-10-23\n\n\nR. Tabal\n31.03\n2025-10-09\n\n\nR. Tabal\n30.92\n2025-10-27\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorkRate medio\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nM. Bertazzoli\n82.30\n\n\nV. Gerasym\n81.38\n\n\nA. Jarid\n81.35\n\n\nF. Montemezzani\n81.23\n\n\nC. Brazzorotto\n81.16\n\n\nC. Barzi\n80.61\n\n\nA. Nicotra\n79.52\n\n\nF. Cerioli\n79.33\n\n\nM. Bonizzoni\n77.27\n\n\nM. Tajeddine\n76.77"
+  },
+  {
+    "objectID": "Under19.html#classifiche-tecniche",
+    "href": "Under19.html#classifiche-tecniche",
+    "title": "Under 19",
+    "section": "Classifiche Tecniche",
+    "text": "Classifiche Tecniche\n\n\n\n\n\n\n\n\n\n\nTocchi medi per minuto\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nM. D'Ischia\n2.69\n\n\nF. Montemezzani\n2.51\n\n\nW. De Maio\n2.50\n\n\nC. Bertazzoni\n2.33\n\n\nA. Jarid\n2.28\n\n\nC. Barzi\n2.19\n\n\nA. Nicotra\n2.12\n\n\nR. Tabal\n2.12\n\n\nI. Dimov\n2.11\n\n\nS. Schiavini\n2.09\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRilasci medi per minuto\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nC. Barzi\n1.03\n\n\nS. Schiavini\n1.01\n\n\nW. De Maio\n0.93\n\n\nC. Bertazzoni\n0.90\n\n\nM. D'Ischia\n0.89\n\n\nM. Bertazzoli\n0.87\n\n\nF. Montemezzani\n0.87\n\n\nI. Dimov\n0.84\n\n\nA. Jarid\n0.81\n\n\nM. Bonizzoni\n0.78"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Crema 1908 Data Analysis",
     "section": "",
     "text": "Crema 1908 Data Analysis\n\n\ndi Stefano Madona\n\n\n\n\n\n\nQuesto sito è stato creato con i dati raccolti dai dispositivi wearable forniti dalla società Playermaker.\nTutte le analisi sono state realizzate con RStudio.\nTutti i grafici presenti nelle pagine sono originali e derivano direttamente dai dati raccolti."
+  },
+  {
+    "objectID": "GiocatoriU19/tajeddine.html#valori-anomali",
+    "href": "GiocatoriU19/tajeddine.html#valori-anomali",
+    "title": "M. Tajeddine",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.135\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.383\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.440\n0.383\n0.057\n2.92\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n297.667\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/schiavini.html#valori-anomali",
+    "href": "GiocatoriU19/schiavini.html#valori-anomali",
+    "title": "S. Schiavini",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nS. Schiavini — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.140\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS. Schiavini — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.350\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS. Schiavini — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n285.000\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/nicotra.html#valori-anomali",
+    "href": "GiocatoriU19/nicotra.html#valori-anomali",
+    "title": "A. Nicotra",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nA. Nicotra — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.138\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Nicotra — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.350\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Nicotra — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n279.750\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/jarid.html#valori-anomali",
+    "href": "GiocatoriU19/jarid.html#valori-anomali",
+    "title": "A. Jarid",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nA. Jarid — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.154\nNA\nNA\n\n\nsession\nMon, Oct 6, 2025\nPartita finale\n0.140\n0.154\n−0.014\n−4.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Jarid — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.430\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Jarid — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n323.562\nNA\nNA\n\n\nsession\nMon, Oct 6, 2025\nPartita finale\n289.000\n323.562\n−34.562\n−3.31\n\n\nsession\nMon, Oct 13, 2025\nPartita finale\n378.000\n323.562\n54.438\n4.44\n\n\nsession\nThu, Oct 23, 2025\nPartita finale\n281.000\n323.562\n−42.562\n−4.00"
+  },
+  {
+    "objectID": "GiocatoriU19/fino.html#valori-anomali",
+    "href": "GiocatoriU19/fino.html#valori-anomali",
+    "title": "M. Fino",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Fino — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.136\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.095\n0.136\n−0.041\n−6.07\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Fino — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.362\nNA\nNA\n\n\nsession\nMon, Oct 13, 2025\nPartita finale\n0.405\n0.362\n0.043\n4.05\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.500\n0.362\n0.138\n10.45\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Fino — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n287.250\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/dimov.html#valori-anomali",
+    "href": "GiocatoriU19/dimov.html#valori-anomali",
+    "title": "I. Dimov",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nI. Dimov — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.143\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI. Dimov — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.398\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI. Dimov — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n312.167\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/cicare.html#valori-anomali",
+    "href": "GiocatoriU19/cicare.html#valori-anomali",
+    "title": "A. Cicarè",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nA. Cicarè — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.138\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Cicarè — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.372\nNA\nNA\n\n\nsession\nThu, Oct 9, 2025\nPartita finale\n0.395\n0.372\n0.023\n2.70\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.410\n0.372\n0.038\n3.71\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Cicarè — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n299.000\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n323.500\n299.000\n24.500\n2.51"
+  },
+  {
+    "objectID": "GiocatoriU19/brazzorotto.html#valori-anomali",
+    "href": "GiocatoriU19/brazzorotto.html#valori-anomali",
+    "title": "C. Brazzorotto",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nC. Brazzorotto — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.165\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC. Brazzorotto — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.375\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC. Brazzorotto — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n300.250\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/bertazzoni.html#valori-anomali",
+    "href": "GiocatoriU19/bertazzoni.html#valori-anomali",
+    "title": "C. Bertazzoni",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nC. Bertazzoni — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.137\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC. Bertazzoni — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.383\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC. Bertazzoni — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n290.962\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/barzi.html#valori-anomali",
+    "href": "GiocatoriU19/barzi.html#valori-anomali",
+    "title": "C. Barzi",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nC. Barzi — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.168\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC. Barzi — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.377\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC. Barzi — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n313.375\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU17/shiku.html#valori-anomali",
+    "href": "GiocatoriU17/shiku.html#valori-anomali",
+    "title": "D. Shiku",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nD. Shiku — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.160\nNA\nNA\n\n\nsession\nWed, Nov 12, 2025\nPartita finale\n0.140\n0.160\n−0.020\n−2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nD. Shiku — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.389\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nD. Shiku — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n321.000\nNA\nNA\n\n\nsession\nWed, Nov 12, 2025\nPartita finale\n291.000\n321.000\n−30.000\n−3.90"
+  },
+  {
+    "objectID": "GiocatoriU17/pascale.html",
+    "href": "GiocatoriU17/pascale.html",
+    "title": "L. Pascale",
+    "section": "",
+    "text": "Full SessionsPartita Finale AllenamentoPartite Ufficiali"
+  },
+  {
+    "objectID": "GiocatoriU17/pascale.html#valori-anomali",
+    "href": "GiocatoriU17/pascale.html#valori-anomali",
+    "title": "L. Pascale",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nL. Pascale — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.143\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nL. Pascale — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.380\nNA\nNA\n\n\nsession\nTue, Nov 4, 2025\nPartita finale\n0.335\n0.380\n−0.045\n−3.04\n\n\nsession\nWed, Dec 17, 2025\nPartita finale\n0.440\n0.380\n0.060\n4.05\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nL. Pascale — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n303.933\nNA\nNA\n\n\nsession\nTue, Jan 20, 2026\nPartita finale\n339.000\n303.933\n35.067\n2.63"
+  },
+  {
+    "objectID": "GiocatoriU17/ndema.html",
+    "href": "GiocatoriU17/ndema.html",
+    "title": "F. Ndema",
+    "section": "",
+    "text": "Full SessionsPartita Finale AllenamentoPartite Ufficiali"
+  },
+  {
+    "objectID": "GiocatoriU17/ndema.html#valori-anomali",
+    "href": "GiocatoriU17/ndema.html#valori-anomali",
+    "title": "F. Ndema",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nF. Ndema — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.157\nNA\nNA\n\n\nsession\nTue, Oct 14, 2025\nPartita finale\n0.135\n0.157\n−0.022\n−2.70\n\n\nsession\nTue, Nov 25, 2025\nPartita finale\n0.175\n0.157\n0.018\n2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Ndema — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.386\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Ndema — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n316.929\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU17/montoya.html",
+    "href": "GiocatoriU17/montoya.html",
+    "title": "S. Montoya",
+    "section": "",
+    "text": "Scheda Anagrafica\n\n\n\n\n\n\nNoteMattia Bresciani\n\n\n\nCategoria: Allievi U17\nRuolo: Difensore\n\n\n\nCampo\nValore\n\n\n\n\nData di nascita\n06/01/2009\n\n\nEtà\n17\n\n\nPiede\n—\n\n\nAltezza\n—\n\n\n\n\n\n\n\nMinutaggi\n\n\nMinuti giocati\n100 min\n\n\nMinuti squadra\n382 min\n\n\n% presenza\n26.2%\n\n\n\n\n\n\n\n\nS. Montoya: 100 min (26.2%) dei minuti totali squadra nei match considerati.\n\n\n\nTest Fisici\n\n\nMonitoraggio\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFull SessionsPartita Finale AllenamentoPartite Ufficiali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrend di forma\n\n\n\n\n\n\n\n\n\n\n\nTrend tecnico\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDinamica di corsa\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nS. Montoya — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.164\nNA\nNA\n\n\nsession\nTue, Jan 20, 2026\nPartita finale\n0.175\n0.164\n0.011\n3.37\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS. Montoya — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.360\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS. Montoya — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n307.375\nNA\nNA\n\n\nsession\nTue, Oct 14, 2025\nPartita finale\n323.500\n307.375\n16.125\n2.70\n\n\nsession\nTue, Jan 20, 2026\nPartita finale\n322.500\n307.375\n15.125\n2.56\n\n\n\n\n\n\n\n\n\n\n\n\nConfronto con prima squadra\n\nFull SessionPartite FinaliPartite Ufficiali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo\n\n\nVisita Medica\n\n\nCarriera\n\n\nSalute Mentale"
+  },
+  {
+    "objectID": "GiocatoriU17/massazza.html",
+    "href": "GiocatoriU17/massazza.html",
+    "title": "F. Massazza",
+    "section": "",
+    "text": "Full SessionsPartita Finale AllenamentoPartite Ufficiali"
+  },
+  {
+    "objectID": "GiocatoriU17/massazza.html#valori-anomali",
+    "href": "GiocatoriU17/massazza.html#valori-anomali",
+    "title": "F. Massazza",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nF. Massazza — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.162\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Massazza — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.378\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Massazza — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n317.737\nNA\nNA\n\n\nsession\nTue, Nov 18, 2025\nPartita finale\n288.500\n317.737\n−29.237\n−2.88"
+  },
+  {
+    "objectID": "GiocatoriU17/laini.html#valori-anomali",
+    "href": "GiocatoriU17/laini.html#valori-anomali",
+    "title": "M. Laini",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Laini — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.149\nNA\nNA\n\n\nsession\nTue, Oct 14, 2025\nPartita finale\n0.075\n0.149\n−0.074\n−11.47\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Laini — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.394\nNA\nNA\n\n\nsession\nTue, Oct 14, 2025\nPartita finale\n0.560\n0.394\n0.166\n12.48\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Laini — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n310.722\nNA\nNA\n\n\nsession\nTue, Oct 14, 2025\nPartita finale\n348.000\n310.722\n37.278\n3.06"
+  },
+  {
+    "objectID": "GiocatoriU17/gagliardi.html",
+    "href": "GiocatoriU17/gagliardi.html",
+    "title": "K. Gagliardi",
+    "section": "",
+    "text": "Full SessionsPartita Finale AllenamentoPartite Ufficiali"
+  },
+  {
+    "objectID": "GiocatoriU17/gagliardi.html#valori-anomali",
+    "href": "GiocatoriU17/gagliardi.html#valori-anomali",
+    "title": "K. Gagliardi",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nK. Gagliardi — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.144\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nK. Gagliardi — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.368\nNA\nNA\n\n\nsession\nTue, Oct 7, 2025\nPartita finale martedi\n0.400\n0.368\n0.032\n2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nK. Gagliardi — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n297.000\nNA\nNA\n\n\nsession\nTue, Oct 7, 2025\nPartita finale martedi\n329.500\n297.000\n32.500\n2.84\n\n\nsession\nWed, Jan 14, 2026\nPartita finale\n210.000\n297.000\n−87.000\n−8.67"
+  },
+  {
+    "objectID": "GiocatoriU17/calia.html",
+    "href": "GiocatoriU17/calia.html",
+    "title": "T. Calia",
+    "section": "",
+    "text": "Full SessionsPartita Finale AllenamentoPartite Ufficiali"
+  },
+  {
+    "objectID": "GiocatoriU17/calia.html#valori-anomali",
+    "href": "GiocatoriU17/calia.html#valori-anomali",
+    "title": "T. Calia",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nT. Calia — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.176\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT. Calia — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.419\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT. Calia — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n344.955\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU17/bresciani.html",
+    "href": "GiocatoriU17/bresciani.html",
+    "title": "Mattia Bresciani",
+    "section": "",
+    "text": "Scheda Anagrafica\n\n\n\n\n\n\nNoteMattia Bresciani\n\n\n\n\nCategoria: Allievi U17\nRuolo: Difensore\n\n\n\n\nCampo\nValore\n\n\n\n\nData di nascita\n06/01/2009\n\n\nEtà\n17\n\n\nPiede\n—\n\n\nAltezza\n170\n\n\nPeso\n60.5\n\n\n\n\n\n\n\nMinutaggi\n\n\nMinuti giocati\n1088 min\n\n\nMinuti squadra\n1800 min\n\n\n% presenza\n60.4%\n\n\n\n\n\n\n\n\nM. Bresciani: 1088 min (60.4%) dei minuti totali squadra nei match considerati.\n\n\n\nTest Fisici\n\n  \n    \n      \n        Test fisici\n        Confronto Settembre vs Gennaio\n      \n      Aggiornato al: 25/02/2026\n    \n\n    \n      \n\n\n\nTest\nSettembre\nGennaio\nΔ\nTrend\n\n\n\n\nSprint 20 m\n2.83 s\n2.89 s\n+0.06 s\nPeggiora\n\n\nVertical Jump\n25.4 cm\n23.0 cm\n-2.4 cm\nPeggiora\n\n\n\n\n    \n  \n\n\n\nMonitoraggio\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFull SessionsPartita Finale AllenamentoPartite Ufficiali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrend di forma\n\n\n\n\n\n\n\n\n\n\n\nTrend tecnico\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDinamica di corsa\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Bresciani — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.127\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bresciani — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.373\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bresciani — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n287.500\nNA\nNA\n\n\nsession\nWed, Jan 14, 2026\nPartita finale\n216.000\n287.500\n−71.500\n−5.14\n\n\n\n\n\n\n\n\n\n\n\n\nConfronto con prima squadra\n\nFull SessionPartite FinaliPartite Ufficiali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo\n\n\nVisita Medica\n\n  \n    \n      \n        Visita medica\n        Scadenza: 22/09/2026\n      \n      \n        OK\n        Mancano 209 giorni\n      \n    \n\n    \n      \n    \n\n    \n      0 gg365 gg\n    \n  \n\n\n\nSalute Mentale"
+  },
+  {
+    "objectID": "GiocatoriFT/valdameri.html#valori-anomali",
+    "href": "GiocatoriFT/valdameri.html#valori-anomali",
+    "title": "T. Valdameri",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nT. Valdameri — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.143\nNA\nNA\n\n\nsession\nFri, Nov 7, 2025\nPartita finale venerdi\n0.160\n0.143\n0.017\n4.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT. Valdameri — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.397\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT. Valdameri — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n316.375\nNA\nNA\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n272.000\n316.375\n−44.375\n−4.34"
+  },
+  {
+    "objectID": "GiocatoriFT/tomella.html#valori-anomali",
+    "href": "GiocatoriFT/tomella.html#valori-anomali",
+    "title": "R. Tomella",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nR. Tomella — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.159\nNA\nNA\n\n\nsession\nThu, Oct 23, 2025\nMatch giovedi\n0.140\n0.159\n−0.019\n−2.70\n\n\nsession\nThu, Dec 18, 2025\nPartita finale venerdi\n0.140\n0.159\n−0.019\n−2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Tomella — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.379\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Tomella — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n309.174\nNA\nNA\n\n\nsession\nFri, Oct 31, 2025\nPartita finale venerdi\n252.500\n309.174\n−56.674\n−3.87"
+  },
+  {
+    "objectID": "GiocatoriFT/recino.html#valori-anomali",
+    "href": "GiocatoriFT/recino.html#valori-anomali",
+    "title": "G. Recino",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nG. Recino — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.150\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nG. Recino — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.365\nNA\nNA\n\n\nsession\nTue, Nov 18, 2025\nPartita finale martedi\n0.385\n0.365\n0.020\n3.37\n\n\nsession\nThu, Nov 27, 2025\nMatch giovedi\n0.410\n0.365\n0.045\n6.74\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n0.390\n0.365\n0.025\n4.05\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nG. Recino — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n316.932\nNA\nNA\n\n\nsession\nFri, Dec 12, 2025\nPartita finale venerdi\n272.000\n316.932\n−44.932\n−4.03"
+  },
+  {
+    "objectID": "GiocatoriFT/niculae.html#valori-anomali",
+    "href": "GiocatoriFT/niculae.html#valori-anomali",
+    "title": "L. Niculae",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nL. Niculae — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.142\nNA\nNA\n\n\nsession\nThu, Oct 23, 2025\nMatch giovedi\n0.130\n0.142\n−0.012\n−3.37\n\n\nsession\nFri, Oct 24, 2025\nPartita finale venerdi\n0.130\n0.142\n−0.012\n−3.37\n\n\nsession\nFri, Nov 7, 2025\nPartita finale venerdi\n0.130\n0.142\n−0.012\n−3.37\n\n\nsession\nTue, Nov 18, 2025\nPartita finale martedi\n0.130\n0.142\n−0.012\n−3.37\n\n\nsession\nTue, Dec 9, 2025\nPartita finale martedi\n0.155\n0.142\n0.013\n3.37\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nL. Niculae — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.374\nNA\nNA\n\n\nsession\nThu, Oct 30, 2025\nMatch giovedi\n0.320\n0.374\n−0.054\n−3.10\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n0.325\n0.374\n−0.049\n−2.83\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nL. Niculae — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n302.543\nNA\nNA\n\n\nsession\nWed, Nov 26, 2025\nPartita finale mercoledi\n212.000\n302.543\n−90.543\n−6.71"
+  },
+  {
+    "objectID": "GiocatoriFT/mozzanica.html#valori-anomali",
+    "href": "GiocatoriFT/mozzanica.html#valori-anomali",
+    "title": "J. Mozzanica",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nJ. Mozzanica — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.144\nNA\nNA\n\n\nsession\nThu, Oct 30, 2025\nMatch giovedi\n0.110\n0.144\n−0.034\n−4.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJ. Mozzanica — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.399\nNA\nNA\n\n\nsession\nThu, Oct 30, 2025\nMatch giovedi\n0.350\n0.399\n−0.049\n−3.37\n\n\nsession\nWed, Nov 5, 2025\nPartita finale mercoledi\n0.345\n0.399\n−0.054\n−3.71\n\n\nsession\nThu, Nov 13, 2025\nMatch giovedi\n0.455\n0.399\n0.056\n3.71\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJ. Mozzanica — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n310.567\nNA\nNA\n\n\nsession\nWed, Oct 15, 2025\nPartita finale mercoledi\n258.500\n310.567\n−52.067\n−2.51"
+  },
+  {
+    "objectID": "GiocatoriFT/latini.html#valori-anomali",
+    "href": "GiocatoriFT/latini.html#valori-anomali",
+    "title": "A. Latini",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nA. Latini — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.155\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Latini — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.391\nNA\nNA\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n0.445\n0.391\n0.054\n3.71\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Latini — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n307.733\nNA\nNA\n\n\nsession\nTue, Oct 7, 2025\nPartita finale martedi\n230.500\n307.733\n−77.233\n−4.58\n\n\nsession\nFri, Oct 17, 2025\nPartita finale venerdi\n247.500\n307.733\n−60.233\n−3.63\n\n\nsession\nWed, Dec 3, 2025\nPartita finale\n231.000\n307.733\n−76.733\n−4.55\n\n\nsession\nTue, Dec 9, 2025\nPartita finale martedi\n267.000\n307.733\n−40.733\n−2.53"
+  },
+  {
+    "objectID": "GiocatoriFT/fenotti.html#valori-anomali",
+    "href": "GiocatoriFT/fenotti.html#valori-anomali",
+    "title": "D. Fenotti",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nD. Fenotti — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.156\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nD. Fenotti — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.358\nNA\nNA\n\n\nsession\nThu, Oct 23, 2025\nMatch giovedi\n0.375\n0.358\n0.017\n2.70\n\n\nsession\nWed, Oct 29, 2025\nPartita finale mercoledi\n0.380\n0.358\n0.022\n3.37\n\n\nsession\nFri, Nov 28, 2025\nPartita finale venerdi\n0.375\n0.358\n0.017\n2.70\n\n\nsession\nThu, Dec 4, 2025\nMatch giovedi\n0.375\n0.358\n0.017\n2.70\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n0.390\n0.358\n0.032\n4.72\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n0.380\n0.358\n0.022\n3.37\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nD. Fenotti — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n307.108\nNA\nNA\n\n\nsession\nThu, Nov 6, 2025\nMatch giovedi\n267.000\n307.108\n−40.108\n−4.20\n\n\nsession\nTue, Nov 18, 2025\nPartita finale martedi\n283.000\n307.108\n−24.108\n−2.54\n\n\nsession\nFri, Nov 28, 2025\nPartita finale venerdi\n337.500\n307.108\n30.392\n3.11\n\n\nsession\nThu, Jan 8, 2026\nMatch giovedi\n279.500\n307.108\n−27.608\n−2.91\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n281.000\n307.108\n−26.108\n−2.75\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n337.500\n307.108\n30.392\n3.11"
+  },
+  {
+    "objectID": "GiocatoriFT/cerasani.html#valori-anomali",
+    "href": "GiocatoriFT/cerasani.html#valori-anomali",
+    "title": "J. Cerasani",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nJ. Cerasani — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.142\nNA\nNA\n\n\nsession\nThu, Jan 8, 2026\nMatch giovedi\n0.125\n0.142\n−0.017\n−2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJ. Cerasani — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.385\nNA\nNA\n\n\nsession\nWed, Nov 26, 2025\nPartita finale mercoledi\n0.335\n0.385\n−0.050\n−3.37\n\n\nsession\nThu, Jan 8, 2026\nMatch giovedi\n0.340\n0.385\n−0.045\n−3.04\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJ. Cerasani — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n312.364\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriFT/azzali.html#valori-anomali",
+    "href": "GiocatoriFT/azzali.html#valori-anomali",
+    "title": "S. Azzali",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nS. Azzali — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.158\nNA\nNA\n\n\nsession\nWed, Oct 1, 2025\nPartita finale mercoledi\n0.140\n0.158\n−0.018\n−2.70\n\n\nsession\nThu, Jan 8, 2026\nMatch giovedi\n0.140\n0.158\n−0.018\n−2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS. Azzali — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.397\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS. Azzali — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n319.710\nNA\nNA\n\n\nsession\nThu, Oct 2, 2025\nMatch giovedi\n2.000\n319.710\n−317.710\n−25.11\n\n\nsession\nWed, Oct 22, 2025\nPartita finale mercoledi\n266.000\n319.710\n−53.710\n−4.76\n\n\nsession\nThu, Jan 8, 2026\nMatch giovedi\n270.000\n319.710\n−49.710\n−4.45"
+  },
+  {
+    "objectID": "GiocatoriFT/abba.html#valori-anomali",
+    "href": "GiocatoriFT/abba.html#valori-anomali",
+    "title": "N. Abba",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nN. Abba — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.148\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN. Abba — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.375\nNA\nNA\n\n\nsession\nFri, Nov 28, 2025\nPartita finale venerdi\n0.325\n0.375\n−0.050\n−3.37\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN. Abba — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n315.314\nNA\nNA\n\n\nsession\nFri, Nov 28, 2025\nPartita finale venerdi\n265.500\n315.314\n−49.814\n−4.68"
   },
   {
     "objectID": "FirstTeam.html",
@@ -42,160 +343,6 @@
     "text": "Attaccanti\n\nE. Neci\nG. Recino\nD. Fenotti\nM. Varisco"
   },
   {
-    "objectID": "GiocatoriFT/abba.html",
-    "href": "GiocatoriFT/abba.html",
-    "title": "N. Abba",
-    "section": "",
-    "text": "#Statistiche All Time\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Trend di forma"
-  },
-  {
-    "objectID": "GiocatoriFT/abba.html#attaccante",
-    "href": "GiocatoriFT/abba.html#attaccante",
-    "title": "N. Abba",
-    "section": "",
-    "text": "#Statistiche All Time\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Trend di forma"
-  },
-  {
-    "objectID": "GiocatoriFT/AdvancedAnalytics.html",
-    "href": "GiocatoriFT/AdvancedAnalytics.html",
-    "title": "AdvancedAnalytics",
-    "section": "",
-    "text": "Advanced Analytics"
-  },
-  {
-    "objectID": "GiocatoriFT/demartino.html",
-    "href": "GiocatoriFT/demartino.html",
-    "title": "R. De Martino",
-    "section": "",
-    "text": "title: “R. De Martino” format: html: theme: darkly css: styles.css —"
-  },
-  {
-    "objectID": "GiocatoriFT/demartino.html#attaccante",
-    "href": "GiocatoriFT/demartino.html#attaccante",
-    "title": "R. De Martino",
-    "section": "Attaccante",
-    "text": "Attaccante"
-  },
-  {
-    "objectID": "GiocatoriFT/abba.html#valori-anomali",
-    "href": "GiocatoriFT/abba.html#valori-anomali",
-    "title": "N. Abba",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nN. Abba — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.148\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN. Abba — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.375\nNA\nNA\n\n\nsession\nFri, Nov 28, 2025\nPartita finale venerdi\n0.325\n0.375\n−0.050\n−3.37\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nN. Abba — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n315.314\nNA\nNA\n\n\nsession\nFri, Nov 28, 2025\nPartita finale venerdi\n265.500\n315.314\n−49.814\n−4.68"
-  },
-  {
-    "objectID": "Under19.html",
-    "href": "Under19.html",
-    "title": "Under 19",
-    "section": "",
-    "text": "Questa è la sezione dedicata alla Under 19."
-  },
-  {
-    "objectID": "Under19.html#portieri",
-    "href": "Under19.html#portieri",
-    "title": "Under 19",
-    "section": "Portieri",
-    "text": "Portieri\n\nA. Laini\nA. Riboli"
-  },
-  {
-    "objectID": "Under19.html#difensori",
-    "href": "Under19.html#difensori",
-    "title": "Under 19",
-    "section": "Difensori",
-    "text": "Difensori\n\nC. Barzi\nM. Bertazzoli\nA. Cicarè\nI. Dimov\nV. Gerasym\nF. Montemezzani\nF. Cerioli"
-  },
-  {
-    "objectID": "Under19.html#centrocampisti",
-    "href": "Under19.html#centrocampisti",
-    "title": "Under 19",
-    "section": "Centrocampisti",
-    "text": "Centrocampisti\n\nC. Brazzorotto\nC. Bertazzoni\nM. Bonizzoni\nW. De Maio\nM. D’Ischia\nA. Jarid\nS. Schiavini\nB. Pape"
-  },
-  {
-    "objectID": "Under19.html#attaccanti",
-    "href": "Under19.html#attaccanti",
-    "title": "Under 19",
-    "section": "Attaccanti",
-    "text": "Attaccanti\n\nM. Fino\nA. Nicotra\nF. Valletti\nR. Tabal\nM. Tajeddine"
-  },
-  {
-    "objectID": "Under19.html#difensore",
-    "href": "Under19.html#difensore",
-    "title": "C. Barzi",
-    "section": "Difensore",
-    "text": "Difensore"
-  },
-  {
-    "objectID": "GiocatoriU19/barzi.html#valori-anomali",
-    "href": "GiocatoriU19/barzi.html#valori-anomali",
-    "title": "C. Barzi",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nC. Barzi — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.168\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC. Barzi — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.377\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC. Barzi — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n313.375\nNA\nNA"
-  },
-  {
-    "objectID": "GiocatoriU19/bertazzoli.html#valori-anomali",
-    "href": "GiocatoriU19/bertazzoli.html#valori-anomali",
-    "title": "M. Bertazzoli",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.159\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.396\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.430\n0.396\n0.034\n2.70\n\n\nsession\nMon, Dec 15, 2025\nPartita finale\n0.445\n0.396\n0.049\n3.71\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n324.417\nNA\nNA"
-  },
-  {
-    "objectID": "GiocatoriU19/cicare.html#valori-anomali",
-    "href": "GiocatoriU19/cicare.html#valori-anomali",
-    "title": "A. Cicarè",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nA. Cicarè — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.138\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Cicarè — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.372\nNA\nNA\n\n\nsession\nThu, Oct 9, 2025\nPartita finale\n0.395\n0.372\n0.023\n2.70\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.410\n0.372\n0.038\n3.71\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Cicarè — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n299.000\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n323.500\n299.000\n24.500\n2.51"
-  },
-  {
-    "objectID": "GiocatoriU19/demaio.html#valori-anomali",
-    "href": "GiocatoriU19/demaio.html#valori-anomali",
-    "title": "W. De Maio",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nW. De Maio — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.150\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nW. De Maio — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.340\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nW. De Maio — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n292.500\nNA\nNA"
-  },
-  {
-    "objectID": "GiocatoriU19/dimov.html#valori-anomali",
-    "href": "GiocatoriU19/dimov.html#valori-anomali",
-    "title": "I. Dimov",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nI. Dimov — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.143\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI. Dimov — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.398\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI. Dimov — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n312.167\nNA\nNA"
-  },
-  {
-    "objectID": "GiocatoriU19/pape.html#valori-anomali",
-    "href": "GiocatoriU19/pape.html#valori-anomali",
-    "title": "B. Pape",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nB. Pape — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.160\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB. Pape — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.410\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB. Pape — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n311.400\nNA\nNA\n\n\nsession\nMon, Oct 20, 2025\nPartita finale\n266.000\n311.400\n−45.400\n−3.34"
-  },
-  {
-    "objectID": "GiocatoriU19/schiavini.html#valori-anomali",
-    "href": "GiocatoriU19/schiavini.html#valori-anomali",
-    "title": "S. Schiavini",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nS. Schiavini — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.140\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS. Schiavini — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.350\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS. Schiavini — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n285.000\nNA\nNA"
-  },
-  {
-    "objectID": "GiocatoriU19/valletti.html#valori-anomali",
-    "href": "GiocatoriU19/valletti.html#valori-anomali",
-    "title": "F. Valletti",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nF. Valletti — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.150\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Valletti — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.375\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Valletti — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n304.000\nNA\nNA"
-  },
-  {
-    "objectID": "GiocatoriU19/tabal.html#valori-anomali",
-    "href": "GiocatoriU19/tabal.html#valori-anomali",
-    "title": "R. Tabal",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nR. Tabal — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.167\nNA\nNA\n\n\nsession\nThu, Nov 13, 2025\nPartita finale\n0.120\n0.167\n−0.047\n−6.75\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Tabal — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.346\nNA\nNA\n\n\nsession\nThu, Nov 13, 2025\nPartita finale\n0.415\n0.346\n0.069\n6.74\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Tabal — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n304.167\nNA\nNA\n\n\nsession\nThu, Nov 13, 2025\nPartita finale\n347.500\n304.167\n43.333\n6.52\n\n\nsession\nThu, Nov 20, 2025\nPartita finale\n271.000\n304.167\n−33.167\n−4.95"
-  },
-  {
-    "objectID": "GiocatoriU19/tajeddine.html#valori-anomali",
-    "href": "GiocatoriU19/tajeddine.html#valori-anomali",
-    "title": "M. Tajeddine",
-    "section": "Valori anomali",
-    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.135\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.383\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.440\n0.383\n0.057\n2.92\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Tajeddine — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n297.667\nNA\nNA"
-  },
-  {
     "objectID": "FirstTeam.html#carichi-di-lavoro",
     "href": "FirstTeam.html#carichi-di-lavoro",
     "title": "Prima squadra",
@@ -203,39 +350,11 @@
     "text": "Carichi di Lavoro\n\n\n\n\n\n\n\n\nCarichi di lavoro\n\n\nMedie settimanali (tutti i giocatori)\n\n\nWeek\nMedia WorkRate\nMedia HID\nMedia Acc. Index\nMedia Dec. Index\n\n\n\n\n2025-40\n74.62\n9.44\n80.62\n80.70\n\n\n2025-41\n75.37\n9.72\n74.88\n75.24\n\n\n2025-42\n80.68\n12.45\n84.28\n84.93\n\n\n2025-43\n77.46\n12.99\n82.54\n84.35\n\n\n2025-44\n77.39\n9.56\n91.19\n90.76\n\n\n2025-45\n86.36\n14.11\n95.93\n96.78\n\n\n2025-46\n84.04\n12.98\n87.74\n88.40\n\n\n2025-47\n83.78\n11.48\n94.41\n94.33\n\n\n2025-48\n80.50\n13.51\n85.84\n87.24\n\n\n2025-49\n79.77\n12.10\n86.27\n87.20\n\n\n2025-50\n80.44\n13.64\n85.78\n87.20\n\n\n2025-51\n84.41\n10.87\n93.06\n92.81\n\n\n2026-2\n77.56\n10.38\n86.89\n87.22\n\n\n2026-3\n83.64\n13.58\n91.52\n93.29\n\n\n2026-4\n86.94\n14.46\n90.61\n90.80"
   },
   {
-    "objectID": "Under19.html#carichi-di-lavoro",
-    "href": "Under19.html#carichi-di-lavoro",
-    "title": "Under 19",
-    "section": "Carichi di Lavoro",
-    "text": "Carichi di Lavoro\n\n\n\n\n\n\n\n\nCarichi di lavoro\n\n\nMedie settimanali (tutti i giocatori)\n\n\nWeek\nMedia WorkRate\nMedia HID\nMedia Acc. Index\nMedia Dec. Index\n\n\n\n\n2025-41\n75.16\n8.41\n83.61\n83.01\n\n\n2025-42\n73.83\n11.35\n83.38\n84.05\n\n\n2025-43\n65.59\n7.96\n78.62\n78.43\n\n\n2025-44\n66.65\n8.54\n77.70\n77.86\n\n\n2025-45\n72.30\n11.33\n77.13\n77.77\n\n\n2025-46\n75.58\n14.00\n93.95\n94.24\n\n\n2025-47\n88.10\n14.99\n88.09\n87.98\n\n\n2025-48\n80.68\n12.44\n93.92\n93.49\n\n\n2025-49\n82.27\n11.29\n91.86\n91.59\n\n\n2025-50\n86.39\n15.42\n91.64\n92.49\n\n\n2025-51\n75.46\n16.57\n70.52\n72.28\n\n\n2026-2\n73.69\n11.64\n73.32\n73.26\n\n\n2026-3\n67.46\n6.47\n83.45\n83.11\n\n\n2026-4\n79.96\n11.82\n96.43\n96.67"
-  },
-  {
-    "objectID": "Under19.html#statistiche-all-time",
-    "href": "Under19.html#statistiche-all-time",
-    "title": "Under 19",
-    "section": "Statistiche all time",
-    "text": "Statistiche all time"
-  },
-  {
     "objectID": "FirstTeam.html#statistiche-all-time",
     "href": "FirstTeam.html#statistiche-all-time",
     "title": "Prima squadra",
     "section": "Statistiche all time",
     "text": "Statistiche all time"
-  },
-  {
-    "objectID": "Under19.html#classifiche-fisiche",
-    "href": "Under19.html#classifiche-fisiche",
-    "title": "Under 19",
-    "section": "Classifiche fisiche",
-    "text": "Classifiche fisiche\n\n\n\n\n\n\n\n\n\n\nTopSpeed all time\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\nData\n\n\n\n\nM. Bonizzoni\n33.73\n2025-12-18\n\n\nF. Cerioli\n32.29\n2025-10-09\n\n\nM. Bertazzoli\n31.75\n2025-12-11\n\n\nR. Tabal\n31.64\n2025-11-13\n\n\nM. Tajeddine\n31.57\n2025-12-11\n\n\nM. Fino\n31.32\n2025-10-27\n\n\nM. Tajeddine\n31.25\n2025-10-09\n\n\nM. Tajeddine\n31.07\n2025-10-23\n\n\nR. Tabal\n31.03\n2025-10-09\n\n\nR. Tabal\n30.92\n2025-10-27\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorkRate medio\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nM. Bertazzoli\n82.30\n\n\nV. Gerasym\n81.38\n\n\nA. Jarid\n81.35\n\n\nF. Montemezzani\n81.23\n\n\nC. Brazzorotto\n81.16\n\n\nC. Barzi\n80.61\n\n\nA. Nicotra\n79.52\n\n\nF. Cerioli\n79.33\n\n\nM. Bonizzoni\n77.27\n\n\nM. Tajeddine\n76.77"
-  },
-  {
-    "objectID": "Under19.html#classifiche-tecniche",
-    "href": "Under19.html#classifiche-tecniche",
-    "title": "Under 19",
-    "section": "Classifiche Tecniche",
-    "text": "Classifiche Tecniche\n\n\n\n\n\n\n\n\n\n\nTocchi medi per minuto\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nM. D'Ischia\n2.69\n\n\nF. Montemezzani\n2.51\n\n\nW. De Maio\n2.50\n\n\nC. Bertazzoni\n2.33\n\n\nA. Jarid\n2.28\n\n\nC. Barzi\n2.19\n\n\nA. Nicotra\n2.12\n\n\nR. Tabal\n2.12\n\n\nI. Dimov\n2.11\n\n\nS. Schiavini\n2.09\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRilasci medi per minuto\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nC. Barzi\n1.03\n\n\nS. Schiavini\n1.01\n\n\nW. De Maio\n0.93\n\n\nC. Bertazzoni\n0.90\n\n\nM. D'Ischia\n0.89\n\n\nM. Bertazzoli\n0.87\n\n\nF. Montemezzani\n0.87\n\n\nI. Dimov\n0.84\n\n\nA. Jarid\n0.81\n\n\nM. Bonizzoni\n0.78"
   },
   {
     "objectID": "FirstTeam.html#classifiche-fisiche",
@@ -250,5 +369,306 @@
     "title": "Prima squadra",
     "section": "Classifiche Tecniche",
     "text": "Classifiche Tecniche\n\n\n\n\n\n\n\n\n\n\nTocchi medi per minuto\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nT. Erman\n2.22\n\n\nJ. Mozzanica\n1.99\n\n\nA. Latini\n1.96\n\n\nT. Serioli\n1.76\n\n\nA. Arpini\n1.69\n\n\nD. Fenotti\n1.68\n\n\nM. Vailati\n1.60\n\n\nL. Gramignoli\n1.53\n\n\nL. Niculae\n1.51\n\n\nE. Maccherini\n1.51\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRilasci medi per minuto\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nT. Erman\n0.85\n\n\nA. Arpini\n0.81\n\n\nJ. Mozzanica\n0.79\n\n\nA. Latini\n0.77\n\n\nM. Vailati\n0.74\n\n\nT. Serioli\n0.73\n\n\nV. Camilleri\n0.71\n\n\nE. Maccherini\n0.70\n\n\nL. Niculae\n0.63\n\n\nD. Fenotti\n0.61"
+  },
+  {
+    "objectID": "GiocatoriFT/arpini.html#valori-anomali",
+    "href": "GiocatoriFT/arpini.html#valori-anomali",
+    "title": "A. Arpini",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nA. Arpini — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.143\nNA\nNA\n\n\nsession\nWed, Nov 26, 2025\nPartita finale mercoledi\n0.125\n0.143\n−0.018\n−2.70\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n0.125\n0.143\n−0.018\n−2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Arpini — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.357\nNA\nNA\n\n\nsession\nWed, Nov 19, 2025\nPartita finale mercoledi\n0.315\n0.357\n−0.042\n−3.04\n\n\nsession\nWed, Nov 26, 2025\nPartita finale mercoledi\n0.310\n0.357\n−0.047\n−3.37\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n0.400\n0.357\n0.043\n2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Arpini — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n301.587\nNA\nNA\n\n\nsession\nWed, Nov 19, 2025\nPartita finale mercoledi\n236.000\n301.587\n−65.587\n−3.96"
+  },
+  {
+    "objectID": "GiocatoriFT/camilleri.html#valori-anomali",
+    "href": "GiocatoriFT/camilleri.html#valori-anomali",
+    "title": "V. Camilleri",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nV. Camilleri — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.171\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nV. Camilleri — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.416\nNA\nNA\n\n\nsession\nThu, Jan 22, 2026\nMatch giovedi\n0.370\n0.416\n−0.046\n−3.37\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nV. Camilleri — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n342.889\nNA\nNA\n\n\nsession\nThu, Jan 22, 2026\nMatch giovedi\n313.500\n342.889\n−29.389\n−2.70"
+  },
+  {
+    "objectID": "GiocatoriFT/erman.html#valori-anomali",
+    "href": "GiocatoriFT/erman.html#valori-anomali",
+    "title": "T. Erman",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nT. Erman — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.140\nNA\nNA\n\n\nsession\nFri, Nov 14, 2025\nPartita finale venerdi\n0.120\n0.140\n−0.020\n−2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT. Erman — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.390\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT. Erman — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n307.714\nNA\nNA\n\n\nsession\nWed, Dec 10, 2025\nPartita finale mercoledi\n258.000\n307.714\n−49.714\n−3.36"
+  },
+  {
+    "objectID": "GiocatoriFT/gramignoli.html#valori-anomali",
+    "href": "GiocatoriFT/gramignoli.html#valori-anomali",
+    "title": "L. Gramignoli",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nL. Gramignoli — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.138\nNA\nNA\n\n\nsession\nFri, Oct 3, 2025\nPartita finale venerdi\n0.115\n0.138\n−0.023\n−3.37\n\n\nsession\nWed, Oct 22, 2025\nPartita finale mercoledi\n0.115\n0.138\n−0.023\n−3.37\n\n\nsession\nFri, Oct 24, 2025\nPartita finale venerdi\n0.095\n0.138\n−0.043\n−6.07\n\n\nsession\nWed, Oct 29, 2025\nPartita finale mercoledi\n0.120\n0.138\n−0.018\n−2.70\n\n\nsession\nFri, Oct 31, 2025\nPartita finale venerdi\n0.120\n0.138\n−0.018\n−2.70\n\n\nsession\nTue, Nov 4, 2025\nPartita finale martedi\n0.160\n0.138\n0.022\n2.70\n\n\nsession\nThu, Nov 6, 2025\nMatch giovedi\n0.085\n0.138\n−0.053\n−7.42\n\n\nsession\nThu, Nov 6, 2025\nMatch giovedi\n0.100\n0.138\n−0.038\n−5.40\n\n\nsession\nFri, Nov 7, 2025\nPartita finale venerdi\n0.110\n0.138\n−0.028\n−4.05\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nL. Gramignoli — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.388\nNA\nNA\n\n\nsession\nWed, Oct 22, 2025\nPartita finale mercoledi\n0.445\n0.388\n0.057\n2.92\n\n\nsession\nFri, Oct 24, 2025\nPartita finale venerdi\n0.535\n0.388\n0.147\n6.97\n\n\nsession\nWed, Oct 29, 2025\nPartita finale mercoledi\n0.440\n0.388\n0.052\n2.70\n\n\nsession\nFri, Oct 31, 2025\nPartita finale venerdi\n0.475\n0.388\n0.087\n4.27\n\n\nsession\nThu, Nov 6, 2025\nMatch giovedi\n0.470\n0.388\n0.082\n4.05\n\n\nsession\nThu, Nov 6, 2025\nMatch giovedi\n0.450\n0.388\n0.062\n3.15\n\n\nsession\nThu, Dec 18, 2025\nPartita finale venerdi\n0.315\n0.388\n−0.073\n−2.92\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nL. Gramignoli — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n310.862\nNA\nNA\n\n\nsession\nTue, Nov 4, 2025\nPartita finale martedi\n265.000\n310.862\n−45.862\n−3.14\n\n\nsession\nThu, Dec 18, 2025\nPartita finale venerdi\n272.500\n310.862\n−38.362\n−2.63\n\n\nsession\nWed, Jan 14, 2026\nPartita finale mercoledi\n269.000\n310.862\n−41.862\n−2.87"
+  },
+  {
+    "objectID": "GiocatoriFT/maccherini.html#valori-anomali",
+    "href": "GiocatoriFT/maccherini.html#valori-anomali",
+    "title": "E. Maccherini",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nE. Maccherini — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.146\nNA\nNA\n\n\nsession\nThu, Nov 6, 2025\nMatch giovedi\n0.125\n0.146\n−0.021\n−2.70\n\n\nsession\nThu, Jan 8, 2026\nMatch giovedi\n0.165\n0.146\n0.019\n2.70\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n0.165\n0.146\n0.019\n2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE. Maccherini — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.370\nNA\nNA\n\n\nsession\nTue, Oct 28, 2025\nPartita finale martedi\n0.315\n0.370\n−0.055\n−4.05\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n0.330\n0.370\n−0.040\n−3.04\n\n\nsession\nThu, Jan 22, 2026\nMatch giovedi\n0.330\n0.370\n−0.040\n−3.04\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE. Maccherini — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n301.800\nNA\nNA\n\n\nsession\nTue, Oct 7, 2025\nPartita finale martedi\n245.000\n301.800\n−56.800\n−3.52"
+  },
+  {
+    "objectID": "GiocatoriFT/neci.html#valori-anomali",
+    "href": "GiocatoriFT/neci.html#valori-anomali",
+    "title": "E. Neci",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nE. Neci — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.127\nNA\nNA\n\n\nsession\nTue, Nov 25, 2025\nPartita finale martedi\n0.150\n0.127\n0.023\n3.37\n\n\nsession\nThu, Nov 27, 2025\nMatch giovedi\n0.145\n0.127\n0.018\n2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE. Neci — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.374\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE. Neci — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n300.936\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriFT/pavesi.html#valori-anomali",
+    "href": "GiocatoriFT/pavesi.html#valori-anomali",
+    "title": "R. Pavesi",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nR. Pavesi — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.137\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Pavesi — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.366\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Pavesi — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n302.426\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriFT/serioli.html#valori-anomali",
+    "href": "GiocatoriFT/serioli.html#valori-anomali",
+    "title": "T. Serioli",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nT. Serioli — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.135\nNA\nNA\n\n\nsession\nThu, Oct 2, 2025\nMatch giovedi\n0.100\n0.135\n−0.035\n−4.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT. Serioli — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.407\nNA\nNA\n\n\nsession\nThu, Oct 2, 2025\nMatch giovedi\n0.530\n0.407\n0.123\n5.40\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT. Serioli — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n321.750\nNA\nNA\n\n\nsession\nThu, Oct 2, 2025\nMatch giovedi\n404.000\n321.750\n82.250\n5.61\n\n\nsession\nThu, Oct 2, 2025\nMatch giovedi\n423.500\n321.750\n101.750\n6.89\n\n\nsession\nThu, Nov 27, 2025\nMatch giovedi\n280.500\n321.750\n−41.250\n−2.52"
+  },
+  {
+    "objectID": "GiocatoriFT/vailati.html#valori-anomali",
+    "href": "GiocatoriFT/vailati.html#valori-anomali",
+    "title": "M. Vailati",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Vailati — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.162\nNA\nNA\n\n\nsession\nWed, Dec 17, 2025\nMatch giovedi\n0.180\n0.162\n0.018\n2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Vailati — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.435\nNA\nNA\n\n\nsession\nThu, Dec 11, 2025\nMatch giovedi\n0.405\n0.435\n−0.030\n−2.92\n\n\nsession\nFri, Dec 12, 2025\nPartita finale venerdi\n0.405\n0.435\n−0.030\n−2.92\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Vailati — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n352.462\nNA\nNA\n\n\nsession\nWed, Nov 19, 2025\nPartita finale mercoledi\n316.000\n352.462\n−36.462\n−2.63"
+  },
+  {
+    "objectID": "GiocatoriFT/varisco.html#valori-anomali",
+    "href": "GiocatoriFT/varisco.html#valori-anomali",
+    "title": "M. Varisco",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Varisco — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.147\nNA\nNA\n\n\nsession\nFri, Oct 31, 2025\nPartita finale venerdi\n0.130\n0.147\n−0.017\n−2.70\n\n\nsession\nWed, Nov 26, 2025\nPartita finale mercoledi\n0.170\n0.147\n0.023\n2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Varisco — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.393\nNA\nNA\n\n\nsession\nFri, Oct 31, 2025\nPartita finale venerdi\n0.335\n0.393\n−0.058\n−2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Varisco — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n314.925\nNA\nNA\n\n\nsession\nFri, Oct 31, 2025\nPartita finale venerdi\n264.500\n314.925\n−50.425\n−2.72\n\n\nsession\nWed, Nov 19, 2025\nPartita finale mercoledi\n254.000\n314.925\n−60.925\n−3.23\n\n\nsession\nFri, Nov 21, 2025\nPartita finale venerdi\n264.500\n314.925\n−50.425\n−2.72\n\n\nsession\nThu, Dec 18, 2025\nPartita finale venerdi\n261.000\n314.925\n−53.925\n−2.89\n\n\nsession\nThu, Jan 15, 2026\nMatch giovedi\n258.500\n314.925\n−56.425\n−3.01"
+  },
+  {
+    "objectID": "GiocatoriU17/brusati.html#valori-anomali",
+    "href": "GiocatoriU17/brusati.html#valori-anomali",
+    "title": "A. Brusati",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nA. Brusati — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.145\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Brusati — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.381\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Brusati — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n302.861\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU17/dicicco.html",
+    "href": "GiocatoriU17/dicicco.html",
+    "title": "E. Di Cicco",
+    "section": "",
+    "text": "Full SessionsPartita Finale AllenamentoPartite Ufficiali"
+  },
+  {
+    "objectID": "GiocatoriU17/dicicco.html#valori-anomali",
+    "href": "GiocatoriU17/dicicco.html#valori-anomali",
+    "title": "E. Di Cicco",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nE. Di Cicco — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.168\nNA\nNA\n\n\nsession\nWed, Nov 12, 2025\nPartita finale\n0.165\n0.168\n−0.003\n−121,507,117,946,456.09\n\n\nsession\nTue, Dec 2, 2025\nPartita finale\n0.165\n0.168\n−0.003\n−121,507,117,946,456.09\n\n\nsession\nWed, Dec 3, 2025\nPartita finale\n0.175\n0.168\n0.007\n121,507,117,946,455.41\n\n\nsession\nWed, Dec 17, 2025\nPartita finale\n0.165\n0.168\n−0.003\n−121,507,117,946,456.09\n\n\nsession\nTue, Jan 20, 2026\nPartita finale\n0.160\n0.168\n−0.008\n−243,014,235,892,912.19\n\n\nsession\nWed, Jan 21, 2026\nPartita finale\n0.160\n0.168\n−0.008\n−243,014,235,892,912.19\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE. Di Cicco — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.390\nNA\nNA\n\n\nsession\nWed, Dec 3, 2025\nPartita finale\n0.410\n0.390\n0.020\n2.70\n\n\nsession\nWed, Dec 17, 2025\nPartita finale\n0.410\n0.390\n0.020\n2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nE. Di Cicco — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n323.083\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU17/kurici.html",
+    "href": "GiocatoriU17/kurici.html",
+    "title": "L. Kurici",
+    "section": "",
+    "text": "Full SessionsPartita Finale AllenamentoPartite Ufficiali"
+  },
+  {
+    "objectID": "GiocatoriU17/kurici.html#valori-anomali",
+    "href": "GiocatoriU17/kurici.html#valori-anomali",
+    "title": "L. Kurici",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nL. Kurici — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.160\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nL. Kurici — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.394\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nL. Kurici — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n315.125\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU17/marelli.html#valori-anomali",
+    "href": "GiocatoriU17/marelli.html#valori-anomali",
+    "title": "P. Marelli",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nP. Marelli — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.138\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nP. Marelli — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.391\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nP. Marelli — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n309.615\nNA\nNA\n\n\nsession\nTue, Nov 18, 2025\nPartita finale\n338.500\n309.615\n28.885\n3.48"
+  },
+  {
+    "objectID": "GiocatoriU17/mhilli.html",
+    "href": "GiocatoriU17/mhilli.html",
+    "title": "A. Mhilli",
+    "section": "",
+    "text": "Scheda Anagrafica\n\n\n\n\n\n\nNoteMattia Bresciani\n\n\n\nCategoria: Allievi U17\nRuolo: Difensore\n\n\n\nCampo\nValore\n\n\n\n\nData di nascita\n06/01/2009\n\n\nEtà\n17\n\n\nPiede\n—\n\n\nAltezza\n—\n\n\n\n\n\n\n\nMinutaggi\n\n\nMinuti giocati\n310 min\n\n\nMinuti squadra\n478 min\n\n\n% presenza\n64.9%\n\n\n\n\n\n\n\n\nA. Mhilli: 310 min (64.9%) dei minuti totali squadra nei match considerati.\n\n\n\nTest Fisici\n\n\nMonitoraggio\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFull SessionsPartita Finale AllenamentoPartite Ufficiali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrend di forma\n\n\n\n\n\n\n\n\n\n\n\nTrend tecnico\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDinamica di corsa\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nA. Mhilli — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.145\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Mhilli — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.392\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA. Mhilli — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n335.375\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\nConfronto con prima squadra\n\nFull SessionPartite FinaliPartite Ufficiali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo\n\n\nVisita Medica\n\n\nCarriera\n\n\nSalute Mentale"
+  },
+  {
+    "objectID": "GiocatoriU17/moruzzi.html",
+    "href": "GiocatoriU17/moruzzi.html",
+    "title": "F. Moruzzi",
+    "section": "",
+    "text": "Full SessionsPartita Finale AllenamentoPartite Ufficiali"
+  },
+  {
+    "objectID": "GiocatoriU17/moruzzi.html#valori-anomali",
+    "href": "GiocatoriU17/moruzzi.html#valori-anomali",
+    "title": "F. Moruzzi",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nF. Moruzzi — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.119\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Moruzzi — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.351\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Moruzzi — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n266.909\nNA\nNA\n\n\nsession\nTue, Oct 14, 2025\nPartita finale\n299.000\n266.909\n32.091\n3.13\n\n\nsession\nTue, Nov 18, 2025\nPartita finale\n165.000\n266.909\n−101.909\n−13.31"
+  },
+  {
+    "objectID": "GiocatoriU17/nicolini.html",
+    "href": "GiocatoriU17/nicolini.html",
+    "title": "R. Nicolini",
+    "section": "",
+    "text": "Scheda Anagrafica\n\n\n\n\n\n\nNoteMattia Bresciani\n\n\n\nCategoria: Allievi U17\nRuolo: Difensore\n\n\n\nCampo\nValore\n\n\n\n\nData di nascita\n06/01/2009\n\n\nEtà\n17\n\n\nPiede\n—\n\n\nAltezza\n—\n\n\n\n\n\n\n\nMinutaggi\n\n\nMinuti giocati\n417 min\n\n\nMinuti squadra\n574 min\n\n\n% presenza\n72.6%\n\n\n\n\n\n\n\n\nR. Nicolini: 417 min (72.6%) dei minuti totali squadra nei match considerati.\n\n\n\nTest Fisici\n\n\nMonitoraggio\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFull SessionsPartita Finale AllenamentoPartite Ufficiali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrend di forma\n\n\n\n\n\n\n\n\n\n\n\nTrend tecnico\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDinamica di corsa\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nValori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nR. Nicolini — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.145\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Nicolini — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.394\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Nicolini — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n298.231\nNA\nNA\n\n\nsession\nWed, Nov 19, 2025\nPartita finale\n205.500\n298.231\n−92.731\n−3.86\n\n\n\n\n\n\n\n\n\n\n\n\nConfronto con prima squadra\n\nFull SessionPartite FinaliPartite Ufficiali\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVideo\n\n\nVisita Medica\n\n\nCarriera\n\n\nSalute Mentale"
+  },
+  {
+    "objectID": "GiocatoriU17/pea.html#valori-anomali",
+    "href": "GiocatoriU17/pea.html#valori-anomali",
+    "title": "D. Pea",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nD. Pea — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.143\nNA\nNA\n\n\nsession\nTue, Oct 7, 2025\nPartita finale martedi\n0.070\n0.143\n−0.073\n−10.79\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nD. Pea — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.412\nNA\nNA\n\n\nsession\nTue, Oct 7, 2025\nPartita finale martedi\n0.565\n0.412\n0.153\n5.56\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nD. Pea — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n326.636\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU17/vanelli.html",
+    "href": "GiocatoriU17/vanelli.html",
+    "title": "M. Vanelli",
+    "section": "",
+    "text": "Full SessionsPartita Finale AllenamentoPartite Ufficiali"
+  },
+  {
+    "objectID": "GiocatoriU17/vanelli.html#valori-anomali",
+    "href": "GiocatoriU17/vanelli.html#valori-anomali",
+    "title": "M. Vanelli",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Vanelli — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.159\nNA\nNA\n\n\nsession\nTue, Oct 28, 2025\nPartita finale\n0.140\n0.159\n−0.019\n−2.70\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Vanelli — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.415\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Vanelli — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n328.444\nNA\nNA\n\n\nsession\nWed, Nov 26, 2025\nPartita finale\n295.000\n328.444\n−33.444\n−5.26"
+  },
+  {
+    "objectID": "GiocatoriU19/bertazzoli.html#valori-anomali",
+    "href": "GiocatoriU19/bertazzoli.html#valori-anomali",
+    "title": "M. Bertazzoli",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.159\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.396\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.430\n0.396\n0.034\n2.70\n\n\nsession\nMon, Dec 15, 2025\nPartita finale\n0.445\n0.396\n0.049\n3.71\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bertazzoli — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n324.417\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/bonizzoni.html#valori-anomali",
+    "href": "GiocatoriU19/bonizzoni.html#valori-anomali",
+    "title": "M. Bonizzoni",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. Bonizzoni — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.165\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bonizzoni — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.440\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. Bonizzoni — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n338.600\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/cerioli.html#valori-anomali",
+    "href": "GiocatoriU19/cerioli.html#valori-anomali",
+    "title": "F. Cerioli",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nF. Cerioli — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.139\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Cerioli — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.448\nNA\nNA\n\n\nsession\nMon, Oct 6, 2025\nPartita finale\n0.495\n0.448\n0.047\n4.72\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.525\n0.448\n0.078\n7.42\n\n\nsession\nMon, Nov 3, 2025\nPartita finale\n0.405\n0.448\n−0.042\n−3.37\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Cerioli — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n344.231\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/demaio.html#valori-anomali",
+    "href": "GiocatoriU19/demaio.html#valori-anomali",
+    "title": "W. De Maio",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nW. De Maio — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.150\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nW. De Maio — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.340\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nW. De Maio — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n292.500\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/dischia.html#valori-anomali",
+    "href": "GiocatoriU19/dischia.html#valori-anomali",
+    "title": "M. D’Ischia",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nM. D’Ischia — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.171\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. D’Ischia — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.394\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nM. D’Ischia — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n318.600\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n343.500\n318.600\n24.900\n19.22\n\n\nsession\nThu, Oct 30, 2025\nPartita finale\n304.000\n318.600\n−14.600\n−7.42"
+  },
+  {
+    "objectID": "GiocatoriU19/gerasym.html#valori-anomali",
+    "href": "GiocatoriU19/gerasym.html#valori-anomali",
+    "title": "V. Gerasym",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nV. Gerasym — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.148\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nV. Gerasym — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.387\nNA\nNA\n\n\nsession\nMon, Oct 27, 2025\nPartita finale\n0.425\n0.387\n0.038\n5.06\n\n\nsession\nMon, Nov 3, 2025\nPartita finale\n0.365\n0.387\n−0.022\n−3.04\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nV. Gerasym — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n304.042\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/montemezzani.html#valori-anomali",
+    "href": "GiocatoriU19/montemezzani.html#valori-anomali",
+    "title": "F. Montemezzani",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nF. Montemezzani — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.160\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Montemezzani — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.375\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Montemezzani — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n301.000\nNA\nNA"
+  },
+  {
+    "objectID": "GiocatoriU19/pape.html#valori-anomali",
+    "href": "GiocatoriU19/pape.html#valori-anomali",
+    "title": "B. Pape",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nB. Pape — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.160\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB. Pape — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.410\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nB. Pape — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n311.400\nNA\nNA\n\n\nsession\nMon, Oct 20, 2025\nPartita finale\n266.000\n311.400\n−45.400\n−3.34"
+  },
+  {
+    "objectID": "GiocatoriU19/tabal.html#valori-anomali",
+    "href": "GiocatoriU19/tabal.html#valori-anomali",
+    "title": "R. Tabal",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nR. Tabal — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.167\nNA\nNA\n\n\nsession\nThu, Nov 13, 2025\nPartita finale\n0.120\n0.167\n−0.047\n−6.75\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Tabal — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.346\nNA\nNA\n\n\nsession\nThu, Nov 13, 2025\nPartita finale\n0.415\n0.346\n0.069\n6.74\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR. Tabal — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n304.167\nNA\nNA\n\n\nsession\nThu, Nov 13, 2025\nPartita finale\n347.500\n304.167\n43.333\n6.52\n\n\nsession\nThu, Nov 20, 2025\nPartita finale\n271.000\n304.167\n−33.167\n−4.95"
+  },
+  {
+    "objectID": "GiocatoriU19/valletti.html#valori-anomali",
+    "href": "GiocatoriU19/valletti.html#valori-anomali",
+    "title": "F. Valletti",
+    "section": "Valori anomali",
+    "text": "Valori anomali\n\nContact DurationFlight DurationStride Length\n\n\n\n\n\n\n\n\n\n\nF. Valletti — HCD (Contact Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.150\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Valletti — HFD (Flight Duration) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: sec\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n0.375\nNA\nNA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nF. Valletti — HSL (Stride Length) — mean\n\n\nOutlier HID (|z| ≥ 2.5) — ordinati per data | unità: cm\n\n\nTipo\nData\nTag\nValore\nBaseline\nDelta\nZ robusto\n\n\n\n\nbaseline\nNA\nNA\nNA\n304.000\nNA\nNA"
+  },
+  {
+    "objectID": "Under17.html",
+    "href": "Under17.html",
+    "title": "Under 17",
+    "section": "",
+    "text": "Questa è la sezione dedicata alla Under 17."
+  },
+  {
+    "objectID": "Under17.html#portieri",
+    "href": "Under17.html#portieri",
+    "title": "Under 17",
+    "section": "Portieri",
+    "text": "Portieri\n\nA. Ajdini\nA. Laini\nA. Riboli"
+  },
+  {
+    "objectID": "Under17.html#difensori",
+    "href": "Under17.html#difensori",
+    "title": "Under 17",
+    "section": "Difensori",
+    "text": "Difensori\n\nM. Bresciani\nA. Brusati\nE. Di Cicco\n[A. Granata]\nP. Marelli\nA. Mhilli\nS. Montoya\nR. Nicolini"
+  },
+  {
+    "objectID": "Under17.html#centrocampisti",
+    "href": "Under17.html#centrocampisti",
+    "title": "Under 17",
+    "section": "Centrocampisti",
+    "text": "Centrocampisti\n\nK. Gagliardi\nF. Massazza\nF. Moruzzi\nL. Pascale\nD. Pea\nD. Shiku\nM. Vanelli"
+  },
+  {
+    "objectID": "Under17.html#attaccanti",
+    "href": "Under17.html#attaccanti",
+    "title": "Under 17",
+    "section": "Attaccanti",
+    "text": "Attaccanti\n\nT. Calia\nL. Kurici\nM. Laini\nF. Ndema\n[M. Tacchini]"
+  },
+  {
+    "objectID": "Under17.html#carichi-di-lavoro",
+    "href": "Under17.html#carichi-di-lavoro",
+    "title": "Under 17",
+    "section": "Carichi di Lavoro",
+    "text": "Carichi di Lavoro\n\n\nError in eval(expr, envir, enclos): oggetto 'tb_carichi_lavoro_u17' non trovato"
+  },
+  {
+    "objectID": "Under17.html#statistiche-all-time",
+    "href": "Under17.html#statistiche-all-time",
+    "title": "Under 17",
+    "section": "Statistiche all time",
+    "text": "Statistiche all time"
+  },
+  {
+    "objectID": "Under17.html#classifiche-fisiche",
+    "href": "Under17.html#classifiche-fisiche",
+    "title": "Under 17",
+    "section": "Classifiche fisiche",
+    "text": "Classifiche fisiche\n\n\n\n\n\n\n\n\n\n\nTopSpeed all time\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\nData\n\n\n\n\nK. Gagliardi\n33.77\n2026-01-14\n\n\nL. Invernizzi\n31.32\n2025-11-11\n\n\nM. Laini\n31.21\n2025-11-11\n\n\nK. Gagliardi\n31.10\n2025-11-11\n\n\nF. Massazza\n31.10\n2026-01-21\n\n\nD. Pea\n31.03\n2025-10-22\n\n\nR. Nicolini\n31.00\n2025-11-11\n\n\nF. Massazza\n30.89\n2025-11-11\n\n\nM. Bresciani\n30.82\n2025-10-22\n\n\nM. Bresciani\n30.78\n2025-12-09\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWorkRate medio\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nF. Massazza\n94.65\n\n\nA. Brusati\n90.41\n\n\nD. Shiku\n89.92\n\n\nK. Gagliardi\n85.93\n\n\nS. Montoya\n85.59\n\n\nL. Pascale\n85.39\n\n\nL. Kurici\n84.84\n\n\nE. Di Cicco\n84.57\n\n\nM. Vanelli\n80.61\n\n\nP. Marelli\n79.84"
+  },
+  {
+    "objectID": "Under17.html#classifiche-tecniche",
+    "href": "Under17.html#classifiche-tecniche",
+    "title": "Under 17",
+    "section": "Classifiche Tecniche",
+    "text": "Classifiche Tecniche\n\n\n\n\n\n\n\n\n\n\nTocchi medi per minuto\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nF. Massazza\n2.30\n\n\nR. Nicolini\n2.07\n\n\nL. Pascale\n2.00\n\n\nF. Moruzzi\n1.93\n\n\nD. Shiku\n1.92\n\n\nK. Gagliardi\n1.81\n\n\nE. Di Cicco\n1.74\n\n\nT. Calia\n1.73\n\n\nA. Laini\n1.70\n\n\nA. Ajdini\n1.68\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRilasci medi per minuto\n\n\nTop 10 giocatori\n\n\nGiocatore\nValore\n\n\n\n\nA. Laini\n0.90\n\n\nA. Ajdini\n0.80\n\n\nL. Pascale\n0.77\n\n\nF. Massazza\n0.76\n\n\nR. Nicolini\n0.70\n\n\nA. Riboli\n0.67\n\n\nF. Moruzzi\n0.66\n\n\nK. Gagliardi\n0.64\n\n\nT. Calia\n0.62\n\n\nE. Di Cicco\n0.59"
+  },
+  {
+    "objectID": "GiocatoriU17/tesseramenti_u17.html",
+    "href": "GiocatoriU17/tesseramenti_u17.html",
+    "title": "Premi tesseramento",
+    "section": "",
+    "text": "Note\n\n\n\nRegola: il premio di tesseramento è dovuto per ogni stagione dal 20/21 in cui il giocatore risulta in una società diversa da AC Crema 1908. Le celle vuote dal 20/21 in poi vengono marcate come dati mancanti.\n\n\nlibrary(dplyr) library(stringr) library(readr) library(tidyr)\n\n=== CONFIG ===\ndatafile &lt;- read_excel(here(“data”, “STORICO_CALCIATORI.xlsx”)) crema_tag &lt;- “AC CREMA 1908” due_from &lt;- “20/21” # da qui in avanti si conteggiano i premi\n\n\n— Lettura dati —\ndf &lt;- read_csv(datafile, show_col_types = FALSE)\n\n\nElimina eventuali colonne completamente vuote (capita con export Excel)\ndf &lt;- df %&gt;% select(where(~ !all(is.na(.) | str_squish(as.character(.)) == ““)))\n\n\nIndividua le colonne stagione (formato 20/21)\nseason_cols &lt;- names(df)[str_detect(names(df), “^\\d{2}/\\d{2}$”)] if (length(season_cols) == 0) stop(“Non trovo colonne stagione nel formato ‘20/21’.”)\n\n\nOrdine stagioni come appaiono nel file (se vuoi forzarlo, sostituisci season_cols con un vettore fisso)\nseasons &lt;- season_cols if (!due_from %in% seasons) stop(paste(“La stagione”, due_from, “non è tra le colonne.”))\ndue_seasons &lt;- seasons[match(due_from, seasons):length(seasons)]\nnorm &lt;- function(x) str_squish(replace_na(as.character(x), ““)) is_crema &lt;- function(x) str_detect(str_to_upper(norm(x)), str_to_upper(crema_tag))\n\n\n— Calcoli per riga —\ncalc_arrival &lt;- function(row) { idx &lt;- which(is_crema(row[seasons])) if (length(idx) == 0) return(“—”) seasons[min(idx)] }\ncalc_due_missing &lt;- function(row) { vals &lt;- setNames(lapply(row[due_seasons], norm), due_seasons) missing &lt;- names(vals)[unlist(vals) == “”] due &lt;- names(vals)[unlist(vals) != “” & !sapply(vals, is_crema)] list( due_years = if (length(due)) paste(due, collapse = “,”) else “—”, due_n = length(due), missing = if (length(missing)) paste(missing, collapse = “,”) else “—” ) }\ntmp &lt;- df %&gt;% rowwise() %&gt;% mutate( Anno arrivo (Crema) = calc_arrival(cur_data()), .calc = list(calc_due_missing(cur_data())), Anni premio (da 20/21) = .calc\\(due_years,\n    `N° anni premio` = .calc\\)due_n, Dati mancanti (da 20/21) = .calc$missing ) %&gt;% ungroup() %&gt;% select(-.calc)\n\n\n— KPI —\nn_players &lt;- nrow(tmp) n_due_players &lt;- sum(tmp\\(`N° anni premio` &gt; 0, na.rm = TRUE)\ntot_due_years &lt;- sum(tmp\\)N° anni premio, na.rm = TRUE) n_missing &lt;- sum(tmp$Dati mancanti (da 20/21) != “—”, na.rm = TRUE)\n\n\nValue boxes (stile professionale)\nlibrary(bslib) bslib::layout_column_wrap( width = 1/4, bslib::value_box(“Giocatori”, n_players), bslib::value_box(“Con premio dovuto”, n_due_players), bslib::value_box(“Anni premio totali”, tot_due_years), bslib::value_box(“Righe con dati mancanti”, n_missing) )\nlibrary(DT)\nview &lt;- tmp %&gt;% select(Giocatore, Categoria, Nascita, Anno arrivo (Crema), N° anni premio, Anni premio (da 20/21), Dati mancanti (da 20/21)) %&gt;% arrange(desc(N° anni premio), Giocatore)\ndt &lt;- datatable( view, rownames = FALSE, extensions = c(“Buttons”), options = list( dom = “Bfrtip”, buttons = c(“copy”, “csv”, “excel”, “print”), pageLength = 25, scrollX = TRUE ) )\n\n\nEvidenzia chi ha premio e chi ha dati mancanti\ndt %&gt;% formatStyle( “N° anni premio”, backgroundColor = styleInterval(0, c(NA, “#fff3cd”)), fontWeight = styleInterval(0, c(“normal”, “bold”)) ) %&gt;% formatStyle( “Dati mancanti (da 20/21)”, backgroundColor = styleEqual(“—”, NA, default = “#f8d7da”) )\nstorico &lt;- tmp %&gt;% select(Giocatore, all_of(seasons)) %&gt;% arrange(Giocatore)\ndatatable(storico, rownames = FALSE, options = list(pageLength = 25, scrollX = TRUE))"
   }
 ]

@@ -1,0 +1,281 @@
+---
+title: "A. Mhilli"
+format:
+  html:
+    theme: darkly
+    css: styles.css
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../code/ReportUnoNew.R")
+source("../code/ReportDueNew.R")
+source("../code/Temi_grafici.R")
+source("../code/player_wheel.R")
+source("../code/run_dynamics_new.R")
+source("../code/phy_vs_tech_new.R")
+source("../code/comparisons_U17_new.R")
+
+ctx <- readRDS(here::here("data", "derived", "u17_context.rds"))
+
+match_u17 <- c("CREMA vs TREVIGLIESE U17", "CREMA vs BRUSAPORTO U17", "CREMA vs DESENZANO U17", "CREMA vs AURORA TRAVAGLIATO U17", 
+               "VOLUNTAS vs CREMA U17", "VILLAVALLE vs CREMA U17", "CREMA vs PONTE SP MAPELLO U17")
+
+df          <- ctx$df_u17
+cph         <- ctx$cph_u17
+ctx_session <- ctx$ctx_session_u17
+ctx_pf      <- ctx$ctx_pf_u17
+ctx_matches <- ctx$ctx_matches_u17
+pcts        <- ctx$pcts_u17
+
+scatter_data <- ctx$scatter_u17
+
+df_dynamic_hid_match <- ctx$run_ctx_u17$df_dynamic_hid_match
+
+scatter_u17_over_match   <- ctx$scatter_u17_over_match
+scatter_u17_over_pf      <- ctx$scatter_u17_over_pf
+scatter_u17_over_session <- ctx$scatter_u17_over_session
+
+
+player_sel <- "A. Mhilli"
+```
+
+# Scheda Anagrafica
+```{r}
+# Scheda Anagrafica
+
+#| echo: false
+nome      <- "Mattia Bresciani"
+nascita   <- as.Date("2009-01-06")
+ruolo     <- "Difensore"
+categoria <- "Allievi U17"
+eta <- as.integer(floor(as.numeric(difftime(Sys.Date(), nascita, units="days"))/365.25))
+```
+
+::: {.callout-note appearance="simple"}
+## `r nome`
+
+**Categoria:** `r categoria`  
+**Ruolo:** `r ruolo`
+
+| Campo | Valore |
+|---|---:|
+| Data di nascita | `r format(nascita, "%d/%m/%Y")` |
+| Età | `r eta` |
+| Piede | — |
+| Altezza | — |
+:::
+
+# Minutaggi
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(dplyr)
+library(glue)
+library(scales)
+
+prova <- df %>% filter(`Player Name` == player_sel)
+
+minuti_giocati_partita <- sum(prova$`Player Participation Time (min)`[prova$Tag %in% match_u17], na.rm = TRUE)
+minuti_totali          <- sum(prova$`Phase Duration (min)`[prova$Tag %in% match_u17], na.rm = TRUE)
+perc_minuti            <- ifelse(minuti_totali > 0, minuti_giocati_partita/minuti_totali, NA_real_)
+
+perc_txt <- percent(perc_minuti, accuracy = 0.1)
+
+```
+
+::: {.kpi-row}
+::: {.kpi-card}
+**Minuti giocati**  
+<span class="kpi-number">`r round(minuti_giocati_partita, 0)`</span>
+<span class="kpi-sub">min</span>
+:::
+
+::: {.kpi-card}
+**Minuti squadra**  
+<span class="kpi-number">`r round(minuti_totali, 0)`</span>
+<span class="kpi-sub">min</span>
+:::
+
+::: {.kpi-card}
+**% presenza**  
+<span class="kpi-number">`r perc_txt`</span>
+:::
+:::
+
+<div class="progress kpi-progress" role="progressbar" aria-label="Minutaggio" aria-valuenow="`r round(perc_minuti*100,1)`" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar" style="width:`r round(perc_minuti*100,1)`%"></div>
+</div>
+
+<div class="muted-note">
+`r glue("{player_sel}: {round(minuti_giocati_partita,0)} min ({perc_txt}) dei minuti totali squadra nei match considerati.")`
+</div>
+
+# Test Fisici
+
+
+# Monitoraggio
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_phy_tec_player(player_sel, scatter_data = scatter_data)
+```
+
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_fisico(player_sel, cph)
+```
+
+
+::: {.panel-tabset}
+# Full Sessions
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_tecnico(player_sel, ctx_session)
+```
+
+# Partita Finale Allenamento
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_tecnico(player_sel, ctx_pf)
+```
+
+# Partite Ufficiali
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_tecnico(player_sel, ctx_matches)
+```
+
+:::
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-format: png
+#| fig-dpi: 320
+#| fig-bg: "#0b0b0b"
+#| fig-width: 7
+#| fig-height: 7
+#| out-width: "85%"
+
+plot_player_wheel(pcts, player_sel)
+
+
+```
+
+### Trend di forma
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+trend_fisico(player_sel, cph)
+
+```
+
+### Trend tecnico
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+trend_tecnico_indici(player_sel, ctx_session)
+trend_tecnico_possesso(player_sel, ctx_session)
+trend_tecnico_piede(player_sel, ctx_session)
+
+```
+
+
+### Dinamica di corsa
+
+::: {.panel-tabset}
+# Contact Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HCD")
+
+```
+
+# Flight Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HFD")
+
+```
+
+# Stride Length
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HSL")
+
+
+```
+
+
+:::
+
+### Valori anomali
+
+::: {.panel-tabset}
+# Contact Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HCD", top_n = 20)
+
+```
+
+# Flight Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HFD", top_n = 20)
+
+```
+
+# Stride Length
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HSL", top_n = 20)
+
+```
+:::
+
+
+### Confronto con prima squadra
+::: {.panel-tabset}
+# Full Session
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_compare_phy_tec_player_3(scatter_u17_over_session, player_sel, "overall")
+```
+
+# Partite Finali
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_compare_phy_tec_player_3(scatter_u17_over_pf, player_sel, "overall")
+```
+
+# Partite Ufficiali
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_compare_phy_tec_player_3(scatter_u17_over_match, player_sel, "overall")
+```
+:::
+
+
+# Video
+
+# Visita Medica
+```{r}
+#| echo: false
+scadenza_vm <- as.Date("2026-09-22")
+oggi <- Sys.Date()
+giorni <- as.integer(scadenza_vm - oggi)
+
+stato_txt <- dplyr::case_when(
+  giorni < 0   ~ "SCADUTA",
+  giorni <= 30 ~ "URGENTE",
+  giorni <= 90 ~ "ATTENZIONE",
+  TRUE         ~ "OK"
+)
+
+tipo_callout <- dplyr::case_when(
+  giorni < 0   ~ "danger",
+  giorni <= 30 ~ "danger",
+  giorni <= 90 ~ "warning",
+  TRUE         ~ "success"
+)
+
+```
+
+
+
+# Carriera
+
+# Salute Mentale

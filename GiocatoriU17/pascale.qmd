@@ -1,0 +1,171 @@
+---
+title: "L. Pascale"
+format:
+  html:
+    theme: darkly
+    css: styles.css
+---
+
+
+
+# Statistiche All Time 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../code/ReportUnoNew.R")
+source("../code/ReportDueNew.R")
+source("../code/Temi_grafici.R")
+source("../code/player_wheel.R")
+source("../code/run_dynamics_new.R")
+source("../code/phy_vs_tech_new.R")
+source("../code/comparisons_U17_new.R")
+
+ctx <- readRDS(here::here("data", "derived", "u17_context.rds"))
+
+df          <- ctx$df_u17
+cph         <- ctx$cph_u17
+ctx_session <- ctx$ctx_session_u17
+ctx_pf      <- ctx$ctx_pf_u17
+ctx_matches <- ctx$ctx_matches_u17
+pcts        <- ctx$pcts_u17
+
+scatter_data <- ctx$scatter_u17
+
+df_dynamic_hid_match <- ctx$run_ctx_u17$df_dynamic_hid_match
+
+scatter_u17_over_match   <- ctx$scatter_u17_over_match
+scatter_u17_over_pf      <- ctx$scatter_u17_over_pf
+scatter_u17_over_session <- ctx$scatter_u17_over_session
+
+
+player_sel <- "L. Pascale"
+plot_phy_tec_player(player_sel, scatter_data = scatter_data)
+```
+
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_fisico(player_sel, cph)
+```
+
+
+::: {.panel-tabset}
+# Full Sessions
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_tecnico(player_sel, ctx_session)
+```
+
+# Partita Finale Allenamento
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_tecnico(player_sel, ctx_pf)
+```
+
+# Partite Ufficiali
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+report_tecnico(player_sel, ctx_matches)
+```
+
+:::
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-format: png
+#| fig-dpi: 320
+#| fig-bg: "#0b0b0b"
+#| fig-width: 7
+#| fig-height: 7
+#| out-width: "85%"
+
+plot_player_wheel(pcts, player_sel)
+
+
+```
+
+# Trend di forma
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+trend_fisico(player_sel, cph)
+
+```
+
+# Trend tecnico
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+trend_tecnico_indici(player_sel, ctx_session)
+trend_tecnico_possesso(player_sel, ctx_session)
+trend_tecnico_piede(player_sel, ctx_session)
+
+```
+
+
+# Dinamica di corsa
+
+::: {.panel-tabset}
+# Contact Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HCD")
+
+```
+
+# Flight Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HFD")
+
+```
+
+# Stride Length
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HSL")
+
+
+```
+
+
+:::
+
+## Valori anomali
+
+::: {.panel-tabset}
+# Contact Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HCD", top_n = 20)
+
+```
+
+# Flight Duration
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HFD", top_n = 20)
+
+```
+
+# Stride Length
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HSL", top_n = 20)
+
+```
+:::
+
+
+# Confronto con prima squadra
+::: {.panel-tabset}
+# Full Session
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_compare_phy_tec_player_3(scatter_u17_over_session, player_sel, "overall")
+```
+
+# Partite Finali
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_compare_phy_tec_player_3(scatter_u17_over_pf, player_sel, "overall")
+```
+
+# Partite Ufficiali
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_compare_phy_tec_player_3(scatter_u17_over_match, player_sel, "overall")
+```
+:::
+
+
+
+

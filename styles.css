@@ -19,3 +19,115 @@
 .navbar-nav .nav-link:hover {
   color: #ffcccc !important;
 }
+
+/* Titoletti coerenti */
+.section-title{
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin-bottom: 10px;
+}
+
+/* --- Profile card --- */
+.profile-card{
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 10px 25px rgba(0,0,0,.22);
+  margin: 10px 0 18px;
+}
+
+.avatar{
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.profile-name{
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.chips{
+  display:flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.chip{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 750;
+  font-size: .85rem;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.chip-outline{
+  background: transparent;
+}
+
+.profile-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 12px;
+}
+
+.label{ opacity:.7; font-size:.85rem; }
+.value{ font-size: 1.15rem; font-weight: 800; }
+
+@media (max-width: 900px){
+  .profile-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+/* --- Visita medica --- */
+.medical-card{
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 10px 25px rgba(0,0,0,.22);
+  margin: 10px 0 18px;
+}
+
+.medical-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 14px;
+  align-items: end;
+}
+
+.badge-wrap{ display:flex; justify-content:flex-end; }
+
+.status-badge{
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-weight: 900;
+  letter-spacing: .7px;
+  font-size: .8rem;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.08);
+}
+
+/* Stati (sobri) */
+.status-ok .status-badge{ background: rgba(25,135,84,.20); }
+.status-attenzione .status-badge{ background: rgba(255,193,7,.20); }
+.status-urgente .status-badge,
+.status-scaduta .status-badge{ background: rgba(220,53,69,.22); }
+
+@media (max-width: 700px){
+  .medical-grid{ grid-template-columns: 1fr 1fr; }
+  .badge-wrap{ justify-content:flex-start; grid-column: 1 / -1; }
+}

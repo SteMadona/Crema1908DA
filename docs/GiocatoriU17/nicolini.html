@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R. Nicolini – Crema 1908 Data Analysis</title>
+<title>Riccardo Nicolini – Crema 1908 Data Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -128,7 +132,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#scheda-anagrafica" id="toc-scheda-anagrafica" class="nav-link active" data-scroll-target="#scheda-anagrafica">Scheda Anagrafica</a></li>
-  <li><a href="#minutaggi" id="toc-minutaggi" class="nav-link" data-scroll-target="#minutaggi">Minutaggi</a></li>
+  <li><a href="#minutaggi" id="toc-minutaggi" class="nav-link" data-scroll-target="#minutaggi">Minutaggi</a>
+  <ul class="collapse">
+  <li><a href="#partite" id="toc-partite" class="nav-link" data-scroll-target="#partite">Partite</a></li>
+  <li><a href="#allenamenti" id="toc-allenamenti" class="nav-link" data-scroll-target="#allenamenti">Allenamenti</a></li>
+  </ul></li>
   <li><a href="#test-fisici" id="toc-test-fisici" class="nav-link" data-scroll-target="#test-fisici">Test Fisici</a></li>
   <li><a href="#monitoraggio" id="toc-monitoraggio" class="nav-link" data-scroll-target="#monitoraggio">Monitoraggio</a>
   <ul class="collapse">
@@ -140,7 +148,6 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#video" id="toc-video" class="nav-link" data-scroll-target="#video">Video</a></li>
   <li><a href="#visita-medica" id="toc-visita-medica" class="nav-link" data-scroll-target="#visita-medica">Visita Medica</a></li>
-  <li><a href="#carriera" id="toc-carriera" class="nav-link" data-scroll-target="#carriera">Carriera</a></li>
   <li><a href="#salute-mentale" id="toc-salute-mentale" class="nav-link" data-scroll-target="#salute-mentale">Salute Mentale</a></li>
   </ul>
 </nav>
@@ -150,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R. Nicolini</h1>
+<h1 class="title">Riccardo Nicolini</h1>
 </div>
 
 
@@ -175,35 +182,41 @@ ul.task-list li input[type="checkbox"] {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Mattia Bresciani
+<span class="screen-reader-only">Note</span>Riccardo Nicolini
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Categoria:</strong> Allievi U17<br>
-<strong>Ruolo:</strong> Difensore</p>
+<ul>
+<li><strong>Categoria:</strong> Allievi U17</li>
+<li><strong>Ruolo:</strong> Difensore</li>
+</ul>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Campo</th>
+<th style="text-align: left;">Campo</th>
 <th style="text-align: right;">Valore</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Data di nascita</td>
-<td style="text-align: right;">06/01/2009</td>
+<td style="text-align: left;">Data di nascita</td>
+<td style="text-align: right;">10/10/2009</td>
 </tr>
 <tr class="even">
-<td>Età</td>
-<td style="text-align: right;">17</td>
+<td style="text-align: left;">Età</td>
+<td style="text-align: right;">16</td>
 </tr>
 <tr class="odd">
-<td>Piede</td>
+<td style="text-align: left;">Piede</td>
 <td style="text-align: right;">—</td>
 </tr>
 <tr class="even">
-<td>Altezza</td>
-<td style="text-align: right;">—</td>
+<td style="text-align: left;">Altezza</td>
+<td style="text-align: right;">172</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Peso</td>
+<td style="text-align: right;">59.9</td>
 </tr>
 </tbody>
 </table>
@@ -212,31 +225,108 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="minutaggi" class="level1">
 <h1>Minutaggi</h1>
-<div class="kpi-row">
-<div class="kpi-card">
-<p><strong>Minuti giocati</strong><br>
-<span class="kpi-number">417</span> <span class="kpi-sub">min</span></p>
+<section id="partite" class="level3">
+<h3 class="anchored" data-anchor-id="partite">Partite</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Partite totali</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Presenze</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Minuti</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Gol</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Ammonizioni</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Espulsioni</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">948</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="kpi-card">
-<p><strong>Minuti squadra</strong><br>
-<span class="kpi-number">574</span> <span class="kpi-sub">min</span></p>
 </div>
-<div class="kpi-card">
-<p><strong>% presenza</strong><br>
-<span class="kpi-number">72.6%</span></p>
+</section>
+<section id="allenamenti" class="level3">
+<h3 class="anchored" data-anchor-id="allenamenti">Allenamenti</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Allenamenti totali</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Presenze</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Assenze</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Infortuni</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Aggregato cat. superiori</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div class="progress kpi-progress" role="progressbar" aria-label="Minutaggio" aria-valuenow="72.6" aria-valuemin="0" aria-valuemax="100">
-<div class="progress-bar" style="width:72.6%">
-
-</div>
-</div>
-<div class="muted-note">
-<p>R. Nicolini: 417 min (72.6%) dei minuti totali squadra nei match considerati.</p>
-</div>
+</section>
 </section>
 <section id="test-fisici" class="level1">
 <h1>Test Fisici</h1>
+<div class="card shadow-sm mb-3">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
+      <div>
+        <div class="text-muted small">Test fisici</div>
+        <div class="h5 mb-0">Confronto Settembre vs Gennaio</div>
+      </div>
+      <div class="small text-muted">Aggiornato al: 10/03/2026</div>
+    </div>
+
+    <div class="table-responsive">
+      
+<table class="table table-sm table-striped table-hover align-middle mb-0 caption-top">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Test</th>
+<th class="text-center" data-quarto-table-cell-role="th">Settembre</th>
+<th class="text-center" data-quarto-table-cell-role="th">Gennaio</th>
+<th class="text-center" data-quarto-table-cell-role="th">Δ</th>
+<th class="text-end" data-quarto-table-cell-role="th">Trend</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="fw-semibold">Sprint 20 m</td>
+<td class="text-center">10.00 s</td>
+<td class="text-center">3.03 s</td>
+<td class="text-center">-6.97 s</td>
+<td class="text-end"><span class="badge bg-success">Migliora</span></td>
+</tr>
+<tr class="even">
+<td class="fw-semibold">Vertical Jump</td>
+<td class="text-center">0.0 cm</td>
+<td class="text-center">25.6 cm</td>
+<td class="text-center">+25.6 cm</td>
+<td class="text-end"><span class="badge bg-success">Migliora</span></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+  </div>
+</div>
 </section>
 <section id="monitoraggio" class="level1">
 <h1>Monitoraggio</h1>
@@ -244,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -253,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -266,7 +356,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -277,7 +367,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -288,7 +378,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -300,7 +390,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" style="width:85.0%"></p>
 </figure>
 </div>
 </div>
@@ -311,7 +401,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -323,21 +413,21 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-11-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-13-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-11-3.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-13-3.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -353,7 +443,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -364,7 +454,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -375,7 +465,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -392,23 +482,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div id="xxxmqbkduv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xxxmqbkduv table {
+<div id="utbwfetuaz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#utbwfetuaz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xxxmqbkduv thead, #xxxmqbkduv tbody, #xxxmqbkduv tfoot, #xxxmqbkduv tr, #xxxmqbkduv td, #xxxmqbkduv th {
+#utbwfetuaz thead, #utbwfetuaz tbody, #utbwfetuaz tfoot, #utbwfetuaz tr, #utbwfetuaz td, #utbwfetuaz th {
   border-style: none;
 }
 
-#xxxmqbkduv p {
+#utbwfetuaz p {
   margin: 0;
   padding: 0;
 }
 
-#xxxmqbkduv .gt_table {
+#utbwfetuaz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -434,12 +524,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_caption {
+#utbwfetuaz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xxxmqbkduv .gt_title {
+#utbwfetuaz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -451,7 +541,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#xxxmqbkduv .gt_subtitle {
+#utbwfetuaz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -463,7 +553,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#xxxmqbkduv .gt_heading {
+#utbwfetuaz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -475,13 +565,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_bottom_border {
+#utbwfetuaz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_col_headings {
+#utbwfetuaz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -496,7 +586,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_col_heading {
+#utbwfetuaz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -516,7 +606,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#xxxmqbkduv .gt_column_spanner_outer {
+#utbwfetuaz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -528,15 +618,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#xxxmqbkduv .gt_column_spanner_outer:first-child {
+#utbwfetuaz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xxxmqbkduv .gt_column_spanner_outer:last-child {
+#utbwfetuaz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xxxmqbkduv .gt_column_spanner {
+#utbwfetuaz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -548,11 +638,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#xxxmqbkduv .gt_spanner_row {
+#utbwfetuaz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xxxmqbkduv .gt_group_heading {
+#utbwfetuaz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -578,7 +668,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#xxxmqbkduv .gt_empty_group_heading {
+#utbwfetuaz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -593,15 +683,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#xxxmqbkduv .gt_from_md > :first-child {
+#utbwfetuaz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xxxmqbkduv .gt_from_md > :last-child {
+#utbwfetuaz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xxxmqbkduv .gt_row {
+#utbwfetuaz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -620,7 +710,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#xxxmqbkduv .gt_stub {
+#utbwfetuaz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -633,7 +723,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#xxxmqbkduv .gt_stub_row_group {
+#utbwfetuaz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -647,15 +737,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#xxxmqbkduv .gt_row_group_first td {
+#utbwfetuaz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xxxmqbkduv .gt_row_group_first th {
+#utbwfetuaz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xxxmqbkduv .gt_summary_row {
+#utbwfetuaz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -665,16 +755,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#xxxmqbkduv .gt_first_summary_row {
+#utbwfetuaz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_first_summary_row.thick {
+#utbwfetuaz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xxxmqbkduv .gt_last_summary_row {
+#utbwfetuaz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -684,7 +774,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_grand_summary_row {
+#utbwfetuaz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -694,7 +784,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#xxxmqbkduv .gt_first_grand_summary_row {
+#utbwfetuaz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -704,7 +794,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_last_grand_summary_row_top {
+#utbwfetuaz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -714,11 +804,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_striped {
+#utbwfetuaz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xxxmqbkduv .gt_table_body {
+#utbwfetuaz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -727,7 +817,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_footnotes {
+#utbwfetuaz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -741,7 +831,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_footnote {
+#utbwfetuaz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -750,7 +840,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#xxxmqbkduv .gt_sourcenotes {
+#utbwfetuaz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -764,7 +854,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#xxxmqbkduv .gt_sourcenote {
+#utbwfetuaz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -772,72 +862,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#xxxmqbkduv .gt_left {
+#utbwfetuaz .gt_left {
   text-align: left;
 }
 
-#xxxmqbkduv .gt_center {
+#utbwfetuaz .gt_center {
   text-align: center;
 }
 
-#xxxmqbkduv .gt_right {
+#utbwfetuaz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xxxmqbkduv .gt_font_normal {
+#utbwfetuaz .gt_font_normal {
   font-weight: normal;
 }
 
-#xxxmqbkduv .gt_font_bold {
+#utbwfetuaz .gt_font_bold {
   font-weight: bold;
 }
 
-#xxxmqbkduv .gt_font_italic {
+#utbwfetuaz .gt_font_italic {
   font-style: italic;
 }
 
-#xxxmqbkduv .gt_super {
+#utbwfetuaz .gt_super {
   font-size: 65%;
 }
 
-#xxxmqbkduv .gt_footnote_marks {
+#utbwfetuaz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xxxmqbkduv .gt_asterisk {
+#utbwfetuaz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xxxmqbkduv .gt_indent_1 {
+#utbwfetuaz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xxxmqbkduv .gt_indent_2 {
+#utbwfetuaz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xxxmqbkduv .gt_indent_3 {
+#utbwfetuaz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xxxmqbkduv .gt_indent_4 {
+#utbwfetuaz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xxxmqbkduv .gt_indent_5 {
+#utbwfetuaz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xxxmqbkduv .katex-display {
+#utbwfetuaz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xxxmqbkduv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#utbwfetuaz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -880,23 +970,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div id="xdvmuittkr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xdvmuittkr table {
+<div id="zkxfduvbpf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#zkxfduvbpf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xdvmuittkr thead, #xdvmuittkr tbody, #xdvmuittkr tfoot, #xdvmuittkr tr, #xdvmuittkr td, #xdvmuittkr th {
+#zkxfduvbpf thead, #zkxfduvbpf tbody, #zkxfduvbpf tfoot, #zkxfduvbpf tr, #zkxfduvbpf td, #zkxfduvbpf th {
   border-style: none;
 }
 
-#xdvmuittkr p {
+#zkxfduvbpf p {
   margin: 0;
   padding: 0;
 }
 
-#xdvmuittkr .gt_table {
+#zkxfduvbpf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -922,12 +1012,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_caption {
+#zkxfduvbpf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xdvmuittkr .gt_title {
+#zkxfduvbpf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -939,7 +1029,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#xdvmuittkr .gt_subtitle {
+#zkxfduvbpf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -951,7 +1041,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#xdvmuittkr .gt_heading {
+#zkxfduvbpf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -963,13 +1053,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_bottom_border {
+#zkxfduvbpf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_col_headings {
+#zkxfduvbpf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -984,7 +1074,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_col_heading {
+#zkxfduvbpf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1004,7 +1094,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#xdvmuittkr .gt_column_spanner_outer {
+#zkxfduvbpf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1016,15 +1106,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#xdvmuittkr .gt_column_spanner_outer:first-child {
+#zkxfduvbpf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xdvmuittkr .gt_column_spanner_outer:last-child {
+#zkxfduvbpf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xdvmuittkr .gt_column_spanner {
+#zkxfduvbpf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1036,11 +1126,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#xdvmuittkr .gt_spanner_row {
+#zkxfduvbpf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xdvmuittkr .gt_group_heading {
+#zkxfduvbpf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1066,7 +1156,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#xdvmuittkr .gt_empty_group_heading {
+#zkxfduvbpf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1081,15 +1171,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#xdvmuittkr .gt_from_md > :first-child {
+#zkxfduvbpf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xdvmuittkr .gt_from_md > :last-child {
+#zkxfduvbpf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xdvmuittkr .gt_row {
+#zkxfduvbpf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1108,7 +1198,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#xdvmuittkr .gt_stub {
+#zkxfduvbpf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1121,7 +1211,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#xdvmuittkr .gt_stub_row_group {
+#zkxfduvbpf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1135,15 +1225,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#xdvmuittkr .gt_row_group_first td {
+#zkxfduvbpf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xdvmuittkr .gt_row_group_first th {
+#zkxfduvbpf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xdvmuittkr .gt_summary_row {
+#zkxfduvbpf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1153,16 +1243,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#xdvmuittkr .gt_first_summary_row {
+#zkxfduvbpf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_first_summary_row.thick {
+#zkxfduvbpf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xdvmuittkr .gt_last_summary_row {
+#zkxfduvbpf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1172,7 +1262,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_grand_summary_row {
+#zkxfduvbpf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1182,7 +1272,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#xdvmuittkr .gt_first_grand_summary_row {
+#zkxfduvbpf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1192,7 +1282,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_last_grand_summary_row_top {
+#zkxfduvbpf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1202,11 +1292,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_striped {
+#zkxfduvbpf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xdvmuittkr .gt_table_body {
+#zkxfduvbpf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1215,7 +1305,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_footnotes {
+#zkxfduvbpf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1229,7 +1319,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_footnote {
+#zkxfduvbpf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1238,7 +1328,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#xdvmuittkr .gt_sourcenotes {
+#zkxfduvbpf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1252,7 +1342,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#xdvmuittkr .gt_sourcenote {
+#zkxfduvbpf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1260,72 +1350,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#xdvmuittkr .gt_left {
+#zkxfduvbpf .gt_left {
   text-align: left;
 }
 
-#xdvmuittkr .gt_center {
+#zkxfduvbpf .gt_center {
   text-align: center;
 }
 
-#xdvmuittkr .gt_right {
+#zkxfduvbpf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xdvmuittkr .gt_font_normal {
+#zkxfduvbpf .gt_font_normal {
   font-weight: normal;
 }
 
-#xdvmuittkr .gt_font_bold {
+#zkxfduvbpf .gt_font_bold {
   font-weight: bold;
 }
 
-#xdvmuittkr .gt_font_italic {
+#zkxfduvbpf .gt_font_italic {
   font-style: italic;
 }
 
-#xdvmuittkr .gt_super {
+#zkxfduvbpf .gt_super {
   font-size: 65%;
 }
 
-#xdvmuittkr .gt_footnote_marks {
+#zkxfduvbpf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xdvmuittkr .gt_asterisk {
+#zkxfduvbpf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xdvmuittkr .gt_indent_1 {
+#zkxfduvbpf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xdvmuittkr .gt_indent_2 {
+#zkxfduvbpf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xdvmuittkr .gt_indent_3 {
+#zkxfduvbpf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xdvmuittkr .gt_indent_4 {
+#zkxfduvbpf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xdvmuittkr .gt_indent_5 {
+#zkxfduvbpf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xdvmuittkr .katex-display {
+#zkxfduvbpf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xdvmuittkr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#zkxfduvbpf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1368,23 +1458,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div id="hdpsfomtzd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hdpsfomtzd table {
+<div id="flmewucuvn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#flmewucuvn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hdpsfomtzd thead, #hdpsfomtzd tbody, #hdpsfomtzd tfoot, #hdpsfomtzd tr, #hdpsfomtzd td, #hdpsfomtzd th {
+#flmewucuvn thead, #flmewucuvn tbody, #flmewucuvn tfoot, #flmewucuvn tr, #flmewucuvn td, #flmewucuvn th {
   border-style: none;
 }
 
-#hdpsfomtzd p {
+#flmewucuvn p {
   margin: 0;
   padding: 0;
 }
 
-#hdpsfomtzd .gt_table {
+#flmewucuvn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1410,12 +1500,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_caption {
+#flmewucuvn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hdpsfomtzd .gt_title {
+#flmewucuvn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1427,7 +1517,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#hdpsfomtzd .gt_subtitle {
+#flmewucuvn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1439,7 +1529,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#hdpsfomtzd .gt_heading {
+#flmewucuvn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1451,13 +1541,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_bottom_border {
+#flmewucuvn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_col_headings {
+#flmewucuvn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1472,7 +1562,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_col_heading {
+#flmewucuvn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1492,7 +1582,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#hdpsfomtzd .gt_column_spanner_outer {
+#flmewucuvn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1504,15 +1594,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#hdpsfomtzd .gt_column_spanner_outer:first-child {
+#flmewucuvn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hdpsfomtzd .gt_column_spanner_outer:last-child {
+#flmewucuvn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hdpsfomtzd .gt_column_spanner {
+#flmewucuvn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1524,11 +1614,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#hdpsfomtzd .gt_spanner_row {
+#flmewucuvn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hdpsfomtzd .gt_group_heading {
+#flmewucuvn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1554,7 +1644,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#hdpsfomtzd .gt_empty_group_heading {
+#flmewucuvn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1569,15 +1659,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#hdpsfomtzd .gt_from_md > :first-child {
+#flmewucuvn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hdpsfomtzd .gt_from_md > :last-child {
+#flmewucuvn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hdpsfomtzd .gt_row {
+#flmewucuvn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1596,7 +1686,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#hdpsfomtzd .gt_stub {
+#flmewucuvn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1609,7 +1699,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#hdpsfomtzd .gt_stub_row_group {
+#flmewucuvn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1623,15 +1713,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#hdpsfomtzd .gt_row_group_first td {
+#flmewucuvn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hdpsfomtzd .gt_row_group_first th {
+#flmewucuvn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hdpsfomtzd .gt_summary_row {
+#flmewucuvn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1641,16 +1731,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#hdpsfomtzd .gt_first_summary_row {
+#flmewucuvn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_first_summary_row.thick {
+#flmewucuvn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hdpsfomtzd .gt_last_summary_row {
+#flmewucuvn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1660,7 +1750,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_grand_summary_row {
+#flmewucuvn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1670,7 +1760,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#hdpsfomtzd .gt_first_grand_summary_row {
+#flmewucuvn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1680,7 +1770,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_last_grand_summary_row_top {
+#flmewucuvn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1690,11 +1780,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_striped {
+#flmewucuvn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hdpsfomtzd .gt_table_body {
+#flmewucuvn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1703,7 +1793,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_footnotes {
+#flmewucuvn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1717,7 +1807,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_footnote {
+#flmewucuvn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1726,7 +1816,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#hdpsfomtzd .gt_sourcenotes {
+#flmewucuvn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1740,7 +1830,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#hdpsfomtzd .gt_sourcenote {
+#flmewucuvn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1748,72 +1838,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#hdpsfomtzd .gt_left {
+#flmewucuvn .gt_left {
   text-align: left;
 }
 
-#hdpsfomtzd .gt_center {
+#flmewucuvn .gt_center {
   text-align: center;
 }
 
-#hdpsfomtzd .gt_right {
+#flmewucuvn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hdpsfomtzd .gt_font_normal {
+#flmewucuvn .gt_font_normal {
   font-weight: normal;
 }
 
-#hdpsfomtzd .gt_font_bold {
+#flmewucuvn .gt_font_bold {
   font-weight: bold;
 }
 
-#hdpsfomtzd .gt_font_italic {
+#flmewucuvn .gt_font_italic {
   font-style: italic;
 }
 
-#hdpsfomtzd .gt_super {
+#flmewucuvn .gt_super {
   font-size: 65%;
 }
 
-#hdpsfomtzd .gt_footnote_marks {
+#flmewucuvn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hdpsfomtzd .gt_asterisk {
+#flmewucuvn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hdpsfomtzd .gt_indent_1 {
+#flmewucuvn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hdpsfomtzd .gt_indent_2 {
+#flmewucuvn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hdpsfomtzd .gt_indent_3 {
+#flmewucuvn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hdpsfomtzd .gt_indent_4 {
+#flmewucuvn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hdpsfomtzd .gt_indent_5 {
+#flmewucuvn .gt_indent_5 {
   text-indent: 25px;
 }
 
-#hdpsfomtzd .katex-display {
+#flmewucuvn .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#hdpsfomtzd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#flmewucuvn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1875,7 +1965,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1886,7 +1976,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1897,7 +1987,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="nicolini_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="nicolini_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1912,9 +2002,28 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="visita-medica" class="level1">
 <h1>Visita Medica</h1>
-</section>
-<section id="carriera" class="level1">
-<h1>Carriera</h1>
+<div class="card shadow-sm mb-3">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+      <div>
+        <div class="text-muted small">Visita medica</div>
+        <div class="h5 mb-0">Scadenza: 03/10/2026</div>
+      </div>
+      <div class="text-end">
+        <span class="badge bg-success fs-6">OK</span>
+        <div class="small text-muted mt-1">Mancano <b>207</b> giorni</div>
+      </div>
+    </div>
+
+    <div class="progress mt-3" role="progressbar" aria-label="Validità visita medica" aria-valuenow="56.7" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+      <div class="progress-bar bg-success" style="width:56.7%"></div>
+    </div>
+
+    <div class="d-flex justify-content-between small text-muted mt-1">
+      <span>0 gg</span><span>365 gg</span>
+    </div>
+  </div>
+</div>
 </section>
 <section id="salute-mentale" class="level1">
 <h1>Salute Mentale</h1>

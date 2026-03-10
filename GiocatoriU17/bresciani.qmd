@@ -76,47 +76,45 @@ peso <- 60.5
 
 
 # Minutaggi
+
+### Partite
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-library(dplyr)
-library(glue)
-library(scales)
+library(tibble)
+library(knitr)
+library(kableExtra)
 
-prova <- df %>% filter(`Player Name` == player_sel)
+tab_partite <- tibble(
+  `Partite totali` = 23,
+  Presenze = 20,
+  Minuti = 1212,
+  Gol = 1,
+  Ammonizioni = 1, 
+  Espulsioni = 1
+)
 
-minuti_giocati_partita <- 1088
-minuti_totali          <- 20*90
-perc_minuti            <- ifelse(minuti_totali > 0, minuti_giocati_partita/minuti_totali, NA_real_)
-
-perc_txt <- percent(perc_minuti, accuracy = 0.1)
-
+tab_partite %>%
+  knitr::kable(align = "c") %>%
+  kableExtra::kable_styling(full_width = FALSE)
 ```
 
-::: {.kpi-row}
-::: {.kpi-card}
-**Minuti giocati**  
-<span class="kpi-number">`r round(minuti_giocati_partita, 0)`</span>
-<span class="kpi-sub">min</span>
-:::
+### Allenamenti
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tibble)
+library(knitr)
+library(kableExtra)
 
-::: {.kpi-card}
-**Minuti squadra**  
-<span class="kpi-number">`r round(minuti_totali, 0)`</span>
-<span class="kpi-sub">min</span>
-:::
+tab_allenamenti <- tibble(
+  `Allenamenti totali` = 70,
+  Presenze = 63,
+  Assenze = 3,
+  Infortuni = 1,
+  `Aggregato cat. superiori` = 1
+)
 
-::: {.kpi-card}
-**% presenza**  
-<span class="kpi-number">`r perc_txt`</span>
-:::
-:::
-
-<div class="progress kpi-progress" role="progressbar" aria-label="Minutaggio" aria-valuenow="`r round(perc_minuti*100,1)`" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" style="width:`r round(perc_minuti*100,1)`%"></div>
-</div>
-
-<div class="muted-note">
-`r glue("{player_sel}: {round(minuti_giocati_partita,0)} min ({perc_txt}) dei minuti totali squadra nei match considerati.")`
-</div>
+tab_allenamenti %>%
+  knitr::kable(align = "c") %>%
+  kableExtra::kable_styling(full_width = FALSE)
+```
 
 # Test Fisici
 
@@ -124,11 +122,11 @@ perc_txt <- percent(perc_minuti, accuracy = 0.1)
 #| echo: false
 #| results: asis
 
-sett20m <- 2.83 
-genn20m <- 2.89 
+sett20m <- 2.83
+genn20m <- 2.89
 
 settjump <- 25.4
-gennjump <- 23
+gennjump <- 23.0
 
 delta_20m  <- genn20m - sett20m
 delta_jump <- gennjump - settjump
@@ -339,7 +337,7 @@ plot_compare_phy_tec_player_3(scatter_u17_over_match, player_sel, "overall")
 #| echo: false
 #| results: asis
 
-scadenza_vm <- as.Date("2026-09-22")
+scadenza_vm <- as.Date("2026-09-26")
 oggi <- Sys.Date()
 giorni <- as.integer(scadenza_vm - oggi)
 

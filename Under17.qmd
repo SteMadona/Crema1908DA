@@ -25,7 +25,7 @@ Questa è la sezione dedicata alla **Under 17**.
 ## Difensori
 - [M. Bresciani](GiocatoriU17/bresciani.html)
 - [A. Brusati](GiocatoriU17/brusati.html)
-- [E. Di Cicco](GiocatoriU17/dicico.html)
+- [E. Di Cicco](GiocatoriU17/dicicco.html)
 - [A. Granata]
 - [P. Marelli](GiocatoriU17/marelli.html)
 - [A. Mhilli](GiocatoriU17/mhilli.html)
@@ -34,7 +34,7 @@ Questa è la sezione dedicata alla **Under 17**.
 
 ## Centrocampisti
 - [K. Gagliardi](GiocatoriU17/gagliardi.html)
-- [F. Massazza](GiocatoriU17//massazza.html)
+- [F. Massazza](GiocatoriU17/massazza.html)
 - [F. Moruzzi](GiocatoriU17/moruzzi.html)
 - [L. Pascale](GiocatoriU17/pascale.html)
 - [D. Pea](GiocatoriU17/pea.html)

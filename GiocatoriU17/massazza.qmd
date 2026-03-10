@@ -1,12 +1,16 @@
 ---
-title: "F. Massazza"
+title: "Francesco Massazza"
 format:
   html:
     theme: darkly
     css: styles.css
+execute:
+  echo: false
+  message: false
+  warning: false
 ---
 
-# Statistiche All Time 
+
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../code/ReportUnoNew.R")
@@ -18,6 +22,9 @@ source("../code/phy_vs_tech_new.R")
 source("../code/comparisons_U17_new.R")
 
 ctx <- readRDS(here::here("data", "derived", "u17_context.rds"))
+
+match_u17 <- c("CREMA vs TREVIGLIESE U17", "CREMA vs BRUSAPORTO U17", "CREMA vs DESENZANO U17", "CREMA vs AURORA TRAVAGLIATO U17", 
+               "VOLUNTAS vs CREMA U17", "VILLAVALLE vs CREMA U17", "CREMA vs PONTE SP MAPELLO U17")
 
 df          <- ctx$df_u17
 cph         <- ctx$cph_u17
@@ -36,6 +43,164 @@ scatter_u17_over_session <- ctx$scatter_u17_over_session
 
 
 player_sel <- "F. Massazza"
+```
+
+# Scheda Anagrafica
+```{r}
+# Scheda Anagrafica
+
+#| echo: false
+nome      <- "Francesco Massazza"
+nascita   <- as.Date("2009-01-30")
+ruolo     <- "Centrocampista"
+categoria <- "Allievi U17"
+eta <- as.integer(floor(as.numeric(difftime(Sys.Date(), nascita, units="days"))/365.25))
+altezza <- 172
+peso <- 60.3
+```
+
+::: {.callout-note appearance="simple"}
+## `r nome`
+
+- **Categoria:** `r categoria`
+- **Ruolo:** `r ruolo`
+
+| Campo | Valore |
+|:--|--:|
+| Data di nascita | `r format(nascita, "%d/%m/%Y")` |
+| Età | `r eta` |
+| Piede | — |
+| Altezza | `r altezza` |
+| Peso | `r peso` |
+:::
+
+
+# Minutaggi
+
+### Partite
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tibble)
+library(knitr)
+library(kableExtra)
+
+tab_partite <- tibble(
+  `Partite totali` = 23,
+  Presenze = 23,
+  Minuti = 1961,
+  Gol = 17,
+  Ammonizioni = 1, 
+  Espulsioni = 0
+)
+
+tab_partite %>%
+  knitr::kable(align = "c") %>%
+  kableExtra::kable_styling(full_width = FALSE)
+```
+
+### Allenamenti
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tibble)
+library(knitr)
+library(kableExtra)
+
+tab_allenamenti <- tibble(
+  `Allenamenti totali` = 70,
+  Presenze = 63,
+  Assenze = 3,
+  Infortuni = 0,
+  `Aggregato cat. superiori` = 2
+)
+
+tab_allenamenti %>%
+  knitr::kable(align = "c") %>%
+  kableExtra::kable_styling(full_width = FALSE)
+```
+
+# Test Fisici
+
+```{r}
+#| echo: false
+#| results: asis
+
+sett20m <- 2.99
+genn20m <- 2.98
+
+settjump <- 27.2
+gennjump <- 26.5
+
+delta_20m  <- genn20m - sett20m
+delta_jump <- gennjump - settjump
+
+trend_badge <- function(delta, better = c("lower", "higher")) {
+  better <- match.arg(better)
+  improved <- if (better == "lower") delta < 0 else delta > 0
+  worsened <- if (better == "lower") delta > 0 else delta < 0
+  
+  if (improved) {
+    "<span class='badge bg-success'>Migliora</span>"
+  } else if (worsened) {
+    "<span class='badge bg-danger'>Peggiora</span>"
+  } else {
+    "<span class='badge bg-secondary'>Stabile</span>"
+  }
+}
+
+rows_html <- paste0(
+  "<tr>",
+  "<td class='fw-semibold'>Sprint 20 m</td>",
+  "<td class='text-center'>", sprintf('%.2f s', sett20m), "</td>",
+  "<td class='text-center'>", sprintf('%.2f s', genn20m), "</td>",
+  "<td class='text-center'>", sprintf('%+.2f s', delta_20m), "</td>",
+  "<td class='text-end'>", trend_badge(delta_20m, 'lower'), "</td>",
+  "</tr>",
+  "<tr>",
+  "<td class='fw-semibold'>Vertical Jump</td>",
+  "<td class='text-center'>", sprintf('%.1f cm', settjump), "</td>",
+  "<td class='text-center'>", sprintf('%.1f cm', gennjump), "</td>",
+  "<td class='text-center'>", sprintf('%+.1f cm', delta_jump), "</td>",
+  "<td class='text-end'>", trend_badge(delta_jump, 'higher'), "</td>",
+  "</tr>"
+)
+
+html <- glue::glue("
+<div class='card shadow-sm mb-3'>
+  <div class='card-body'>
+    <div class='d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2'>
+      <div>
+        <div class='text-muted small'>Test fisici</div>
+        <div class='h5 mb-0'>Confronto Settembre vs Gennaio</div>
+      </div>
+      <div class='small text-muted'>Aggiornato al: {format(Sys.Date(), '%d/%m/%Y')}</div>
+    </div>
+
+    <div class='table-responsive'>
+      <table class='table table-sm table-striped table-hover align-middle mb-0'>
+        <thead>
+          <tr>
+            <th>Test</th>
+            <th class='text-center'>Settembre</th>
+            <th class='text-center'>Gennaio</th>
+            <th class='text-center'>Δ</th>
+            <th class='text-end'>Trend</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows_html}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+")
+
+knitr::asis_output(html)
+
+```
+
+
+# Monitoraggio
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 ```
 
@@ -81,14 +246,14 @@ plot_player_wheel(pcts, player_sel)
 
 ```
 
-# Trend di forma
+### Trend di forma
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 trend_fisico(player_sel, cph)
 
 ```
 
-# Trend tecnico
+### Trend tecnico
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 trend_tecnico_indici(player_sel, ctx_session)
@@ -98,7 +263,7 @@ trend_tecnico_piede(player_sel, ctx_session)
 ```
 
 
-# Dinamica di corsa
+### Dinamica di corsa
 
 ::: {.panel-tabset}
 # Contact Duration
@@ -123,7 +288,7 @@ plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HSL")
 
 :::
 
-## Valori anomali
+### Valori anomali
 
 ::: {.panel-tabset}
 # Contact Duration
@@ -146,7 +311,7 @@ gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HSL", top_n = 2
 :::
 
 
-# Confronto con prima squadra
+### Confronto con prima squadra
 ::: {.panel-tabset}
 # Full Session
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -165,5 +330,70 @@ plot_compare_phy_tec_player_3(scatter_u17_over_match, player_sel, "overall")
 :::
 
 
+# Video
+
+# Visita Medica
+```{r}
+#| echo: false
+#| results: asis
+
+scadenza_vm <- as.Date("2026-08-31")
+oggi <- Sys.Date()
+giorni <- as.integer(scadenza_vm - oggi)
+
+stato_txt <- dplyr::case_when(
+  giorni < 0   ~ "SCADUTA",
+  giorni <= 30 ~ "URGENTE",
+  giorni <= 90 ~ "ATTENZIONE",
+  TRUE         ~ "OK"
+)
+
+badge_color <- dplyr::case_when(
+  giorni < 0   ~ "danger",
+  giorni <= 30 ~ "danger",
+  giorni <= 90 ~ "warning",
+  TRUE         ~ "success"
+)
+
+manca_txt <- if (giorni >= 0) {
+  glue::glue("Mancano <b>{giorni}</b> giorni")
+} else {
+  glue::glue("Scaduta da <b>{abs(giorni)}</b> giorni")
+}
+
+pct <- max(min(giorni / 365, 1), 0) * 100
+
+html <- glue::glue("
+<div class='card shadow-sm mb-3'>
+  <div class='card-body'>
+    <div class='d-flex justify-content-between align-items-center flex-wrap gap-3'>
+      <div>
+        <div class='text-muted small'>Visita medica</div>
+        <div class='h5 mb-0'>Scadenza: {format(scadenza_vm, '%d/%m/%Y')}</div>
+      </div>
+      <div class='text-end'>
+        <span class='badge bg-{badge_color} fs-6'>{stato_txt}</span>
+        <div class='small text-muted mt-1'>{manca_txt}</div>
+      </div>
+    </div>
+
+    <div class='progress mt-3' role='progressbar'
+         aria-label='Validità visita medica'
+         aria-valuenow='{round(pct,1)}' aria-valuemin='0' aria-valuemax='100'
+         style='height: 10px;'>
+      <div class='progress-bar bg-{badge_color}' style='width:{round(pct,1)}%'></div>
+    </div>
+
+    <div class='d-flex justify-content-between small text-muted mt-1'>
+      <span>0 gg</span><span>365 gg</span>
+    </div>
+  </div>
+</div>
+")
+
+knitr::asis_output(html)
+```
 
 
+
+# Salute Mentale

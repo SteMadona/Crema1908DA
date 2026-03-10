@@ -68,6 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -128,7 +132,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#scheda-anagrafica" id="toc-scheda-anagrafica" class="nav-link active" data-scroll-target="#scheda-anagrafica">Scheda Anagrafica</a></li>
-  <li><a href="#minutaggi" id="toc-minutaggi" class="nav-link" data-scroll-target="#minutaggi">Minutaggi</a></li>
+  <li><a href="#minutaggi" id="toc-minutaggi" class="nav-link" data-scroll-target="#minutaggi">Minutaggi</a>
+  <ul class="collapse">
+  <li><a href="#partite" id="toc-partite" class="nav-link" data-scroll-target="#partite">Partite</a></li>
+  <li><a href="#allenamenti" id="toc-allenamenti" class="nav-link" data-scroll-target="#allenamenti">Allenamenti</a></li>
+  </ul></li>
   <li><a href="#test-fisici" id="toc-test-fisici" class="nav-link" data-scroll-target="#test-fisici">Test Fisici</a></li>
   <li><a href="#monitoraggio" id="toc-monitoraggio" class="nav-link" data-scroll-target="#monitoraggio">Monitoraggio</a>
   <ul class="collapse">
@@ -217,28 +225,62 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="minutaggi" class="level1">
 <h1>Minutaggi</h1>
-<div class="kpi-row">
-<div class="kpi-card">
-<p><strong>Minuti giocati</strong><br>
-<span class="kpi-number">1416</span> <span class="kpi-sub">min</span></p>
+<section id="partite" class="level3">
+<h3 class="anchored" data-anchor-id="partite">Partite</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Partite totali</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Presenze</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Minuti</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Gol</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Ammonizioni</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Espulsioni</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">1664</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="kpi-card">
-<p><strong>Minuti squadra</strong><br>
-<span class="kpi-number">1800</span> <span class="kpi-sub">min</span></p>
 </div>
-<div class="kpi-card">
-<p><strong>% presenza</strong><br>
-<span class="kpi-number">78.7%</span></p>
+</section>
+<section id="allenamenti" class="level3">
+<h3 class="anchored" data-anchor-id="allenamenti">Allenamenti</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Allenamenti totali</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Presenze</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Assenze</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Infortuni</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Aggregato cat. superiori</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-<div class="progress kpi-progress" role="progressbar" aria-label="Minutaggio" aria-valuenow="78.7" aria-valuemin="0" aria-valuemax="100">
-<div class="progress-bar" style="width:78.7%">
-
-</div>
-</div>
-<div class="muted-note">
-<p>E. Di Cicco: 1416 min (78.7%) dei minuti totali squadra nei match considerati.</p>
-</div>
+</section>
 </section>
 <section id="test-fisici" class="level1">
 <h1>Test Fisici</h1>
@@ -292,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -301,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -314,7 +356,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -325,7 +367,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -336,7 +378,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -348,7 +390,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" style="width:85.0%"></p>
 </figure>
 </div>
 </div>
@@ -359,7 +401,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -371,21 +413,21 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-12-2.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-13-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-12-3.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-13-3.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -401,7 +443,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -412,7 +454,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -423,7 +465,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -440,23 +482,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div id="spfymdqxfi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#spfymdqxfi table {
+<div id="lmpyqjugbb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lmpyqjugbb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#spfymdqxfi thead, #spfymdqxfi tbody, #spfymdqxfi tfoot, #spfymdqxfi tr, #spfymdqxfi td, #spfymdqxfi th {
+#lmpyqjugbb thead, #lmpyqjugbb tbody, #lmpyqjugbb tfoot, #lmpyqjugbb tr, #lmpyqjugbb td, #lmpyqjugbb th {
   border-style: none;
 }
 
-#spfymdqxfi p {
+#lmpyqjugbb p {
   margin: 0;
   padding: 0;
 }
 
-#spfymdqxfi .gt_table {
+#lmpyqjugbb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -482,12 +524,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_caption {
+#lmpyqjugbb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#spfymdqxfi .gt_title {
+#lmpyqjugbb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -499,7 +541,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#spfymdqxfi .gt_subtitle {
+#lmpyqjugbb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -511,7 +553,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#spfymdqxfi .gt_heading {
+#lmpyqjugbb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -523,13 +565,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_bottom_border {
+#lmpyqjugbb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_col_headings {
+#lmpyqjugbb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -544,7 +586,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_col_heading {
+#lmpyqjugbb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -564,7 +606,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#spfymdqxfi .gt_column_spanner_outer {
+#lmpyqjugbb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -576,15 +618,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#spfymdqxfi .gt_column_spanner_outer:first-child {
+#lmpyqjugbb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#spfymdqxfi .gt_column_spanner_outer:last-child {
+#lmpyqjugbb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#spfymdqxfi .gt_column_spanner {
+#lmpyqjugbb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -596,11 +638,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#spfymdqxfi .gt_spanner_row {
+#lmpyqjugbb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#spfymdqxfi .gt_group_heading {
+#lmpyqjugbb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -626,7 +668,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#spfymdqxfi .gt_empty_group_heading {
+#lmpyqjugbb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -641,15 +683,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#spfymdqxfi .gt_from_md > :first-child {
+#lmpyqjugbb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#spfymdqxfi .gt_from_md > :last-child {
+#lmpyqjugbb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#spfymdqxfi .gt_row {
+#lmpyqjugbb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -668,7 +710,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#spfymdqxfi .gt_stub {
+#lmpyqjugbb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -681,7 +723,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#spfymdqxfi .gt_stub_row_group {
+#lmpyqjugbb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -695,15 +737,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#spfymdqxfi .gt_row_group_first td {
+#lmpyqjugbb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#spfymdqxfi .gt_row_group_first th {
+#lmpyqjugbb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#spfymdqxfi .gt_summary_row {
+#lmpyqjugbb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -713,16 +755,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#spfymdqxfi .gt_first_summary_row {
+#lmpyqjugbb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_first_summary_row.thick {
+#lmpyqjugbb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#spfymdqxfi .gt_last_summary_row {
+#lmpyqjugbb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -732,7 +774,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_grand_summary_row {
+#lmpyqjugbb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -742,7 +784,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#spfymdqxfi .gt_first_grand_summary_row {
+#lmpyqjugbb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -752,7 +794,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_last_grand_summary_row_top {
+#lmpyqjugbb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -762,11 +804,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_striped {
+#lmpyqjugbb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#spfymdqxfi .gt_table_body {
+#lmpyqjugbb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -775,7 +817,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_footnotes {
+#lmpyqjugbb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -789,7 +831,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_footnote {
+#lmpyqjugbb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -798,7 +840,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#spfymdqxfi .gt_sourcenotes {
+#lmpyqjugbb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -812,7 +854,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#spfymdqxfi .gt_sourcenote {
+#lmpyqjugbb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -820,72 +862,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#spfymdqxfi .gt_left {
+#lmpyqjugbb .gt_left {
   text-align: left;
 }
 
-#spfymdqxfi .gt_center {
+#lmpyqjugbb .gt_center {
   text-align: center;
 }
 
-#spfymdqxfi .gt_right {
+#lmpyqjugbb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#spfymdqxfi .gt_font_normal {
+#lmpyqjugbb .gt_font_normal {
   font-weight: normal;
 }
 
-#spfymdqxfi .gt_font_bold {
+#lmpyqjugbb .gt_font_bold {
   font-weight: bold;
 }
 
-#spfymdqxfi .gt_font_italic {
+#lmpyqjugbb .gt_font_italic {
   font-style: italic;
 }
 
-#spfymdqxfi .gt_super {
+#lmpyqjugbb .gt_super {
   font-size: 65%;
 }
 
-#spfymdqxfi .gt_footnote_marks {
+#lmpyqjugbb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#spfymdqxfi .gt_asterisk {
+#lmpyqjugbb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#spfymdqxfi .gt_indent_1 {
+#lmpyqjugbb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#spfymdqxfi .gt_indent_2 {
+#lmpyqjugbb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#spfymdqxfi .gt_indent_3 {
+#lmpyqjugbb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#spfymdqxfi .gt_indent_4 {
+#lmpyqjugbb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#spfymdqxfi .gt_indent_5 {
+#lmpyqjugbb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#spfymdqxfi .katex-display {
+#lmpyqjugbb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#spfymdqxfi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lmpyqjugbb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -982,23 +1024,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div id="kbqzvhehvk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kbqzvhehvk table {
+<div id="azinoljkkz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#azinoljkkz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kbqzvhehvk thead, #kbqzvhehvk tbody, #kbqzvhehvk tfoot, #kbqzvhehvk tr, #kbqzvhehvk td, #kbqzvhehvk th {
+#azinoljkkz thead, #azinoljkkz tbody, #azinoljkkz tfoot, #azinoljkkz tr, #azinoljkkz td, #azinoljkkz th {
   border-style: none;
 }
 
-#kbqzvhehvk p {
+#azinoljkkz p {
   margin: 0;
   padding: 0;
 }
 
-#kbqzvhehvk .gt_table {
+#azinoljkkz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1024,12 +1066,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_caption {
+#azinoljkkz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kbqzvhehvk .gt_title {
+#azinoljkkz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1041,7 +1083,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#kbqzvhehvk .gt_subtitle {
+#azinoljkkz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1053,7 +1095,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#kbqzvhehvk .gt_heading {
+#azinoljkkz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1065,13 +1107,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_bottom_border {
+#azinoljkkz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_col_headings {
+#azinoljkkz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1086,7 +1128,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_col_heading {
+#azinoljkkz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1106,7 +1148,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#kbqzvhehvk .gt_column_spanner_outer {
+#azinoljkkz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1118,15 +1160,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#kbqzvhehvk .gt_column_spanner_outer:first-child {
+#azinoljkkz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kbqzvhehvk .gt_column_spanner_outer:last-child {
+#azinoljkkz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kbqzvhehvk .gt_column_spanner {
+#azinoljkkz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1138,11 +1180,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#kbqzvhehvk .gt_spanner_row {
+#azinoljkkz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kbqzvhehvk .gt_group_heading {
+#azinoljkkz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1168,7 +1210,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#kbqzvhehvk .gt_empty_group_heading {
+#azinoljkkz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1183,15 +1225,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#kbqzvhehvk .gt_from_md > :first-child {
+#azinoljkkz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kbqzvhehvk .gt_from_md > :last-child {
+#azinoljkkz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kbqzvhehvk .gt_row {
+#azinoljkkz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1210,7 +1252,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#kbqzvhehvk .gt_stub {
+#azinoljkkz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1223,7 +1265,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#kbqzvhehvk .gt_stub_row_group {
+#azinoljkkz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1237,15 +1279,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#kbqzvhehvk .gt_row_group_first td {
+#azinoljkkz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kbqzvhehvk .gt_row_group_first th {
+#azinoljkkz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kbqzvhehvk .gt_summary_row {
+#azinoljkkz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1255,16 +1297,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#kbqzvhehvk .gt_first_summary_row {
+#azinoljkkz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_first_summary_row.thick {
+#azinoljkkz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kbqzvhehvk .gt_last_summary_row {
+#azinoljkkz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1274,7 +1316,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_grand_summary_row {
+#azinoljkkz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1284,7 +1326,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#kbqzvhehvk .gt_first_grand_summary_row {
+#azinoljkkz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1294,7 +1336,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_last_grand_summary_row_top {
+#azinoljkkz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1304,11 +1346,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_striped {
+#azinoljkkz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kbqzvhehvk .gt_table_body {
+#azinoljkkz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1317,7 +1359,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_footnotes {
+#azinoljkkz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1331,7 +1373,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_footnote {
+#azinoljkkz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1340,7 +1382,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#kbqzvhehvk .gt_sourcenotes {
+#azinoljkkz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1354,7 +1396,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#kbqzvhehvk .gt_sourcenote {
+#azinoljkkz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1362,72 +1404,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#kbqzvhehvk .gt_left {
+#azinoljkkz .gt_left {
   text-align: left;
 }
 
-#kbqzvhehvk .gt_center {
+#azinoljkkz .gt_center {
   text-align: center;
 }
 
-#kbqzvhehvk .gt_right {
+#azinoljkkz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kbqzvhehvk .gt_font_normal {
+#azinoljkkz .gt_font_normal {
   font-weight: normal;
 }
 
-#kbqzvhehvk .gt_font_bold {
+#azinoljkkz .gt_font_bold {
   font-weight: bold;
 }
 
-#kbqzvhehvk .gt_font_italic {
+#azinoljkkz .gt_font_italic {
   font-style: italic;
 }
 
-#kbqzvhehvk .gt_super {
+#azinoljkkz .gt_super {
   font-size: 65%;
 }
 
-#kbqzvhehvk .gt_footnote_marks {
+#azinoljkkz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kbqzvhehvk .gt_asterisk {
+#azinoljkkz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kbqzvhehvk .gt_indent_1 {
+#azinoljkkz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kbqzvhehvk .gt_indent_2 {
+#azinoljkkz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kbqzvhehvk .gt_indent_3 {
+#azinoljkkz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kbqzvhehvk .gt_indent_4 {
+#azinoljkkz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kbqzvhehvk .gt_indent_5 {
+#azinoljkkz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kbqzvhehvk .katex-display {
+#azinoljkkz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kbqzvhehvk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#azinoljkkz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1488,23 +1530,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div id="obilnzbtyz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#obilnzbtyz table {
+<div id="byaacrosnj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#byaacrosnj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#obilnzbtyz thead, #obilnzbtyz tbody, #obilnzbtyz tfoot, #obilnzbtyz tr, #obilnzbtyz td, #obilnzbtyz th {
+#byaacrosnj thead, #byaacrosnj tbody, #byaacrosnj tfoot, #byaacrosnj tr, #byaacrosnj td, #byaacrosnj th {
   border-style: none;
 }
 
-#obilnzbtyz p {
+#byaacrosnj p {
   margin: 0;
   padding: 0;
 }
 
-#obilnzbtyz .gt_table {
+#byaacrosnj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1530,12 +1572,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_caption {
+#byaacrosnj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#obilnzbtyz .gt_title {
+#byaacrosnj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1547,7 +1589,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#obilnzbtyz .gt_subtitle {
+#byaacrosnj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1559,7 +1601,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#obilnzbtyz .gt_heading {
+#byaacrosnj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1571,13 +1613,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_bottom_border {
+#byaacrosnj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_col_headings {
+#byaacrosnj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1592,7 +1634,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_col_heading {
+#byaacrosnj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1612,7 +1654,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#obilnzbtyz .gt_column_spanner_outer {
+#byaacrosnj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1624,15 +1666,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#obilnzbtyz .gt_column_spanner_outer:first-child {
+#byaacrosnj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#obilnzbtyz .gt_column_spanner_outer:last-child {
+#byaacrosnj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#obilnzbtyz .gt_column_spanner {
+#byaacrosnj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1644,11 +1686,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#obilnzbtyz .gt_spanner_row {
+#byaacrosnj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#obilnzbtyz .gt_group_heading {
+#byaacrosnj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1674,7 +1716,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#obilnzbtyz .gt_empty_group_heading {
+#byaacrosnj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1689,15 +1731,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#obilnzbtyz .gt_from_md > :first-child {
+#byaacrosnj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#obilnzbtyz .gt_from_md > :last-child {
+#byaacrosnj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#obilnzbtyz .gt_row {
+#byaacrosnj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1716,7 +1758,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#obilnzbtyz .gt_stub {
+#byaacrosnj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1729,7 +1771,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#obilnzbtyz .gt_stub_row_group {
+#byaacrosnj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1743,15 +1785,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#obilnzbtyz .gt_row_group_first td {
+#byaacrosnj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#obilnzbtyz .gt_row_group_first th {
+#byaacrosnj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#obilnzbtyz .gt_summary_row {
+#byaacrosnj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1761,16 +1803,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#obilnzbtyz .gt_first_summary_row {
+#byaacrosnj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_first_summary_row.thick {
+#byaacrosnj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#obilnzbtyz .gt_last_summary_row {
+#byaacrosnj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1780,7 +1822,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_grand_summary_row {
+#byaacrosnj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1790,7 +1832,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#obilnzbtyz .gt_first_grand_summary_row {
+#byaacrosnj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1800,7 +1842,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_last_grand_summary_row_top {
+#byaacrosnj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1810,11 +1852,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_striped {
+#byaacrosnj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#obilnzbtyz .gt_table_body {
+#byaacrosnj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1823,7 +1865,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_footnotes {
+#byaacrosnj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1837,7 +1879,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_footnote {
+#byaacrosnj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1846,7 +1888,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#obilnzbtyz .gt_sourcenotes {
+#byaacrosnj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1860,7 +1902,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#obilnzbtyz .gt_sourcenote {
+#byaacrosnj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1868,72 +1910,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#obilnzbtyz .gt_left {
+#byaacrosnj .gt_left {
   text-align: left;
 }
 
-#obilnzbtyz .gt_center {
+#byaacrosnj .gt_center {
   text-align: center;
 }
 
-#obilnzbtyz .gt_right {
+#byaacrosnj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#obilnzbtyz .gt_font_normal {
+#byaacrosnj .gt_font_normal {
   font-weight: normal;
 }
 
-#obilnzbtyz .gt_font_bold {
+#byaacrosnj .gt_font_bold {
   font-weight: bold;
 }
 
-#obilnzbtyz .gt_font_italic {
+#byaacrosnj .gt_font_italic {
   font-style: italic;
 }
 
-#obilnzbtyz .gt_super {
+#byaacrosnj .gt_super {
   font-size: 65%;
 }
 
-#obilnzbtyz .gt_footnote_marks {
+#byaacrosnj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#obilnzbtyz .gt_asterisk {
+#byaacrosnj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#obilnzbtyz .gt_indent_1 {
+#byaacrosnj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#obilnzbtyz .gt_indent_2 {
+#byaacrosnj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#obilnzbtyz .gt_indent_3 {
+#byaacrosnj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#obilnzbtyz .gt_indent_4 {
+#byaacrosnj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#obilnzbtyz .gt_indent_5 {
+#byaacrosnj .gt_indent_5 {
   text-indent: 25px;
 }
 
-#obilnzbtyz .katex-display {
+#byaacrosnj .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#obilnzbtyz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#byaacrosnj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1986,7 +2028,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1997,7 +2039,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -2008,7 +2050,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="dicicco_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="dicicco_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>

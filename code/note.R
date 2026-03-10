@@ -5,16 +5,12 @@
 # 2. aggiungere colonna premi formazioni tecnica
 # formazione tecnica : d compimento 10 anni di età fino a u19
 # premio di tesseramento parte da U12 (non U13)
-# 3. processo uniformato test fisici e minuti (allenamenti?)
+# 3. processo uniformato test fisici e minuti (allenamenti?) e visita medica
 
 
 #COSA MI SERVE ANCORA 
 # 1. Liste mail di staff e giocatori 
-
-
-
-# 25/02
-#aggiungere gol assist gialli rossi in sezione minutaggi
+# 2. Dati antropometrici Federico Moruzzi U17
 
 
 

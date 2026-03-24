@@ -359,3 +359,40 @@ thead th{
 hr{
   border-color: #edf1f5;
 }
+
+/* =========================
+   BLOCCO SPIEGAZIONE
+========================= */
+
+.explainer-box{
+  background: #ffffff;
+  border: 1px solid #e6eaf0;
+  border-left: 4px solid #b30000;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 10px 0 22px;
+  box-shadow: 0 6px 18px rgba(16,24,40,.05);
+}
+
+.explainer-title{
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.explainer-text{
+  color: #475467;
+  line-height: 1.55;
+  font-size: .96rem;
+}
+
+.explainer-formula{
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: #f8fafc;
+  border: 1px solid #e9eef5;
+  border-radius: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #111827;
+  font-size: .93rem;
+}

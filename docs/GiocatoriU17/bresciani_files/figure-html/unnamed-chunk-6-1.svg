@@ -372,18 +372,18 @@
 </g>
 <path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="0.94902" stroke-width="1.133858" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="0.94902" stroke-miterlimit="10" d="M 328.382812 270.46875 C 328.382812 274.316406 325.261719 277.4375 321.414062 277.4375 C 317.566406 277.4375 314.445312 274.316406 314.445312 270.46875 C 314.445312 266.617188 317.566406 263.5 321.414062 263.5 C 325.261719 263.5 328.382812 266.617188 328.382812 270.46875 "/>
 <g fill="rgb(0%, 0%, 0%)" fill-opacity="1">
-<use xlink:href="#glyph-0-0" x="306.136719" y="263.9375"/>
-<use xlink:href="#glyph-0-1" x="317.987403" y="263.9375"/>
-<use xlink:href="#glyph-0-2" x="321.939946" y="263.9375"/>
-<use xlink:href="#glyph-0-3" x="325.89249" y="263.9375"/>
-<use xlink:href="#glyph-0-4" x="335.381373" y="263.9375"/>
-<use xlink:href="#glyph-0-5" x="340.118868" y="263.9375"/>
-<use xlink:href="#glyph-0-6" x="348.030901" y="263.9375"/>
-<use xlink:href="#glyph-0-7" x="355.14409" y="263.9375"/>
-<use xlink:href="#glyph-0-8" x="362.257279" y="263.9375"/>
-<use xlink:href="#glyph-0-9" x="365.417925" y="263.9375"/>
-<use xlink:href="#glyph-0-10" x="373.329958" y="263.9375"/>
-<use xlink:href="#glyph-0-8" x="381.241991" y="263.9375"/>
+<use xlink:href="#glyph-0-0" x="258.425781" y="288.171875"/>
+<use xlink:href="#glyph-0-1" x="270.276465" y="288.171875"/>
+<use xlink:href="#glyph-0-2" x="274.229009" y="288.171875"/>
+<use xlink:href="#glyph-0-3" x="278.181552" y="288.171875"/>
+<use xlink:href="#glyph-0-4" x="287.670435" y="288.171875"/>
+<use xlink:href="#glyph-0-5" x="292.40793" y="288.171875"/>
+<use xlink:href="#glyph-0-6" x="300.319964" y="288.171875"/>
+<use xlink:href="#glyph-0-7" x="307.433153" y="288.171875"/>
+<use xlink:href="#glyph-0-8" x="314.546342" y="288.171875"/>
+<use xlink:href="#glyph-0-9" x="317.706987" y="288.171875"/>
+<use xlink:href="#glyph-0-10" x="325.61902" y="288.171875"/>
+<use xlink:href="#glyph-0-8" x="333.531054" y="288.171875"/>
 </g>
 <g clip-path="url(#clip-9)">
 <path fill="none" stroke-width="2.347352" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(60%, 60%, 60%)" stroke-opacity="1" stroke-dasharray="9.389409 9.389409" stroke-miterlimit="10" d="M 340.792969 317.660156 L 340.792969 91.5625 "/>

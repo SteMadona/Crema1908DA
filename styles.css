@@ -1,70 +1,140 @@
-/* css styles */
+/* =========================
+   BASE
+========================= */
+:root{
+  --crema-red: #b30000;
+  --crema-red-hover: #8f0000;
+  --crema-red-soft: #fdecec;
 
-/* Cambia colore di sfondo della navbar */
-.navbar {
-  background-color: #b30000 !important; /* rosso scuro */
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --surface-soft: #fafbfc;
+  --border: #e6eaf0;
+
+  --text: #16202a;
+  --muted: #667085;
+
+  --shadow-sm: 0 6px 18px rgba(16,24,40,.05);
+  --shadow-md: 0 10px 28px rgba(16,24,40,.07);
+  --radius-lg: 18px;
+  --radius-md: 14px;
 }
 
-/* Cambia il colore del brand (titolo del sito) */
-.navbar .navbar-brand {
+body{
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* larghezza contenuto */
+main.content{
+  max-width: 1180px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar{
+  background-color: var(--crema-red) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link{
   color: white !important;
+  font-weight: 600;
 }
 
-/* Cambia il colore dei link nella navbar */
-.navbar-nav .nav-link {
-  color: white !important;
+.navbar .nav-link:hover{
+  color: #ffe3e3 !important;
 }
 
-/* Colore hover dei link */
-.navbar-nav .nav-link:hover {
-  color: #ffcccc !important;
+/* =========================
+   TITOLI
+========================= */
+h1, h2, h3, h4{
+  color: #111827;
+  font-weight: 800;
+  letter-spacing: -.01em;
 }
 
-/* Titoletti coerenti */
+h2{
+  margin-top: 2rem;
+  padding-top: .35rem;
+  border-top: 1px solid #edf1f5;
+}
+
 .section-title{
   font-weight: 800;
   letter-spacing: .2px;
   margin-bottom: 10px;
 }
 
-/* --- Profile card --- */
+.quarto-title-block .title{
+  font-weight: 900;
+  letter-spacing: -.02em;
+}
+
+/* =========================
+   CARD GENERICHE
+========================= */
+.card,
+.card-lite,
+.profile-card,
+.medical-card,
+.callout{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.card{
+  border: 1px solid var(--border);
+}
+
+.card .card-body{
+  padding: 1.1rem 1.2rem;
+}
+
+/* =========================
+   PROFILE CARD
+========================= */
 .profile-card{
   display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 14px;
-  padding: 16px;
-  border-radius: 16px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: 0 10px 25px rgba(0,0,0,.22);
-  margin: 10px 0 18px;
+  grid-template-columns: 84px 1fr;
+  gap: 16px;
+  padding: 20px;
+  margin: 12px 0 22px;
+  box-shadow: var(--shadow-md);
 }
 
 .avatar{
-  width: 72px;
-  height: 72px;
+  width: 84px;
+  height: 84px;
   border-radius: 999px;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   font-weight: 900;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.12);
+  color: var(--crema-red);
+  background: var(--crema-red-soft);
+  border: 1px solid #f4caca;
 }
 
 .profile-name{
-  font-size: 1.6rem;
+  font-size: 1.75rem;
   font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 8px;
+  line-height: 1.05;
+  margin-bottom: 10px;
+  color: #111827;
 }
 
 .chips{
   display:flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .chip{
@@ -72,34 +142,57 @@
   border-radius: 999px;
   font-weight: 750;
   font-size: .85rem;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.10);
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #374151;
 }
+
 .chip-outline{
-  background: transparent;
+  background: #fff;
 }
 
 .profile-grid{
   display:grid;
   grid-template-columns: repeat(4, minmax(0,1fr));
-  gap: 12px;
+  gap: 14px;
 }
 
-.label{ opacity:.7; font-size:.85rem; }
-.value{ font-size: 1.15rem; font-weight: 800; }
+.label{
+  color: var(--muted);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 2px;
+}
+
+.value{
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #111827;
+}
 
 @media (max-width: 900px){
   .profile-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
 
-/* --- Visita medica --- */
+@media (max-width: 640px){
+  .profile-card{
+    grid-template-columns: 1fr;
+  }
+
+  .avatar{
+    width: 72px;
+    height: 72px;
+  }
+}
+
+/* =========================
+   MEDICAL CARD
+========================= */
 .medical-card{
-  padding: 16px;
-  border-radius: 16px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: 0 10px 25px rgba(0,0,0,.22);
-  margin: 10px 0 18px;
+  padding: 18px;
+  margin: 12px 0 22px;
+  box-shadow: var(--shadow-md);
 }
 
 .medical-grid{
@@ -109,25 +202,160 @@
   align-items: end;
 }
 
-.badge-wrap{ display:flex; justify-content:flex-end; }
+.badge-wrap{
+  display:flex;
+  justify-content:flex-end;
+}
 
 .status-badge{
   padding: 7px 12px;
   border-radius: 999px;
   font-weight: 900;
-  letter-spacing: .7px;
+  letter-spacing: .5px;
   font-size: .8rem;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.08);
+  border: 1px solid transparent;
 }
 
-/* Stati (sobri) */
-.status-ok .status-badge{ background: rgba(25,135,84,.20); }
-.status-attenzione .status-badge{ background: rgba(255,193,7,.20); }
+.status-ok .status-badge{
+  background: #eaf8ef;
+  color: #166534;
+  border-color: #cdebd7;
+}
+
+.status-attenzione .status-badge{
+  background: #fff7df;
+  color: #92400e;
+  border-color: #f6e4a9;
+}
+
 .status-urgente .status-badge,
-.status-scaduta .status-badge{ background: rgba(220,53,69,.22); }
+.status-scaduta .status-badge{
+  background: #fdecec;
+  color: #991b1b;
+  border-color: #f3c7c7;
+}
+
+.medical-progress{
+  height: 10px;
+  background: #eef2f6;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.medical-progress-bar{
+  height: 100%;
+  border-radius: 999px;
+  background: var(--crema-red);
+}
 
 @media (max-width: 700px){
   .medical-grid{ grid-template-columns: 1fr 1fr; }
   .badge-wrap{ justify-content:flex-start; grid-column: 1 / -1; }
+}
+
+/* =========================
+   CALLOUT
+========================= */
+.callout{
+  margin: 12px 0 18px;
+}
+
+.callout.callout-note{
+  --bs-callout-bg: #ffffff;
+  --bs-callout-border: #dfe6ef;
+}
+
+.callout .callout-title-container{
+  font-weight: 800;
+}
+
+/* =========================
+   TABSET
+========================= */
+.panel-tabset > .nav-tabs{
+  border-bottom: 1px solid var(--border);
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.panel-tabset > .nav-tabs .nav-link{
+  border: none;
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 700;
+  padding: .5rem .95rem;
+}
+
+.panel-tabset > .nav-tabs .nav-link:hover{
+  background: #f3f5f8;
+  color: #344054;
+}
+
+.panel-tabset > .nav-tabs .nav-link.active{
+  background: #fff1f1;
+  color: var(--crema-red);
+}
+
+/* =========================
+   FIGURE
+========================= */
+.quarto-figure,
+.figure{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 12px 14px 8px;
+  margin-bottom: 1.25rem;
+}
+
+.quarto-figure img,
+.figure img{
+  border-radius: 12px;
+}
+
+.figure-caption,
+figcaption{
+  color: var(--muted);
+  font-size: .9rem;
+  margin-top: .4rem;
+}
+
+/* =========================
+   TABELLE
+========================= */
+.table{
+  margin-bottom: 0;
+}
+
+.table > :not(caption) > * > *{
+  padding: .72rem .8rem;
+  border-bottom-color: #eef1f5;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > *{
+  background: #fafbfc;
+}
+
+/* kableExtra */
+table{
+  width: 100%;
+}
+
+thead th{
+  color: #111827;
+  font-weight: 800;
+  background: #f8fafc;
+}
+
+/* =========================
+   SPAZIATURA
+========================= */
+.columns{
+  gap: 1rem;
+}
+
+hr{
+  border-color: #edf1f5;
 }

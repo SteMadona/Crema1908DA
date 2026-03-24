@@ -6,6 +6,8 @@
 # formazione tecnica : d compimento 10 anni di età fino a u19
 # premio di tesseramento parte da U12 (non U13)
 # 3. processo uniformato test fisici e minuti (allenamenti?) e visita medica
+# 4. Cambiare salute mentale in area mentale
+# 5. Dati picco di crescita per U12, U13, U14
 
 
 #COSA MI SERVE ANCORA 

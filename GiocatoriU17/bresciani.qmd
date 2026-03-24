@@ -2,8 +2,14 @@
 title: "Mattia Bresciani"
 format:
   html:
-    theme: darkly
+    theme: flatly
     css: styles.css
+    toc: true
+    toc-depth: 2
+    smooth-scroll: true
+    fig-format: svg
+    fig-dpi: 320
+    page-layout: article
 execute:
   echo: false
   message: false
@@ -57,6 +63,7 @@ categoria <- "Allievi U17"
 eta <- as.integer(floor(as.numeric(difftime(Sys.Date(), nascita, units="days"))/365.25))
 altezza <- 170 
 peso <- 60.5
+piede <- "Destro"
 ```
 
 ::: {.callout-note appearance="simple"}
@@ -69,7 +76,7 @@ peso <- 60.5
 |:--|--:|
 | Data di nascita | `r format(nascita, "%d/%m/%Y")` |
 | Età | `r eta` |
-| Piede | — |
+| Piede | `r piede` |
 | Altezza | `r altezza` |
 | Peso | `r peso` |
 :::
@@ -205,12 +212,33 @@ plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 ```
 
 
+::: {.columns}
 
-
+::: {.column width="58%"}
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 report_fisico(player_sel, cph)
 ```
+:::
 
+::: {.column width="42%"}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-format: svg
+#| fig-dpi: 320
+#| fig-bg: "white"
+#| fig-width: 6.2
+#| fig-height: 6.2
+#| out-width: "100%"
+
+plot_player_wheel(pcts, player_sel)
+
+
+```
+:::
+
+:::
 
 ::: {.panel-tabset}
 # Full Sessions
@@ -230,25 +258,13 @@ report_tecnico(player_sel, ctx_matches)
 
 :::
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| fig-format: png
-#| fig-dpi: 320
-#| fig-bg: "#0b0b0b"
-#| fig-width: 7
-#| fig-height: 7
-#| out-width: "85%"
-
-plot_player_wheel(pcts, player_sel)
-
-
-```
-
 ### Trend di forma
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-format: svg
+#| fig-width: 12
+#| fig-height: 12
+#| out-width: "100%"
 trend_fisico(player_sel, cph)
 
 ```
@@ -256,7 +272,15 @@ trend_fisico(player_sel, cph)
 ### Trend tecnico
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-format: svg
+#| fig-width: 12
+#| fig-height: 8
+#| out-width: "100%"
 trend_tecnico_indici(player_sel, ctx_session)
+
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 trend_tecnico_possesso(player_sel, ctx_session)
 trend_tecnico_piede(player_sel, ctx_session)
 
@@ -396,4 +420,4 @@ knitr::asis_output(html)
 
 
 
-# Salute Mentale
+# Sezione Mentale - Psicologica

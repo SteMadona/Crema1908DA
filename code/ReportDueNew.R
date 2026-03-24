@@ -314,44 +314,139 @@ report_tecnico <- function(giocatore, ctx, theme_fn = theme_crema_pro) {
 }
 
 
-trend_tecnico_indici <- function(giocatore, ctx, theme_fn = theme_crema_pro) {
+trend_tecnico_indici <- function(
+    giocatore,
+    ctx,
+    theme_fn = theme_crema_pro,
+    colore_linea = "#B30000",
+    colore_media = "#B8C0CC"
+) {
   
-  colori_indici <- c(
-    "Indice Possesso"          = "#FF2E2E",
-    "Indice Tocchi"            = "lightblue",
-    "Indice Velocità Rilascio" = "green",
-    "Indice Tempo p/Possesso"  = "black"
+  ordine_metriche <- c(
+    "possession_index",
+    "touches_index",
+    "rv_index",
+    "time_ball_index"
+  )
+  
+  etichette_metriche <- c(
+    possession_index = "Indice possesso",
+    touches_index    = "Indice tocchi",
+    rv_index         = "Indice velocità rilascio",
+    time_ball_index  = "Indice tempo p/possesso"
   )
   
   dati <- ctx$agg_week %>%
-    filter(player == giocatore) %>%
-    select(week_id, possession_index, touches_index, rv_index, time_ball_index) %>%
-    pivot_longer(cols = c(possession_index, touches_index, rv_index, time_ball_index),
-                 names_to = "metrica", values_to = "valore") %>%
-    mutate(
-      week_id = factor(week_id, levels = sort(unique(week_id))),
-      metrica = factor(metrica,
-                       levels = c("possession_index","touches_index","rv_index","time_ball_index"),
-                       labels = c("Indice Possesso","Indice Tocchi","Indice Velocità Rilascio","Indice Tempo p/Possesso"))
-    )
+    dplyr::filter(player == giocatore) %>%
+    dplyr::select(
+      week_id,
+      possession_index,
+      touches_index,
+      rv_index,
+      time_ball_index
+    ) %>%
+    tidyr::pivot_longer(
+      cols = c(possession_index, touches_index, rv_index, time_ball_index),
+      names_to = "metrica",
+      values_to = "valore"
+    ) %>%
+    dplyr::filter(!is.na(valore))
   
-  ggplot(dati, aes(x = week_id, y = valore, group = metrica, color = metrica)) +
-    geom_line(linewidth = 1.35, lineend = "round") +
-    geom_point(size = 2.6, shape = 21, stroke = 0.9, aes(fill = metrica), color = "black") +
-    scale_color_manual(values = colori_indici) +
-    scale_fill_manual(values = colori_indici) +
-    scale_y_continuous(limits = c(0, 100), breaks = seq(0, 100, 20), expand = expansion(mult = c(0.02, 0.05))) +
-    scale_x_discrete(breaks = function(x) x[seq(1, length(x), by = 2)]) +
-    labs(
-      title = paste("Trend Indici Tecnici —", giocatore),
-      subtitle = "Aggregazione settimanale | Scala 0–100",
-      x = "Settimana", y = "Indice"
+  if (nrow(dati) == 0) {
+    stop("Giocatore non trovato nel contesto passato in ctx.")
+  }
+  
+  livelli_settimana <- sort(unique(dati$week_id))
+  
+  dati <- dati %>%
+    dplyr::mutate(
+      week_id = factor(week_id, levels = livelli_settimana),
+      metrica = factor(
+        metrica,
+        levels = ordine_metriche,
+        labels = etichette_metriche[ordine_metriche]
+      )
+    ) %>%
+    dplyr::arrange(metrica, week_id)
+  
+  medie_metriche <- dati %>%
+    dplyr::group_by(metrica) %>%
+    dplyr::summarise(media = mean(valore, na.rm = TRUE), .groups = "drop")
+  
+  ultimi_punti <- dati %>%
+    dplyr::group_by(metrica) %>%
+    dplyr::slice_tail(n = 1) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(label_val = scales::number(valore, accuracy = 0.1))
+  
+  ggplot(dati, aes(x = week_id, y = valore, group = 1)) +
+    geom_hline(
+      data = medie_metriche,
+      aes(yintercept = media),
+      inherit.aes = FALSE,
+      linewidth = 0.7,
+      linetype = "dashed",
+      color = colore_media
     ) +
-    guides(color = guide_legend(nrow = 1, byrow = TRUE), fill = "none") +
+    geom_line(
+      linewidth = 1.05,
+      color = colore_linea,
+      lineend = "round"
+    ) +
+    geom_point(
+      size = 2.3,
+      shape = 21,
+      stroke = 0.9,
+      fill = "white",
+      color = colore_linea
+    ) +
+    geom_point(
+      data = ultimi_punti,
+      size = 3.1,
+      shape = 21,
+      stroke = 1.1,
+      fill = colore_linea,
+      color = colore_linea,
+      show.legend = FALSE
+    ) +
+    geom_text(
+      data = ultimi_punti,
+      aes(label = label_val),
+      vjust = -0.9,
+      size = 3.4,
+      fontface = "bold",
+      color = "#111111",
+      show.legend = FALSE
+    ) +
+    facet_wrap(~ metrica, ncol = 2) +
+    scale_x_discrete(
+      breaks = function(x) x[seq(1, length(x), by = 2)]
+    ) +
+    scale_y_continuous(
+      limits = c(0, 100),
+      breaks = seq(0, 100, 20),
+      expand = expansion(mult = c(0.03, 0.12))
+    ) +
+    labs(
+      title = "Trend indici tecnici",
+      subtitle = giocatore,
+      x = "Settimana",
+      y = "Indice",
+      caption = "Linea tratteggiata = media stagionale della metrica"
+    ) +
+    coord_cartesian(clip = "off") +
     theme_fn() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+    theme(
+      legend.position = "none",
+      axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+      axis.title.x = element_text(face = "bold"),
+      strip.text = element_text(face = "bold", size = 11.5),
+      panel.grid.major.x = element_blank(),
+      plot.title = element_text(face = "bold"),
+      plot.subtitle = element_text(color = "#555555"),
+      plot.caption = element_text(color = "#6B7280")
+    )
 }
-
 
 trend_tecnico_piede <- function(giocatore, ctx, theme_fn = theme_crema_pro) {
   

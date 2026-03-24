@@ -217,44 +217,119 @@ report_fisico <- function(giocatore, ctx, theme_fn = theme_crema_pro) {
 }
 
 
-trend_fisico <- function(giocatore, ctx,
-                         colori_statistiche = c(
-                           acc_index   = "black",
-                           dec_index   = "purple",
-                           sprint_dist = "#FF2E2E",
-                           HID         = "cyan",
-                           topspeed    = "green",
-                           workrate    = "gray50"
-                         ),
-                         theme_fn = theme_crema_pro) {
+trend_fisico <- function(
+    giocatore,
+    ctx,
+    ordine_stat = c("acc_index", "dec_index", "sprint_dist", "HID", "topspeed", "workrate"),
+    etichette_stat = c(
+      acc_index   = "Indice accelerazioni",
+      dec_index   = "Indice decelerazioni",
+      sprint_dist = "Sprint distance",
+      HID         = "HID",
+      topspeed    = "Top speed",
+      workrate    = "Work rate"
+    ),
+    colore_linea = "#B30000",
+    colore_media = "#B8C0CC",
+    theme_fn = theme_crema_pro
+) {
   
-  dati <- ctx$df_week_long %>% filter(player == giocatore)
+  dati <- ctx$df_week_long %>%
+    dplyr::filter(player == giocatore, statistica %in% ordine_stat) %>%
+    dplyr::filter(!is.na(valore))
   
-  if (nrow(dati) == 0) stop("Giocatore non trovato nel contesto passato in ctx.")
+  if (nrow(dati) == 0) {
+    stop("Giocatore non trovato nel contesto passato in ctx.")
+  }
+  
+  # Ordine settimane stabile
+  livelli_settimana <- sort(unique(dati$week_id))
   
   dati <- dati %>%
-    mutate(week_id = factor(week_id, levels = sort(unique(week_id))))
+    dplyr::mutate(
+      week_id = factor(week_id, levels = livelli_settimana),
+      statistica = factor(
+        statistica,
+        levels = ordine_stat,
+        labels = etichette_stat[ordine_stat]
+      )
+    ) %>%
+    dplyr::arrange(statistica, week_id)
   
-  ggplot(dati, aes(x = week_id, y = valore, group = statistica, color = statistica)) +
-    geom_line(size = 1.5) +
+  # Media stagionale per ciascuna metrica
+  medie_stat <- dati %>%
+    dplyr::group_by(statistica) %>%
+    dplyr::summarise(media = mean(valore, na.rm = TRUE), .groups = "drop")
+  
+  # Ultimo punto disponibile per etichetta finale
+  ultimi_punti <- dati %>%
+    dplyr::group_by(statistica) %>%
+    dplyr::slice_tail(n = 1) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(label_val = scales::number(valore, accuracy = 0.1))
+  
+  ggplot(dati, aes(x = week_id, y = valore, group = 1)) +
+    geom_hline(
+      data = medie_stat,
+      aes(yintercept = media),
+      inherit.aes = FALSE,
+      linewidth = 0.7,
+      linetype = "dashed",
+      color = colore_media
+    ) +
+    geom_line(
+      linewidth = 1.05,
+      color = colore_linea,
+      lineend = "round"
+    ) +
     geom_point(
-      size = 2, shape = 21, stroke = 0.9,
-      aes(fill = statistica),
-      color = "black",
+      size = 2.3,
+      shape = 21,
+      stroke = 0.9,
+      fill = "white",
+      color = colore_linea
+    ) +
+    geom_point(
+      data = ultimi_punti,
+      size = 3.1,
+      shape = 21,
+      stroke = 1.1,
+      fill = colore_linea,
+      color = colore_linea,
       show.legend = FALSE
     ) +
-    scale_color_manual(values = colori_statistiche) +
-    scale_fill_manual(values = colori_statistiche) +
-    scale_x_discrete(breaks = function(x) x[seq(1, length(x), by = 2)]) +
+    geom_text(
+      data = ultimi_punti,
+      aes(label = label_val),
+      nudge_y = 0,
+      vjust = -0.9,
+      size = 3.4,
+      fontface = "bold",
+      color = "#111111",
+      show.legend = FALSE
+    ) +
+    facet_wrap(~ statistica, scales = "free_y", ncol = 2) +
+    scale_x_discrete(
+      breaks = function(x) x[seq(1, length(x), by = 2)]
+    ) +
     labs(
-      title = paste("📈 Trend Fisico Settimanale –", giocatore),
+      title = "Trend fisico settimanale",
+      subtitle = giocatore,
       x = "Settimana",
       y = NULL,
-      color = NULL
+      caption = "Linea tratteggiata = media stagionale della metrica"
     ) +
-    theme_minimal(base_size = 13) +
-    theme_fn() +
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+    coord_cartesian(clip = "off") +
+    theme_fn(base_size = 12.5) +
+    theme(
+      legend.position = "none",
+      axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+      axis.title.x = element_text(face = "bold"),
+      axis.text.y = element_text(face = "bold"),
+      strip.text = element_text(face = "bold", size = 11.5),
+      panel.grid.major.x = element_blank(),
+      plot.title = element_text(face = "bold"),
+      plot.subtitle = element_text(color = "#555555"),
+      plot.caption = element_text(color = "#6B7280")
+    )
 }
-
-

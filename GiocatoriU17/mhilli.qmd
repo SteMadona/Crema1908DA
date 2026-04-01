@@ -2,8 +2,14 @@
 title: "Alesio Mhilli"
 format:
   html:
-    theme: darkly
+    theme: flatly
     css: styles.css
+    toc: true
+    toc-depth: 2
+    smooth-scroll: true
+    fig-format: svg
+    fig-dpi: 320
+    page-layout: article
 execute:
   echo: false
   message: false
@@ -50,13 +56,14 @@ player_sel <- "A. Mhilli"
 # Scheda Anagrafica
 
 #| echo: false
-nome      <- "Alesio Mihilli"
+nome      <- "Alesio Mhilli"
 nascita   <- as.Date("2009-04-02")
 ruolo     <- "Difensore"
 categoria <- "Allievi U17"
 eta <- as.integer(floor(as.numeric(difftime(Sys.Date(), nascita, units="days"))/365.25))
 altezza <- 177
 peso <- 67.6
+piede <- "Destro"
 ```
 
 ::: {.callout-note appearance="simple"}
@@ -69,7 +76,7 @@ peso <- 67.6
 |:--|--:|
 | Data di nascita | `r format(nascita, "%d/%m/%Y")` |
 | Età | `r eta` |
-| Piede | — |
+| Piede | `r piede` |
 | Altezza | `r altezza` |
 | Peso | `r peso` |
 :::
@@ -84,12 +91,12 @@ library(knitr)
 library(kableExtra)
 
 tab_partite <- tibble(
-  `Partite totali` = 23,
+  `Partite totali` = 24,
   Presenze = 17,
   Minuti = 1205,
   Gol = 1,
   Ammonizioni = 4, 
-  Espulsioni = 0
+  Espulsioni = 1
 )
 
 tab_partite %>%
@@ -204,13 +211,67 @@ knitr::asis_output(html)
 plot_phy_tec_player(player_sel, scatter_data = scatter_data)
 ```
 
+<div class="explainer-box">
+  <div class="explainer-title">Come leggere gli indici</div>
+  <div class="explainer-text">
+    Sono due indicatori sintetici che servono a riassumere doti fisiche e tecniche. Le linee 
+    tratteggiate in grigio rappresentano la media della propria squadra. 
+  </div>
+  <div class="explainer-formula">
+    IQF = combinazione normalizzata di distanza ad alta intensità per minuto, metri percorsi
+    per minuto e distanza in sprint per sessione.
+  </div>
+  <div class="explainer-formula">
+    IQT = combinazione normalizzata di numero rilasci per minuto, numero tocchi per minuto e 
+    media di velocità dei rilasci. 
+  </div>
+</div>
 
+::: {.columns}
 
-
+::: {.column width="58%"}
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 report_fisico(player_sel, cph)
 ```
+:::
 
+::: {.column width="42%"}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-format: svg
+#| fig-dpi: 320
+#| fig-bg: "white"
+#| fig-width: 6.2
+#| fig-height: 6.2
+#| out-width: "100%"
+
+plot_player_wheel(pcts, player_sel)
+
+
+```
+:::
+
+:::
+
+<div class="explainer-box">
+  <div class="explainer-title">Come leggere i grafici</div>
+  <div class="explainer-text">
+    Il report fisico riporta le principali metriche fisiche, con un confronto tra il 
+    giocatore e la  media del ruolo all'interno della squadra. 
+    La sintesi riporta il confronto tra tutte le principali metriche rispetto a tutti i     
+    giocatori della squadra.
+  </div>
+  <div class="explainer-formula">
+    acceleration index = media pesata della accelerazioni, con peso crescente al crescere 
+    dell'intensità dell'accelerazione.
+  </div>
+  <div class="explainer-formula">
+    deceleration index = media pesata della decelerazioni, con peso crescente al crescere 
+    dell'intensità delle decelerazioni.  
+  </div>
+</div>
 
 ::: {.panel-tabset}
 # Full Sessions
@@ -230,25 +291,36 @@ report_tecnico(player_sel, ctx_matches)
 
 :::
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| fig-format: png
-#| fig-dpi: 320
-#| fig-bg: "#0b0b0b"
-#| fig-width: 7
-#| fig-height: 7
-#| out-width: "85%"
+<div class="explainer-box">
+  <div class="explainer-title">Come leggere gli indici</div>
+  <div class="explainer-text">
+    Il report tecnico riporta le principali metriche tecniche, con un confronto tra il 
+    giocatore e la  media del ruolo all'interno della squadra. 
+    I primi tre valori indicano le percentuali rispettivamente di possessi lunghi, possessi
+    corti e giocate di prima. Ci sono poi la durata media del possesso, la percentuale 
+    di tocchi di sinistro e la percentuale di tocchi di destro.
+  </div>
+  <div class="explainer-formula">
+    rv index = media pesata delle velocità di rilascio, con peso crescente al crescere 
+    della velocità di rilascio.
+  </div>
+  <div class="explainer-formula">
+    touches index = normalizzazione del numero di tocchi totali effettuati.   
+  </div>
+  <div class="explainer-formula">
+    possession index = combinazione normalizzata di numero di tocchi, numero di rilasci,    
+    numero di possessi lunghi e numero di palloni ricevuti.   
+  </div>
+</div>
 
-plot_player_wheel(pcts, player_sel)
-
-
-```
 
 ### Trend di forma
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-format: svg
+#| fig-width: 12
+#| fig-height: 12
+#| out-width: "100%"
 trend_fisico(player_sel, cph)
 
 ```
@@ -256,7 +328,15 @@ trend_fisico(player_sel, cph)
 ### Trend tecnico
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-format: svg
+#| fig-width: 12
+#| fig-height: 8
+#| out-width: "100%"
 trend_tecnico_indici(player_sel, ctx_session)
+
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 trend_tecnico_possesso(player_sel, ctx_session)
 trend_tecnico_piede(player_sel, ctx_session)
 
@@ -288,6 +368,19 @@ plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HSL")
 
 :::
 
+<div class="explainer-box">
+  <div class="explainer-title">Come leggere la dinamica di corsa</div>
+  <div class="explainer-text">
+    Questi grafici riportano la distribuzione, divisa per allenamento, delle principali 
+    metriche per l'analisi della dinamica di corsa: durata media del contatto a terra, durata
+    media del tempo di volo e lunghezza media della falcata. 
+    I punti rossi sono i valori anomali, riportati successivamente nelle specifiche tabelle. 
+    I valori anomali possono indicare il posizionamento non corretto dei gps nella sessione, 
+    ma se ripetuti nel tempo possono servire da campanello di allarme per eventuali problemi
+    fisici. 
+  </div>
+</div>
+
 ### Valori anomali
 
 ::: {.panel-tabset}
@@ -309,6 +402,8 @@ gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HSL", top_n = 2
 
 ```
 :::
+
+
 
 
 ### Confronto con prima squadra
@@ -396,4 +491,4 @@ knitr::asis_output(html)
 
 
 
-# Salute Mentale
+# Area Mentale - Psicologica

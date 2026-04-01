@@ -63,7 +63,7 @@ categoria <- "Allievi U17"
 eta <- as.integer(floor(as.numeric(difftime(Sys.Date(), nascita, units="days"))/365.25))
 altezza <- 178
 peso <- 64.0
-piede <- "Destro"
+piede <- "Sinistro"
 ```
 
 ::: {.callout-note appearance="simple"}

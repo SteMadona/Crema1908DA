@@ -2,9 +2,21 @@
 title: "Under 17"
 format:
   html:
-    theme: darkly
+    theme: flatly
     css: styles.css
+    toc: true
+    toc-depth: 2
+    smooth-scroll: true
+    fig-format: svg
+    fig-dpi: 320
+    page-layout: article
+execute:
+  echo: false
+  message: false
+  warning: false
 ---
+
+
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
 

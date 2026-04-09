@@ -2,7 +2,7 @@
    BASE
 ========================= */
 :root{
-  --crema-red: #b30000;
+  --crema-red: #000000;
   --crema-red-hover: #8f0000;
   --crema-red-soft: #fdecec;
 
@@ -33,9 +33,27 @@ main.content{
 /* =========================
    NAVBAR
 ========================= */
+/* =========================
+   NAVBAR
+========================= */
 .navbar{
   background-color: var(--crema-red) !important;
   box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-brand,
+.navbar-brand-container{
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img,
+.navbar-logo{
+  height: 60px !important;
+  width: auto !important;
+  max-height: none !important;
 }
 
 .navbar .navbar-brand,

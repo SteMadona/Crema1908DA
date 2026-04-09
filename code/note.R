@@ -14,9 +14,28 @@
 # 1. Liste mail di staff e giocatori 
 # 2. Dati antropometrici Federico Moruzzi U17
 
+#PREMIO FORMAZIONE 
 
 
-# DA CAPIRE
-# 1. cosa fare con i portieri
-# 2. 
+#tenere solo giocatore - categoria - nascita - anno arrivo - anni premio
+
+#in scheda anagrafica aggiungere anno tesseramento 
+
+
+#cambiare barra in alto col nero (no rosso)
+#logo crema più grande 
+#aggiungere logo future lab (chiedere a cremo)
+
+
+#ESORDIENTI 
+# - scheda anagrafica (+ picco di crescita)
+# - minutaggi (campionati - test match - tornei - allenamenti)
+# - report -> report tecnico + metri / min 
+# - mix possesso 
+# - dx / sx
+
+
+#Per il 10 
+# - preparare un esordiente, un agonista, un prima squadra *completi*
+
 

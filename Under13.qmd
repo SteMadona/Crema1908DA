@@ -1,0 +1,65 @@
+---
+title: "Under 13"
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    smooth-scroll: true
+    fig-format: svg
+    fig-dpi: 320
+    page-layout: article
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/data_generation_unico.R")
+
+```
+
+
+Questa è la sezione dedicata alla **Under 13**.
+
+## Giocatori 
+- C. Barbera 
+- C. Cè
+- G. Coletti
+- [A. Diana](GiocatoriU13/diana.html)
+- D. Esestime 
+- D. Filocamo
+- D. Johansson
+- R. Lungu 
+- A. Manera
+- G. Mattiazzi
+- F. Picciolo
+- G. Quartieri
+- D. Romano
+- E. Scorsetti
+- M. Soldo
+- A. Tajeddine
+- T. Tomba
+
+# Analisi All Time
+
+
+## Carichi di Lavoro
+
+
+## Statistiche all time
+
+
+
+## Classifiche fisiche
+
+
+
+## Classifiche Tecniche 
+
+

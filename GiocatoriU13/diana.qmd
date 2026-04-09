@@ -1,0 +1,132 @@
+---
+title: "Alberto Diana"
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    smooth-scroll: true
+    fig-format: svg
+    fig-dpi: 320
+    page-layout: article
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+# Scheda Anagrafica
+```{r}
+# Scheda Anagrafica
+
+#| echo: false
+nome      <- "Alberto Diana"
+nascita   <- as.Date("2013-05-22")
+categoria <- "Esordienti U13"
+eta <- as.integer(floor(as.numeric(difftime(Sys.Date(), nascita, units="days"))/365.25))
+tesseramento <- 2022
+altezza <- 160
+peso <- 41.0
+piede <- "Sinistro"
+picco <- "17 mesi"
+```
+
+::: {.callout-note appearance="simple"}
+## `r nome`
+
+- **Categoria:** `r categoria`
+
+| Campo | Valore |
+|:--|--:|
+| Data di nascita | `r format(nascita, "%d/%m/%Y")` |
+| Età | `r eta` |
+| Anno Tesseramento | `r tesseramento` |
+| Piede | `r piede` |
+| Altezza | `r altezza` |
+| Peso | `r peso` |
+| Picco di crescita tra | `r picco` |
+:::
+
+# Minutaggi
+
+### Partite
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tibble)
+library(knitr)
+library(kableExtra)
+
+tab_partite <- tibble(
+  `Partite campionato` = 9,
+  `Presenze campionato` = 9,
+  `Minuti campionato` = 715,
+  Gol = 2,
+  `Partite amichevoli` = 5,
+  `Presenze amichevoli` = 5,
+  `Minuti amichevoli` = 380
+)
+
+tab_partite %>%
+  knitr::kable(align = "c") %>%
+  kableExtra::kable_styling(full_width = FALSE)
+```
+
+### Allenamenti
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(tibble)
+library(knitr)
+library(kableExtra)
+
+tab_allenamenti <- tibble(
+  `Allenamenti totali` = 56,
+  Presenze = 43,
+  Assenze = 0,
+  Infortuni = 0,
+  `Aggregato cat. superiori` = 0
+)
+
+tab_allenamenti %>%
+  knitr::kable(align = "c") %>%
+  kableExtra::kable_styling(full_width = FALSE)
+```
+
+# Monitoraggio
+
+### Statistiche all time
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../code/ReportDue_U13.R")
+source("../code/Temi_grafici.R")
+
+
+ctx <- readRDS(here::here("data", "derived", "u13_context.rds"))
+
+
+report_tecnico_u13(
+  giocatore = "Diana",
+  agg_report_u13 = ctx$agg_report_u13
+)
+
+```
+
+
+### Trend Tecnici
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+ctx <- readRDS(here::here("data", "derived", "u13_context.rds"))
+
+
+trend_tecnico_possesso_u13(
+  giocatore = "Diana",
+  ctx_skill = ctx$ctx_skill_u13
+)
+
+trend_tecnico_piede_u13(
+  giocatore = "Diana",
+  ctx_skill = ctx$ctx_skill_u13
+)
+
+```
+
+
+

@@ -372,14 +372,14 @@
 </g>
 <path fill-rule="nonzero" fill="rgb(100%, 18.039216%, 18.039216%)" fill-opacity="0.94902" stroke-width="1.133858" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="0.94902" stroke-miterlimit="10" d="M 447.714844 176.128906 C 447.714844 179.976562 444.59375 183.097656 440.746094 183.097656 C 436.894531 183.097656 433.777344 179.976562 433.777344 176.128906 C 433.777344 172.277344 436.894531 169.160156 440.746094 169.160156 C 444.59375 169.160156 447.714844 172.277344 447.714844 176.128906 "/>
 <g fill="rgb(0%, 0%, 0%)" fill-opacity="1">
-<use xlink:href="#glyph-0-0" x="390.007812" y="193.839844"/>
-<use xlink:href="#glyph-0-1" x="400.281647" y="193.839844"/>
-<use xlink:href="#glyph-0-2" x="404.23419" y="193.839844"/>
-<use xlink:href="#glyph-0-3" x="408.186734" y="193.839844"/>
-<use xlink:href="#glyph-0-4" x="417.675617" y="193.839844"/>
-<use xlink:href="#glyph-0-5" x="425.58765" y="193.839844"/>
-<use xlink:href="#glyph-0-6" x="428.748296" y="193.839844"/>
-<use xlink:href="#glyph-0-7" x="435.861485" y="193.839844"/>
+<use xlink:href="#glyph-0-0" x="390.003906" y="193.84375"/>
+<use xlink:href="#glyph-0-1" x="400.277741" y="193.84375"/>
+<use xlink:href="#glyph-0-2" x="404.230284" y="193.84375"/>
+<use xlink:href="#glyph-0-3" x="408.182828" y="193.84375"/>
+<use xlink:href="#glyph-0-4" x="417.671711" y="193.84375"/>
+<use xlink:href="#glyph-0-5" x="425.583744" y="193.84375"/>
+<use xlink:href="#glyph-0-6" x="428.74439" y="193.84375"/>
+<use xlink:href="#glyph-0-7" x="435.857579" y="193.84375"/>
 </g>
 <g clip-path="url(#clip-9)">
 <path fill="none" stroke-width="2.347352" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(60%, 60%, 60%)" stroke-opacity="1" stroke-dasharray="9.389409 9.389409" stroke-miterlimit="10" d="M 353.101562 317.660156 L 353.101562 91.5625 "/>

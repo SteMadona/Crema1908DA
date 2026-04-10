@@ -53,7 +53,7 @@ player_sel <- "D. Shiku"
 # Scheda Anagrafica
 
 #| echo: false
-nome      <- "Riccardo Nicolini"
+nome      <- "Deivi Shiku"
 nascita   <- as.Date("2009-09-09")
 ruolo     <- "Centrocampista"
 categoria <- "Allievi U17"

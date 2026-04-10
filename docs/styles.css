@@ -414,3 +414,17 @@ hr{
   color: #111827;
   font-size: .93rem;
 }
+
+/* =========================
+   LINK FUTURE LAB IN NAVBAR
+========================= */
+
+.navbar .navbar-nav.ms-auto .nav-link:not(.quarto-search-button){
+  color: #d61f26 !important;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.navbar .navbar-nav.ms-auto .nav-link:not(.quarto-search-button):hover{
+  color: #ff4d4f !important;
+}

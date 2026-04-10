@@ -5,6 +5,7 @@ project:
 website:
   title: "Crema 1908 Data Analysis"
   navbar:
+    search: true
     left:
       - href: index.qmd
         text: Home
@@ -16,6 +17,10 @@ website:
         text: "Under 17"
       - href: Under13.qmd
         text: "Under 13"
+    right:
+      - href: index.qmd
+        text: "Future Lab"
+        aria-label: "Crema Future Lab"
     logo: images/Crema_logo.png
     logo-alt: "Crema 1908"
 

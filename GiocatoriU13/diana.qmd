@@ -109,6 +109,28 @@ report_tecnico_u13(
 
 ```
 
+<div class="explainer-box">
+  <div class="explainer-title">Come leggere gli indici</div>
+  <div class="explainer-text">
+    Il report tecnico riporta le principali metriche tecniche, con un confronto tra il 
+    giocatore e la  media del ruolo all'interno della squadra. 
+    I primi tre valori indicano le percentuali rispettivamente di possessi lunghi, possessi
+    corti e giocate di prima. Ci sono poi la durata media del possesso, la percentuale 
+    di tocchi di sinistro e la percentuale di tocchi di destro.
+  </div>
+  <div class="explainer-formula">
+    rv index = media pesata delle velocità di rilascio, con peso crescente al crescere 
+    della velocità di rilascio.
+  </div>
+  <div class="explainer-formula">
+    touches index = normalizzazione del numero di tocchi totali effettuati.   
+  </div>
+  <div class="explainer-formula">
+    possession index = combinazione normalizzata di numero di tocchi, numero di rilasci,    
+    numero di possessi lunghi e numero di palloni ricevuti.   
+  </div>
+</div>
+
 
 ### Trend Tecnici
 

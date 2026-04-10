@@ -90,7 +90,7 @@ library(knitr)
 library(kableExtra)
 
 tab_partite <- tibble(
-  `Partite totali` = 19,
+  `Partite totali` = 20,
   Presenze = 19,
   Minuti = 1634,
   Gol = 1,

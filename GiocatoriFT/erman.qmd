@@ -90,117 +90,17 @@ library(knitr)
 library(kableExtra)
 
 tab_partite <- tibble(
-  `Partite totali` = 24,
-  Presenze = 16,
-  Minuti = 948,
+  `Partite totali` = 19,
+  Presenze = 19,
+  Minuti = 1634,
   Gol = 1,
-  Ammonizioni = 4, 
-  Espulsioni = 2
+  Ammonizioni = 8, 
+  Espulsioni = 0
 )
 
 tab_partite %>%
   knitr::kable(align = "c") %>%
   kableExtra::kable_styling(full_width = FALSE)
-```
-
-### Allenamenti
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
-library(tibble)
-library(knitr)
-library(kableExtra)
-
-tab_allenamenti <- tibble(
-  `Allenamenti totali` = 70,
-  Presenze = 50,
-  Assenze = 12,
-  Infortuni = 2,
-  `Aggregato cat. superiori` = 4
-)
-
-tab_allenamenti %>%
-  knitr::kable(align = "c") %>%
-  kableExtra::kable_styling(full_width = FALSE)
-```
-
-# Test Fisici
-
-```{r}
-#| echo: false
-#| results: asis
-
-sett20m <- 10.00
-genn20m <- 3.03
-
-settjump <- 0.00
-gennjump <- 25.6
-
-delta_20m  <- genn20m - sett20m
-delta_jump <- gennjump - settjump
-
-trend_badge <- function(delta, better = c("lower", "higher")) {
-  better <- match.arg(better)
-  improved <- if (better == "lower") delta < 0 else delta > 0
-  worsened <- if (better == "lower") delta > 0 else delta < 0
-  
-  if (improved) {
-    "<span class='badge bg-success'>Migliora</span>"
-  } else if (worsened) {
-    "<span class='badge bg-danger'>Peggiora</span>"
-  } else {
-    "<span class='badge bg-secondary'>Stabile</span>"
-  }
-}
-
-rows_html <- paste0(
-  "<tr>",
-  "<td class='fw-semibold'>Sprint 20 m</td>",
-  "<td class='text-center'>", sprintf('%.2f s', sett20m), "</td>",
-  "<td class='text-center'>", sprintf('%.2f s', genn20m), "</td>",
-  "<td class='text-center'>", sprintf('%+.2f s', delta_20m), "</td>",
-  "<td class='text-end'>", trend_badge(delta_20m, 'lower'), "</td>",
-  "</tr>",
-  "<tr>",
-  "<td class='fw-semibold'>Vertical Jump</td>",
-  "<td class='text-center'>", sprintf('%.1f cm', settjump), "</td>",
-  "<td class='text-center'>", sprintf('%.1f cm', gennjump), "</td>",
-  "<td class='text-center'>", sprintf('%+.1f cm', delta_jump), "</td>",
-  "<td class='text-end'>", trend_badge(delta_jump, 'higher'), "</td>",
-  "</tr>"
-)
-
-html <- glue::glue("
-<div class='card shadow-sm mb-3'>
-  <div class='card-body'>
-    <div class='d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2'>
-      <div>
-        <div class='text-muted small'>Test fisici</div>
-        <div class='h5 mb-0'>Confronto Settembre vs Gennaio</div>
-      </div>
-      <div class='small text-muted'>Aggiornato al: {format(Sys.Date(), '%d/%m/%Y')}</div>
-    </div>
-
-    <div class='table-responsive'>
-      <table class='table table-sm table-striped table-hover align-middle mb-0'>
-        <thead>
-          <tr>
-            <th>Test</th>
-            <th class='text-center'>Settembre</th>
-            <th class='text-center'>Gennaio</th>
-            <th class='text-center'>Δ</th>
-            <th class='text-end'>Trend</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows_html}
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-")
-
-knitr::asis_output(html)
-
 ```
 
 

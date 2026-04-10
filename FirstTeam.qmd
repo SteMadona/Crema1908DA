@@ -9,7 +9,7 @@ format:
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
 
-source("code/data_generation_ft.R")
+source("code/data_generation_unico.R")
 
 ```
 

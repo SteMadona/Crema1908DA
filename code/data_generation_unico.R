@@ -50,6 +50,20 @@ players_u17 <- c(
   "D. Pea", "A. Riboli", "D. Shiku", "M. Vanelli"
 )
 
+players_u16 <- c(
+  "A. Mazzucchetti", "L. Peretti", "L. Diana", "R. Baldajack", "A. De Maria", "C. Gentile",
+  "D. Constantin", "G. Groppelli", "D. Martinelli", "A. Oitha", "T. Anelli", "C. Biondi",
+  "J. Onoh", "G. Testa", "R. Hzizi", "D. Cangianiello", "R. Gallarati", "L. Piovesan",
+  "W. Lazzari", "V. Zucchi", "M. Bardella", "O. Diop"
+)
+
+players_u15 <- c(
+  "S. Denti", "F. Dentini", "S. Egeste", "R. El Kamch", "S. Ferrari", "E. Ghisetti", 
+  "T. Groppelli", "A. Lamanna", "S. Ligorio", "T. Manzoni", "T. Marzagalli", "L. Mussi", 
+  "E. Paroni", "G. Quartieri", "A. Ronconi", "A. Ruiu", "R. Sacchi", "A. Sesini",
+  "M. Susani", "E. Zucchi", "A. Bignone"
+)
+
 players_u13 <- c(
   "Barbera", "Cè", "Coletti", "Diana", "Esestime",
   "Filocamo", "Lungu", "Manera", "Mattiazzi", "Picciolo", "Quartieri", "Romano"
@@ -243,11 +257,15 @@ save_context <- function(obj, filename) {
 df_ft_raw  <- subset_by_players(df_all, players_ft,  "FT")
 df_u19_raw <- subset_by_players(df_all, players_u19, "U19")
 df_u17_raw <- subset_by_players(df_all, players_u17, "U17")
+df_u16_raw <- subset_by_players(df_all, players_u16, "U16")
+df_u15_raw <- subset_by_players(df_all, players_u15, "U15")
 df_u13_raw <- subset_by_players(df_all, players_u13, "U13")
 
 match_ft  <- infer_match_tags(df_ft_raw)
 match_u19 <- infer_match_tags(df_u19_raw)
 match_u17 <- infer_match_tags(df_u17_raw)
+match_u16 <- infer_match_tags(df_u16_raw)
+match_u15 <- infer_match_tags(df_u15_raw)
 
 # -------------------------------------------------------------------------
 # BUILD CONTEXTS
@@ -260,6 +278,10 @@ match_u17 <- infer_match_tags(df_u17_raw)
 ft_ctx  <- build_base_context(df_ft_raw,  players_ft,  match_ft)
 u19_ctx <- build_base_context(df_u19_raw, players_u19, match_u19)
 u17_ctx <- build_base_context(df_u17_raw, players_u17, match_u17)
+u16_ctx <- build_base_context(df_u16_raw, players_u16, match_u16)
+u15_ctx <- build_base_context(df_u15_raw, players_u15, match_u15)
+
+
 u13_ctx <- build_u13_context(df_u13_raw, session_tag = session_tag_u13)
 
 # -------------------------------------------------------------------------
@@ -307,12 +329,56 @@ u17_extras <- list(
 )
 
 # -------------------------------------------------------------------------
+# COMPARAZIONI U16 vs U17
+# -------------------------------------------------------------------------
+
+u16_extras <- list(
+  scatter_u16_u17_session = build_compare_dataset_phy_tec(
+    u16_ctx$ctx_session, u16_ctx$cph$df_physicalreport,
+    u17_ctx$ctx_session,  u17_ctx$cph$df_physicalreport
+  ),
+  scatter_u16_u17_pf = build_compare_dataset_phy_tec(
+    u16_ctx$ctx_pf, u16_ctx$cph$df_physicalreport,
+    u17_ctx$ctx_pf,  u17_ctx$cph$df_physicalreport
+  ),
+  scatter_u16_u17_match = build_compare_dataset_phy_tec(
+    u16_ctx$ctx_matches, u16_ctx$cph$df_physicalreport,
+    u17_ctx$ctx_matches,  u17_ctx$cph$df_physicalreport
+  )
+)
+
+# -------------------------------------------------------------------------
+# COMPARAZIONI U15 vs U16
+# -------------------------------------------------------------------------
+
+u15_extras <- list(
+  scatter_u15_u16_session = build_compare_dataset_phy_tec(
+    u15_ctx$ctx_session, u15_ctx$cph$df_physicalreport,
+    u16_ctx$ctx_session,  u16_ctx$cph$df_physicalreport
+  ),
+  scatter_u15_u16_pf = build_compare_dataset_phy_tec(
+    u15_ctx$ctx_pf, u15_ctx$cph$df_physicalreport,
+    u16_ctx$ctx_pf,  u16_ctx$cph$df_physicalreport
+  ),
+  scatter_u15_u16_match = build_compare_dataset_phy_tec(
+    u15_ctx$ctx_matches, u15_ctx$cph$df_physicalreport,
+    u16_ctx$ctx_matches,  u16_ctx$cph$df_physicalreport
+  )
+)
+
+
+
+# -------------------------------------------------------------------------
 # OUTPUT FINALI CON GLI STESSI NOMI DI PRIMA
 # -------------------------------------------------------------------------
 
 out_ft  <- build_named_output("ft",  ft_ctx)
 out_u19 <- build_named_output("u19", u19_ctx, u19_extras)
 out_u17 <- build_named_output("u17", u17_ctx, u17_extras)
+out_u16 <- build_named_output("u16", u16_ctx, u16_extras)
+out_u15 <- build_named_output("u15", u15_ctx, u15_extras)
+
+
 out_u13 <- list(
   ctx_skill_u13 = u13_ctx$ctx_skill,
   cph_u13 = u13_ctx$cph,
@@ -326,6 +392,8 @@ out_u13 <- list(
 save_context(out_ft,  "ft_context.rds")
 save_context(out_u19, "u19_context.rds")
 save_context(out_u17, "u17_context.rds")
+save_context(out_u16, "u16_context.rds")
+save_context(out_u15, "u15_context.rds")
 save_context(out_u13, "u13_context.rds")
 
 

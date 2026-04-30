@@ -1,0 +1,70 @@
+---
+title: "Under 15"
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    smooth-scroll: true
+    fig-format: svg
+    fig-dpi: 320
+    page-layout: article
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/data_generation_unico.R")
+
+```
+
+
+Questa è la sezione dedicata alla **Under 15**.
+
+## Portieri
+- E. Paroni
+- A. Ruiu
+
+## Difensori
+- S. Egeste
+- T. Groppelli
+- A. Lamanna
+- [G. Quartieri](GiocatoriU15/quartieri.html)
+- E. Zucchi
+
+## Centrocampisti
+- S. Ferrari
+- E. Ghisetti
+- T. Manzoni
+- T. Marzagalli
+- L. Mussi
+- A. Ronconi
+- R. Sacchi
+- M. Susani
+
+
+
+## Attaccanti
+- S. Denti
+- F. Dentini
+- R. El Kamch
+- A. Sesini
+
+# Analisi All Time
+
+
+## Statistiche all time
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/phy_vs_tech_new.R")
+ctx <- readRDS(here::here("data", "derived", "u15_context.rds"))
+plot_phy_tec_squad(ctx$scatter_u15)
+
+```
+

@@ -66,28 +66,31 @@ plot_player_wheel <- function(pcts_df, player_name) {
       metric = recode(metric,
                       p_workrate      = "Workrate",
                       p_topspeed      = "Top speed",
-                      p_HID          = "HID",
+                      p_HID           = "HID",
                       p_accdec_mean   = "Acc/Dec index",
                       p_touch_per_min = "Touch / min",
                       p_rel_per_min   = "Releases / min",
                       p_rel_vel_avg   = "Release vel avg",
                       p_one_touch_pct = "One-touch %"
       ),
-      group = if_else(metric %in% c("Workrate","Top speed","HID","Acc/Dec index"),
-                      "Physical", "On-ball"),
+      
+      group = if_else(
+        metric %in% c("Workrate", "Top speed", "HID", "Acc/Dec index"),
+        "Physical",
+        "On-ball"
+      ),
+      
       metric = factor(metric, levels = c(
-        "Workrate","Top speed","HID","Acc/Dec index",
-        "Touch / min","Releases / min","Release vel avg","One-touch %"
+        "Workrate", "Top speed", "HID", "Acc/Dec index",
+        "Touch / min", "Releases / min", "Release vel avg", "One-touch %"
       )),
+      
       id = as.integer(metric),
       
       # colori spicchi
       fill = if_else(group == "Physical", "#FF2E2E", "#000000"),
       
-      # testo numeri: nero sulla parte bianca, bianco sulla parte rossa
-      txt = if_else(group == "Physical", "white", "#000000"),
-      
-      # gestione NA senza warning
+      # gestione NA
       value_plot = coalesce(value, 0),
       value_lab  = if_else(is.na(value), "NA", sprintf("%d", round(value))),
       
@@ -97,58 +100,94 @@ plot_player_wheel <- function(pcts_df, player_name) {
       angle = if_else(angle < -90, angle + 180, angle)
     )
   
-  # linee radiali (una per ogni spicchio) + separatore metà/ metà
+  # linee radiali
   radial_lines <- tibble(x = seq(0.5, 8.5, by = 1))
   
   ggplot(dfp, aes(x = id, y = value_plot)) +
     
-    # spicchi con bordi più netti
-    geom_col(aes(fill = fill),
-             width = 1,
-             color = "#0a0a0a",
-             linewidth = 1.1,
-             show.legend = FALSE) +
+    # spicchi
+    geom_col(
+      aes(fill = fill),
+      width = 1,
+      color = "#0a0a0a",
+      linewidth = 1.1,
+      show.legend = FALSE
+    ) +
     
     # anelli griglia
-    geom_hline(yintercept = c(25, 50, 75, 100),
-               linetype = c("dashed","dashed","dashed","solid"),
-               color = "#2a2a2a",
-               linewidth = c(0.55,0.55,0.55,1.0)) +
+    geom_hline(
+      yintercept = c(25, 50, 75, 100),
+      linetype = c("dashed", "dashed", "dashed", "solid"),
+      color = "#2a2a2a",
+      linewidth = c(0.55, 0.55, 0.55, 1.0)
+    ) +
     
-    # linee radiali per ogni spicchio (più nette)
-    geom_vline(data = radial_lines, aes(xintercept = x),
-               color = "#1a1a1a", linewidth = 0.9) +
+    # linee radiali
+    geom_vline(
+      data = radial_lines,
+      aes(xintercept = x),
+      color = "#1a1a1a",
+      linewidth = 0.9
+    ) +
     
-    # linea di separazione tra le due metà (più evidente)
-    geom_vline(xintercept = c(4.5, 8.5),
-               color = "#444444", linewidth = 1.4) +
+    # separatore tra area physical e area on-ball
+    geom_vline(
+      xintercept = c(4.5, 8.5),
+      color = "#444444",
+      linewidth = 1.4
+    ) +
     
-    # numeri: più grandi + con halo per leggibilità
-    geom_text(aes(label = value_lab),
-              color = "cyan", fontface = "bold", size = 4.6) +
-    geom_text(aes(label = value_lab),
-              color = "#000000", fontface = "bold", size = 4.6,
-              alpha = 0.35, nudge_y = 0.15) +
+    # linee di collegamento verso i numeri esterni
     
-    # etichette esterne: più fuori e più “tangenti” al cerchio
-    geom_text(aes(y = 118, label = metric, angle = angle),
-              hjust = 0.5, 
-              color = "black", 
-              size = 3.9, 
-              fontface = "bold") +
+    # linee di collegamento verso i numeri esterni
+    # numeri esterni, ma molto vicini alla ruota
+    geom_label(
+      data = dfp,
+      aes(
+        x = id,
+        y = 108,
+        label = value_lab
+      ),
+      inherit.aes = FALSE,
+      fill = "white",
+      color = "black",
+      fontface = "bold",
+      size = 4.2,
+      label.size = 0.30,
+      label.r = grid::unit(0.14, "lines"),
+      label.padding = grid::unit(0.15, "lines")
+    ) +
+    
+    # etichette metriche esterne
+    geom_text(
+      aes(
+        y = 121,
+        label = metric,
+        angle = angle
+      ),
+      hjust = 0.5,
+      color = "black",
+      size = 3.6,
+      fontface = "bold"
+    ) +
     
     scale_fill_identity() +
-    # subito prima di coord_polar()
+    
     scale_x_continuous(
       limits = c(0.5, 8.5),
       breaks = 1:8,
       expand = c(0, 0)
-    ) + 
-    coord_polar(start = pi/2, clip = "off") +
-    scale_y_continuous(limits = c(0, 130)) +
+    ) +
+    
+    coord_polar(start = pi / 2, clip = "off") +
+    
+    scale_y_continuous(
+      limits = c(0, 126),
+      expand = expansion(mult = c(0, 0))
+    ) +
     
     labs(
-      title = paste("Sintesi - ",player_name),
+      title = paste("Sintesi -", player_name),
       subtitle = "Percentili vs tutti i giocatori"
     ) +
     
@@ -156,8 +195,17 @@ plot_player_wheel <- function(pcts_df, player_name) {
     theme(
       plot.background  = element_rect(fill = "white", color = NA),
       panel.background = element_rect(fill = "white", color = NA),
-      plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      plot.subtitle    = element_text(color = "black"),
-      plot.margin      = margin(10, 55, 10, 20)
+      plot.title       = element_text(
+        color = "#FF2E2E",
+        face = "bold",
+        size = 16,
+        margin = margin(b = 3)
+      ),
+      plot.subtitle    = element_text(
+        color = "black",
+        size = 10,
+        margin = margin(b = 12)
+      ),
+      plot.margin = margin(5, 25, 5, 25)
     )
 }

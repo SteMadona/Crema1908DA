@@ -54,12 +54,76 @@ build_compare_dataset_phy_tec_3 <- function(
   )
   
   # ---- 4) join su player+squad+category ----
+  # ---- 4) join su player+squad+category ----
   df_all <- df_tech %>%
     dplyr::left_join(df_phys,  by = c("player","squad","category")) %>%
     dplyr::left_join(df_touch, by = c("player","squad"))
   
-  if (exclude_gk) df_all <- df_all %>% dplyr::filter(category != "Goalkeepers")
+  # -------------------------------------------------------------------------
+  # PEZZA MANUALE RUOLI PER CONFRONTO U17 vs U19 vs FT
+  # -------------------------------------------------------------------------
   
+  match_surname <- function(player, surnames) {
+    x <- tolower(iconv(player, to = "ASCII//TRANSLIT"))
+    s <- tolower(iconv(surnames, to = "ASCII//TRANSLIT"))
+    patterns <- paste0("\\b", s, "\\b")
+    Reduce(`|`, lapply(patterns, grepl, x = x))
+  }
+  
+  df_all <- df_all %>%
+    dplyr::mutate(
+      category = dplyr::case_when(
+        
+        # -------------------------
+        # U17
+        # -------------------------
+        squad == "U17" & match_surname(player, c("ajdini", "riboli", "laini")) ~ "portiere",
+        
+        squad == "U17" & match_surname(player, c("brusati", "mhilli", "marelli")) ~ "difensore centrale",
+        
+        squad == "U17" & match_surname(player, c("di cicco", "bresciani", "gagliardi", "nicolini")) ~ "esterno basso",
+        
+        squad == "U17" & match_surname(player, c("vanelli", "montoya", "shiku", "massazza", "granata", "pascale")) ~ "centrocampista",
+        
+        squad == "U17" & match_surname(player, c("pea", "ndema", "moruzzi", "laini")) ~ "esterno alto",
+        
+        squad == "U17" & match_surname(player, c("tacchini", "calia", "kurici")) ~ "attaccante",
+        
+        
+        # -------------------------
+        # U19
+        # -------------------------
+        squad == "U19" & match_surname(player, c("barzi", "bertazzoli", "montemezzani", "schiavini")) ~ "difensore centrale",
+        
+        squad == "U19" & match_surname(player, c("cicare", "dimov", "gerasym", "cerioli")) ~ "esterno basso",
+        
+        squad == "U19" & match_surname(player, c("bertazzoni", "bonizzoni", "de maio", "d'ischia", "jarid", "pape")) ~ "centrocampista",
+        
+        squad == "U19" & match_surname(player, c("nicotra", "tajeddine")) ~ "esterno alto",
+        
+        squad == "U19" & match_surname(player, c("brazzorotto", "fino", "valletti")) ~ "attaccante",
+        
+        
+        # -------------------------
+        # FT
+        # -------------------------
+        squad == "FT" & match_surname(player, c("ferrara", "maianti", "cavalli")) ~ "portiere",
+        
+        squad == "FT" & match_surname(player, c("camilleri", "maccherini", "vailati", "azzali")) ~ "difensore centrale",
+        
+        squad == "FT" & match_surname(player, c("arpini", "abba", "niculae", "gramignoli")) ~ "esterno basso",
+        
+        squad == "FT" & match_surname(player, c("erman", "mozzanica", "serioli", "latini", "tomella", "pavesi")) ~ "centrocampista",
+        
+        squad == "FT" & match_surname(player, c("cerasani")) ~ "esterno alto",
+        
+        squad == "FT" & match_surname(player, c("recino", "fenotti")) ~ "attaccante",
+        
+        TRUE ~ category
+      )
+    )
+  
+  if (exclude_gk) df_all <- df_all %>% dplyr::filter(category != "portiere")
   # ---- 5) indici su scala comune (range sull'unione: LOWER+MID+UPPER) ----
   df_all <- df_all %>%
     dplyr::mutate(

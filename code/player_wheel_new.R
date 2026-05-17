@@ -88,14 +88,14 @@ plot_player_wheel <- function(pcts_df, player_name) {
                       p_rel_per_min   = "Releases / min",
                       p_rel_vel_avg   = "Release vel avg",
                       p_one_touch_pct = "One-touch %",
-                      p_pass_perc     = "Pass %",      # <- nuovo
-                      p_regains       = "Regains"      # <- nuovo
+                      p_pass_perc     = "Pass %",
+                      p_regains       = "Regains"
       ),
       
       group = case_when(
         metric %in% c("Workrate","Top speed","HID","Acc/Dec index") ~ "Physical",
         metric %in% c("Touch / min","Releases / min","Release vel avg","One-touch %") ~ "On-ball",
-        TRUE ~ "Pass/Def"  # <- spicchi grigi
+        TRUE ~ "Pass/Def"
       ),
       
       metric = factor(metric, levels = c(
@@ -106,83 +106,128 @@ plot_player_wheel <- function(pcts_df, player_name) {
       
       id = as.integer(metric),
       
-      # colori spicchi
       fill = case_when(
         group == "Physical" ~ "#FF2E2E",
-        group == "On-ball"  ~ "white",
-        TRUE                ~ "#8d8d8d"   # grigio
+        group == "On-ball"  ~ "#000000",
+        TRUE                ~ "#8d8d8d"
       ),
-      
-      # colore numeri (nero solo su bianco)
-      txt = if_else(group == "On-ball", "#000000", "white"),
       
       value_plot = coalesce(value, 0),
       value_lab  = if_else(is.na(value), "NA", sprintf("%d", round(value))),
       
-      angle = 90 - 360 * (id - 0.5) / n(),
-      hjust = if_else(angle < -90, 1, 0),
-      angle = if_else(angle < -90, angle + 180, angle)
+      # angolo per le etichette delle metriche
+      angle_lab = 90 - 360 * (id - 0.5) / n(),
+      hjust_lab = if_else(angle_lab < -90, 1, 0),
+      angle_lab = if_else(angle_lab < -90, angle_lab + 180, angle_lab)
     )
   
-  # linee radiali (ora 10 spicchi)
   radial_lines <- tibble(x = seq(0.5, 10.5, by = 1))
   
   ggplot(dfp, aes(x = id, y = value_plot)) +
     
-    geom_col(aes(fill = fill),
-             width = 1,
-             color = "#0a0a0a",
-             linewidth = 1.1,
-             show.legend = FALSE
+    # spicchi
+    geom_col(
+      aes(fill = fill),
+      width = 1,
+      color = "#0a0a0a",
+      linewidth = 1.1,
+      show.legend = FALSE
     ) +
     
-    geom_hline(yintercept = c(25, 50, 75, 100),
-               linetype = c("dashed","dashed","dashed","solid"),
-               color = "#2a2a2a",
-               linewidth = c(0.55,0.55,0.55,1.0)
+    # cerchi percentili
+    geom_hline(
+      yintercept = c(25, 50, 75, 100),
+      linetype = c("dashed", "dashed", "dashed", "solid"),
+      color = "#2a2a2a",
+      linewidth = c(0.55, 0.55, 0.55, 1.0)
     ) +
     
-    geom_vline(data = radial_lines, aes(xintercept = x),
-               color = "#1a1a1a", linewidth = 0.9
+    # linee radiali
+    geom_vline(
+      data = radial_lines,
+      aes(xintercept = x),
+      color = "#1a1a1a",
+      linewidth = 0.9
     ) +
     
-    # separatori: Physical | On-ball | Grey | fine
-    geom_vline(xintercept = c(4.5, 8.5, 10.5),
-               color = "#444444", linewidth = 1.4
+    # separatori tra gruppi
+    geom_vline(
+      xintercept = c(4.5, 8.5, 10.5),
+      color = "#444444",
+      linewidth = 1.4
     ) +
     
-    # numeri (colore dinamico + halo)
-    geom_text(aes(label = value_lab, color = txt),
-              fontface = "bold", size = 4.6
-    ) +
-    geom_text(aes(label = value_lab),
-              color = "cyan", fontface = "bold", size = 4.6,
-              alpha = 0.35, nudge_y = 0.15
+    # lineette che collegano il cerchio al numero esterno
+    geom_segment(
+      aes(
+        x = id,
+        xend = id,
+        y = 101,
+        yend = 109
+      ),
+      color = "#1a1a1a",
+      linewidth = 0.55,
+      inherit.aes = FALSE
     ) +
     
-    geom_text(aes(y = 118, label = metric, angle = angle, hjust = hjust),
-              color = "white",
-              size = 3.9,
-              fontface = "bold"
+    # numeri esterni dentro riquadro
+    geom_label(
+      aes(
+        x = id,
+        y = 116,
+        label = value_lab
+      ),
+      fill = "white",
+      color = "#00AFAF",
+      fontface = "bold",
+      size = 4.4,
+      label.size = 0.35,
+      label.r = unit(0.16, "lines"),
+      label.padding = unit(0.18, "lines"),
+      inherit.aes = FALSE
+    ) +
+    
+    # nomi metriche più esterni
+    geom_text(
+      aes(
+        y = 132,
+        label = metric,
+        angle = angle_lab,
+        hjust = hjust_lab
+      ),
+      color = "#111111",
+      size = 3.7,
+      fontface = "bold"
     ) +
     
     scale_fill_identity() +
-    scale_color_identity() +
-    coord_polar(start = pi/2, clip = "off") +
-    scale_y_continuous(limits = c(0, 130)) +
+    coord_polar(start = pi / 2, clip = "off") +
+    scale_y_continuous(
+      limits = c(0, 145),
+      expand = expansion(mult = c(0, 0))
+    ) +
+    
     labs(
-      title = paste("Sintesi - ", player_name),
+      title = paste("Sintesi -", player_name),
       subtitle = "Percentili vs tutti i giocatori"
     ) +
+    
     theme_void() +
     theme(
-      plot.background  = element_rect(fill = "#0b0b0b", color = NA),
-      panel.background = element_rect(fill = "#0b0b0b", color = NA),
-      plot.title       = element_text(color = "#FF2E2E", face = "bold", size = 16),
-      plot.subtitle    = element_text(color = "white"),
-      plot.margin      = margin(10, 55, 10, 20)
+      plot.background  = element_rect(fill = "white", color = NA),
+      panel.background = element_rect(fill = "white", color = NA),
+      plot.title       = element_text(
+        color = "#FF2E2E",
+        face = "bold",
+        size = 16,
+        margin = margin(b = 3)
+      ),
+      plot.subtitle    = element_text(
+        color = "#111111",
+        size = 10,
+        margin = margin(b = 12)
+      ),
+      plot.margin      = margin(15, 70, 20, 70)
     )
 }
-
 pcts <- make_player_pcts(df_physicalreport, agg, df_passes)
-plot_player_wheel(pcts, "T. Serioli")

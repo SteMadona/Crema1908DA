@@ -10,6 +10,8 @@ format:
     fig-format: svg
     fig-dpi: 320
     page-layout: article
+  pdf:
+    toc: true
 execute:
   echo: false
   message: false
@@ -90,12 +92,13 @@ library(knitr)
 library(kableExtra)
 
 tab_partite <- tibble(
-  `Partite totali` = 26,
-  Presenze = 24,
-  Minuti = 1943,
-  Gol = 2,
-  Ammonizioni = 3, 
-  Espulsioni = 0
+  Categoria = c("U17", "Prima squadra"),
+  `Convocazioni` = c(26, 2),
+  Presenze = c(24, 2),
+  Minuti = c(1943, 105),
+  Gol = c(2, 0),
+  Ammonizioni = c(3, 0), 
+  Espulsioni = c(0, 0)
 )
 
 tab_partite %>%
@@ -127,18 +130,31 @@ tab_allenamenti %>%
 ```{r}
 #| echo: false
 #| results: asis
+#| message: false
+#| warning: false
+
+library(tibble)
+library(knitr)
+library(kableExtra)
+library(glue)
+library(dplyr)
 
 sett20m <- 3.08
-genn20m <- 25.9
+genn20m <- 3.09
 
-settjump <- 3.09
+settjump <- 25.9
 gennjump <- 27.5
 
-delta_20m  <- genn20m - sett20m
-delta_jump <- gennjump - settjump
+# Medie di riferimento
+media_ft_20m <- 2.98
+media_u17_20m <- 2.97 
+
+media_ft_jump <- 26.4
+media_u17_jump <- 25.4
 
 trend_badge <- function(delta, better = c("lower", "higher")) {
   better <- match.arg(better)
+  
   improved <- if (better == "lower") delta < 0 else delta > 0
   worsened <- if (better == "lower") delta > 0 else delta < 0
   
@@ -151,27 +167,121 @@ trend_badge <- function(delta, better = c("lower", "higher")) {
   }
 }
 
-rows_html <- paste0(
-  "<tr>",
-  "<td class='fw-semibold'>Sprint 20 m</td>",
-  "<td class='text-center'>", sprintf('%.2f s', sett20m), "</td>",
-  "<td class='text-center'>", sprintf('%.2f s', genn20m), "</td>",
-  "<td class='text-center'>", sprintf('%+.2f s', delta_20m), "</td>",
-  "<td class='text-end'>", trend_badge(delta_20m, 'lower'), "</td>",
-  "</tr>",
-  "<tr>",
-  "<td class='fw-semibold'>Vertical Jump</td>",
-  "<td class='text-center'>", sprintf('%.1f cm', settjump), "</td>",
-  "<td class='text-center'>", sprintf('%.1f cm', gennjump), "</td>",
-  "<td class='text-center'>", sprintf('%+.1f cm', delta_jump), "</td>",
-  "<td class='text-end'>", trend_badge(delta_jump, 'higher'), "</td>",
-  "</tr>"
+fmt_value <- function(x, unit, digits) {
+  paste0(sprintf(paste0("%.", digits, "f"), x), " ", unit)
+}
+
+fmt_delta <- function(x, unit, digits) {
+  paste0(sprintf(paste0("%+.", digits, "f"), x), " ", unit)
+}
+
+trend_text <- function(delta, unit, digits, better = c("lower", "higher")) {
+  better <- match.arg(better)
+  
+  glue("
+    {trend_badge(delta, better)}
+    <br>
+    <span class='fw-semibold'>{fmt_delta(delta, unit, digits)}</span>
+  ")
+}
+
+benchmark_text <- function(player_value, ref_value, unit, digits, better = c("lower", "higher")) {
+  better <- match.arg(better)
+  diff <- player_value - ref_value
+  
+  if (better == "lower") {
+    label <- case_when(
+      diff < 0 ~ "più veloce",
+      diff > 0 ~ "più lento",
+      TRUE ~ "in linea"
+    )
+    
+    cls <- case_when(
+      diff < 0 ~ "text-success",
+      diff > 0 ~ "text-danger",
+      TRUE ~ "text-secondary"
+    )
+  } else {
+    label <- case_when(
+      diff > 0 ~ "sopra media",
+      diff < 0 ~ "sotto media",
+      TRUE ~ "in linea"
+    )
+    
+    cls <- case_when(
+      diff > 0 ~ "text-success",
+      diff < 0 ~ "text-danger",
+      TRUE ~ "text-secondary"
+    )
+  }
+  
+  glue("
+    <span class='{cls} fw-semibold'>{fmt_delta(diff, unit, digits)}</span>
+    <br>
+    <span class='small text-muted'>{label}</span>
+    <br>
+    <span class='small text-muted'>media: {fmt_value(ref_value, unit, digits)}</span>
+  ")
+}
+
+make_test_table <- function(test_name, settembre, gennaio, media_u17, media_ft, unit, digits, better) {
+  
+  delta <- gennaio - settembre
+  
+  tab <- tibble(
+    Settembre = fmt_value(settembre, unit, digits),
+    Gennaio = fmt_value(gennaio, unit, digits),
+    `Trend personale` = trend_text(delta, unit, digits, better),
+    `vs Media U17` = benchmark_text(gennaio, media_u17, unit, digits, better),
+    `vs Media FT` = benchmark_text(gennaio, media_ft, unit, digits, better)
+  )
+  
+  table_html <- tab %>%
+    knitr::kable(
+      format = "html",
+      escape = FALSE,
+      align = "c"
+    ) %>%
+    kableExtra::kable_styling(
+      full_width = FALSE,
+      bootstrap_options = c("striped", "hover", "condensed")
+    ) %>%
+    kableExtra::row_spec(0, bold = TRUE)
+  
+  glue("
+    <div class='mb-4'>
+      <div class='h6 mb-2'>{test_name}</div>
+      {table_html}
+    </div>
+  ")
+}
+
+html_sprint <- make_test_table(
+  test_name = "Sprint 20 m",
+  settembre = sett20m,
+  gennaio = genn20m,
+  media_u17 = media_u17_20m,
+  media_ft = media_ft_20m,
+  unit = "s",
+  digits = 2,
+  better = "lower"
 )
 
-html <- glue::glue("
+html_jump <- make_test_table(
+  test_name = "Vertical Jump",
+  settembre = settjump,
+  gennaio = gennjump,
+  media_u17 = media_u17_jump,
+  media_ft = media_ft_jump,
+  unit = "cm",
+  digits = 1,
+  better = "higher"
+)
+
+html <- glue("
 <div class='card shadow-sm mb-3'>
   <div class='card-body'>
-    <div class='d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2'>
+    <div class='d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3'>
       <div>
         <div class='text-muted small'>Test fisici</div>
         <div class='h5 mb-0'>Confronto Settembre vs Gennaio</div>
@@ -179,30 +289,15 @@ html <- glue::glue("
       <div class='small text-muted'>Aggiornato al: {format(Sys.Date(), '%d/%m/%Y')}</div>
     </div>
 
-    <div class='table-responsive'>
-      <table class='table table-sm table-striped table-hover align-middle mb-0'>
-        <thead>
-          <tr>
-            <th>Test</th>
-            <th class='text-center'>Settembre</th>
-            <th class='text-center'>Gennaio</th>
-            <th class='text-center'>Δ</th>
-            <th class='text-end'>Trend</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows_html}
-        </tbody>
-      </table>
-    </div>
+    {html_sprint}
+    {html_jump}
+
   </div>
 </div>
 ")
 
 knitr::asis_output(html)
-
 ```
-
 
 # Monitoraggio
 
@@ -242,8 +337,8 @@ report_fisico(player_sel, cph)
 #| fig-format: svg
 #| fig-dpi: 320
 #| fig-bg: "white"
-#| fig-width: 6.2
-#| fig-height: 6.2
+#| fig-width: 7
+#| fig-height: 7
 #| out-width: "100%"
 
 plot_player_wheel(pcts, player_sel)
@@ -406,22 +501,11 @@ gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HSL", top_n = 2
 
 
 ### Confronto con prima squadra
-::: {.panel-tabset}
-# Full Session
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot_compare_phy_tec_player_3(scatter_u17_over_session, player_sel, "overall")
-```
 
-# Partite Finali
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot_compare_phy_tec_player_3(scatter_u17_over_pf, player_sel, "overall")
-```
 
-# Partite Ufficiali
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 plot_compare_phy_tec_player_3(scatter_u17_over_match, player_sel, "overall")
 ```
-:::
 
 
 # Video
@@ -431,7 +515,7 @@ plot_compare_phy_tec_player_3(scatter_u17_over_match, player_sel, "overall")
 #| echo: false
 #| results: asis
 
-scadenza_vm <- as.Date("2026-02-13")
+scadenza_vm <- as.Date("2027-02-11")
 oggi <- Sys.Date()
 giorni <- as.integer(scadenza_vm - oggi)
 
@@ -490,7 +574,7 @@ knitr::asis_output(html)
 
 
 
-# Area Mentale - Psicologica
+# Area Mentale
 
 ### Partite
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}

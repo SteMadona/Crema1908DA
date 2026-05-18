@@ -187,7 +187,7 @@ plot_player_wheel <- function(pcts_df, player_name) {
     ) +
     
     labs(
-      title = paste("Sintesi -", player_name),
+      title = paste("Sintesi - Giocatore 1"),
       subtitle = "Percentili vs tutti i giocatori"
     ) +
     

@@ -366,17 +366,17 @@
 </g>
 <path fill-rule="nonzero" fill="rgb(100%, 18.039216%, 18.039216%)" fill-opacity="0.94902" stroke-width="1.133858" stroke-linecap="round" stroke-linejoin="round" stroke="rgb(0%, 0%, 0%)" stroke-opacity="0.94902" stroke-miterlimit="10" d="M 447.714844 176.128906 C 447.714844 179.976562 444.59375 183.097656 440.746094 183.097656 C 436.894531 183.097656 433.777344 179.976562 433.777344 176.128906 C 433.777344 172.277344 436.894531 169.160156 440.746094 169.160156 C 444.59375 169.160156 447.714844 172.277344 447.714844 176.128906 "/>
 <g fill="rgb(0%, 0%, 0%)" fill-opacity="1">
-<use xlink:href="#glyph-0-0" x="380.109375" y="193.839844"/>
-<use xlink:href="#glyph-0-1" x="391.175107" y="193.839844"/>
-<use xlink:href="#glyph-0-2" x="394.335753" y="193.839844"/>
-<use xlink:href="#glyph-0-3" x="402.247786" y="193.839844"/>
-<use xlink:href="#glyph-0-4" x="409.360975" y="193.839844"/>
-<use xlink:href="#glyph-0-5" x="417.273009" y="193.839844"/>
-<use xlink:href="#glyph-0-2" x="421.225552" y="193.839844"/>
-<use xlink:href="#glyph-0-6" x="429.137586" y="193.839844"/>
-<use xlink:href="#glyph-0-7" x="433.875081" y="193.839844"/>
-<use xlink:href="#glyph-0-8" x="441.787114" y="193.839844"/>
-<use xlink:href="#glyph-0-9" x="445.739658" y="193.839844"/>
+<use xlink:href="#glyph-0-0" x="380.121094" y="193.832031"/>
+<use xlink:href="#glyph-0-1" x="391.186826" y="193.832031"/>
+<use xlink:href="#glyph-0-2" x="394.347472" y="193.832031"/>
+<use xlink:href="#glyph-0-3" x="402.259505" y="193.832031"/>
+<use xlink:href="#glyph-0-4" x="409.372694" y="193.832031"/>
+<use xlink:href="#glyph-0-5" x="417.284728" y="193.832031"/>
+<use xlink:href="#glyph-0-2" x="421.237271" y="193.832031"/>
+<use xlink:href="#glyph-0-6" x="429.149304" y="193.832031"/>
+<use xlink:href="#glyph-0-7" x="433.886799" y="193.832031"/>
+<use xlink:href="#glyph-0-8" x="441.798833" y="193.832031"/>
+<use xlink:href="#glyph-0-9" x="445.751376" y="193.832031"/>
 </g>
 <g clip-path="url(#clip-9)">
 <path fill="none" stroke-width="2.347352" stroke-linecap="butt" stroke-linejoin="round" stroke="rgb(60%, 60%, 60%)" stroke-opacity="1" stroke-dasharray="9.389409 9.389409" stroke-miterlimit="10" d="M 353.101562 317.660156 L 353.101562 91.5625 "/>

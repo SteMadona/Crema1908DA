@@ -515,7 +515,7 @@ plot_compare_phy_tec_player_3(scatter_u17_over_match, player_sel, "overall")
 
 
 # Video
-[Video analisi del giocatore](https://youtu.be/1KakRiLLGTM)
+[Video analisi del giocatore](https://youtu.be/1KakRiLLGTM)x\
 
 # Visita Medica
 ```{r}

@@ -189,7 +189,7 @@ gt_hid_outlier_table <- function(df_dynamic_hid_match,
       value = .data[[col_name]]
     )
   
-  if (nrow(d) == 0) stop(paste0("Nessun dato disponibile per ", player_name, " su ", lab))
+  if (nrow(d) == 0) stop(paste0("Nessun dato disponibile per Giocatore 1 su ", lab))
   
   baseline_mean <- mean(d$value, na.rm = TRUE)
   
@@ -235,7 +235,7 @@ gt_hid_outlier_table <- function(df_dynamic_hid_match,
   out_tbl %>%
     gt() %>%
     tab_header(
-      title = md(paste0("**", player_name, " — ", lab, "**")),
+      title = md(paste0("** Giocatore 1 — ", lab, "**")),
       subtitle = md(paste0("Outlier HID (|z| ≥ ", out_th, ") — ordinati per data | unità: ", unit))
     ) %>%
     cols_label(
@@ -308,7 +308,7 @@ plot_hid_box_kpi <- function(df_dynamic_hid_match,
   y_anno <- max(d$value, na.rm = TRUE)
   
   
-  if (nrow(d) == 0) stop(paste0("Nessun dato disponibile per ", player_name, " su ", lab))
+  if (nrow(d) == 0) stop(paste0("Nessun dato disponibile per Giocatore 1 su ", lab))
   
   mu <- mean(d$value, na.rm = TRUE)
   
@@ -344,7 +344,7 @@ plot_hid_box_kpi <- function(df_dynamic_hid_match,
     scale_fill_manual(values = c(`FALSE` = "#8A8A8A", `TRUE` = "#FF2E2E"), guide = "none") +
     labs(
       title = lab,
-      subtitle = paste0(player_name, " — outlier |z| ≥ ", out_th, " (etichette = data)"),
+      subtitle = paste0("Giocatore 1 — outlier |z| ≥ ", out_th, " (etichette = data)"),
       x = NULL,
       y = paste0("Valore (", unit, ")")
     ) + annotate(

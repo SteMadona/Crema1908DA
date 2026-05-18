@@ -255,9 +255,7 @@ plot_compare_phy_tec_player_3 <- function(
   top_mid_role <- df_top_m %>%
     dplyr::filter(category == role) %>%
     dplyr::mutate(
-      label = ifelse(is.na(player) | player == "",
-                     paste0("Top ", mid_tag),
-                     paste0("Top ", mid_tag, ": ", player)),
+      label = "TopU19",
       point_type = "Top ruolo U19",
       squad_ref  = "mid"
     )
@@ -266,7 +264,7 @@ plot_compare_phy_tec_player_3 <- function(
     top_mid_role <- mean_mid %>%
       dplyr::transmute(category, player = NA_character_,
                        physical_index, quality_index, overall,
-                       label = paste0("Top ", mid_tag),
+                       label = "TopU19",
                        point_type = "Top ruolo U19",
                        squad_ref  = "mid")
   }
@@ -275,9 +273,7 @@ plot_compare_phy_tec_player_3 <- function(
   top_upper_role <- df_top_u %>%
     dplyr::filter(category == role) %>%
     dplyr::mutate(
-      label = ifelse(is.na(player) | player == "",
-                     paste0("Top ", upper_tag),
-                     paste0("Top ", upper_tag, ": ", player)),
+      label = "TopFT",
       point_type = "Top ruolo FT",
       squad_ref  = "upper"
     )
@@ -286,7 +282,7 @@ plot_compare_phy_tec_player_3 <- function(
     top_upper_role <- mean_upper %>%
       dplyr::transmute(category, player = NA_character_,
                        physical_index, quality_index, overall,
-                       label = paste0("Top ", upper_tag),
+                       label = "TopFT",
                        point_type = "Top ruolo FT",
                        squad_ref  = "upper")
   }
@@ -298,7 +294,7 @@ plot_compare_phy_tec_player_3 <- function(
                      physical_index,
                      quality_index,
                      overall,
-                     label = player_name,
+                     label = "Giocatore 1",
                      point_type = "Giocatore U17",
                      squad_ref = "lower")
   
@@ -347,7 +343,8 @@ plot_compare_phy_tec_player_3 <- function(
     ) +
     
     ggrepel::geom_label_repel(
-      data = df_points,
+      data = df_points %>%
+        dplyr::filter(point_type %in% c("Giocatore U17", "Top ruolo U19", "Top ruolo FT")),
       ggplot2::aes(x = physical_index, y = quality_index, label = label),
       size = 4.5,
       fill = "white",

@@ -1,5 +1,5 @@
 ---
-title: "Deivi Shiku"
+title: "Giocatore 1"
 format:
   html:
     theme: flatly
@@ -48,6 +48,7 @@ scatter_u17_over_session <- ctx$scatter_u17_over_session
 
 
 player_sel <- "D. Shiku"
+player_label <- "Giocatore 1"
 ```
 
 # Scheda Anagrafica
@@ -55,8 +56,8 @@ player_sel <- "D. Shiku"
 # Scheda Anagrafica
 
 #| echo: false
-nome      <- "Deivi Shiku"
-nascita   <- as.Date("2009-09-09")
+nome      <- "Giocatore 1"
+nascita   <- as.Date("2009-01-01")
 ruolo     <- "Centrocampista"
 categoria <- "Allievi U17"
 eta <- as.integer(floor(as.numeric(difftime(Sys.Date(), nascita, units="days"))/365.25))
@@ -141,16 +142,18 @@ library(dplyr)
 
 sett20m <- 3.08
 genn20m <- 3.09
+apri20m <- 3.04
 
-settjump <- 25.9
-gennjump <- 27.5
+settjump <- 65.8
+gennjump <- 69.9
+aprijump <- 71.6
 
 # Medie di riferimento
-media_ft_20m <- 2.98
-media_u17_20m <- 2.97 
+media_ft_20m <- 2.96
+media_u17_20m <- 3.00 
 
-media_ft_jump <- 26.4
-media_u17_jump <- 25.4
+media_ft_jump <- 69.0
+media_u17_jump <- 64.5
 
 trend_badge <- function(delta, better = c("lower", "higher")) {
   better <- match.arg(better)
@@ -224,16 +227,17 @@ benchmark_text <- function(player_value, ref_value, unit, digits, better = c("lo
   ")
 }
 
-make_test_table <- function(test_name, settembre, gennaio, media_u17, media_ft, unit, digits, better) {
+make_test_table <- function(test_name, settembre, gennaio, aprile, media_u17, media_ft, unit, digits, better) {
   
-  delta <- gennaio - settembre
+  delta <- aprile - settembre
   
   tab <- tibble(
     Settembre = fmt_value(settembre, unit, digits),
     Gennaio = fmt_value(gennaio, unit, digits),
+    Aprile = fmt_value(aprile, unit, digits),
     `Trend personale` = trend_text(delta, unit, digits, better),
-    `vs Media U17` = benchmark_text(gennaio, media_u17, unit, digits, better),
-    `vs Media FT` = benchmark_text(gennaio, media_ft, unit, digits, better)
+    `vs Media U17` = benchmark_text(aprile, media_u17, unit, digits, better),
+    `vs Media FT` = benchmark_text(aprile, media_ft, unit, digits, better)
   )
   
   table_html <- tab %>%
@@ -255,11 +259,11 @@ make_test_table <- function(test_name, settembre, gennaio, media_u17, media_ft, 
     </div>
   ")
 }
-
 html_sprint <- make_test_table(
   test_name = "Sprint 20 m",
   settembre = sett20m,
   gennaio = genn20m,
+  aprile = apri20m,
   media_u17 = media_u17_20m,
   media_ft = media_ft_20m,
   unit = "s",
@@ -271,6 +275,7 @@ html_jump <- make_test_table(
   test_name = "Vertical Jump",
   settembre = settjump,
   gennaio = gennjump,
+  aprile = aprijump,
   media_u17 = media_u17_jump,
   media_ft = media_ft_jump,
   unit = "cm",
@@ -278,13 +283,14 @@ html_jump <- make_test_table(
   better = "higher"
 )
 
+
 html <- glue("
 <div class='card shadow-sm mb-3'>
   <div class='card-body'>
     <div class='d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3'>
       <div>
         <div class='text-muted small'>Test fisici</div>
-        <div class='h5 mb-0'>Confronto Settembre vs Gennaio</div>
+        <div class='h5 mb-0'>Confronto Settembre - Gennaio - Aprile</div>
       </div>
       <div class='small text-muted'>Aggiornato al: {format(Sys.Date(), '%d/%m/%Y')}</div>
     </div>
@@ -509,6 +515,7 @@ plot_compare_phy_tec_player_3(scatter_u17_over_match, player_sel, "overall")
 
 
 # Video
+[Video analisi del giocatore](https://youtu.be/1KakRiLLGTM)
 
 # Visita Medica
 ```{r}
@@ -583,12 +590,12 @@ library(knitr)
 library(kableExtra)
 
 tab_partite_ment <- tibble(
-  Atteggiamento = 2.8,
-  `Gestione dell'errore` = 3,
-  Concentrazione = 3.8,
-  `Stabilità emotiva` = 3.6,
+  Atteggiamento = 4.5,
+  `Gestione dell'errore` = 4.0,
+  Concentrazione = 5.0,
+  `Stabilità emotiva` = 4.4,
   Proattività = 4.2, 
-  Motivazione = 3.4
+  Motivazione = 4.6
 )
 
 tab_partite_ment %>%
@@ -603,12 +610,12 @@ library(knitr)
 library(kableExtra)
 
 tab_allenamenti_ment <- tibble(
-  Atteggiamento = 3.8,
-  `Gestione dell'errore` = 4.2,
-  Concentrazione = 3.6,
+  Atteggiamento = 4.8,
+  `Gestione dell'errore` = 4.0,
+  Concentrazione = 4.6,
   `Stabilità emotiva` = 4.0,
-  Proattività = 3.0, 
-  Motivazione = 4.4
+  Proattività = 4.5, 
+  Motivazione = 5.0
 )
 tab_allenamenti_ment %>%
   knitr::kable(align = "c") %>%

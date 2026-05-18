@@ -78,7 +78,7 @@ plot_phy_tec_player <- function(player_name,
       stroke = 0.8
     ) +
     ggrepel::geom_text_repel(
-      ggplot2::aes(label = player),
+      ggplot2::aes(label = "Giocatore 1"),
       color = "black",
       size = 5,
       box.padding = 0.4,
@@ -95,7 +95,7 @@ plot_phy_tec_player <- function(player_name,
     ggplot2::guides(fill = ggplot2::guide_legend(override.aes = list(color = "black"))) +
     ggplot2::labs(
       title = "📈 Confronto tra qualità fisica e tecnica",
-      subtitle = paste0("Giocatore: ", player_name, " — linee tratteggiate = medie squadra"),
+      subtitle = paste0("Giocatore: Giocatore 1 — linee tratteggiate = medie squadra"),
       x = "Indice Qualità Fisica (0-1)",
       y = "Indice Qualità Tecnica (0–1)",
       fill = "Ruolo"

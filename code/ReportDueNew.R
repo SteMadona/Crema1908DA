@@ -279,38 +279,54 @@ prep_skill_context <- function(df_raw,
 
 report_tecnico <- function(giocatore, ctx, theme_fn = theme_crema_pro) {
   
-  ruolo <- ctx$agg_all %>% filter(player == giocatore) %>% pull(category) %>% unique()
+  ruolo <- ctx$agg_all %>% 
+    filter(player == giocatore) %>% 
+    pull(category) %>% 
+    unique()
+  
   if (length(ruolo) == 0) stop("Giocatore non trovato nel contesto tecnico.")
   
-  dati_plot <- ctx$build_report_long(giocatore)
+  dati_plot <- ctx$build_report_long(giocatore) %>%
+    mutate(
+      tipo = if_else(tipo == giocatore, "Giocatore 1", tipo),
+      tipo = factor(tipo, levels = c("Giocatore 1", "Media Ruolo"))
+    )
   
   lab_fun <- function(m, v){
     if (m %in% c("touch_right","touch_left","one_touch","short_poss","long_poss")) {
-      paste0(round(v,1),"%")
+      paste0(round(v, 1), "%")
     } else if (m == "avg_time_per_poss_sec") {
-      paste0(round(v,2)," s")
+      paste0(round(v, 2), " s")
     } else {
-      round(v,1)
+      round(v, 1)
     }
   }
+  
+  colori <- c(
+    "Giocatore 1" = "#FF2E2E",
+    "Media Ruolo" = "black"
+  )
   
   ggplot(dati_plot, aes(x = valore, y = metrica, fill = tipo)) +
     geom_col(position = position_dodge(width = 0.7), width = 0.6) +
     geom_text(
       aes(label = mapply(lab_fun, metrica, valore)),
       position = position_dodge(width = 0.7),
-      hjust = -0.15, color = "black", size = 3.6, fontface = "bold"
+      hjust = -0.15,
+      color = "black",
+      size = 3.6,
+      fontface = "bold"
     ) +
-    scale_fill_manual(values = c(setNames("#FF2E2E", giocatore), "Media Ruolo" = "black"), name = NULL) +
+    scale_fill_manual(values = colori, name = NULL, drop = FALSE) +
     labs(
-      title    = paste("📊 Report Tecnico –", giocatore),
+      title = "📊 Report Tecnico – Giocatore 1",
       subtitle = paste("Confronto con Media Ruolo:", ruolo),
-      x = NULL, y = NULL
+      x = NULL,
+      y = NULL
     ) +
     theme_minimal(base_size = 13) +
     theme_fn()
 }
-
 
 trend_tecnico_indici <- function(
     giocatore,
@@ -427,7 +443,7 @@ trend_tecnico_indici <- function(
     ) +
     labs(
       title = "Trend indici tecnici",
-      subtitle = giocatore,
+      subtitle = "Giocatore 1",
       x = "Settimana",
       y = "Indice",
       caption = "Linea tratteggiata = media stagionale della metrica"
@@ -467,7 +483,7 @@ trend_tecnico_piede <- function(giocatore, ctx, theme_fn = theme_crema_pro) {
                color = "black", show.legend = FALSE) +
     scale_y_continuous(labels = function(x) paste0(x, "%")) +
     scale_x_discrete(breaks = function(x) x[seq(1, length(x), by = 2)]) +
-    labs(title = paste("Uso del Piede –", giocatore),
+    labs(title = paste("Uso del Piede – Giocatore 1"),
          x = "Settimana", y = "Percentuale tocchi", color = NULL) +
     theme_fn() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
@@ -494,7 +510,7 @@ trend_tecnico_possesso <- function(giocatore, ctx, theme_fn = theme_crema_pro) {
     scale_y_continuous(labels = scales::percent_format(scale = 1)) +
     scale_x_discrete(breaks = function(x) x[seq(1, length(x), by = 2)]) +
     labs(
-      title = paste("Mix di Possesso –", giocatore),
+      title = paste("Mix di Possesso – Giocatore 1"),
       x = "Settimana", y = "Distribuzione % possesso", fill = NULL
     ) +
     theme_fn()

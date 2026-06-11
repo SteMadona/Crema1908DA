@@ -126,6 +126,3 @@ tb_releases
 :::
 
 :::
-
-## Premio tesseramenti 
-[Premio tesseramenti](GiocatoriU17/tesseramenti_u17.html)

@@ -43,7 +43,6 @@ Questa è la sezione dedicata alla **Under 19**.
 - [M. Fino](GiocatoriU19/fino.html)
 - [A. Nicotra](GiocatoriU19/nicotra.html)
 - [F. Valletti](GiocatoriU19/valletti.html)
-- [R. Tabal](GiocatoriU19/tabal.html)
 - [M. Tajeddine](GiocatoriU19/tajeddine.html)
 
 # Analisi All Time

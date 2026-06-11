@@ -39,7 +39,7 @@ players_u19 <- c(
   "C. Brazzorotto", "C. Barzi", "M. Bertazzoli", "C. Bertazzoni", "M. Bonizzoni",
   "A. Cicarè", "W. De Maio", "M. D'Ischia", "I. Dimov",
   "M. Fino", "V. Gerasym", "A. Jarid", "A. Nicotra", "F. Valletti",
-  "F. Montemezzani", "S. Schiavini", "B. Pape", "R. Tabal", "M. Tajeddine",
+  "F. Montemezzani", "S. Schiavini", "B. Pape", "M. Tajeddine",
   "F. Cerioli"
 )
 

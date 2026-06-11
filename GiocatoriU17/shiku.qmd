@@ -1,5 +1,5 @@
 ---
-title: "Deivi Shiku"
+title: "D. Shiku"
 format:
   html:
     theme: flatly
@@ -10,8 +10,6 @@ format:
     fig-format: svg
     fig-dpi: 320
     page-layout: article
-  pdf:
-    toc: true
 execute:
   echo: false
   message: false
@@ -55,7 +53,7 @@ player_sel <- "D. Shiku"
 # Scheda Anagrafica
 
 #| echo: false
-nome      <- "Giocatore 1"
+nome      <- "Deivi Shiku"
 nascita   <- as.Date("2009-01-01")
 ruolo     <- "Centrocampista"
 categoria <- "Allievi U17"

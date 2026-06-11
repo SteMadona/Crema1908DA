@@ -114,6 +114,7 @@ role_overrides <- tibble::tribble(
   "Recino",          "Forwards",      "attaccante",
   "Fenotti",         "Forwards",      "attaccante",
   "Cerasani",        "Forwards",      "esterno alto",
+  "Neci",            "Forwards",      "attaccante",
   
   # -----------------------------------------------------------------------
   # U17

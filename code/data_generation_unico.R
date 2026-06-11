@@ -19,7 +19,7 @@ source(here("code", "comparisons_U17_new.R"))
 # FILE UNICO
 # -------------------------------------------------------------------------
 
-file_unico <- here("data", "CremaAprile.xlsx")   
+file_unico <- here("data", "Crema2526.xlsx")   
 sheet_data <- 2                                  
 
 df_all <- read_excel(file_unico, sheet = sheet_data)
@@ -68,6 +68,145 @@ players_u13 <- c(
   "Barbera", "Cè", "Coletti", "Diana", "Esestime",
   "Filocamo", "Lungu", "Manera", "Mattiazzi", "Picciolo", "Quartieri", "Romano"
 )
+
+# -------------------------------------------------------------------------
+# RUOLI MANUALI
+# -------------------------------------------------------------------------
+
+# Se vuoi togliere Tabal dalla U19:
+players_u19 <- setdiff(players_u19, "R. Tabal")
+
+normalize_player_name <- function(x) {
+  x <- as.character(x)
+  x <- gsub("[’`]", "'", x)
+  x <- chartr("àáèéìíòóùú", "aaeeiioouu", x)
+  x <- stringr::str_to_lower(x)
+  x <- stringr::str_replace_all(x, "[^a-z0-9]+", " ")
+  stringr::str_squish(x)
+}
+
+role_overrides <- tibble::tribble(
+  ~match_text,       ~role_manual,    ~role_detail,
+  
+  # -----------------------------------------------------------------------
+  # PRIMA SQUADRA
+  # -----------------------------------------------------------------------
+  "Ferrara",         "Goalkeepers",   "portiere",
+  "Maianti",         "Goalkeepers",   "portiere",
+  "Cavalli",         "Goalkeepers",   "portiere",
+  
+  "Arpini",          "Defenders",     "esterno basso",
+  "Abba",            "Defenders",     "esterno basso",
+  "Niculae",         "Defenders",     "esterno basso",
+  "Camilleri",       "Defenders",     "difensore centrale",
+  "Maccherini",      "Defenders",     "difensore centrale",
+  "Vailati",         "Defenders",     "difensore centrale",
+  "Azzali",          "Defenders",     "difensore centrale",
+  "Gramignoli",      "Defenders",     "esterno basso",
+  
+  "Erman",           "Midfielders",   "centrocampista",
+  "Mozzanica",       "Midfielders",   "centrocampista",
+  "Serioli",         "Midfielders",   "centrocampista",
+  "Latini",          "Midfielders",   "centrocampista",
+  "Tomella",         "Midfielders",   "centrocampista",
+  "Pavesi",          "Midfielders",   "centrocampista",
+  
+  "Recino",          "Forwards",      "attaccante",
+  "Fenotti",         "Forwards",      "attaccante",
+  "Cerasani",        "Forwards",      "esterno alto",
+  
+  # -----------------------------------------------------------------------
+  # U17
+  # -----------------------------------------------------------------------
+  "Ajdini",          "Goalkeepers",   "portiere",
+  "Riboli",          "Goalkeepers",   "portiere",
+  "A. Laini",        "Goalkeepers",   "portiere",
+  "Laini A",         "Goalkeepers",   "portiere",
+  
+  "Brusati",         "Defenders",     "difensore centrale",
+  "Mhilli",          "Defenders",     "difensore centrale",
+  "Marelli",         "Defenders",     "difensore centrale",
+  
+  "Di Cicco",        "Defenders",     "difensore esterno",
+  "Bresciani",       "Defenders",     "difensore esterno",
+  "Gagliardi",       "Defenders",     "difensore esterno",
+  "Nicolini",        "Defenders",     "difensore esterno",
+  
+  "Vanelli",         "Midfielders",   "centrocampista",
+  "Montoya",         "Midfielders",   "centrocampista",
+  "Shiku",           "Midfielders",   "centrocampista",
+  "Massazza",        "Midfielders",   "centrocampista",
+  "Granata",         "Midfielders",   "centrocampista",
+  "Pascale",         "Midfielders",   "centrocampista",
+  
+  "Pea",             "Forwards",      "esterno alto",
+  "Ndema",           "Forwards",      "esterno alto",
+  "Moruzzi",         "Forwards",      "esterno alto",
+  "M. Laini",        "Forwards",      "esterno alto",
+  "Laini M",         "Forwards",      "esterno alto",
+  
+  "Tacchini",        "Forwards",      "attaccante",
+  "Calia",           "Forwards",      "attaccante",
+  "Kurici",          "Forwards",      "attaccante",
+  
+  # -----------------------------------------------------------------------
+  # U19 - difensori
+  # -----------------------------------------------------------------------
+  "Barzi",           "Defenders",     "difensore centrale",
+  "Bertazzoli",      "Defenders",     "difensore centrale",
+  "Cicare",          "Defenders",     "difensore esterno",
+  "Cicarè",          "Defenders",     "difensore esterno",
+  "Dimov",           "Defenders",     "difensore esterno",
+  "Gerasym",         "Defenders",     "difensore esterno",
+  "Montemezzani",    "Defenders",     "difensore centrale",
+  "Cerioli",         "Defenders",     "difensore esterno",
+  "Schiavini",       "Defenders",     "difensore centrale",
+  
+  # -----------------------------------------------------------------------
+  # U19 - centrocampisti
+  # -----------------------------------------------------------------------
+  "Bertazzoni",      "Midfielders",   "centrocampista",
+  "Bonizzoni",       "Midfielders",   "centrocampista",
+  "De Maio",         "Midfielders",   "centrocampista",
+  "D'Ischia",        "Midfielders",   "centrocampista",
+  "D’Ischia",        "Midfielders",   "centrocampista",
+  "Jarid",           "Midfielders",   "centrocampista",
+  "Pape",            "Midfielders",   "centrocampista",
+  
+  # -----------------------------------------------------------------------
+  # U19 - attaccanti / esterni alti
+  # -----------------------------------------------------------------------
+  "Brazzorotto",     "Forwards",      "attaccante",
+  "Fino",            "Forwards",      "attaccante",
+  "Nicotra",         "Forwards",      "esterno alto",
+  "Valletti",        "Forwards",      "attaccante",
+  "Tajeddine",       "Forwards",      "esterno alto"
+) %>%
+  dplyr::mutate(match_norm = normalize_player_name(match_text))
+
+df_all <- df_all %>%
+  dplyr::mutate(
+    .player_norm = normalize_player_name(`Player Name`),
+    .role_manual = NA_character_,
+    .role_detail = NA_character_
+  )
+
+for (i in seq_len(nrow(role_overrides))) {
+  idx <- stringr::str_detect(
+    df_all$.player_norm,
+    stringr::fixed(role_overrides$match_norm[i])
+  ) & is.na(df_all$.role_manual)
+  
+  df_all$.role_manual[idx] <- role_overrides$role_manual[i]
+  df_all$.role_detail[idx] <- role_overrides$role_detail[i]
+}
+
+df_all <- df_all %>%
+  dplyr::mutate(
+    `Position Category` = dplyr::coalesce(.role_manual, `Position Category`),
+    `Manual Role Detail` = .role_detail
+  ) %>%
+  dplyr::select(-.player_norm, -.role_manual, -.role_detail)
 
 # -------------------------------------------------------------------------
 # MATCH FINDER

@@ -77,7 +77,8 @@ build_compare_dataset_phy_tec_3 <- function(
         # -------------------------
         # U17
         # -------------------------
-        squad == "U17" & match_surname(player, c("ajdini", "riboli", "laini")) ~ "portiere",
+        squad == "U17" & player == "A. Laini" ~ "portiere",
+        squad == "U17" & match_surname(player, c("ajdini", "riboli")) ~ "portiere",
         
         squad == "U17" & match_surname(player, c("brusati", "mhilli", "marelli")) ~ "difensore centrale",
         
@@ -85,7 +86,8 @@ build_compare_dataset_phy_tec_3 <- function(
         
         squad == "U17" & match_surname(player, c("vanelli", "montoya", "shiku", "massazza", "granata", "pascale")) ~ "centrocampista",
         
-        squad == "U17" & match_surname(player, c("pea", "ndema", "moruzzi", "laini")) ~ "esterno alto",
+        squad == "U17" & player == "M. Laini" ~ "esterno alto",
+        squad == "U17" & match_surname(player, c("pea", "ndema", "moruzzi")) ~ "esterno alto",
         
         squad == "U17" & match_surname(player, c("tacchini", "calia", "kurici")) ~ "attaccante",
         

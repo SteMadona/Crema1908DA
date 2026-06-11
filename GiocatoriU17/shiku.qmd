@@ -1,5 +1,5 @@
 ---
-title: "Giocatore 1"
+title: "Deivi Shiku"
 format:
   html:
     theme: flatly
@@ -48,7 +48,6 @@ scatter_u17_over_session <- ctx$scatter_u17_over_session
 
 
 player_sel <- "D. Shiku"
-player_label <- "Giocatore 1"
 ```
 
 # Scheda Anagrafica
@@ -515,7 +514,7 @@ plot_compare_phy_tec_player_3(scatter_u17_over_match, player_sel, "overall")
 
 
 # Video
-[Video analisi del giocatore](https://youtu.be/1KakRiLLGTM)x\
+
 
 # Visita Medica
 ```{r}

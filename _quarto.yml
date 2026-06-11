@@ -1,6 +1,8 @@
+encoding: utf-8
+
 project:
   type: website
-  output-dir: docs
+  output-dir: _site
 
 website:
   title: "Crema 1908 Data Analysis"

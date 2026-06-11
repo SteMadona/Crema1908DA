@@ -7,3 +7,9 @@ data/
 /.quarto/
 **/*.quarto_ipynb
 
+/.quarto/
+/_site/
+/docs/
+.Rhistory
+.RData
+.Rproj.user/

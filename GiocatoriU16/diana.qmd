@@ -45,7 +45,7 @@ scatter_u16_over_pf      <- ctx$scatter_u16_over_pf
 scatter_u16_over_session <- ctx$scatter_u16_over_session
 
 
-player_sel <- "D. Diana"
+player_sel <- "L. Diana"
 ```
 
 # Scheda Anagrafica

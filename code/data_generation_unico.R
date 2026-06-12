@@ -117,6 +117,33 @@ role_overrides <- tibble::tribble(
   "Neci",            "Forwards",      "attaccante",
   
   # -----------------------------------------------------------------------
+  # U16
+  # -----------------------------------------------------------------------
+  "Mazzucchetti",     "Goalkeepers",   "portiere",
+  "Peretti",          "Goalkeepers",   "portiere",
+  
+  "Diana",            "Defenders",     "difensore centrale",
+  "Baldajack",        "Defenders",     "difensore centrale",
+  "De Maria",         "Defenders",     "difensore centrale",
+  "Constantin",       "Defenders",     "difensore centrale",
+  "Groppelli",        "Defenders",     "esterno basso",
+  "Martinelli",       "Defenders",     "esterno basso",
+  
+  "Oitha",            "Midfielders",   "centrocampista",
+  "Anelli",           "Midfielders",   "centrocampista",
+  "Biondi",           "Midfielders",   "centrocampista",
+  "Onoh",             "Midfielders",   "centrocampista",
+  "Testa",            "Midfielders",   "centrocampista",
+  "Gallarati",        "Midfielders",   "centrocampista",
+  
+  "Cangianiello",     "Forwards",      "esterno alto",
+  "Piovesan",         "Forwards",      "esterno alto",
+  "Lazzari",          "Forwards",      "attaccante",
+  "Zucchi",           "Forwards",      "attaccante",
+  "Bardella",         "Forwards",      "attaccante",
+  "Diop",             "Forwards",      "esterno alto", 
+  
+  # -----------------------------------------------------------------------
   # U17
   # -----------------------------------------------------------------------
   "Ajdini",          "Goalkeepers",   "portiere",

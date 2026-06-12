@@ -1,0 +1,60 @@
+---
+title: "Under 16"
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    smooth-scroll: true
+    fig-format: svg
+    fig-dpi: 320
+    page-layout: article
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+
+source("code/data_generation_unico.R")
+
+```
+
+
+Questa è la sezione dedicata alla **Under 17**.
+
+## Portieri
+- A. Mazzucchetti
+
+## Difensori
+- [L. Diana](GiocatoriU16/diana.html)
+- Baldajack 
+- A. De maria 
+- D. Constamtin 
+- G. Groppelli 
+- D. Martinelli 
+
+
+## Centrocampisti
+- A. Oitha 
+- T. Anelli 
+- C. Biondi 
+- J. Onoh 
+- G. Testa 
+- R. Gallarati 
+
+
+## Attaccanti
+- M. Bardella 
+- D. Cangianiello 
+- O. Diop
+- W. Lazzari
+- L. Piovesan 
+- E. Zucchi 
+
+# Analisi All Time
+

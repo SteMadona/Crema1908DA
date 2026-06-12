@@ -187,16 +187,16 @@ report_fisico <- function(giocatore, ctx, theme_fn = theme_crema_pro) {
     filter(player == media_ruolo_label, statistica %in% ordine_variabili)
   
   dati_plot <- bind_rows(
-    dati_giocatore %>% mutate(tipo = "Giocatore 1"),
+    dati_giocatore %>% mutate(tipo = .env$giocatore),
     media_ruolo    %>% mutate(tipo = "Media Ruolo")
   ) %>%
     drop_na(statistica) %>%
     mutate(
       statistica = factor(statistica, levels = ordine_variabili),
-      tipo = factor(tipo, levels = c("Giocatore 1", "Media Ruolo"))
+      tipo = factor(tipo, levels = c(.env$giocatore, "Media Ruolo"))
     )
   
-  colori <- setNames(c("#FF2E2E", "black"), c("Giocatore 1", "Media Ruolo"))
+  colori <- setNames(c("#FF2E2E", "black"), c(giocatore, "Media Ruolo"))
   
   ggplot(dati_plot, aes(x = valore, y = statistica, fill = tipo)) +
     geom_col(position = position_dodge(width = 0.7), width = 0.6, na.rm = TRUE) +
@@ -211,7 +211,7 @@ report_fisico <- function(giocatore, ctx, theme_fn = theme_crema_pro) {
     coord_flip() +
     scale_fill_manual(values = colori, name = NULL, drop = FALSE) +
     labs(
-      title = paste("📊 Report Fisico – Giocatore 1"),
+      title = paste("📊 Report Fisico –", giocatore),
       subtitle = paste("Confronto con Media Ruolo:", ruolo),
       x = NULL, y = NULL
     ) +

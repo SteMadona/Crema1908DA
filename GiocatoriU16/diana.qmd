@@ -25,7 +25,7 @@ source("../code/Temi_grafici.R")
 source("../code/player_wheel.R")
 source("../code/run_dynamics_new.R")
 source("../code/phy_vs_tech_new.R")
-#source("../code/comparisons_U17_new.R")
+source("../code/comparisons.R")
 
 ctx <- readRDS(here::here("data", "derived", "u16_context.rds"))
 

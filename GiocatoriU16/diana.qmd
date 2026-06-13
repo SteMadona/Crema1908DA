@@ -53,8 +53,8 @@ player_sel <- "L. Diana"
 # Scheda Anagrafica
 
 #| echo: false
-nome      <- "L. Diana"
-nascita   <- as.Date("2009-01-01")
+nome      <- "Lorenzo Diana"
+nascita   <- as.Date("2010-02-10")
 ruolo     <- "Centrocampista"
 categoria <- "Allievi u16"
 eta <- as.integer(floor(as.numeric(difftime(Sys.Date(), nascita, units="days"))/365.25))
@@ -503,12 +503,23 @@ gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HSL", top_n = 2
 
 
 
-### Confronto con prima squadra
-
-
+# Confronto con Under 17
+::: {.panel-tabset}
+# Full Session
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot_compare_phy_tec_player_3(scatter_u16_over_match, player_sel, "overall")
+plot_compare_phy_tec_player(scatter_u16_over_session, player_sel)
 ```
+
+# Partite Finali
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_compare_phy_tec_player(scatter_u16_over_pf, player_sel)
+```
+
+# Partite Ufficiali
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot_compare_phy_tec_player(scatter_u16_over_match, player_sel)
+```
+:::
 
 
 # Video
@@ -579,84 +590,3 @@ knitr::asis_output(html)
 
 
 # Area Mentale
-
-### Partite
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
-library(tibble)
-library(knitr)
-library(kableExtra)
-
-tab_partite_ment <- tibble(
-  Atteggiamento = 4.5,
-  `Gestione dell'errore` = 4.0,
-  Concentrazione = 5.0,
-  `Stabilità emotiva` = 4.4,
-  Proattività = 4.2, 
-  Motivazione = 4.6
-)
-
-tab_partite_ment %>%
-  knitr::kable(align = "c") %>%
-  kableExtra::kable_styling(full_width = FALSE)
-```
-
-### Allenamenti
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
-library(tibble)
-library(knitr)
-library(kableExtra)
-
-tab_allenamenti_ment <- tibble(
-  Atteggiamento = 4.8,
-  `Gestione dell'errore` = 4.0,
-  Concentrazione = 4.6,
-  `Stabilità emotiva` = 4.0,
-  Proattività = 4.5, 
-  Motivazione = 5.0
-)
-tab_allenamenti_ment %>%
-  knitr::kable(align = "c") %>%
-  kableExtra::kable_styling(full_width = FALSE)
-```
-
-
-<div class="explainer-box">
-  <div class="explainer-title">Come leggere gli indici dell'area mentale</div>
-  <div class="explainer-text">
-    Le due tabelle dell'area mentale riportano le medie, differenziate tra partite e 
-    allenamenti, di 6 metriche psicologiche. Il punteggio va da 1 a 5.
-    1 = non adeguato
-    2 = livello minimo 
-    3 = adeguato 
-    4 = avanzato 
-    5 = eccellente
-  </div>
-  <div class="explainer-formula">
-    ATTEGGIAMENTO: Intensità, cura dei dettagli, chiedere feedback/chiarimenti, accetta diversi 
-    ruoli e compiti mantenendo il ritmo di lavoro, lavora anche se non osservato, si impegna 
-    anche se parte dalla panchina.
-  </div>
-  <div class="explainer-formula">
-    GESTIONE DELL'ERRORE: Si assume le proprie responsabilità, ascolta la correzione, tende 
-    a non ripetere l'errore, non mostra paura nelle azioni seguenti.
-  </div>
-  <div class="explainer-formula">
-    CONCENTRAZIONE: Mantine l'attenzione, applica le indicazioni in modo puntuale, riduce
-    distrazioni, perde poco tempo nel reagire, osserva il gioco anche quando non direttamente 
-    coinvolto.   
-  </div>
-  <div class="explainer-formula">
-    STABILITA' EMOTIVA: Gestisce la pressione e momenti decisivi, non cambia atteggiamento dopo 
-    decisioni arbitrali o richiami dello staff, mantiene lucidità nel finale di gara, controllo 
-    del linguaggio verbale e non verbale.
-  </div>
-  <div class="explainer-formula">
-    PROATTIVITA': atteggiamento attivo, comunicazione con compagni, mantiene equilibrio anche 
-    in momenti di difficoltà, rispetta le indicazioni dello staff.
-  </div>
-  <div class="explainer-formula">
-    MOTIVAZIONE: spinta personale dell’atleta a dare il massimo, affrontare le difficoltà e 
-    contribuire al lavoro del gruppo. Coinvolgimento e determinazione nel raggiungimento degli 
-    obiettivi e dei compiti dati.
-  </div>
-</div>

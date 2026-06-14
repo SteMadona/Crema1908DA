@@ -36,25 +36,25 @@ Questa è la sezione dedicata alla **Under 17**.
 - [A. De maria](GiocatoriU16/demaria.html) 
 - [D. Constantin](GiocatoriU16/constantin.html)
 - [G. Groppelli](GiocatoriU16/groppelli.html) 
-- D. Martinelli 
+- [D. Martinelli](GiocatoriU16/martinelli.html)
 
 
 ## Centrocampisti
-- A. Oitha 
-- T. Anelli 
-- C. Biondi 
-- J. Onoh 
-- G. Testa 
-- R. Gallarati 
+- [A. Oitha](GiocatoriU16/oitha.html)
+- [T. Anelli](GiocatoriU16/anelli.html) 
+- [C. Biondi](GiocatoriU16/biondi.html) 
+- [J. Onoh](GiocatoriU16/onoh.html)
+- [G. Testa](GiocatoriU16/testa.html) 
+- [R. Gallarati](GiocatoriU16/gallarati.html) 
 
 
 ## Attaccanti
-- M. Bardella 
-- D. Cangianiello 
-- O. Diop
-- W. Lazzari
-- L. Piovesan 
-- E. Zucchi 
+- [M. Bardella](GiocatoriU16/bardella.html) 
+- [D. Cangianiello](GiocatoriU16/cangianiello.html) 
+- [O. Diop](GiocatoriU16/diop.html)
+- [W. Lazzari](GiocatoriU16/lazzari.html)
+- [L. Piovesan](GiocatoriU16/piovesan.html) 
+- [V. Zucchi](GiocatoriU16/zucchi.html) 
 
 # Analisi All Time
 

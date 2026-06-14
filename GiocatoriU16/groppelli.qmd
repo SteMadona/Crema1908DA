@@ -1,5 +1,5 @@
 ---
-title: "L. Diana"
+title: "G. Groppelli"
 format:
   html:
     theme: flatly
@@ -45,7 +45,7 @@ scatter_u16_over_pf      <- ctx$scatter_u16_over_pf
 scatter_u16_over_session <- ctx$scatter_u16_over_session
 
 
-player_sel <- "L. Diana"
+player_sel <- "G. Groppelli"
 ```
 
 # Scheda Anagrafica
@@ -53,14 +53,14 @@ player_sel <- "L. Diana"
 # Scheda Anagrafica
 
 #| echo: false
-nome      <- "Lorenzo Diana"
-nascita   <- as.Date("2010-02-10")
+nome      <- "Giacomo Groppelli"
+nascita   <- as.Date("2010-02-16")
 ruolo     <- "Difensore"
 categoria <- "Allievi u16"
 eta <- as.integer(floor(as.numeric(difftime(Sys.Date(), nascita, units="days"))/365.25))
 tesseramento <- 2021
-altezza <- 181
-peso <- 64.1
+altezza <- 182
+peso <- 67.6
 piede <- "Destro"
 ```
 
@@ -91,11 +91,11 @@ library(kableExtra)
 
 tab_partite <- tibble(
   `Partite totali` = 26,
-  Presenze = 24,
-  Minuti = 1919,
-  Gol = 1,
+  Presenze = 17,
+  Minuti = 868,
+  Gol = 0,
   Ammonizioni = 3, 
-  Espulsioni = 2
+  Espulsioni = 0
 )
 
 tab_partite %>%
@@ -111,10 +111,10 @@ library(kableExtra)
 
 tab_allenamenti <- tibble(
   `Allenamenti totali` = 79,
-  Presenze = 76,
+  Presenze = 64,
   Assenze = 3,
-  Infortuni = 0,
-  `Aggregato cat. superiori` = 0
+  Infortuni = 11,
+  `Aggregato cat. superiori` = 1
 )
 
 tab_allenamenti %>%
@@ -136,13 +136,13 @@ library(kableExtra)
 library(glue)
 library(dplyr)
 
-sett20m <- 3.16
-genn20m <- 3.16
-apri20m <- 3.16
+sett20m <- 3.17
+genn20m <- 3.08
+apri20m <- 3.08
 
-settjump <- 57.5
-gennjump <- 57.5
-aprijump <- 57.5
+settjump <- 52.5
+gennjump <- 52.5
+aprijump <- 52.5
 
 # Medie di riferimento
 media_ft_20m <- 2.96

@@ -33,9 +33,9 @@ Questa è la sezione dedicata alla **Under 17**.
 ## Difensori
 - [L. Diana](GiocatoriU16/diana.html)
 - Baldajack 
-- A. De maria 
-- D. Constamtin 
-- G. Groppelli 
+- [A. De maria](GiocatoriU16/demaria.html) 
+- [D. Constantin](GiocatoriU16/constantin.html)
+- [G. Groppelli](GiocatoriU16/groppelli.html) 
 - D. Martinelli 
 
 

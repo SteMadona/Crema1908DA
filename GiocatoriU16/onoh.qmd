@@ -439,67 +439,6 @@ trend_tecnico_piede(player_sel, ctx_session)
 ```
 
 
-### Dinamica di corsa
-
-::: {.panel-tabset}
-# Contact Duration
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HCD")
-
-```
-
-# Flight Duration
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HFD")
-
-```
-
-# Stride Length
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot_hid_box_kpi(df_dynamic_hid_match, player_sel, metric = "HSL")
-
-
-```
-
-
-:::
-
-<div class="explainer-box">
-  <div class="explainer-title">Come leggere la dinamica di corsa</div>
-  <div class="explainer-text">
-    Questi grafici riportano la distribuzione, divisa per allenamento, delle principali 
-    metriche per l'analisi della dinamica di corsa: durata media del contatto a terra, durata
-    media del tempo di volo e lunghezza media della falcata. 
-    I punti rossi sono i valori anomali, riportati successivamente nelle specifiche tabelle. 
-    I valori anomali possono indicare il posizionamento non corretto dei gps nella sessione, 
-    ma se ripetuti nel tempo possono servire da campanello di allarme per eventuali problemi
-    fisici. 
-  </div>
-</div>
-
-### Valori anomali
-
-::: {.panel-tabset}
-# Contact Duration
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HCD", top_n = 20)
-
-```
-
-# Flight Duration
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HFD", top_n = 20)
-
-```
-
-# Stride Length
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-gt_hid_outlier_table(df_dynamic_hid_match, player_sel, metric = "HSL", top_n = 20)
-
-```
-:::
-
-
 
 
 # Confronto con Under 17
